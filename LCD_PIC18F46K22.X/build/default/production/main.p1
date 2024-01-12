@@ -1,5 +1,47 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
+"27 main.c
+[; ;main.c: 27: void Configurations (void);
+[v _Configurations `(v ~T0 @X0 0 ef ]
+"16046 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f46k22.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f46k22.h: 16046: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
+[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
+"198
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f46k22.h: 198: extern volatile unsigned char ANSELD __attribute__((address(0xF3B)));
+[v _ANSELD `Vuc ~T0 @X0 0 e@3899 ]
+"153
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f46k22.h: 153:     struct {
+[s S11 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S11 . . ANSC2 ANSC3 ANSC4 ANSC5 ANSC6 ANSC7 ]
+"152
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f46k22.h: 152: typedef union {
+[u S10 `S11 1 ]
+[n S10 . . ]
+"163
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f46k22.h: 163: extern volatile ANSELCbits_t ANSELCbits __attribute__((address(0xF3A)));
+[v _ANSELCbits `VS10 ~T0 @X0 0 e@3898 ]
+"8726
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f46k22.h: 8726: extern volatile unsigned char TRISD __attribute__((address(0xF95)));
+[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
+"8515
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f46k22.h: 8515:     struct {
+[s S407 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S407 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"8525
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f46k22.h: 8525:     struct {
+[s S408 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S408 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"8514
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f46k22.h: 8514: typedef union {
+[u S406 `S407 1 `S408 1 ]
+[n S406 . . . ]
+"8536
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f46k22.h: 8536: extern volatile TRISCbits_t TRISCbits __attribute__((address(0xF94)));
+[v _TRISCbits `VS406 ~T0 @X0 0 e@3988 ]
+[v F192 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\builtins.h
+[v __delay `JF192 ~T0 @X0 0 e ]
+[p i __delay ]
 "54 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f46k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -836,55 +878,82 @@ Version 4.0 HI-TECH Software Intermediate Code
 "70
 [p x EBTRB  =  OFF       ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"28 main.c
-[; ;main.c: 28: void main(void) {
+"32 main.c
+[; ;main.c: 32: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"31
-[; ;main.c: 31:     while (1){
+"35
+[; ;main.c: 35:     Configurations();
+[e ( _Configurations ..  ]
+"37
+[; ;main.c: 37:     while (1){
 [e :U 856 ]
 {
-"33
-[; ;main.c: 33:     }
+"39
+[; ;main.c: 39:     }
 }
 [e :U 855 ]
 [e $U 856  ]
 [e :U 857 ]
-"35
-[; ;main.c: 35: }
+"41
+[; ;main.c: 41: }
 [e :UE 854 ]
 }
-"38
-[; ;main.c: 38: void Configuration (void){
-[v _Configuration `(v ~T0 @X0 1 ef ]
+"44
+[; ;main.c: 44: void Configurations (void){
+[v _Configurations `(v ~T0 @X0 1 ef ]
 {
-[e :U _Configuration ]
+[e :U _Configurations ]
 [f ]
-"42
-[; ;main.c: 42: }
+"46
+[; ;main.c: 46:     OSCCON = 0x72;
+[e = _OSCCON -> -> 114 `i `uc ]
+"49
+[; ;main.c: 49:     ANSELD = 0x00;
+[e = _ANSELD -> -> 0 `i `uc ]
+"50
+[; ;main.c: 50:     ANSELCbits.ANSC4 = 0;
+[e = . . _ANSELCbits 0 3 -> -> 0 `i `uc ]
+"51
+[; ;main.c: 51:     ANSELCbits.ANSC5 = 0;
+[e = . . _ANSELCbits 0 4 -> -> 0 `i `uc ]
+"54
+[; ;main.c: 54:     TRISD = 0x00;
+[e = _TRISD -> -> 0 `i `uc ]
+"55
+[; ;main.c: 55:     TRISCbits.RC4 = 0;
+[e = . . _TRISCbits 1 4 -> -> 0 `i `uc ]
+"56
+[; ;main.c: 56:     TRISCbits.RC5 = 0;
+[e = . . _TRISCbits 1 5 -> -> 0 `i `uc ]
+"60
+[; ;main.c: 60: }
 [e :UE 858 ]
 }
-"45
-[; ;main.c: 45: void Init_LCD (void){
+"63
+[; ;main.c: 63: void Init_LCD (void){
 [v _Init_LCD `(v ~T0 @X0 1 ef ]
 {
 [e :U _Init_LCD ]
 [f ]
-"49
-[; ;main.c: 49: }
+"65
+[; ;main.c: 65:     _delay((unsigned long)((20)*(16000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+"68
+[; ;main.c: 68: }
 [e :UE 859 ]
 }
-"52
-[; ;main.c: 52: void Instruction_LCD (unsigned char WR_Set, unsigned char Data){
+"71
+[; ;main.c: 71: void Instruction_LCD (unsigned char WR_Set, unsigned char Data){
 [v _Instruction_LCD `(v ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _Instruction_LCD ]
 [v _WR_Set `uc ~T0 @X0 1 r1 ]
 [v _Data `uc ~T0 @X0 1 r2 ]
 [f ]
-"56
-[; ;main.c: 56: }
+"76
+[; ;main.c: 76: }
 [e :UE 860 ]
 }
