@@ -9708,13 +9708,38 @@ unsigned char __t3rd16on(void);
 
 #pragma config EBTRB = OFF
 # 10 "main.c" 2
-
+# 23 "main.c"
+void Configurations (void);
+void Init_LCD (void);
+void Instruction_LCD (unsigned char WR_Set, unsigned char Data);
 
 
 void main(void) {
 
+
     while (1){
 
     }
+
+}
+
+
+void Configuration (void){
+
+
+
+}
+
+
+void Init_LCD (void){
+
+
+
+}
+
+
+void Instruction_LCD (unsigned char WR_Set, unsigned char Data){
+
+
 
 }

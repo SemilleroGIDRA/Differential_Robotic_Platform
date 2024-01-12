@@ -836,23 +836,55 @@ Version 4.0 HI-TECH Software Intermediate Code
 "70
 [p x EBTRB  =  OFF       ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"13 main.c
-[; ;main.c: 13: void main(void) {
+"28 main.c
+[; ;main.c: 28: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"15
-[; ;main.c: 15:     while (1){
+"31
+[; ;main.c: 31:     while (1){
 [e :U 856 ]
 {
-"17
-[; ;main.c: 17:     }
+"33
+[; ;main.c: 33:     }
 }
 [e :U 855 ]
 [e $U 856  ]
 [e :U 857 ]
-"19
-[; ;main.c: 19: }
+"35
+[; ;main.c: 35: }
 [e :UE 854 ]
+}
+"38
+[; ;main.c: 38: void Configuration (void){
+[v _Configuration `(v ~T0 @X0 1 ef ]
+{
+[e :U _Configuration ]
+[f ]
+"42
+[; ;main.c: 42: }
+[e :UE 858 ]
+}
+"45
+[; ;main.c: 45: void Init_LCD (void){
+[v _Init_LCD `(v ~T0 @X0 1 ef ]
+{
+[e :U _Init_LCD ]
+[f ]
+"49
+[; ;main.c: 49: }
+[e :UE 859 ]
+}
+"52
+[; ;main.c: 52: void Instruction_LCD (unsigned char WR_Set, unsigned char Data){
+[v _Instruction_LCD `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _Instruction_LCD ]
+[v _WR_Set `uc ~T0 @X0 1 r1 ]
+[v _Data `uc ~T0 @X0 1 r2 ]
+[f ]
+"56
+[; ;main.c: 56: }
+[e :UE 860 ]
 }
