@@ -9708,7 +9708,7 @@ unsigned char __t3rd16on(void);
 
 #pragma config EBTRB = OFF
 # 10 "main.c" 2
-# 27 "main.c"
+# 28 "main.c"
 void Configurations (void);
 void Init_LCD (void);
 void Instruction_LCD (unsigned char WR_Set, unsigned char Data);
@@ -9718,6 +9718,7 @@ void main(void) {
 
 
     Configurations();
+    Init_LCD();
 
     while (1){
 
@@ -9750,12 +9751,13 @@ void Init_LCD (void){
     _delay((unsigned long)((20)*(16000000/4000.0)));
 
 
+
 }
 
 
-void Instruction_LCD (unsigned char WR_Set, unsigned char Data){
+void Instruction_LCD (unsigned char WI_Set, unsigned char Data){
 
-
+    LATCbits.LC4 = WI_Set;
 
 
 }

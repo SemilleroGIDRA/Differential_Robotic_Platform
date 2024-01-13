@@ -17,7 +17,8 @@
 #define ROW4 0X00
 #define Left 0x00
 #define Right 0x00
-#define SET 0x00
+#define Set_Instruction 0
+#define Write_Instruction 1
 //Pins of the LCD 
 #define RS LATCbits.LC4 //Define pin (RC4) Register Select as bit flag.
 #define E LATCbits.LC5 //Define pin (RC5) Enable as bit flag.   
@@ -33,6 +34,7 @@ void main(void) {
     
     //Call functions. 
     Configurations();
+    Init_LCD(); 
     //Infinite Loop.
     while (1){
         
@@ -65,12 +67,13 @@ void Init_LCD (void){
     __delay_ms(20);
     
     
+    
 }
 
 //Develop the LCD instruction. 
-void Instruction_LCD (unsigned char WR_Set, unsigned char Data){
+void Instruction_LCD (unsigned char WI_Set, unsigned char Data){
     
-    
+    RS = WI_Set; 
     
     
 }

@@ -1,10 +1,10 @@
 __S0 10000 0 ABS 0
-__S1 0 0 ABS 0
+__S1 2 0 ABS 0
 __S4 0 0 ABS 0
 __S5 0 0 ABS 0
 __Hintentry 0 0 ABS 0
 __Lintentry 0 0 ABS 0
-_main FFDC 0 CODE 0
+_main FFC6 0 CODE 0
 ___sp 0 0 STACK 2
 start 0 0 CODE 0
 _TRISD F95 0 ABS 0
@@ -33,6 +33,7 @@ __Hbigsfr 0 0 ABS 0
 __Lbigsfr 0 0 ABS 0
 __Heeprom_data 0 0 EEDATA 0
 __Leeprom_data 0 0 EEDATA 0
+_LATCbits F8B 0 ABS 0
 __Hintsave_regs 0 0 BIGRAM 1
 __Lintsave_regs 0 0 BIGRAM 1
 _ANSELD F3B 0 ABS 0
@@ -68,6 +69,7 @@ stackhi 0 0 ABS 0
 _Configurations FFE8 0 CODE 0
 __Hheap 0 0 HEAP 7
 __Lheap 0 0 HEAP 7
+__end_of_Init_LCD FFE8 0 CODE 0
 __Htemp 0 0 COMRAM 1
 __Ltemp 0 0 COMRAM 1
 stacklo 0 0 ABS 0
@@ -78,12 +80,12 @@ __Linit 0 0 CODE 0
 __Hintcodelo 0 0 CODE 0
 __Lintcodelo 0 0 CODE 0
 __Hrbss 0 0 COMRAM 1
-__end_of_main FFE8 0 CODE 0
+__end_of_main FFD6 0 CODE 0
 __Lrbss 0 0 COMRAM 1
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
 ___heap_lo 0 0 ABS 0
-end_of_initialization FFD6 0 CODE 0
+end_of_initialization FFC0 0 CODE 0
 _TRISCbits F94 0 ABS 0
 __Hibigdata 0 0 CODE 0
 __Libigdata 0 0 CODE 0
@@ -115,11 +117,14 @@ __Hbank9 0 0 ABS 0
 __Lbank9 0 0 ABS 0
 __Htext1 0 0 ABS 0
 __Ltext1 0 0 ABS 0
-__ptext0 FFDC 0 CODE 0
-__ptext1 FFE8 0 CODE 0
+__ptext0 FFC6 0 CODE 0
+__Htext2 0 0 ABS 0
+__Ltext2 0 0 ABS 0
+__ptext1 FFD6 0 CODE 0
+__ptext2 FFE8 0 CODE 0
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
-__end_of__initialization FFD6 0 CODE 0
+__end_of__initialization FFC0 0 CODE 0
 ___rparam_used 1 0 ABS 0
 __H__absolute__ 0 0 ABS 0
 __L__absolute__ 0 0 ABS 0
@@ -137,8 +142,8 @@ __Hspace_0 10000 0 ABS 0
 __HcstackCOMRAM 0 0 ABS 0
 __Lspace_0 0 0 ABS 0
 __LcstackCOMRAM 0 0 ABS 0
-__pcstackCOMRAM 0 0 COMRAM 1
-__Hspace_1 0 0 ABS 0
+__pcstackCOMRAM 1 0 COMRAM 1
+__Hspace_1 2 0 ABS 0
 __Lspace_1 0 0 ABS 0
 __Hsmallconst 0 0 SMALLCONST 0
 __Lsmallconst 0 0 SMALLCONST 0
@@ -148,7 +153,7 @@ __Hnvbit 0 0 COMRAM 1
 __Lnvbit 0 0 COMRAM 1
 __Hcinit 0 0 ABS 0
 __Lcinit 0 0 ABS 0
-__pcinit FFD6 0 CODE 0
+__pcinit FFC0 0 CODE 0
 __ramtop 1000 0 RAM 0
 __mediumconst 0 0 MEDIUMCONST 0
 __Hconst 0 0 CONST 0
@@ -170,6 +175,7 @@ __Lbank15 0 0 ABS 0
 ___inthi_sp 0 0 STACK 2
 _ANSELCbits F3A 0 ABS 0
 ___intlo_sp 0 0 STACK 2
+_Init_LCD FFD6 0 CODE 0
 __smallconst 0 0 SMALLCONST 0
 __Hreset_vec 0 0 CODE 0
 __Lreset_vec 0 0 CODE 0
@@ -180,36 +186,43 @@ intlevel0 0 0 CODE 0
 intlevel1 0 0 CODE 0
 intlevel2 0 0 CODE 0
 intlevel3 0 0 CODE 0
-start_initialization FFD6 0 CODE 0
-__initialization FFD6 0 CODE 0
+start_initialization FFC0 0 CODE 0
+__initialization FFC0 0 CODE 0
 __end_of_Configurations 10000 0 CODE 0
 __activetblptr 0 0 ABS 0
 %segments
 reset_vec 0 3 CODE 0 0
-text1 FFE8 FFFF CODE FFE8 0
-text0 FFDC FFE7 CODE FFDC 0
-cinit FFD6 FFDB CODE FFD6 0
+cstackCOMRAM 1 1 COMRAM 1 1
+text2 FFE8 FFFF CODE FFE8 0
+text1 FFD6 FFE7 CODE FFD6 0
+text0 FFC6 FFD5 CODE FFC6 0
+cinit FFC0 FFC5 CODE FFC0 0
 %locals
 dist/default/production\LCD_PIC18F46K22.X.production.o
-C:\Users\aleja\AppData\Local\Temp\xcAsl8c.\driver_tmp_1.s
-675 FFD6 0 CODE 0
-677 FFD6 0 CODE 0
-680 FFD6 0 CODE 0
-686 FFD6 0 CODE 0
-688 FFD6 0 CODE 0
-689 FFD8 0 CODE 0
+C:\Users\aleja\AppData\Local\Temp\xcAscfo.\driver_tmp_1.s
+678 FFC0 0 CODE 0
+680 FFC0 0 CODE 0
+683 FFC0 0 CODE 0
+689 FFC0 0 CODE 0
+691 FFC0 0 CODE 0
+692 FFC2 0 CODE 0
 main.c
-32 FFDC 0 CODE 0
-35 FFDC 0 CODE 0
-37 FFE0 0 CODE 0
-39 FFE0 0 CODE 0
+33 FFC6 0 CODE 0
+36 FFC6 0 CODE 0
+37 FFCA 0 CODE 0
+39 FFCE 0 CODE 0
+41 FFCE 0 CODE 0
 main.c
-44 FFE8 0 CODE 0
+65 FFD6 0 CODE 0
+67 FFD6 0 CODE 0
+71 FFE6 0 CODE 0
+main.c
 46 FFE8 0 CODE 0
-49 FFEC 0 CODE 0
-50 FFF2 0 CODE 0
-51 FFF4 0 CODE 0
-54 FFF6 0 CODE 0
-55 FFFA 0 CODE 0
-56 FFFC 0 CODE 0
-60 FFFE 0 CODE 0
+48 FFE8 0 CODE 0
+51 FFEC 0 CODE 0
+52 FFF2 0 CODE 0
+53 FFF4 0 CODE 0
+56 FFF6 0 CODE 0
+57 FFFA 0 CODE 0
+58 FFFC 0 CODE 0
+62 FFFE 0 CODE 0
