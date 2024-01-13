@@ -1,10 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
 "28 main.c
-[; ;main.c: 28: void Configurations (void);
+[; ;main.c: 28: void Configurations(void);
 [v _Configurations `(v ~T0 @X0 0 ef ]
 "29
-[; ;main.c: 29: void Init_LCD (void);
+[; ;main.c: 29: void Init_LCD(void);
 [v _Init_LCD `(v ~T0 @X0 0 ef ]
 "16046 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f46k22.h: 16046: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
@@ -896,88 +896,88 @@ Version 4.0 HI-TECH Software Intermediate Code
 "70
 [p x EBTRB  =  OFF       ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"33 main.c
-[; ;main.c: 33: void main(void) {
+"34 main.c
+[; ;main.c: 34: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"36
-[; ;main.c: 36:     Configurations();
-[e ( _Configurations ..  ]
 "37
-[; ;main.c: 37:     Init_LCD();
+[; ;main.c: 37:     Configurations();
+[e ( _Configurations ..  ]
+"38
+[; ;main.c: 38:     Init_LCD();
 [e ( _Init_LCD ..  ]
-"39
-[; ;main.c: 39:     while (1){
+"40
+[; ;main.c: 40:     while (1) {
 [e :U 856 ]
 {
-"41
-[; ;main.c: 41:     }
+"42
+[; ;main.c: 42:     }
 }
 [e :U 855 ]
 [e $U 856  ]
 [e :U 857 ]
-"43
-[; ;main.c: 43: }
+"44
+[; ;main.c: 44: }
 [e :UE 854 ]
 }
-"46
-[; ;main.c: 46: void Configurations (void){
+"48
+[; ;main.c: 48: void Configurations(void) {
 [v _Configurations `(v ~T0 @X0 1 ef ]
 {
 [e :U _Configurations ]
 [f ]
-"48
-[; ;main.c: 48:     OSCCON = 0x72;
+"50
+[; ;main.c: 50:     OSCCON = 0x72;
 [e = _OSCCON -> -> 114 `i `uc ]
-"51
-[; ;main.c: 51:     ANSELD = 0x00;
-[e = _ANSELD -> -> 0 `i `uc ]
-"52
-[; ;main.c: 52:     ANSELCbits.ANSC4 = 0;
-[e = . . _ANSELCbits 0 3 -> -> 0 `i `uc ]
 "53
-[; ;main.c: 53:     ANSELCbits.ANSC5 = 0;
+[; ;main.c: 53:     ANSELD = 0x00;
+[e = _ANSELD -> -> 0 `i `uc ]
+"54
+[; ;main.c: 54:     ANSELCbits.ANSC4 = 0;
+[e = . . _ANSELCbits 0 3 -> -> 0 `i `uc ]
+"55
+[; ;main.c: 55:     ANSELCbits.ANSC5 = 0;
 [e = . . _ANSELCbits 0 4 -> -> 0 `i `uc ]
-"56
-[; ;main.c: 56:     TRISD = 0x00;
-[e = _TRISD -> -> 0 `i `uc ]
-"57
-[; ;main.c: 57:     TRISCbits.RC4 = 0;
-[e = . . _TRISCbits 1 4 -> -> 0 `i `uc ]
 "58
-[; ;main.c: 58:     TRISCbits.RC5 = 0;
+[; ;main.c: 58:     TRISD = 0x00;
+[e = _TRISD -> -> 0 `i `uc ]
+"59
+[; ;main.c: 59:     TRISCbits.RC4 = 0;
+[e = . . _TRISCbits 1 4 -> -> 0 `i `uc ]
+"60
+[; ;main.c: 60:     TRISCbits.RC5 = 0;
 [e = . . _TRISCbits 1 5 -> -> 0 `i `uc ]
-"62
-[; ;main.c: 62: }
+"64
+[; ;main.c: 64: }
 [e :UE 858 ]
 }
-"65
-[; ;main.c: 65: void Init_LCD (void){
+"68
+[; ;main.c: 68: void Init_LCD(void) {
 [v _Init_LCD `(v ~T0 @X0 1 ef ]
 {
 [e :U _Init_LCD ]
 [f ]
-"67
-[; ;main.c: 67:     _delay((unsigned long)((20)*(16000000/4000.0)));
+"70
+[; ;main.c: 70:     _delay((unsigned long)((20)*(16000000/4000.0)));
 [e ( __delay (1 -> * -> -> 20 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"71
-[; ;main.c: 71: }
+"74
+[; ;main.c: 74: }
 [e :UE 859 ]
 }
-"74
-[; ;main.c: 74: void Instruction_LCD (unsigned char WI_Set, unsigned char Data){
+"78
+[; ;main.c: 78: void Instruction_LCD(unsigned char Command, unsigned char Data) {
 [v _Instruction_LCD `(v ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _Instruction_LCD ]
-[v _WI_Set `uc ~T0 @X0 1 r1 ]
+[v _Command `uc ~T0 @X0 1 r1 ]
 [v _Data `uc ~T0 @X0 1 r2 ]
 [f ]
-"76
-[; ;main.c: 76:     LATCbits.LC4 = WI_Set;
-[e = . . _LATCbits 1 4 _WI_Set ]
-"79
-[; ;main.c: 79: }
+"80
+[; ;main.c: 80:     LATCbits.LC4 = Command;
+[e = . . _LATCbits 1 4 _Command ]
+"83
+[; ;main.c: 83: }
 [e :UE 860 ]
 }

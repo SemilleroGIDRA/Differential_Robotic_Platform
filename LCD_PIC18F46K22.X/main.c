@@ -25,55 +25,59 @@
 
 
 //Prototype Functions
-void Configurations (void); //Function to set registers.
-void Init_LCD (void); //Function to initialize the LCD. 
-void Instruction_LCD (unsigned char WR_Set, unsigned char Data); //Function to send instruction to LCD. 
+void Configurations(void); //Function to set registers.
+void Init_LCD(void); //Function to initialize the LCD. 
+void Instruction_LCD(unsigned char Command, unsigned char Data); //Function to send instruction to LCD. 
 
 //Main function.
+
 void main(void) {
-    
+
     //Call functions. 
     Configurations();
-    Init_LCD(); 
+    Init_LCD();
     //Infinite Loop.
-    while (1){
-        
+    while (1) {
+
     }
-    
+
 }
 
 //Develop configurations function. 
-void Configurations (void){
-    
+
+void Configurations(void) {
+
     OSCCON = 0x72; //Oscillator Controller set as internal oscillator and frequency (16MHz). 
-    
+
     //Analog & Digital configuration. 
     ANSELD = 0x00; //Analog input control, set port as digital. 
     ANSELCbits.ANSC4 = 0; //Set as digital pin. 
     ANSELCbits.ANSC5 = 0; //Set as digital pin. 
-    
+
     //Inputs & Outputs configuration. 
-    TRISD = 0x00; 
-    TRISCbits.RC4 = 0; 
-    TRISCbits.RC5 = 0; 
-    
+    TRISD = 0x00;
+    TRISCbits.RC4 = 0;
+    TRISCbits.RC5 = 0;
+
     //
-    
+
 }
 
 //Develop initialize LCD function.
-void Init_LCD (void){
-    
+
+void Init_LCD(void) {
+
     __delay_ms(20);
-    
-    
-    
+
+
+
 }
 
 //Develop the LCD instruction. 
-void Instruction_LCD (unsigned char WI_Set, unsigned char Data){
-    
-    RS = WI_Set; 
-    
-    
+
+void Instruction_LCD(unsigned char Command, unsigned char Data) {
+
+    RS = Command;
+
+
 }

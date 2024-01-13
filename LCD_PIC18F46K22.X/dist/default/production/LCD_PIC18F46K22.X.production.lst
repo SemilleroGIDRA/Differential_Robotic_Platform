@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.41 build 20230208172133 
-                                                                                               Sat Jan 13 08:51:41 2024
+                                                                                               Sat Jan 13 08:56:22 2024
 
 Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1 
      1                           	processor	18F46K22
@@ -96,7 +96,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
     82 ;;
     83 ;; *************** function _main *****************
     84 ;; Defined at:
-    85 ;;		line 33 in file "main.c"
+    85 ;;		line 34 in file "main.c"
     86 ;; Parameters:    Size  Location     Type
     87 ;;		None
     88 ;; Auto vars:     Size  Location     Type
@@ -135,10 +135,10 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    116   00FFC6                     _main:
    117                           	callstack 30
    118   00FFC6                     
-   119                           ;main.c: 36:     Configurations();
+   119                           ;main.c: 37:     Configurations();
    120   00FFC6  ECF4  F07F         	call	_Configurations	;wreg free
    121   00FFCA                     
-   122                           ;main.c: 37:     Init_LCD();
+   122                           ;main.c: 38:     Init_LCD();
    123   00FFCA  ECEB  F07F         	call	_Init_LCD	;wreg free
    124   00FFCE                     l23:
    125   00FFCE  EFE7  F07F         	goto	l23
@@ -148,7 +148,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    129                           
    130 ;; *************** function _Init_LCD *****************
    131 ;; Defined at:
-   132 ;;		line 65 in file "main.c"
+   132 ;;		line 68 in file "main.c"
    133 ;; Parameters:    Size  Location     Type
    134 ;;		None
    135 ;; Auto vars:     Size  Location     Type
@@ -186,7 +186,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    162   00FFD6                     _Init_LCD:
    163                           	callstack 30
    164   00FFD6                     
-   165                           ;main.c: 67:     _delay((unsigned long)((20)*(16000000/4000.0)));
+   165                           ;main.c: 70:     _delay((unsigned long)((20)*(16000000/4000.0)));
    166   00FFD6  0E68               	movlw	104
    167   00FFD8  6E01               	movwf	??_Init_LCD^0,c
    168   00FFDA  0EE4               	movlw	228
@@ -202,7 +202,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    178                           
    179 ;; *************** function _Configurations *****************
    180 ;; Defined at:
-   181 ;;		line 46 in file "main.c"
+   181 ;;		line 48 in file "main.c"
    182 ;; Parameters:    Size  Location     Type
    183 ;;		None
    184 ;; Auto vars:     Size  Location     Type
@@ -240,33 +240,33 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    211   00FFE8                     _Configurations:
    212                           	callstack 30
    213   00FFE8                     
-   214                           ;main.c: 48:     OSCCON = 0x72;
+   214                           ;main.c: 50:     OSCCON = 0x72;
    215   00FFE8  0E72               	movlw	114
    216   00FFEA  6ED3               	movwf	211,c	;volatile
    217                           
-   218                           ;main.c: 51:     ANSELD = 0x00;
+   218                           ;main.c: 53:     ANSELD = 0x00;
    219   00FFEC  0E00               	movlw	0
    220   00FFEE  010F               	movlb	15	; () banked
    221   00FFF0  6F3B               	movwf	59,b	;volatile
    222   00FFF2                     
    223                           ; BSR set to: 15
-   224                           ;main.c: 52:     ANSELCbits.ANSC4 = 0;
+   224                           ;main.c: 54:     ANSELCbits.ANSC4 = 0;
    225   00FFF2  993A               	bcf	58,4,b	;volatile
    226   00FFF4                     
    227                           ; BSR set to: 15
-   228                           ;main.c: 53:     ANSELCbits.ANSC5 = 0;
+   228                           ;main.c: 55:     ANSELCbits.ANSC5 = 0;
    229   00FFF4  9B3A               	bcf	58,5,b	;volatile
    230                           
-   231                           ;main.c: 56:     TRISD = 0x00;
+   231                           ;main.c: 58:     TRISD = 0x00;
    232   00FFF6  0E00               	movlw	0
    233   00FFF8  6E95               	movwf	149,c	;volatile
    234   00FFFA                     
    235                           ; BSR set to: 15
-   236                           ;main.c: 57:     TRISCbits.RC4 = 0;
+   236                           ;main.c: 59:     TRISCbits.RC4 = 0;
    237   00FFFA  9894               	bcf	148,4,c	;volatile
    238   00FFFC                     
    239                           ; BSR set to: 15
-   240                           ;main.c: 58:     TRISCbits.RC5 = 0;
+   240                           ;main.c: 60:     TRISCbits.RC5 = 0;
    241   00FFFC  9A94               	bcf	148,5,c	;volatile
    242   00FFFE                     
    243                           ; BSR set to: 15
@@ -635,7 +635,7 @@ SFR                  0      0       0     200        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.41 build 20230208172133 
-Symbol Table                                                                                   Sat Jan 13 08:51:41 2024
+Symbol Table                                                                                   Sat Jan 13 08:56:22 2024
 
                      l23 FFCE                       l32 FFE6                       l24 FFCE  
                      l29 FFFE                       u27 FFDC                      l711 FFE8  
