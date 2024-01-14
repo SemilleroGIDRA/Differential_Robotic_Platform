@@ -125,7 +125,7 @@ void LCD_Instruction(unsigned char Instruction) {
 
 void Test(void) {
 
-    Send_Instruction_Data(Set, ROW3);
+    Send_Instruction_Data(Set, ROW1);
 
     for (int i = 0; i < strlen(Text3); i++) {
 
@@ -133,7 +133,7 @@ void Test(void) {
 
     }
 
-    Send_Instruction_Data(Set, ROW4);
+    Send_Instruction_Data(Set, ROW2);
 
     for (int i = 0; i < strlen(Text4); i++) {
 
@@ -141,7 +141,7 @@ void Test(void) {
 
     }
 
-    Send_Instruction_Data(Set, ROW1);
+    Send_Instruction_Data(Set, ROW3);
 
     for (int i = 0; i < strlen(Text1); i++) {
 
@@ -151,7 +151,7 @@ void Test(void) {
 
     __delay_ms(100);
 
-    Send_Instruction_Data(Set, ROW2);
+    Send_Instruction_Data(Set, ROW4);
 
     for (int j = 0; j < strlen(Text2); j++) {
 
