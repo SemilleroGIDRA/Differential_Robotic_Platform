@@ -9776,6 +9776,8 @@ void Test(void);
 
 char Text1 [20] = {"Hello!"};
 char Text2 [26] = {"Everyone!"};
+char Text3 [30] = {"Welcome to this"};
+char Text4 [30] = {"Microcontroller!"};
 
 
 
@@ -9863,6 +9865,22 @@ void Test(void) {
 
     Send_Instruction_Data(0, 0X94);
 
+    for (int i = 0; i < strlen(Text3); i++) {
+
+        Send_Instruction_Data(1, Text3[i]);
+
+    }
+
+    Send_Instruction_Data(0, 0XD4);
+
+    for (int i = 0; i < strlen(Text4); i++) {
+
+        Send_Instruction_Data(1, Text4[i]);
+
+    }
+
+    Send_Instruction_Data(0, 0X80);
+
     for (int i = 0; i < strlen(Text1); i++) {
 
         Send_Instruction_Data(1, Text1[i]);
@@ -9871,7 +9889,7 @@ void Test(void) {
 
     _delay((unsigned long)((100)*(16000000/4000.0)));
 
-    Send_Instruction_Data(0, 0XD4);
+    Send_Instruction_Data(0, 0xC0);
 
     for (int j = 0; j < strlen(Text2); j++) {
 

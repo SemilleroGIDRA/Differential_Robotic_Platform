@@ -10,7 +10,7 @@
 #include <string.h> //Library to manipulating strings. 
 #include "Fuses_Set.h" //Library to set fuses of the microcontroller. 
 
-//Instructions of the LCD 
+//Instructions or commands of the LCD 
 #define CLR 0x01 //Command to clear the LCD. 
 #define RH 0x02 //Command to Return to Home that is the first position of the LCD (inside first raw and column).
 #define EMS 0x06 //Command Entry Mode Set to use moving direction cursor. 
@@ -33,11 +33,13 @@
 void Configurations(void); //Function to set registers.
 void Init_LCD(void); //Function to initialize the LCD. 
 void LCD_Instruction(unsigned char Instruction); //Function to send data or instruction inside LCD.
-void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
+void Send_Instruction_Data(unsigned char Instruction, unsigned char Data); //Function to enable or disable RS.
 void Test(void);
 //Global variables. 
 char Text1 [20] = {"Hello!"}; //Variable to show on first row of the LCD.
 char Text2 [26] = {"Everyone!"}; //Variable to show on the second row of the LCD. 
+char Text3 [30] = {"Welcome to this"};
+char Text4 [30] = {"Microcontroller!"};
 
 //Main function.
 
@@ -67,11 +69,11 @@ void Configurations(void) {
     ANSELCbits.ANSC5 = 0; //Set as digital pin. 
 
     //Inputs & Outputs configuration. 
-    TRISD = 0x00;
-    TRISCbits.RC4 = 0;
-    TRISCbits.RC5 = 0;
+    TRISD = 0x00; //All port as output. 
+    TRISCbits.RC4 = 0; //Pin 4 from the PORT C as output.
+    TRISCbits.RC5 = 0; //Pin 5 from the port C as output. 
 
-    //Clean ports. 
+    //Clean port C and D. 
     LATC = 0;
     LATD = 0;
 
@@ -81,18 +83,18 @@ void Configurations(void) {
 
 void Init_LCD(void) {
 
-    __delay_ms(20);
-    Send_Instruction_Data(Set, 0x30);
-    __delay_ms(5);
-    Send_Instruction_Data(Set, 0x30);
-    __delay_ms(5);
-    Send_Instruction_Data(Set, 0x30);
-    Send_Instruction_Data(Set, 0x02);
+    __delay_ms(20); //Delay set by the manufacturer. 
+    Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer. 
+    __delay_ms(5); //Delay set by the manufacturer. 
+    Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer. 
+    __delay_ms(5); //Delay set by the manufacturer. 
+    Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer. 
+    Send_Instruction_Data(Set, 0x02); //Data set by the manufacturer. 
     Send_Instruction_Data(Set, EMS);
     Send_Instruction_Data(Set, DC);
     Send_Instruction_Data(Set, FS);
     Send_Instruction_Data(Set, CLR);
-    __delay_ms(5);
+    __delay_ms(5); //Delay set by the manufacturer. 
 
 }
 
@@ -110,12 +112,12 @@ void Send_Instruction_Data(unsigned char Instruction, unsigned char Data) {
 
 void LCD_Instruction(unsigned char Instruction) {
 
-    EN = 1;
-    __delay_ms(15);
-    LATD = Instruction;
-    __delay_ms(15);
-    EN = 0;
-    __delay_ms(15);
+    EN = 1; //Pin ENabled. 
+    __delay_ms(15); //Wait for the instruction. 
+    LATD = Instruction; //Send Instruction to the port. 
+    __delay_ms(15); //Wait for the instruction. 
+    EN = 0; //Pin disabled.
+    __delay_ms(15); //Wait for the instruction. 
 
 }
 
@@ -125,6 +127,22 @@ void Test(void) {
 
     Send_Instruction_Data(Set, ROW3);
 
+    for (int i = 0; i < strlen(Text3); i++) {
+
+        Send_Instruction_Data(Write, Text3[i]);
+
+    }
+
+    Send_Instruction_Data(Set, ROW4);
+
+    for (int i = 0; i < strlen(Text4); i++) {
+
+        Send_Instruction_Data(Write, Text4[i]);
+
+    }
+
+    Send_Instruction_Data(Set, ROW1);
+
     for (int i = 0; i < strlen(Text1); i++) {
 
         Send_Instruction_Data(Write, Text1[i]);
@@ -133,7 +151,7 @@ void Test(void) {
 
     __delay_ms(100);
 
-    Send_Instruction_Data(Set, ROW4);
+    Send_Instruction_Data(Set, ROW2);
 
     for (int j = 0; j < strlen(Text2); j++) {
 
