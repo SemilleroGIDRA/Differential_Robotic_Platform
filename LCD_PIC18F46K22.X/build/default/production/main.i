@@ -9647,6 +9647,65 @@ unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\\pic\\include\\xc.h" 2 3
 # 9 "main.c" 2
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\string.h" 1 3
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\string.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 411 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 26 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\string.h" 2 3
+
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
+
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
+
+
+
+
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+
+
+void *memccpy (void *restrict, const void *restrict, int, size_t);
+# 10 "main.c" 2
+
 # 1 "./Fuses_Set.h" 1
 # 13 "./Fuses_Set.h"
 #pragma config FOSC = INTIO67
@@ -9707,11 +9766,17 @@ unsigned char __t3rd16on(void);
 
 
 #pragma config EBTRB = OFF
-# 10 "main.c" 2
-# 28 "main.c"
+# 11 "main.c" 2
+# 32 "main.c"
 void Configurations(void);
 void Init_LCD(void);
-void Instruction_LCD(unsigned char Command, unsigned char Data);
+void Set_Instruction(unsigned char S_Instruction);
+void Write_Instruction(unsigned char W_Instruction);
+void LCD_Instructions(unsigned char Instruction);
+void Test(void);
+
+char Text1 [20] = {"Hello!"};
+char Text2 [26] = {"Everyone!"};
 
 
 
@@ -9720,6 +9785,8 @@ void main(void) {
 
     Configurations();
     Init_LCD();
+    Test();
+
 
     while (1) {
 
@@ -9744,24 +9811,80 @@ void Configurations(void) {
     TRISCbits.RC5 = 0;
 
 
+    LATC = 0;
+    LATD = 0;
+
+    Set_Instruction(0x02);
+    Set_Instruction(0x06);
+    Set_Instruction(0x0F);
+    Set_Instruction(0x28);
+    Set_Instruction(0x01);
 
 }
 
 
 
 void Init_LCD(void) {
+# 106 "main.c"
+}
 
-    _delay((unsigned long)((20)*(16000000/4000.0)));
 
+
+
+void Set_Instruction(unsigned char S_Instruction) {
+
+    LATCbits.LATC4 = 0;
+    LCD_Instructions(S_Instruction >> 4);
+
+    LCD_Instructions(S_Instruction);
 
 
 }
 
 
 
-void Instruction_LCD(unsigned char Command, unsigned char Data) {
+void Write_Instruction(unsigned char W_Instruction) {
 
-    LATCbits.LC4 = Command;
+    LATCbits.LATC4 = 1;
+    LCD_Instructions(W_Instruction >> 4);
 
+    LCD_Instructions(W_Instruction);
+
+}
+
+
+
+void LCD_Instructions(unsigned char Instruction) {
+
+    LATCbits.LATC5 = 1;
+    _delay((unsigned long)((15)*(16000000/4000.0)));
+    LATD = Instruction;
+    _delay((unsigned long)((15)*(16000000/4000.0)));
+    LATCbits.LATC5 = 0;
+    _delay((unsigned long)((15)*(16000000/4000.0)));
+
+}
+
+
+
+void Test(void) {
+
+    Set_Instruction(0X94);
+
+    for (int i = 0; i < strlen(Text1); i++) {
+
+        Write_Instruction(Text1[i]);
+
+    }
+
+    _delay((unsigned long)((100)*(16000000/4000.0)));
+
+    Set_Instruction(0XD4);
+
+    for (int j = 0; j < strlen(Text2); j++) {
+
+        Write_Instruction(Text2[j]);
+
+    }
 
 }

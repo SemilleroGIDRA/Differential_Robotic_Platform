@@ -23,17 +23,27 @@
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 "8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
 "15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"34 C:\Apps\Git\Repositories\College_Research\LCD_PIC18F46K22.X\main.c
+"44 C:\Apps\Git\Repositories\College_Research\LCD_PIC18F46K22.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"48
+"60
 [v _Configurations Configurations `(v  1 e 1 0 ]
-"68
+"88
 [v _Init_LCD Init_LCD `(v  1 e 1 0 ]
-[s S34 . 1 `uc 1 . 1 0 :2:0 
+"111
+[v _Set_Instruction Set_Instruction `(v  1 e 1 0 ]
+"123
+[v _Write_Instruction Write_Instruction `(v  1 e 1 0 ]
+"134
+[v _LCD_Instructions LCD_Instructions `(v  1 e 1 0 ]
+"147
+[v _Test Test `(v  1 e 1 0 ]
+[s S38 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 ANSC2 1 0 :1:2 
 `uc 1 ANSC3 1 0 :1:3 
 `uc 1 ANSC4 1 0 :1:4 
@@ -42,11 +52,13 @@
 `uc 1 ANSC7 1 0 :1:7 
 ]
 "163 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f46k22.h
-[u S42 . 1 `S34 1 . 1 0 ]
-[v _ANSELCbits ANSELCbits `VES42  1 e 1 @3898 ]
+[u S46 . 1 `S38 1 . 1 0 ]
+[v _ANSELCbits ANSELCbits `VES46  1 e 1 @3898 ]
 "198
 [v _ANSELD ANSELD `VEuc  1 e 1 @3899 ]
-[s S100 . 1 `uc 1 LATC0 1 0 :1:0 
+"7784
+[v _LATC LATC `VEuc  1 e 1 @3979 ]
+[s S105 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -56,7 +68,7 @@
 `uc 1 LATC7 1 0 :1:7 
 ]
 "7811
-[s S109 . 1 `uc 1 LC0 1 0 :1:0 
+[s S114 . 1 `uc 1 LC0 1 0 :1:0 
 `uc 1 LC1 1 0 :1:1 
 `uc 1 LC2 1 0 :1:2 
 `uc 1 LC3 1 0 :1:3 
@@ -65,9 +77,11 @@
 `uc 1 LC6 1 0 :1:6 
 `uc 1 LC7 1 0 :1:7 
 ]
-[u S118 . 1 `S100 1 . 1 0 `S109 1 . 1 0 ]
-[v _LATCbits LATCbits `VES118  1 e 1 @3979 ]
-[s S54 . 1 `uc 1 TRISC0 1 0 :1:0 
+[u S123 . 1 `S105 1 . 1 0 `S114 1 . 1 0 ]
+[v _LATCbits LATCbits `VES123  1 e 1 @3979 ]
+"7896
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+[s S58 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -77,7 +91,7 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "8536
-[s S63 . 1 `uc 1 RC0 1 0 :1:0 
+[s S67 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -86,24 +100,73 @@
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[u S72 . 1 `S54 1 . 1 0 `S63 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES72  1 e 1 @3988 ]
+[u S76 . 1 `S58 1 . 1 0 `S67 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES76  1 e 1 @3988 ]
 "8726
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "16046
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-"34 C:\Apps\Git\Repositories\College_Research\LCD_PIC18F46K22.X\main.c
+"39 C:\Apps\Git\Repositories\College_Research\LCD_PIC18F46K22.X\main.c
+[v _Text1 Text1 `[20]uc  1 e 20 0 ]
+"40
+[v _Text2 Text2 `[26]uc  1 e 26 0 ]
+"44
 [v _main main `(v  1 e 1 0 ]
 {
-"44
+"56
 } 0
-"68
+"147
+[v _Test Test `(v  1 e 1 0 ]
+{
+"161
+[v Test@j j `i  1 a 2 8 ]
+"151
+[v Test@i i `i  1 a 2 6 ]
+"167
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"7
+[v strlen@a a `*.39Cuc  1 a 2 2 ]
+"5
+[v strlen@s s `*.39Cuc  1 p 2 0 ]
+"12
+} 0
+"123 C:\Apps\Git\Repositories\College_Research\LCD_PIC18F46K22.X\main.c
+[v _Write_Instruction Write_Instruction `(v  1 e 1 0 ]
+{
+[v Write_Instruction@W_Instruction W_Instruction `uc  1 a 1 wreg ]
+[v Write_Instruction@W_Instruction W_Instruction `uc  1 a 1 wreg ]
+"125
+[v Write_Instruction@W_Instruction W_Instruction `uc  1 a 1 2 ]
+"130
+} 0
+"88
 [v _Init_LCD Init_LCD `(v  1 e 1 0 ]
 {
-"74
+"106
 } 0
-"48
+"60
 [v _Configurations Configurations `(v  1 e 1 0 ]
 {
-"64
+"84
+} 0
+"111
+[v _Set_Instruction Set_Instruction `(v  1 e 1 0 ]
+{
+[v Set_Instruction@S_Instruction S_Instruction `uc  1 a 1 wreg ]
+[v Set_Instruction@S_Instruction S_Instruction `uc  1 a 1 wreg ]
+"113
+[v Set_Instruction@S_Instruction S_Instruction `uc  1 a 1 2 ]
+"119
+} 0
+"134
+[v _LCD_Instructions LCD_Instructions `(v  1 e 1 0 ]
+{
+[v LCD_Instructions@Instruction Instruction `uc  1 a 1 wreg ]
+[v LCD_Instructions@Instruction Instruction `uc  1 a 1 wreg ]
+"136
+[v LCD_Instructions@Instruction Instruction `uc  1 a 1 1 ]
+"143
 } 0
