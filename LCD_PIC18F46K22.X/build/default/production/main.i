@@ -9767,12 +9767,11 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 
 #pragma config EBTRB = OFF
 # 11 "main.c" 2
-# 32 "main.c"
+# 33 "main.c"
 void Configurations(void);
 void Init_LCD(void);
-void Set_Instruction(unsigned char S_Instruction);
-void Write_Instruction(unsigned char W_Instruction);
-void LCD_Instructions(unsigned char Instruction);
+void LCD_Instruction(unsigned char Instruction);
+void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
 void Test(void);
 
 char Text1 [20] = {"Hello!"};
@@ -9814,47 +9813,40 @@ void Configurations(void) {
     LATC = 0;
     LATD = 0;
 
-    Set_Instruction(0x02);
-    Set_Instruction(0x06);
-    Set_Instruction(0x0F);
-    Set_Instruction(0x28);
-    Set_Instruction(0x01);
-
 }
 
 
 
 void Init_LCD(void) {
-# 106 "main.c"
-}
 
-
-
-
-void Set_Instruction(unsigned char S_Instruction) {
-
-    LATCbits.LATC4 = 0;
-    LCD_Instructions(S_Instruction >> 4);
-
-    LCD_Instructions(S_Instruction);
-
-
-}
-
-
-
-void Write_Instruction(unsigned char W_Instruction) {
-
-    LATCbits.LATC4 = 1;
-    LCD_Instructions(W_Instruction >> 4);
-
-    LCD_Instructions(W_Instruction);
+    _delay((unsigned long)((20)*(16000000/4000.0)));
+    Send_Instruction_Data(0, 0x30);
+    _delay((unsigned long)((5)*(16000000/4000.0)));
+    Send_Instruction_Data(0, 0x30);
+    _delay((unsigned long)((5)*(16000000/4000.0)));
+    Send_Instruction_Data(0, 0x30);
+    Send_Instruction_Data(0, 0x02);
+    Send_Instruction_Data(0, 0x06);
+    Send_Instruction_Data(0, 0x0F);
+    Send_Instruction_Data(0, 0x28);
+    Send_Instruction_Data(0, 0x01);
+    _delay((unsigned long)((5)*(16000000/4000.0)));
 
 }
 
 
 
-void LCD_Instructions(unsigned char Instruction) {
+void Send_Instruction_Data(unsigned char Instruction, unsigned char Data) {
+
+    LATCbits.LATC4 = Instruction;
+    LCD_Instruction(Data >> 4);
+    LCD_Instruction(Data);
+
+}
+
+
+
+void LCD_Instruction(unsigned char Instruction) {
 
     LATCbits.LATC5 = 1;
     _delay((unsigned long)((15)*(16000000/4000.0)));
@@ -9869,21 +9861,21 @@ void LCD_Instructions(unsigned char Instruction) {
 
 void Test(void) {
 
-    Set_Instruction(0X94);
+    Send_Instruction_Data(0, 0X94);
 
     for (int i = 0; i < strlen(Text1); i++) {
 
-        Write_Instruction(Text1[i]);
+        Send_Instruction_Data(1, Text1[i]);
 
     }
 
     _delay((unsigned long)((100)*(16000000/4000.0)));
 
-    Set_Instruction(0XD4);
+    Send_Instruction_Data(0, 0XD4);
 
     for (int j = 0; j < strlen(Text2); j++) {
 
-        Write_Instruction(Text2[j]);
+        Send_Instruction_Data(1, Text2[j]);
 
     }
 
