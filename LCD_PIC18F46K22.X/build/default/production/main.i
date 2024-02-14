@@ -9726,8 +9726,25 @@ unsigned char __t3rd16on(void);
 
 #pragma config EBTRB = OFF
 # 10 "main.c" 2
-# 30 "main.c"
+# 32 "main.c"
+void Configurations(void);
+void Init_LCD(void);
+void LCD_Instruction(unsigned char Instruction);
+void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
+void Send_String (unsigned char *String);
+void Test(void);
+
+
+unsigned char Text1 [20] = {"Hello!"};
+unsigned char Text2 [26] = {"Everyone!"};
+unsigned char Text3 [30] = {"Welcome to this"};
+unsigned char Text4 [30] = {"Microcontroller!"};
+
+
 void main(void) {
+
+
+
 
     while(1){
 

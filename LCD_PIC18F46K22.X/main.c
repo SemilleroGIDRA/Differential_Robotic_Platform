@@ -23,12 +23,31 @@
 #define ROW4 0XD4 //Command to access the address of row 4. 
 #define Set 0 //Command to configuration an instruction. 
 #define Write 1 //Command to write on the LCD. 
+
 //Pins of the LCD 
 #define RS LATCbits.LATC4 //Define pin (RC4) Register Select as bit flag.
 #define EN LATCbits.LATC5 //Define pin (RC5) Enable as bit flag.
 
+//Prototype Functions.
+void Configurations(void); //Function to set registers.
+void Init_LCD(void); //Function to initialize the LCD. 
+void LCD_Instruction(unsigned char Instruction); //Function to send data or instruction inside LCD.
+void Send_Instruction_Data(unsigned char Instruction, unsigned char Data); //Function to enable or disable RS.
+void Send_String (unsigned char *String); 
+void Test(void);
+
+//Global variables. 
+unsigned char Text1 [20] = {"Hello!"}; //Variable to show on first row of the LCD.
+unsigned char Text2 [26] = {"Everyone!"}; //Variable to show on the second row of the LCD. 
+unsigned char Text3 [30] = {"Welcome to this"};
+unsigned char Text4 [30] = {"Microcontroller!"};
+
+//Main function 
 void main(void) {
     
+    //Call functions. 
+    
+    //Infinite loop.
     while(1){
         
         
@@ -39,20 +58,6 @@ void main(void) {
 }   
 
 
-////Prototype Functions.
-//void Configurations(void); //Function to set registers.
-//void Init_LCD(void); //Function to initialize the LCD. 
-//void LCD_Instruction(unsigned char Instruction); //Function to send data or instruction inside LCD.
-//void Send_Instruction_Data(unsigned char Instruction, unsigned char Data); //Function to enable or disable RS.
-//void Test(void);
-////Global variables. 
-//char Text1 [20] = {"Hello!"}; //Variable to show on first row of the LCD.
-//char Text2 [26] = {"Everyone!"}; //Variable to show on the second row of the LCD. 
-//char Text3 [30] = {"Welcome to this"};
-//char Text4 [30] = {"Microcontroller!"};
-//
-////Main function.
-//
 //void main(void) {
 //
 //    //Call functions. 
