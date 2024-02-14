@@ -1,12 +1,15 @@
-__S0 1010 0 ABS 0
-__S1 0 0 ABS 0
+__S0 110E 0 ABS 0
+__S1 7 0 ABS 0
 __S4 0 0 ABS 0
 __S5 0 0 ABS 0
 __Hintentry 0 0 ABS 0
 __Lintentry 0 0 ABS 0
-_main 1002 0 CODE 0
+_LATD F8C 0 ABS 0
+_main 10FC 0 CODE 0
 ___sp 0 0 STACK 2
 start 0 0 CODE 0
+_LCD_Instruction 10A4 0 CODE 0
+__end_of_Send_Instruction_Data 10FC 0 CODE 0
 __Hirdata 0 0 CODE 0
 __Lirdata 0 0 CODE 0
 __HRAM 0 0 ABS 0
@@ -34,6 +37,7 @@ __Hbigsfr 0 0 ABS 0
 __Lbigsfr 0 0 ABS 0
 __Heeprom_data 0 0 EEDATA 0
 __Leeprom_data 0 0 EEDATA 0
+_LATCbits F8B 0 ABS 0
 __Hintsave_regs 0 0 BIGRAM 1
 __Lintsave_regs 0 0 BIGRAM 1
 __Hbigbss 0 0 BIGRAM 1
@@ -57,6 +61,7 @@ __Lfardata 0 0 FARRAM 0
 __Habs1 0 0 ABS 0
 __Labs1 0 0 ABS 0
 isa$xinst 0 0 ABS 0
+Send_Instruction_Data@Data 3 0 COMRAM 1
 __HnvFARRAM 0 0 FARRAM 0
 __LnvFARRAM 0 0 FARRAM 0
 ___heap_hi 0 0 ABS 0
@@ -68,6 +73,8 @@ isa$std 1 0 ABS 0
 stackhi 0 0 ABS 0
 __Hheap 0 0 HEAP 7
 __Lheap 0 0 HEAP 7
+__end_of_Init_LCD 10A4 0 CODE 0
+LCD_Instruction@Instruction 2 0 COMRAM 1
 __Htemp 0 0 COMRAM 1
 __Ltemp 0 0 COMRAM 1
 stacklo 0 0 ABS 0
@@ -78,12 +85,12 @@ __Linit 0 0 CODE 0
 __Hintcodelo 0 0 CODE 0
 __Lintcodelo 0 0 CODE 0
 __Hrbss 0 0 COMRAM 1
-__end_of_main 100A 0 CODE 0
+__end_of_main 1108 0 CODE 0
 __Lrbss 0 0 COMRAM 1
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
 ___heap_lo 0 0 ABS 0
-end_of_initialization 100A 0 CODE 0
+end_of_initialization 1108 0 CODE 0
 __Hsivt_lo 0 0 CODE 0
 __Lsivt_lo 0 0 CODE 0
 __Hibigdata 0 0 CODE 0
@@ -114,12 +121,22 @@ __Htext0 0 0 ABS 0
 __Ltext0 0 0 ABS 0
 __Hbank9 0 0 ABS 0
 __Lbank9 0 0 ABS 0
-__ptext0 1002 0 CODE 0
+__Htext1 0 0 ABS 0
+__Ltext1 0 0 ABS 0
+__ptext0 10FC 0 CODE 0
+__Htext2 0 0 ABS 0
+__Ltext2 0 0 ABS 0
+__ptext1 1002 0 CODE 0
+__Htext3 0 0 ABS 0
+__Ltext3 0 0 ABS 0
+__ptext2 10E0 0 CODE 0
+__ptext3 10A4 0 CODE 0
 ___stack_hi 0 0 STACK 2
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
-__end_of__initialization 100A 0 CODE 0
+__end_of__initialization 1108 0 CODE 0
 ___rparam_used 1 0 ABS 0
+__end_of_LCD_Instruction 10E0 0 CODE 0
 __H__absolute__ 0 0 ABS 0
 __L__absolute__ 0 0 ABS 0
 __Hidata 0 0 CODE 0
@@ -132,12 +149,12 @@ __Hstack 0 0 STACK 2
 __Lstack 0 0 STACK 2
 __Hparam 0 0 COMRAM 1
 __Lparam 0 0 COMRAM 1
-__Hspace_0 1010 0 ABS 0
+__Hspace_0 110E 0 ABS 0
 __HcstackCOMRAM 0 0 ABS 0
 __Lspace_0 0 0 ABS 0
 __LcstackCOMRAM 0 0 ABS 0
-__pcstackCOMRAM 0 0 COMRAM 1
-__Hspace_1 0 0 ABS 0
+__pcstackCOMRAM 1 0 COMRAM 1
+__Hspace_1 7 0 ABS 0
 __Lspace_1 0 0 ABS 0
 __Hsmallconst 1002 0 SMALLCONST 0
 __Lsmallconst 1000 0 SMALLCONST 0
@@ -148,7 +165,7 @@ __Hnvbit 0 0 COMRAM 1
 __Lnvbit 0 0 COMRAM 1
 __Hcinit 0 0 ABS 0
 __Lcinit 0 0 ABS 0
-__pcinit 100A 0 CODE 0
+__pcinit 1108 0 CODE 0
 __ramtop 1000 0 RAM 0
 __mediumconst 0 0 MEDIUMCONST 0
 __Hconst 0 0 CONST 0
@@ -170,6 +187,7 @@ __Hbank15 0 0 ABS 0
 __Lbank15 0 0 ABS 0
 ___inthi_sp 0 0 STACK 2
 ___intlo_sp 0 0 STACK 2
+_Init_LCD 1002 0 CODE 0
 __smallconst 1000 0 SMALLCONST 0
 __Hreset_vec 0 0 CODE 0
 __Lreset_vec 0 0 CODE 0
@@ -181,24 +199,58 @@ intlevel1 0 0 CODE 0
 intlevel2 0 0 CODE 0
 intlevel3 0 0 CODE 0
 ___inthi_stack_lo 0 0 STACK 2
-start_initialization 100A 0 CODE 0
+Send_Instruction_Data@Instruction 4 0 COMRAM 1
+start_initialization 1108 0 CODE 0
 ___intlo_stack_lo 0 0 STACK 2
-__initialization 100A 0 CODE 0
+__initialization 1108 0 CODE 0
+_Send_Instruction_Data 10E0 0 CODE 0
 __activetblptr 0 0 ABS 0
 %segments
 reset_vec 0 3 CODE 0 0
 smallconst 1000 1001 SMALLCONST 1000 0
-text0 1002 100F CODE 1002 0
+cstackCOMRAM 1 6 COMRAM 1 1
+text1 1002 110D CODE 1002 0
 %locals
 dist/default/production\Platform_Project.X.production.o
-C:\Users\aleja\AppData\Local\Temp\xcAsf6g.\driver_tmp_1.s
-664 100A 0 CODE 0
-666 100A 0 CODE 0
-669 100A 0 CODE 0
-675 100A 0 CODE 0
-677 100A 0 CODE 0
-678 100C 0 CODE 0
+C:\Users\aleja\AppData\Local\Temp\xcBsk04.1\driver_tmp_1.s
+671 1108 0 CODE 0
+673 1108 0 CODE 0
+676 1108 0 CODE 0
+682 1108 0 CODE 0
+684 1108 0 CODE 0
+685 110A 0 CODE 0
 main.c
-15 1002 0 CODE 0
-20 1002 0 CODE 0
-24 1002 0 CODE 0
+39 10FC 0 CODE 0
+43 10FC 0 CODE 0
+45 1100 0 CODE 0
+49 1100 0 CODE 0
+main.c
+55 1002 0 CODE 0
+57 1002 0 CODE 0
+58 101A 0 CODE 0
+59 1024 0 CODE 0
+60 1034 0 CODE 0
+61 103E 0 CODE 0
+62 104E 0 CODE 0
+63 1058 0 CODE 0
+64 1062 0 CODE 0
+65 106C 0 CODE 0
+66 1076 0 CODE 0
+67 1080 0 CODE 0
+68 108A 0 CODE 0
+70 10A2 0 CODE 0
+main.c
+74 10E0 0 CODE 0
+76 10E2 0 CODE 0
+77 10EC 0 CODE 0
+78 10F4 0 CODE 0
+80 10FA 0 CODE 0
+main.c
+83 10A4 0 CODE 0
+85 10A6 0 CODE 0
+86 10A8 0 CODE 0
+87 10B8 0 CODE 0
+88 10BC 0 CODE 0
+89 10CC 0 CODE 0
+90 10CE 0 CODE 0
+92 10DE 0 CODE 0

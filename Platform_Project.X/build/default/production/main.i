@@ -9727,18 +9727,75 @@ unsigned char __t3rd16on(void);
 
 #pragma config EBTRB = OFF
 # 11 "main.c" 2
-
-
+# 33 "main.c"
+void Init_LCD(void);
+void LCD_Instruction(unsigned char Instruction);
+void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
+void Send_String(unsigned char *String);
 
 
 void main(void) {
 
 
 
+    Init_LCD();
 
-    while(1){
+    while (1) {
 
 
+
+    }
+
+}
+
+
+
+void Init_LCD(void) {
+
+    _delay((unsigned long)((60)*(16000000/4000.0)));
+    Send_Instruction_Data(0, 0x30);
+    _delay((unsigned long)((5)*(16000000/4000.0)));
+    Send_Instruction_Data(0, 0x30);
+    _delay((unsigned long)((5)*(16000000/4000.0)));
+    Send_Instruction_Data(0, 0x30);
+    Send_Instruction_Data(0, 0x02);
+    Send_Instruction_Data(0, 0x06);
+    Send_Instruction_Data(0, 0x0F);
+    Send_Instruction_Data(0, 0x28);
+    Send_Instruction_Data(0, 0x01);
+    _delay((unsigned long)((100)*(16000000/4000.0)));
+
+}
+
+
+
+void Send_Instruction_Data(unsigned char Instruction, unsigned char Data) {
+
+    LATCbits.LATC4 = Instruction;
+    LCD_Instruction(Data >> 4);
+    LCD_Instruction(Data);
+
+}
+
+
+void LCD_Instruction(unsigned char Instruction) {
+
+    LATCbits.LATC5 = 1;
+    _delay((unsigned long)((15)*(16000000/4000.0)));
+    LATD = Instruction;
+    _delay((unsigned long)((15)*(16000000/4000.0)));
+    LATCbits.LATC5 = 0;
+    _delay((unsigned long)((15)*(16000000/4000.0)));
+
+}
+
+
+
+void Send_String(unsigned char *String) {
+
+    for (uint8_t i = 0; String[i] != '\0'; i++) {
+
+        Send_Instruction_Data(1, String[i]);
 
     }
 
