@@ -33,7 +33,7 @@ void Configurations(void); //Function to set registers.
 void Init_LCD(void); //Function to initialize the LCD. 
 void LCD_Instruction(unsigned char Instruction); //Function to send data or instruction inside LCD.
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data); //Function to enable or disable RS.
-void Send_String (unsigned char *String); 
+void Send_String(unsigned char *String);
 void Test(void);
 
 //Global variables. 
@@ -43,20 +43,41 @@ unsigned char Text3 [30] = {"Welcome to this"};
 unsigned char Text4 [30] = {"Microcontroller!"};
 
 //Main function 
-void main(void) {
-    
-    //Call functions. 
-    
-    //Infinite loop.
-    while(1){
-        
-        
-        
-    }
-    
-    return;
-}   
 
+void main(void) {
+
+    //Call functions. 
+
+    //Infinite loop.
+    while (1) {
+
+
+
+    }
+
+    return;
+}
+
+//Develop configurations function
+
+void Configurations(void) {
+
+    OSCCON = 0x72; //Internal oscillator 
+    //Set pins as digital
+    ANSELC = 0; 
+    ANSELD = 0; 
+    //Set pins as outputs
+    TRISCbits.RC4 = 0; 
+    TRISCbits.RC5 = 0; 
+    
+    TRISD = 0; 
+    //Clean pins 
+    LATCbits.LC4 = 0; 
+    LATCbits.LC5 = 0; 
+    
+    LATD = 0; 
+
+}
 
 //void main(void) {
 //

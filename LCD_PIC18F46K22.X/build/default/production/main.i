@@ -9731,7 +9731,7 @@ void Configurations(void);
 void Init_LCD(void);
 void LCD_Instruction(unsigned char Instruction);
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
-void Send_String (unsigned char *String);
+void Send_String(unsigned char *String);
 void Test(void);
 
 
@@ -9741,16 +9741,38 @@ unsigned char Text3 [30] = {"Welcome to this"};
 unsigned char Text4 [30] = {"Microcontroller!"};
 
 
+
 void main(void) {
 
 
 
 
-    while(1){
+    while (1) {
 
 
 
     }
 
     return;
+}
+
+
+
+void Configurations(void) {
+
+    OSCCON = 0x72;
+
+    ANSELC = 0;
+    ANSELD = 0;
+
+    TRISCbits.RC4 = 0;
+    TRISCbits.RC5 = 0;
+
+    TRISD = 0;
+
+    LATCbits.LC4 = 0;
+    LATCbits.LC5 = 0;
+
+    LATD = 0;
+
 }
