@@ -9745,6 +9745,9 @@ unsigned char Text4 [30] = {"Microcontroller!"};
 void main(void) {
 
 
+    Configurations();
+    Init_LCD();
+    Test();
 
 
     while (1) {
@@ -9827,5 +9830,14 @@ void Send_String(unsigned char *String) {
         Send_Instruction_Data(1, String[i]);
 
     }
+
+}
+
+
+
+void Test(void) {
+
+    Send_Instruction_Data(0, 0X80);
+    Send_String("Hello World!");
 
 }

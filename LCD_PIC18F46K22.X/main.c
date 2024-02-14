@@ -48,7 +48,10 @@ unsigned char Text4 [30] = {"Microcontroller!"};
 void main(void) {
 
     //Call functions. 
-
+    Configurations();
+    Init_LCD();
+    Test(); 
+    
     //Infinite loop.
     while (1) {
 
@@ -125,7 +128,7 @@ void LCD_Instruction(unsigned char Instruction) {
 
 void Send_String(unsigned char *String) { //Receiver string data. 
 
-    for (uint8_t i = 0; String[i] != '\n'; i++) {   //i from 0, to find null character, increment 1. 
+    for (uint8_t i = 0; String[i] != '\n'; i++) { //i from 0, to find null character, increment 1. 
 
         Send_Instruction_Data(Write, String[i]); //Print each character of string. 
 
@@ -133,21 +136,14 @@ void Send_String(unsigned char *String) { //Receiver string data.
 
 }
 
-//void main(void) {
-//
-//    //Call functions. 
-//    Configurations();
-//    Init_LCD();
-//    Test();
-//
-//    //Infinite Loop.
-//    while (1) {
-//
-//    }
-//
-//}
-//
-////Function to show data on LCD. 
+//Develop test function.
+
+void Test(void) {
+
+    Send_Instruction_Data(Set, ROW1);
+    Send_String("Hello World!"); 
+
+} 
 //
 //void Test(void) {
 //
