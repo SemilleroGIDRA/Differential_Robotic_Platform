@@ -38,7 +38,6 @@ void Send_String(unsigned char *String);
 void Test(void);
 
 //Global variables. 
-unsigned char Text1 [20] = {"Hello!"}; //Variable to show on first row of the LCD.
 unsigned char Text2 [26] = {"Everyone!"}; //Variable to show on the second row of the LCD. 
 unsigned char Text3 [30] = {"Welcome to this"};
 unsigned char Text4 [30] = {"Microcontroller!"};
@@ -50,8 +49,8 @@ void main(void) {
     //Call functions. 
     Configurations();
     Init_LCD();
-    Test(); 
-    
+    Test();
+
     //Infinite loop.
     while (1) {
 
@@ -128,7 +127,7 @@ void LCD_Instruction(unsigned char Instruction) {
 
 void Send_String(unsigned char *String) { //Receiver string data. 
 
-    for (uint8_t i = 0; String[i] != '\n'; i++) { //i from 0, to find null character, increment 1. 
+    for (uint8_t i = 0; String[i] != '\0'; i++) { //i from 0, to find null character ('\0'), increment 1. 
 
         Send_Instruction_Data(Write, String[i]); //Print each character of string. 
 
@@ -136,49 +135,38 @@ void Send_String(unsigned char *String) { //Receiver string data.
 
 }
 
-//Develop test function.
+//Develop test function to send data to show in LCD.
 
 void Test(void) {
 
     Send_Instruction_Data(Set, ROW1);
-    Send_String("Hello World!"); 
+    Send_String("Hello World!");
 
-} 
-//
-//void Test(void) {
-//
-//    Send_Instruction_Data(Set, ROW1);
-//
-//    for (int i = 0; Text3[i] != '\n'; i++) {
-//
-//        Send_Instruction_Data(Write, Text3[i]);
-//
-//    }
-//
-//    Send_Instruction_Data(Set, ROW2);
-//
-//    for (int i = 0; Text4[i] != '\n'; i++) {
-//
-//        Send_Instruction_Data(Write, Text4[i]);
-//
-//    }
-//
-//    Send_Instruction_Data(Set, ROW3);
-//
-//    for (int i = 0; Text1[i] != '\n'; i++) {
-//
-//        Send_Instruction_Data(Write, Text1[i]);
-//
-//    }
-//
-//    __delay_ms(100);
-//
-//    Send_Instruction_Data(Set, ROW4);
-//
-//    for (int j = 0; Text2[i] != '\n'; j++) {
-//
-//        Send_Instruction_Data(Write, Text2[j]);
-//
-//    }
-//
-//}
+    __delay_ms(1000);
+
+    Send_Instruction_Data(Set, ROW2);
+    for (int i = 0; Text3[i] != '\0'; i++) {
+
+        Send_Instruction_Data(Write, Text3[i]);
+
+    }
+
+    Send_Instruction_Data(Set, ROW3);
+
+    for (int i = 0; Text4[i] != '\0'; i++) {
+
+        Send_Instruction_Data(Write, Text4[i]);
+
+    }
+
+    __delay_ms(100);
+
+    Send_Instruction_Data(Set, ROW4);
+
+    for (int j = 0; Text2[j] != '\0'; j++) {
+
+        Send_Instruction_Data(Write, Text2[j]);
+
+    }
+
+}

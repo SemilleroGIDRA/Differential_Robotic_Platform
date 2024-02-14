@@ -9735,7 +9735,6 @@ void Send_String(unsigned char *String);
 void Test(void);
 
 
-unsigned char Text1 [20] = {"Hello!"};
 unsigned char Text2 [26] = {"Everyone!"};
 unsigned char Text3 [30] = {"Welcome to this"};
 unsigned char Text4 [30] = {"Microcontroller!"};
@@ -9825,7 +9824,7 @@ void LCD_Instruction(unsigned char Instruction) {
 
 void Send_String(unsigned char *String) {
 
-    for (uint8_t i = 0; String[i] != '\n'; i++) {
+    for (uint8_t i = 0; String[i] != '\0'; i++) {
 
         Send_Instruction_Data(1, String[i]);
 
@@ -9839,5 +9838,32 @@ void Test(void) {
 
     Send_Instruction_Data(0, 0X80);
     Send_String("Hello World!");
+
+    _delay((unsigned long)((1000)*(16000000/4000.0)));
+
+    Send_Instruction_Data(0, 0xC0);
+    for (int i = 0; Text3[i] != '\0'; i++) {
+
+        Send_Instruction_Data(1, Text3[i]);
+
+    }
+
+    Send_Instruction_Data(0, 0X94);
+
+    for (int i = 0; Text4[i] != '\0'; i++) {
+
+        Send_Instruction_Data(1, Text4[i]);
+
+    }
+
+    _delay((unsigned long)((100)*(16000000/4000.0)));
+
+    Send_Instruction_Data(0, 0XD4);
+
+    for (int j = 0; Text2[j] != '\0'; j++) {
+
+        Send_Instruction_Data(1, Text2[j]);
+
+    }
 
 }
