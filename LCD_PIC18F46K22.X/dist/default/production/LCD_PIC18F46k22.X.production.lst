@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
-                                                                                               Wed Feb 14 16:26:21 2024
+                                                                                               Wed Feb 14 16:40:00 2024
 
 Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
      1                           	processor	18F46K22
@@ -272,7 +272,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    258 ;;
    259 ;; *************** function _main *****************
    260 ;; Defined at:
-   261 ;;		line 47 in file "main.c"
+   261 ;;		line 48 in file "main.c"
    262 ;; Parameters:    Size  Location     Type
    263 ;;		None
    264 ;; Auto vars:     Size  Location     Type
@@ -308,8 +308,8 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    289                           	callstack 0
    290   0010B2                     _main:
    291                           	callstack 31
-   292   0010B2                     l27:
-   293   0010B2  EF59  F008         	goto	l27
+   292   0010B2                     l33:
+   293   0010B2  EF59  F008         	goto	l33
    294   0010B6  EF00  F000         	goto	start
    295   0010BA                     __end_of_main:
    296                           	callstack 0
@@ -672,9 +672,9 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.46 build 20240104201356 
-Symbol Table                                                                                   Wed Feb 14 16:26:21 2024
+Symbol Table                                                                                   Wed Feb 14 16:40:00 2024
 
-                     l27 10B2                       l28 10B2                     _LATD 0F8C  
+                     l33 10B2                       l34 10B2                     _LATD 0F8C  
                    _main 10B2                     fsr1l 0FE1                     start 0000  
            ___param_bank 0000                    ?_main 0000                    _TRISD 0F95  
                   _Text1 0039                    _Text2 001F                    _Text3 0001  

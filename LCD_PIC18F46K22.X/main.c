@@ -8,6 +8,7 @@
 
 #include <xc.h>
 #include "Fuses_Configuration.h"
+#include <stdint.h> //Function to use 8 bits integer
 
 //Instructions or commands of the LCD 
 #define CLR 0x01 //Command to clear the LCD. 
@@ -64,18 +65,71 @@ void Configurations(void) {
 
     OSCCON = 0x72; //Internal oscillator 
     //Set pins as digital
-    ANSELC = 0; 
-    ANSELD = 0; 
+    ANSELC = 0;
+    ANSELD = 0;
     //Set pins as outputs
-    TRISCbits.RC4 = 0; 
-    TRISCbits.RC5 = 0; 
-    
-    TRISD = 0; 
+    TRISCbits.RC4 = 0;
+    TRISCbits.RC5 = 0;
+
+    TRISD = 0;
     //Clean pins 
-    LATCbits.LC4 = 0; 
-    LATCbits.LC5 = 0; 
-    
-    LATD = 0; 
+    LATCbits.LC4 = 0;
+    LATCbits.LC5 = 0;
+
+    LATD = 0;
+
+}
+
+//Develop initialize LCD function.
+
+void Init_LCD(void) {
+
+    __delay_ms(60); //Delay set by the manufacturer. 
+    Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer. 
+    __delay_ms(5); //Delay set by the manufacturer. 
+    Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer. 
+    __delay_ms(5); //Delay set by the manufacturer. 
+    Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer. 
+    Send_Instruction_Data(Set, 0x02); //Data set by the manufacturer. 
+    Send_Instruction_Data(Set, EMS); //Send entry mode set.
+    Send_Instruction_Data(Set, DC); //Send command to Display Control. 
+    Send_Instruction_Data(Set, FS); //Send command control.
+    Send_Instruction_Data(Set, CLR); //Send clear LCD. 
+    __delay_ms(100); //Delay set by the manufacturer. 
+
+}
+
+//Develop LCD function to send data or instruction. 
+
+void Send_Instruction_Data(unsigned char Instruction, unsigned char Data) {
+
+    RS = Instruction; //Enable or disabled the register select to write data, or send instruction set.
+    LCD_Instruction(Data >> 4); //Send first the most significant bits
+    LCD_Instruction(Data); //Send the least significant bits. 
+
+}
+//Develop LCD instruction.
+
+void LCD_Instruction(unsigned char Instruction) {
+
+    EN = 1; //Pin ENabled. 
+    __delay_ms(15); //Wait for the instruction. 
+    LATD = Instruction; //Send Instruction to the port. 
+    __delay_ms(15); //Wait for the instruction. 
+    EN = 0; //Pin disabled.
+    __delay_ms(15); //Wait for the instruction. 
+
+}
+
+//Develop send string
+
+void Send_String(unsigned char *String) { //Receiver string data. 
+
+    for (uint8_t i = 0; String[i] != '\n'; i++) {   //i from 0, to find null character, increment 1. 
+
+        Send_Instruction_Data(Write, String[i]); //Print each character of string. 
+
+    }
 
 }
 
@@ -90,70 +144,6 @@ void Configurations(void) {
 //    while (1) {
 //
 //    }
-//
-//}
-//
-////Develop configurations function. 
-//
-//void Configurations(void) {
-//
-//    OSCCON = 0x72; //Oscillator Controller set as internal oscillator and frequency (16MHz). 
-//
-//    //Analog & Digital configuration. 
-//    ANSELD = 0x00; //Analog input control, set port as digital. 
-//    ANSELCbits.ANSC4 = 0; //Set as digital pin. 
-//    ANSELCbits.ANSC5 = 0; //Set as digital pin. 
-//
-//    //Inputs & Outputs configuration. 
-//    TRISD = 0x00; //All port as output. 
-//    TRISCbits.RC4 = 0; //Pin 4 from the PORT C as output.
-//    TRISCbits.RC5 = 0; //Pin 5 from the port C as output. 
-//
-//    //Clean port C and D. 
-//    LATC = 0;
-//    LATD = 0;
-//
-//}
-//
-////Develop initialize LCD function.
-//
-//void Init_LCD(void) {
-//
-//    __delay_ms(60); //Delay set by the manufacturer. 
-//    Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer. 
-//    __delay_ms(5); //Delay set by the manufacturer. 
-//    Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer. 
-//    __delay_ms(5); //Delay set by the manufacturer. 
-//    Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer. 
-//    Send_Instruction_Data(Set, 0x02); //Data set by the manufacturer. 
-//    Send_Instruction_Data(Set, EMS);
-//    Send_Instruction_Data(Set, DC);
-//    Send_Instruction_Data(Set, FS);
-//    Send_Instruction_Data(Set, CLR);
-//    __delay_ms(100); //Delay set by the manufacturer. 
-//
-//}
-//
-////Develop LCD function to send data or instruction. 
-//
-//void Send_Instruction_Data(unsigned char Instruction, unsigned char Data) {
-//
-//    RS = Instruction; //Enable or disabled the register select to write data, or send instruction set.
-//    LCD_Instruction(Data >> 4); //Send first the most significant bits
-//    LCD_Instruction(Data); //Send the least significant bits. 
-//
-//}
-//
-////Develop LCD instruction.
-//
-//void LCD_Instruction(unsigned char Instruction) {
-//
-//    EN = 1; //Pin ENabled. 
-//    __delay_ms(15); //Wait for the instruction. 
-//    LATD = Instruction; //Send Instruction to the port. 
-//    __delay_ms(15); //Wait for the instruction. 
-//    EN = 0; //Pin disabled.
-//    __delay_ms(15); //Wait for the instruction. 
 //
 //}
 //
