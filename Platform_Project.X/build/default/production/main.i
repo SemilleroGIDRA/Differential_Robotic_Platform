@@ -9755,6 +9755,8 @@ void main(void) {
 
 
 
+
+
 void Configurations(void) {
 
     OSCCON = 0x72;
@@ -9772,6 +9774,33 @@ void Configurations(void) {
 
     LATD = 0;
 
+
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+    RCONbits.IPEN = 0;
+
+    PIE1bits.RC1IE = 1;
+    PIR1bits.RC1IF = 0;
+
+
+    SPBRG = 103;
+    TRISCbits.RC6 = 1;
+    TRISCbits.RC7 = 1;
+
+
+    TXSTA1bits.TX91 = 0;
+    TXSTA1bits.TXEN1 = 1;
+    TXSTA1bits.SYNC1 = 0;
+    TXSTA1bits.BRGH1 = 1;
+
+
+    RCSTAbits.SPEN1 = 1;
+    RCSTAbits.RX91 = 0;
+    RCSTAbits.CREN1 = 1;
+
+
+    BAUDCON1bits.BRG16 = 0;
+# 115 "main.c"
 }
 
 

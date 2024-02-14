@@ -40,12 +40,12 @@ void Send_String(unsigned char *String);
 void main(void) {
 
     //Call functions. 
-    Configurations(); 
+    Configurations();
     Init_LCD();
-    
-    Send_Instruction_Data(Set, ROW2); 
+
+    Send_Instruction_Data(Set, ROW2);
     Send_String("Hello World!");
-    
+
     //Infinite Loop. 
     while (1) {
 
@@ -54,6 +54,8 @@ void main(void) {
     }
 
 }
+
+
 
 //Develop configurations function
 
@@ -73,6 +75,42 @@ void Configurations(void) {
     LATCbits.LC5 = 0;
 
     LATD = 0;
+
+    //---- Interrupts Configurations ----
+    INTCONbits.GIE = 1; //Global Interrupt Enabled. 
+    INTCONbits.PEIE = 1; //Peripheral Interrupt Enabled. 
+    RCONbits.IPEN = 0; //Interrupt Priority disabled. 
+
+    PIE1bits.RC1IE = 1; //Receive Enabled. 
+    PIR1bits.RC1IF = 0; //Receive Flag cleared. 
+
+    //---- EUSART Configurations ----
+    SPBRG = 103; //Configuration 9600 bauds. 
+    TRISCbits.RC6 = 1; //Enable pin RC6 (TX1).
+    TRISCbits.RC7 = 1; //Enable pin RC7 (RX1).
+
+    //---- Transmitter configuration TXSTA1 (TX). 
+    TXSTA1bits.TX91 = 0; //9 bits transmitter disabled. 
+    TXSTA1bits.TXEN1 = 1; //Transmit Enabled. 
+    TXSTA1bits.SYNC1 = 0; //Asynchronous mode. 
+    TXSTA1bits.BRGH1 = 1; //High baud rate. 
+
+    //---- Receive configuration RCSTA1 register (RX).
+    RCSTAbits.SPEN1 = 1; //Serial port enable bit. 
+    RCSTAbits.RX91 = 0; //9 bits transmitter disabled. 
+    RCSTAbits.CREN1 = 1; //Receive continuous enabled. 
+
+    //---- Baud configuration BAUDCON1. 
+    BAUDCON1bits.BRG16 = 0; //16 bits mode disabled. 
+
+    /*
+     
+     Remember data buffers. 
+     * 
+        RCREG1; ----> Receive buffer.
+        TXREG1; ----> Transmitter buffer.
+      
+     */
 
 }
 
