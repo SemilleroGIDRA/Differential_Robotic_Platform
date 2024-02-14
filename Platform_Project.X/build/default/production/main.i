@@ -9728,6 +9728,7 @@ unsigned char __t3rd16on(void);
 #pragma config EBTRB = OFF
 # 11 "main.c" 2
 # 33 "main.c"
+void Configurations(void);
 void Init_LCD(void);
 void LCD_Instruction(unsigned char Instruction);
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
@@ -9737,14 +9738,39 @@ void Send_String(unsigned char *String);
 void main(void) {
 
 
-
+    Configurations();
     Init_LCD();
+
+    Send_Instruction_Data(0, 0xC0);
+    Send_String("Hello World!");
+
 
     while (1) {
 
 
 
     }
+
+}
+
+
+
+void Configurations(void) {
+
+    OSCCON = 0x72;
+
+    ANSELC = 0;
+    ANSELD = 0;
+
+    TRISCbits.RC4 = 0;
+    TRISCbits.RC5 = 0;
+
+    TRISD = 0;
+
+    LATCbits.LC4 = 0;
+    LATCbits.LC5 = 0;
+
+    LATD = 0;
 
 }
 
