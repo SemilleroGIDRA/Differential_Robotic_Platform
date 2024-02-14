@@ -83,7 +83,7 @@ void Configurations(void) {
 
 void Init_LCD(void) {
 
-    __delay_ms(20); //Delay set by the manufacturer. 
+    __delay_ms(60); //Delay set by the manufacturer. 
     Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer. 
     __delay_ms(5); //Delay set by the manufacturer. 
     Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer. 
@@ -94,7 +94,7 @@ void Init_LCD(void) {
     Send_Instruction_Data(Set, DC);
     Send_Instruction_Data(Set, FS);
     Send_Instruction_Data(Set, CLR);
-    __delay_ms(5); //Delay set by the manufacturer. 
+    __delay_ms(200); //Delay set by the manufacturer. 
 
 }
 
@@ -104,7 +104,7 @@ void Send_Instruction_Data(unsigned char Instruction, unsigned char Data) {
 
     RS = Instruction; //Enable or disabled the register select to write data, or send instruction set.
     LCD_Instruction(Data >> 4); //Send first the most significant bits
-    LCD_Instruction(Data); //Send the least significant bits. 
+    LCD_Instruction(Data & 0x0F); //Send the least significant bits. 
 
 }
 
