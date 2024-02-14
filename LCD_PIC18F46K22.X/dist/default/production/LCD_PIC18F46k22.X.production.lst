@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
-                                                                                               Wed Feb 14 16:10:54 2024
+                                                                                               Wed Feb 14 16:13:42 2024
 
 Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
      1                           	processor	18F46K22
@@ -85,7 +85,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
     71 ;;
     72 ;; *************** function _main *****************
     73 ;; Defined at:
-    74 ;;		line 13 in file "main.c"
+    74 ;;		line 30 in file "main.c"
     75 ;; Parameters:    Size  Location     Type
     76 ;;		None
     77 ;; Auto vars:     Size  Location     Type
@@ -481,7 +481,7 @@ SFR                  0      0       0     200        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.46 build 20240104201356 
-Symbol Table                                                                                   Wed Feb 14 16:10:54 2024
+Symbol Table                                                                                   Wed Feb 14 16:13:42 2024
 
                       l5 1002                        l6 1002                     _main 1002  
                    start 0000             ___param_bank 0000                    ?_main 0000  

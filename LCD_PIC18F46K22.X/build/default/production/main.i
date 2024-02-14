@@ -9726,9 +9726,7 @@ unsigned char __t3rd16on(void);
 
 #pragma config EBTRB = OFF
 # 10 "main.c" 2
-
-
-
+# 30 "main.c"
 void main(void) {
 
     while(1){
