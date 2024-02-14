@@ -34,6 +34,7 @@ void Configurations(void); //Function to set registers.
 void Init_LCD(void); //Function to initialize the LCD. 
 void LCD_Instruction(unsigned char Instruction); //Function to send data or instruction inside LCD.
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data); //Function to enable or disable RS.
+void Send_String(unsigned char *Str); //Function to send string data to display.
 void Test(void);
 //Global variables. 
 char Text1 [20] = {"Hello!"}; //Variable to show on first row of the LCD.
@@ -118,6 +119,16 @@ void LCD_Instruction(unsigned char Instruction) {
     __delay_ms(15); //Wait for the instruction. 
     EN = 0; //Pin disabled.
     __delay_ms(15); //Wait for the instruction. 
+
+}
+//Develop function
+void Send_String(unsigned char *Str) {
+
+    for (int i = 0; Str[i] != '\0'; i++) { //Check array to find null character. 
+
+        Send_Instruction_Data(Write, Str[i]); //Print each character. 
+
+    }
 
 }
 
