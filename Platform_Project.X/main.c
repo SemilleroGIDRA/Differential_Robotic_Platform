@@ -34,7 +34,12 @@ void Configurations(void); //Function to set registers.
 void Init_LCD(void); //Function to initialize the LCD. 
 void LCD_Instruction(unsigned char Instruction); //Function to send data or instruction inside LCD.
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data); //Function to enable or disable RS.
-void Send_String(unsigned char *String);
+void Send_String(unsigned char *String); //Function to send data to the LCD.
+void Receive_Interrupt(void);
+
+//Global variables.
+unsigned char Rx_Buffer;
+
 //Main function.
 
 void main(void) {
@@ -55,7 +60,17 @@ void main(void) {
 
 }
 
+//Develop interrupt function
 
+void __interrupt() Interrupts(void) {
+
+    if (PIR1bits.RC1IF) { //Check interrupt has been activated. 
+
+        Receive_Interrupt();
+
+    }
+
+}
 
 //Develop configurations function
 
@@ -163,6 +178,28 @@ void Send_String(unsigned char *String) { //Receiver string data.
 
         Send_Instruction_Data(Write, String[i]); //Print each character of string. 
 
+    }
+
+}
+
+void Receive_Interrupt(void) {
+
+    Rx_Buffer = RCREG1;
+
+    if (Rx_Buffer == 'A') {
+
+        Send_Instruction_Data(Set, ROW1);
+        Send_String("Data test: A");
+
+    } else if (Rx_Buffer == 'B') {
+
+        Send_Instruction_Data(Set, ROW4);
+        Send_String("Platform!");
+
+    } else if (Rx_Buffer == 'C') {
+
+        Send_Instruction_Data(Set, CLR);
+        
     }
 
 }

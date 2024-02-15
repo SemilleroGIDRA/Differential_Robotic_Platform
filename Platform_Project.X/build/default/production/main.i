@@ -9733,6 +9733,11 @@ void Init_LCD(void);
 void LCD_Instruction(unsigned char Instruction);
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
 void Send_String(unsigned char *String);
+void Receive_Interrupt(void);
+
+
+unsigned char Rx_Buffer;
+
 
 
 void main(void) {
@@ -9754,6 +9759,16 @@ void main(void) {
 }
 
 
+
+void __attribute__((picinterrupt(("")))) Interrupts(void) {
+
+    if (PIR1bits.RC1IF) {
+
+        Receive_Interrupt();
+
+    }
+
+}
 
 
 
@@ -9800,7 +9815,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 115 "main.c"
+# 130 "main.c"
 }
 
 
@@ -9851,6 +9866,28 @@ void Send_String(unsigned char *String) {
     for (uint8_t i = 0; String[i] != '\0'; i++) {
 
         Send_Instruction_Data(1, String[i]);
+
+    }
+
+}
+
+void Receive_Interrupt(void) {
+
+    Rx_Buffer = RCREG1;
+
+    if (Rx_Buffer == 'A') {
+
+        Send_Instruction_Data(0, 0X80);
+        Send_String("Data test: A");
+
+    } else if (Rx_Buffer == 'B') {
+
+        Send_Instruction_Data(0, 0XD4);
+        Send_String("Platform!");
+
+    } else if (Rx_Buffer == 'C') {
+
+        Send_Instruction_Data(0, 0x01);
 
     }
 
