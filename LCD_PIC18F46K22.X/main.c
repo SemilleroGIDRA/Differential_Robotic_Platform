@@ -37,7 +37,7 @@ void Send_Instruction_Data(unsigned char Instruction, unsigned char Data); //Fun
 void Test(void);
 //Global variables. 
 char Text1 [20] = {"Hello!"}; //Variable to show on first row of the LCD.
-char Text2 [26] = {"Everyone!"}; //Variable to show on the second row of the LCD. 
+char Text2 [26] = {"My love!"}; //Variable to show on the second row of the LCD. 
 char Text3 [30] = {"Welcome to this"};
 char Text4 [30] = {"Microcontroller!"};
 
@@ -52,6 +52,8 @@ void main(void) {
 
     //Infinite Loop.
     while (1) {
+
+
 
     }
 
@@ -88,13 +90,13 @@ void Init_LCD(void) {
     __delay_ms(5); //Delay set by the manufacturer. 
     Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer. 
     __delay_ms(5); //Delay set by the manufacturer. 
-    Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer. 
-    Send_Instruction_Data(Set, 0x02); //Data set by the manufacturer. 
+    Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer.  
+    Send_Instruction_Data(Set, 0x02); //Data set by the manufacturer.
     Send_Instruction_Data(Set, EMS);
     Send_Instruction_Data(Set, DC);
     Send_Instruction_Data(Set, FS);
     Send_Instruction_Data(Set, CLR);
-    __delay_ms(5); //Delay set by the manufacturer. 
+    __delay_ms(10); //Delay set by the manufacturer. 
 
 }
 
@@ -158,5 +160,9 @@ void Test(void) {
         Send_Instruction_Data(Write, Text2[j]);
 
     }
+
+    __delay_ms(5000);
+
+    Send_Instruction_Data(Set, CLR);
 
 }
