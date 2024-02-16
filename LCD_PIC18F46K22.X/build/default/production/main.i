@@ -6,7 +6,11 @@
 # 1 "<built-in>" 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\language_support.h" 1 3
+=======
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\language_support.h" 1 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\language_support.h" 1 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -25,8 +29,13 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\xc.h" 3
+=======
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 1 3
+# 18 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 3
@@ -152,9 +161,15 @@ uldiv_t uldiv (unsigned long, unsigned long);
 extern void __builtin_software_breakpoint(void);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 23 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\xc.h" 2 3
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\builtins.h" 1 3
+=======
+# 23 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 2 3
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\builtins.h" 1 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 23 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 2 3
 
@@ -253,8 +268,13 @@ typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 145 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdint.h" 2 3
 # 4 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\builtins.h" 2 3
+=======
+# 149 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\builtins.h" 2 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 149 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
 # 4 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\builtins.h" 2 3
@@ -287,6 +307,7 @@ extern __attribute__((nonreentrant)) void _delaywdt(uint32_t);
 extern __attribute__((nonreentrant)) void _delay3(uint8_t);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\xc.h" 2 3
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\xc.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\pic18.h" 1 3
@@ -300,10 +321,16 @@ extern __attribute__((nonreentrant)) void _delay3(uint8_t);
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 3
 # 1 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\pic18.h" 1 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
+=======
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 2 3
+# 33 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 3
+# 1 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\pic18.h" 1 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\htc.h" 1 3
@@ -344,6 +371,17 @@ extern __attribute__((nonreentrant)) void _delay3(uint8_t);
 
 
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
+=======
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\htc.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 1 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\htc.h" 2 3
+# 6 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\pic18.h" 2 3
+
+
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 # 1 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\pic18_chip_select.h" 1 3
 # 229 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\pic18_chip_select.h" 3
 # 1 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 1 3
@@ -351,6 +389,9 @@ extern __attribute__((nonreentrant)) void _delay3(uint8_t);
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\__at.h" 1 3
 # 45 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 2 3
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
+=======
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -379,7 +420,11 @@ typedef union {
 extern volatile ANSELAbits_t ANSELAbits __attribute__((address(0xF38)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 97 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 97 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 97 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -404,7 +449,11 @@ typedef union {
 extern volatile ANSELBbits_t ANSELBbits __attribute__((address(0xF39)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 147 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 147 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 147 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -430,7 +479,11 @@ typedef union {
 extern volatile ANSELCbits_t ANSELCbits __attribute__((address(0xF3A)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 198 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 198 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 198 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -457,7 +510,11 @@ typedef union {
 extern volatile ANSELDbits_t ANSELDbits __attribute__((address(0xF3B)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 260 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 260 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 260 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -479,7 +536,11 @@ typedef union {
 extern volatile ANSELEbits_t ANSELEbits __attribute__((address(0xF3C)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 292 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 292 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 292 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -502,7 +563,11 @@ typedef union {
 extern volatile PMD2bits_t PMD2bits __attribute__((address(0xF3D)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 330 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 330 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 330 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -532,7 +597,11 @@ typedef union {
 extern volatile PMD1bits_t PMD1bits __attribute__((address(0xF3E)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 395 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 395 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 395 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -564,7 +633,11 @@ typedef union {
 extern volatile PMD0bits_t PMD0bits __attribute__((address(0xF3F)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 472 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 472 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 472 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -596,7 +669,11 @@ typedef union {
 extern volatile VREFCON2bits_t VREFCON2bits __attribute__((address(0xF40)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 527 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 527 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 527 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -618,7 +695,11 @@ typedef union {
 extern volatile DACCON1bits_t DACCON1bits __attribute__((address(0xF40)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 574 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 574 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 574 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -654,7 +735,11 @@ typedef union {
 extern volatile VREFCON1bits_t VREFCON1bits __attribute__((address(0xF41)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 638 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 638 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 638 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -680,7 +765,11 @@ typedef union {
 extern volatile DACCON0bits_t DACCON0bits __attribute__((address(0xF41)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 694 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 694 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 694 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -713,7 +802,11 @@ typedef union {
 extern volatile VREFCON0bits_t VREFCON0bits __attribute__((address(0xF42)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 745 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 745 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 745 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -736,7 +829,11 @@ typedef union {
 extern volatile FVRCONbits_t FVRCONbits __attribute__((address(0xF42)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 788 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 788 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 788 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -772,7 +869,11 @@ typedef union {
 extern volatile CTMUICONbits_t CTMUICONbits __attribute__((address(0xF43)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 867 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 867 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 867 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -798,7 +899,11 @@ typedef union {
 extern volatile CTMUICONHbits_t CTMUICONHbits __attribute__((address(0xF43)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 938 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 938 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 938 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -836,7 +941,11 @@ typedef union {
 extern volatile CTMUCONLbits_t CTMUCONLbits __attribute__((address(0xF44)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1019 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1019 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1019 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -864,7 +973,11 @@ typedef union {
 extern volatile CTMUCON1bits_t CTMUCON1bits __attribute__((address(0xF44)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1092 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1092 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1092 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -896,7 +1009,11 @@ typedef union {
 extern volatile CTMUCONHbits_t CTMUCONHbits __attribute__((address(0xF45)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1152 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1152 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1152 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -918,7 +1035,11 @@ typedef union {
 extern volatile CTMUCON0bits_t CTMUCON0bits __attribute__((address(0xF45)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1204 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1204 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1204 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -945,7 +1066,11 @@ typedef union {
 extern volatile SRCON1bits_t SRCON1bits __attribute__((address(0xF46)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1266 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1266 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1266 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -976,7 +1101,11 @@ typedef union {
 extern volatile SRCON0bits_t SRCON0bits __attribute__((address(0xF47)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1337 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1337 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1337 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1003,7 +1132,11 @@ typedef union {
 extern volatile CCPTMRS1bits_t CCPTMRS1bits __attribute__((address(0xF48)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1389 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1389 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1389 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1037,7 +1170,11 @@ typedef union {
 extern volatile CCPTMRS0bits_t CCPTMRS0bits __attribute__((address(0xF49)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1463 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1463 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1463 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1068,7 +1205,11 @@ typedef union {
 extern volatile T6CONbits_t T6CONbits __attribute__((address(0xF4A)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1534 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1534 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1534 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1088,7 +1229,11 @@ typedef union {
 extern volatile PR6bits_t PR6bits __attribute__((address(0xF4B)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1554 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1554 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1554 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1108,7 +1253,11 @@ typedef union {
 extern volatile TMR6bits_t TMR6bits __attribute__((address(0xF4C)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1574 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1574 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1574 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1148,7 +1297,11 @@ typedef union {
 extern volatile T5GCONbits_t T5GCONbits __attribute__((address(0xF4D)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1669 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1669 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1669 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1192,7 +1345,11 @@ typedef union {
 extern volatile T5CONbits_t T5CONbits __attribute__((address(0xF4E)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1778 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1778 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1778 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1219,7 +1376,11 @@ typedef union {
 extern volatile TMR5Lbits_t TMR5Lbits __attribute__((address(0xF4F)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1805 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1805 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1805 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1239,7 +1400,11 @@ typedef union {
 extern volatile TMR5Hbits_t TMR5Hbits __attribute__((address(0xF50)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1825 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1825 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1825 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1270,7 +1435,11 @@ typedef union {
 extern volatile T4CONbits_t T4CONbits __attribute__((address(0xF51)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1896 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1896 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1896 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1290,7 +1459,11 @@ typedef union {
 extern volatile PR4bits_t PR4bits __attribute__((address(0xF52)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1916 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1916 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1916 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1310,7 +1483,11 @@ typedef union {
 extern volatile TMR4bits_t TMR4bits __attribute__((address(0xF53)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1936 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 1936 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1936 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1339,7 +1516,11 @@ typedef union {
 extern volatile CCP5CONbits_t CCP5CONbits __attribute__((address(0xF54)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2000 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 2000 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 2000 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1366,7 +1547,11 @@ typedef union {
 extern volatile CCPR5Lbits_t CCPR5Lbits __attribute__((address(0xF55)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2027 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 2027 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 2027 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1386,7 +1571,11 @@ typedef union {
 extern volatile CCPR5Hbits_t CCPR5Hbits __attribute__((address(0xF56)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2047 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 2047 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 2047 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1415,7 +1604,11 @@ typedef union {
 extern volatile CCP4CONbits_t CCP4CONbits __attribute__((address(0xF57)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2111 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 2111 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 2111 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1442,7 +1635,11 @@ typedef union {
 extern volatile CCPR4Lbits_t CCPR4Lbits __attribute__((address(0xF58)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2138 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 2138 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 2138 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1462,7 +1659,11 @@ typedef union {
 extern volatile CCPR4Hbits_t CCPR4Hbits __attribute__((address(0xF59)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2158 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 2158 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 2158 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1493,7 +1694,11 @@ typedef union {
 extern volatile PSTR3CONbits_t PSTR3CONbits __attribute__((address(0xF5A)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2234 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 2234 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 2234 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1540,7 +1745,11 @@ typedef union {
 extern volatile ECCP3ASbits_t ECCP3ASbits __attribute__((address(0xF5B)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2359 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 2359 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 2359 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1577,7 +1786,11 @@ typedef union {
 extern volatile CCP3ASbits_t CCP3ASbits __attribute__((address(0xF5B)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2476 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 2476 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 2476 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1607,7 +1820,11 @@ typedef union {
 extern volatile PWM3CONbits_t PWM3CONbits __attribute__((address(0xF5C)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2546 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 2546 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 2546 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1639,7 +1856,11 @@ typedef union {
 extern volatile CCP3CONbits_t CCP3CONbits __attribute__((address(0xF5D)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2628 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 2628 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 2628 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1666,7 +1887,11 @@ typedef union {
 extern volatile CCPR3Lbits_t CCPR3Lbits __attribute__((address(0xF5E)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2655 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 2655 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 2655 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1686,7 +1911,11 @@ typedef union {
 extern volatile CCPR3Hbits_t CCPR3Hbits __attribute__((address(0xF5F)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2675 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 2675 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 2675 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1710,7 +1939,11 @@ typedef union {
 extern volatile SLRCONbits_t SLRCONbits __attribute__((address(0xF60)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2719 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 2719 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 2719 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1737,7 +1970,11 @@ typedef union {
 extern volatile WPUBbits_t WPUBbits __attribute__((address(0xF61)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2781 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 2781 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 2781 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1761,7 +1998,11 @@ typedef union {
 extern volatile IOCBbits_t IOCBbits __attribute__((address(0xF62)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2820 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 2820 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 2820 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1806,7 +2047,11 @@ typedef union {
 extern volatile PSTR2CONbits_t PSTR2CONbits __attribute__((address(0xF63)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2960 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 2960 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 2960 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1853,7 +2098,11 @@ typedef union {
 extern volatile ECCP2ASbits_t ECCP2ASbits __attribute__((address(0xF64)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 3085 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 3085 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 3085 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1890,7 +2139,11 @@ typedef union {
 extern volatile CCP2ASbits_t CCP2ASbits __attribute__((address(0xF64)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 3202 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 3202 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 3202 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1920,7 +2173,11 @@ typedef union {
 extern volatile PWM2CONbits_t PWM2CONbits __attribute__((address(0xF65)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 3272 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 3272 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 3272 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1952,7 +2209,11 @@ typedef union {
 extern volatile CCP2CONbits_t CCP2CONbits __attribute__((address(0xF66)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 3354 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 3354 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 3354 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1979,7 +2240,11 @@ typedef union {
 extern volatile CCPR2Lbits_t CCPR2Lbits __attribute__((address(0xF67)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 3381 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 3381 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 3381 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -1999,7 +2264,11 @@ typedef union {
 extern volatile CCPR2Hbits_t CCPR2Hbits __attribute__((address(0xF68)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 3401 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 3401 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 3401 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2026,7 +2295,11 @@ typedef union {
 extern volatile SSP2CON3bits_t SSP2CON3bits __attribute__((address(0xF69)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 3463 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 3463 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 3463 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2056,7 +2329,11 @@ typedef union {
 extern volatile SSP2MSKbits_t SSP2MSKbits __attribute__((address(0xF6A)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 3533 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 3533 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 3533 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2101,7 +2378,11 @@ typedef union {
 extern volatile SSP2CON2bits_t SSP2CON2bits __attribute__((address(0xF6B)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 3678 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 3678 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 3678 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2141,7 +2422,11 @@ typedef union {
 extern volatile SSP2CON1bits_t SSP2CON1bits __attribute__((address(0xF6C)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 3798 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 3798 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 3798 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2286,7 +2571,11 @@ typedef union {
 extern volatile SSP2STATbits_t SSP2STATbits __attribute__((address(0xF6D)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 4198 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 4198 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 4198 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2316,7 +2605,11 @@ typedef union {
 extern volatile SSP2ADDbits_t SSP2ADDbits __attribute__((address(0xF6E)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 4268 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 4268 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 4268 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2336,7 +2629,11 @@ typedef union {
 extern volatile SSP2BUFbits_t SSP2BUFbits __attribute__((address(0xF6F)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 4288 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 4288 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 4288 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2388,7 +2685,11 @@ typedef union {
 extern volatile BAUDCON2bits_t BAUDCON2bits __attribute__((address(0xF70)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 4423 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 4423 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 4423 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2430,7 +2731,11 @@ typedef union {
 extern volatile BAUD2CONbits_t BAUD2CONbits __attribute__((address(0xF70)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 4550 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 4550 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 4550 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2485,7 +2790,11 @@ typedef union {
 extern volatile RCSTA2bits_t RCSTA2bits __attribute__((address(0xF71)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 4698 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 4698 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 4698 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2530,7 +2839,11 @@ typedef union {
 extern volatile RC2STAbits_t RC2STAbits __attribute__((address(0xF71)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 4838 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 4838 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 4838 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2577,7 +2890,11 @@ typedef union {
 extern volatile TXSTA2bits_t TXSTA2bits __attribute__((address(0xF72)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 4968 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 4968 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 4968 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2614,7 +2931,11 @@ typedef union {
 extern volatile TX2STAbits_t TX2STAbits __attribute__((address(0xF72)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 5090 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 5090 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 5090 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2652,7 +2973,11 @@ typedef union {
 extern volatile TX2REGbits_t TX2REGbits __attribute__((address(0xF73)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 5128 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 5128 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 5128 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2690,7 +3015,11 @@ typedef union {
 extern volatile RC2REGbits_t RC2REGbits __attribute__((address(0xF74)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 5166 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 5166 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 5166 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2728,7 +3057,11 @@ typedef union {
 extern volatile SP2BRGbits_t SP2BRGbits __attribute__((address(0xF75)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 5204 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 5204 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 5204 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2766,7 +3099,11 @@ typedef union {
 extern volatile SP2BRGHbits_t SP2BRGHbits __attribute__((address(0xF76)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 5242 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 5242 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 5242 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2798,7 +3135,11 @@ typedef union {
 extern volatile CM2CON1bits_t CM2CON1bits __attribute__((address(0xF77)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 5307 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 5307 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 5307 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2820,7 +3161,11 @@ typedef union {
 extern volatile CM12CONbits_t CM12CONbits __attribute__((address(0xF77)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 5364 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 5364 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 5364 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2886,7 +3231,11 @@ typedef union {
 extern volatile CM2CON0bits_t CM2CON0bits __attribute__((address(0xF78)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 5508 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 5508 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 5508 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -2942,7 +3291,11 @@ typedef union {
 extern volatile CM2CONbits_t CM2CONbits __attribute__((address(0xF78)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 5644 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 5644 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 5644 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3039,7 +3392,11 @@ typedef union {
 extern volatile CM1CON0bits_t CM1CON0bits __attribute__((address(0xF79)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 5859 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 5859 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 5859 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3126,7 +3483,11 @@ typedef union {
 extern volatile CM1CONbits_t CM1CONbits __attribute__((address(0xF79)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 6066 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 6066 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 6066 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3148,7 +3509,11 @@ typedef union {
 extern volatile PIE4bits_t PIE4bits __attribute__((address(0xF7A)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 6098 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 6098 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 6098 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3170,7 +3535,11 @@ typedef union {
 extern volatile PIR4bits_t PIR4bits __attribute__((address(0xF7B)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 6130 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 6130 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 6130 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3195,7 +3564,11 @@ typedef union {
 extern volatile IPR4bits_t IPR4bits __attribute__((address(0xF7C)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 6170 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 6170 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 6170 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3217,7 +3590,11 @@ typedef union {
 extern volatile PIE5bits_t PIE5bits __attribute__((address(0xF7D)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 6202 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 6202 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 6202 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3239,7 +3616,11 @@ typedef union {
 extern volatile PIR5bits_t PIR5bits __attribute__((address(0xF7E)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 6234 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 6234 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 6234 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3265,7 +3646,11 @@ typedef union {
 extern volatile IPR5bits_t IPR5bits __attribute__((address(0xF7F)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 6280 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 6280 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 6280 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3360,7 +3745,11 @@ typedef union {
 extern volatile PORTAbits_t PORTAbits __attribute__((address(0xF80)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 6565 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 6565 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 6565 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3440,7 +3829,11 @@ typedef union {
 extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF81)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 6835 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 6835 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 6835 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3522,7 +3915,11 @@ typedef union {
 extern volatile PORTCbits_t PORTCbits __attribute__((address(0xF82)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 7142 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 7142 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 7142 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3595,7 +3992,11 @@ typedef union {
 extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 7385 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 7385 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 7385 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3655,7 +4056,11 @@ typedef union {
 extern volatile PORTEbits_t PORTEbits __attribute__((address(0xF84)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 7560 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 7560 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 7560 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3692,7 +4097,11 @@ typedef union {
 extern volatile LATAbits_t LATAbits __attribute__((address(0xF89)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 7672 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 7672 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 7672 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3729,7 +4138,11 @@ typedef union {
 extern volatile LATBbits_t LATBbits __attribute__((address(0xF8A)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 7784 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 7784 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 7784 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3766,7 +4179,11 @@ typedef union {
 extern volatile LATCbits_t LATCbits __attribute__((address(0xF8B)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 7896 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 7896 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 7896 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3803,7 +4220,11 @@ typedef union {
 extern volatile LATDbits_t LATDbits __attribute__((address(0xF8C)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 8008 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 8008 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 8008 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3830,7 +4251,11 @@ typedef union {
 extern volatile LATEbits_t LATEbits __attribute__((address(0xF8D)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 8060 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 8060 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 8060 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3872,7 +4297,11 @@ typedef union {
 extern volatile TRISAbits_t TRISAbits __attribute__((address(0xF92)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 8175 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 8175 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 8175 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3904,7 +4333,11 @@ typedef union {
 extern volatile DDRAbits_t DDRAbits __attribute__((address(0xF92)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 8282 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 8282 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 8282 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3946,7 +4379,11 @@ typedef union {
 extern volatile TRISBbits_t TRISBbits __attribute__((address(0xF93)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 8397 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 8397 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 8397 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -3978,7 +4415,11 @@ typedef union {
 extern volatile DDRBbits_t DDRBbits __attribute__((address(0xF93)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 8504 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 8504 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 8504 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4020,7 +4461,11 @@ typedef union {
 extern volatile TRISCbits_t TRISCbits __attribute__((address(0xF94)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 8619 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 8619 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 8619 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4052,7 +4497,11 @@ typedef union {
 extern volatile DDRCbits_t DDRCbits __attribute__((address(0xF94)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 8726 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 8726 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 8726 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4094,7 +4543,11 @@ typedef union {
 extern volatile TRISDbits_t TRISDbits __attribute__((address(0xF95)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 8841 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 8841 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 8841 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4126,7 +4579,11 @@ typedef union {
 extern volatile DDRDbits_t DDRDbits __attribute__((address(0xF95)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 8948 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 8948 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 8948 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4160,7 +4617,11 @@ typedef union {
 extern volatile TRISEbits_t TRISEbits __attribute__((address(0xF96)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 9010 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 9010 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 9010 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4184,7 +4645,11 @@ typedef union {
 extern volatile DDREbits_t DDREbits __attribute__((address(0xF96)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 9064 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 9064 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 9064 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4214,7 +4679,11 @@ typedef union {
 extern volatile OSCTUNEbits_t OSCTUNEbits __attribute__((address(0xF9B)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 9134 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 9134 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 9134 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4265,7 +4734,11 @@ typedef union {
 extern volatile HLVDCONbits_t HLVDCONbits __attribute__((address(0xF9C)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 9278 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 9278 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 9278 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4306,7 +4779,11 @@ typedef union {
 extern volatile LVDCONbits_t LVDCONbits __attribute__((address(0xF9C)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 9414 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 9414 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 9414 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4338,7 +4815,11 @@ typedef union {
 extern volatile PIE1bits_t PIE1bits __attribute__((address(0xF9D)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 9491 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 9491 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 9491 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4370,7 +4851,11 @@ typedef union {
 extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 9568 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 9568 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 9568 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4402,7 +4887,11 @@ typedef union {
 extern volatile IPR1bits_t IPR1bits __attribute__((address(0xF9F)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 9645 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 9645 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 9645 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4438,7 +4927,11 @@ typedef union {
 extern volatile PIE2bits_t PIE2bits __attribute__((address(0xFA0)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 9731 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 9731 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 9731 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4474,7 +4967,11 @@ typedef union {
 extern volatile PIR2bits_t PIR2bits __attribute__((address(0xFA1)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 9817 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 9817 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 9817 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4510,7 +5007,11 @@ typedef union {
 extern volatile IPR2bits_t IPR2bits __attribute__((address(0xFA2)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 9903 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 9903 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 9903 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4550,7 +5051,11 @@ typedef union {
 extern volatile PIE3bits_t PIE3bits __attribute__((address(0xFA3)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 10013 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 10013 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 10013 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4583,7 +5088,11 @@ typedef union {
 extern volatile PIR3bits_t PIR3bits __attribute__((address(0xFA4)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 10091 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 10091 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 10091 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4616,7 +5125,11 @@ typedef union {
 extern volatile IPR3bits_t IPR3bits __attribute__((address(0xFA5)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 10169 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 10169 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 10169 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4647,7 +5160,11 @@ typedef union {
 extern volatile EECON1bits_t EECON1bits __attribute__((address(0xFA6)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 10235 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 10235 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 10235 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4667,7 +5184,11 @@ typedef union {
 extern volatile EECON2bits_t EECON2bits __attribute__((address(0xFA7)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 10255 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 10255 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 10255 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4687,7 +5208,11 @@ typedef union {
 extern volatile EEDATAbits_t EEDATAbits __attribute__((address(0xFA8)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 10275 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 10275 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 10275 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4717,7 +5242,11 @@ typedef union {
 extern volatile EEADRbits_t EEADRbits __attribute__((address(0xFA9)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 10345 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 10345 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 10345 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4741,7 +5270,11 @@ typedef union {
 extern volatile EEADRHbits_t EEADRHbits __attribute__((address(0xFAA)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 10379 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 10379 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 10379 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4804,7 +5337,11 @@ typedef union {
 extern volatile RCSTA1bits_t RCSTA1bits __attribute__((address(0xFAB)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 10540 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 10540 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 10540 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4853,7 +5390,11 @@ typedef union {
 extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0xFAB)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 10686 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 10686 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 10686 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4902,7 +5443,11 @@ typedef union {
 extern volatile RC1STAbits_t RC1STAbits __attribute__((address(0xFAB)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 10835 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 10835 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 10835 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4953,7 +5498,11 @@ typedef union {
 extern volatile TXSTA1bits_t TXSTA1bits __attribute__((address(0xFAC)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 10969 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 10969 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 10969 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -4990,7 +5539,11 @@ typedef union {
 extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0xFAC)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11088 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11088 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11088 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5027,7 +5580,11 @@ typedef union {
 extern volatile TX1STAbits_t TX1STAbits __attribute__((address(0xFAC)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11210 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11210 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11210 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5059,7 +5616,11 @@ typedef union {
 extern volatile TXREG1bits_t TXREG1bits __attribute__((address(0xFAD)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11245 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11245 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11245 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5077,7 +5638,11 @@ typedef union {
 extern volatile TXREGbits_t TXREGbits __attribute__((address(0xFAD)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11265 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11265 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11265 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5095,7 +5660,11 @@ typedef union {
 extern volatile TX1REGbits_t TX1REGbits __attribute__((address(0xFAD)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11288 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11288 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11288 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5127,7 +5696,11 @@ typedef union {
 extern volatile RCREG1bits_t RCREG1bits __attribute__((address(0xFAE)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11323 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11323 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11323 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5145,7 +5718,11 @@ typedef union {
 extern volatile RCREGbits_t RCREGbits __attribute__((address(0xFAE)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11343 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11343 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11343 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5163,7 +5740,11 @@ typedef union {
 extern volatile RC1REGbits_t RC1REGbits __attribute__((address(0xFAE)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11366 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11366 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11366 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5195,7 +5776,11 @@ typedef union {
 extern volatile SPBRG1bits_t SPBRG1bits __attribute__((address(0xFAF)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11401 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11401 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11401 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5213,7 +5798,11 @@ typedef union {
 extern volatile SPBRGbits_t SPBRGbits __attribute__((address(0xFAF)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11421 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11421 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11421 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5231,7 +5820,11 @@ typedef union {
 extern volatile SP1BRGbits_t SP1BRGbits __attribute__((address(0xFAF)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11444 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11444 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11444 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5263,7 +5856,11 @@ typedef union {
 extern volatile SPBRGH1bits_t SPBRGH1bits __attribute__((address(0xFB0)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11479 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11479 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11479 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5281,7 +5878,11 @@ typedef union {
 extern volatile SPBRGHbits_t SPBRGHbits __attribute__((address(0xFB0)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11499 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11499 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11499 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5299,7 +5900,11 @@ typedef union {
 extern volatile SP1BRGHbits_t SP1BRGHbits __attribute__((address(0xFB0)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11522 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11522 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11522 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5342,7 +5947,11 @@ typedef union {
 extern volatile T3CONbits_t T3CONbits __attribute__((address(0xFB1)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11630 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11630 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11630 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5369,7 +5978,11 @@ typedef union {
 extern volatile TMR3Lbits_t TMR3Lbits __attribute__((address(0xFB2)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11657 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11657 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11657 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5389,7 +6002,11 @@ typedef union {
 extern volatile TMR3Hbits_t TMR3Hbits __attribute__((address(0xFB3)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11677 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11677 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11677 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5429,7 +6046,11 @@ typedef union {
 extern volatile T3GCONbits_t T3GCONbits __attribute__((address(0xFB4)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11772 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11772 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11772 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5491,7 +6112,11 @@ typedef union {
 extern volatile ECCP1ASbits_t ECCP1ASbits __attribute__((address(0xFB6)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 11967 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 11967 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 11967 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5543,7 +6168,11 @@ typedef union {
 extern volatile ECCPASbits_t ECCPASbits __attribute__((address(0xFB6)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 12154 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 12154 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 12154 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5591,7 +6220,11 @@ typedef union {
 extern volatile PWM1CONbits_t PWM1CONbits __attribute__((address(0xFB7)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 12285 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 12285 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 12285 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5629,7 +6262,11 @@ typedef union {
 extern volatile PWMCONbits_t PWMCONbits __attribute__((address(0xFB7)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 12408 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 12408 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 12408 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5703,7 +6340,11 @@ typedef union {
 extern volatile BAUDCON1bits_t BAUDCON1bits __attribute__((address(0xFB8)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 12590 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 12590 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 12590 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5759,7 +6400,11 @@ typedef union {
 extern volatile BAUDCONbits_t BAUDCONbits __attribute__((address(0xFB8)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 12753 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 12753 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 12753 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5815,7 +6460,11 @@ typedef union {
 extern volatile BAUDCTLbits_t BAUDCTLbits __attribute__((address(0xFB8)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 12916 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 12916 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 12916 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5871,7 +6520,11 @@ typedef union {
 extern volatile BAUD1CONbits_t BAUD1CONbits __attribute__((address(0xFB8)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 13082 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 13082 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 13082 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5907,7 +6560,11 @@ typedef union {
 extern volatile PSTR1CONbits_t PSTR1CONbits __attribute__((address(0xFB9)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 13161 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 13161 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 13161 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5933,7 +6590,11 @@ typedef union {
 extern volatile PSTRCONbits_t PSTRCONbits __attribute__((address(0xFB9)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 13232 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 13232 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 13232 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5964,7 +6625,11 @@ typedef union {
 extern volatile T2CONbits_t T2CONbits __attribute__((address(0xFBA)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 13303 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 13303 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 13303 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -5984,7 +6649,11 @@ typedef union {
 extern volatile PR2bits_t PR2bits __attribute__((address(0xFBB)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 13323 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 13323 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 13323 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6004,7 +6673,11 @@ typedef union {
 extern volatile TMR2bits_t TMR2bits __attribute__((address(0xFBC)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 13343 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 13343 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 13343 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6036,7 +6709,11 @@ typedef union {
 extern volatile CCP1CONbits_t CCP1CONbits __attribute__((address(0xFBD)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 13425 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 13425 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 13425 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6063,7 +6740,11 @@ typedef union {
 extern volatile CCPR1Lbits_t CCPR1Lbits __attribute__((address(0xFBE)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 13452 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 13452 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 13452 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6083,7 +6764,11 @@ typedef union {
 extern volatile CCPR1Hbits_t CCPR1Hbits __attribute__((address(0xFBF)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 13472 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 13472 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 13472 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6114,7 +6799,11 @@ typedef union {
 extern volatile ADCON2bits_t ADCON2bits __attribute__((address(0xFC0)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 13543 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 13543 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 13543 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6147,7 +6836,11 @@ typedef union {
 extern volatile ADCON1bits_t ADCON1bits __attribute__((address(0xFC1)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 13611 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 13611 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 13611 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6202,7 +6895,11 @@ typedef union {
 extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0xFC2)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 13736 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 13736 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 13736 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6229,7 +6926,11 @@ typedef union {
 extern volatile ADRESLbits_t ADRESLbits __attribute__((address(0xFC3)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 13763 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 13763 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 13763 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6249,7 +6950,11 @@ typedef union {
 extern volatile ADRESHbits_t ADRESHbits __attribute__((address(0xFC4)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 13783 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 13783 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 13783 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6307,7 +7012,11 @@ typedef union {
 extern volatile SSP1CON2bits_t SSP1CON2bits __attribute__((address(0xFC5)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 13964 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 13964 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 13964 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6355,7 +7064,11 @@ typedef union {
 extern volatile SSPCON2bits_t SSPCON2bits __attribute__((address(0xFC5)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 14137 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 14137 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 14137 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6400,7 +7113,11 @@ typedef union {
 extern volatile SSP1CON1bits_t SSP1CON1bits __attribute__((address(0xFC6)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 14260 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 14260 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 14260 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6435,7 +7152,11 @@ typedef union {
 extern volatile SSPCON1bits_t SSPCON1bits __attribute__((address(0xFC6)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 14375 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 14375 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 14375 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6551,7 +7272,11 @@ typedef union {
 extern volatile SSP1STATbits_t SSP1STATbits __attribute__((address(0xFC7)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 14694 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 14694 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 14694 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6657,7 +7382,11 @@ typedef union {
 extern volatile SSPSTATbits_t SSPSTATbits __attribute__((address(0xFC7)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 15005 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 15005 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 15005 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6705,7 +7434,11 @@ typedef union {
 extern volatile SSP1ADDbits_t SSP1ADDbits __attribute__((address(0xFC8)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 15136 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 15136 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 15136 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6743,7 +7476,11 @@ typedef union {
 extern volatile SSPADDbits_t SSPADDbits __attribute__((address(0xFC8)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 15259 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 15259 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 15259 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6771,7 +7508,11 @@ typedef union {
 extern volatile SSP1BUFbits_t SSP1BUFbits __attribute__((address(0xFC9)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 15290 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 15290 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 15290 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6789,7 +7530,11 @@ typedef union {
 extern volatile SSPBUFbits_t SSPBUFbits __attribute__((address(0xFC9)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 15313 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 15313 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 15313 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6824,7 +7569,11 @@ typedef union {
 extern volatile SSP1MSKbits_t SSP1MSKbits __attribute__((address(0xFCA)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 15386 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 15386 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 15386 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6849,7 +7598,11 @@ typedef union {
 extern volatile SSPMSKbits_t SSPMSKbits __attribute__((address(0xFCA)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 15451 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 15451 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 15451 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6881,7 +7634,11 @@ typedef union {
 extern volatile SSP1CON3bits_t SSP1CON3bits __attribute__((address(0xFCB)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 15516 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 15516 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 15516 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6903,7 +7660,11 @@ typedef union {
 extern volatile SSPCON3bits_t SSPCON3bits __attribute__((address(0xFCB)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 15573 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 15573 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 15573 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6943,7 +7704,11 @@ typedef union {
 extern volatile T1GCONbits_t T1GCONbits __attribute__((address(0xFCC)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 15668 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 15668 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 15668 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -6986,7 +7751,11 @@ typedef union {
 extern volatile T1CONbits_t T1CONbits __attribute__((address(0xFCD)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 15781 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 15781 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 15781 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7013,7 +7782,11 @@ typedef union {
 extern volatile TMR1Lbits_t TMR1Lbits __attribute__((address(0xFCE)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 15808 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 15808 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 15808 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7033,7 +7806,11 @@ typedef union {
 extern volatile TMR1Hbits_t TMR1Hbits __attribute__((address(0xFCF)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 15828 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 15828 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 15828 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7086,7 +7863,11 @@ typedef union {
 extern volatile RCONbits_t RCONbits __attribute__((address(0xFD0)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 15961 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 15961 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 15961 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7109,7 +7890,11 @@ typedef union {
 extern volatile WDTCONbits_t WDTCONbits __attribute__((address(0xFD1)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 15989 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 15989 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 15989 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7136,7 +7921,11 @@ typedef union {
 extern volatile OSCCON2bits_t OSCCON2bits __attribute__((address(0xFD2)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16046 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16046 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16046 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7169,7 +7958,11 @@ typedef union {
 extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0xFD3)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16129 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16129 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16129 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7199,7 +7992,11 @@ typedef union {
 extern volatile T0CONbits_t T0CONbits __attribute__((address(0xFD5)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16199 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16199 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16199 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7226,7 +8023,11 @@ typedef union {
 extern volatile TMR0Lbits_t TMR0Lbits __attribute__((address(0xFD6)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16226 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16226 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16226 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7246,7 +8047,11 @@ typedef union {
 extern volatile TMR0Hbits_t TMR0Hbits __attribute__((address(0xFD7)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16246 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16246 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16246 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7277,7 +8082,11 @@ typedef union {
 extern volatile STATUSbits_t STATUSbits __attribute__((address(0xFD8)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16317 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16317 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16317 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7304,7 +8113,11 @@ typedef union {
 extern volatile FSR2Lbits_t FSR2Lbits __attribute__((address(0xFD9)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16344 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16344 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16344 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7331,7 +8144,11 @@ typedef union {
 extern volatile PLUSW2bits_t PLUSW2bits __attribute__((address(0xFDB)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16371 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16371 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16371 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7351,7 +8168,11 @@ typedef union {
 extern volatile PREINC2bits_t PREINC2bits __attribute__((address(0xFDC)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16391 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16391 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16391 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7371,7 +8192,11 @@ typedef union {
 extern volatile POSTDEC2bits_t POSTDEC2bits __attribute__((address(0xFDD)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16411 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16411 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16411 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7391,7 +8216,11 @@ typedef union {
 extern volatile POSTINC2bits_t POSTINC2bits __attribute__((address(0xFDE)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16431 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16431 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16431 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7411,7 +8240,11 @@ typedef union {
 extern volatile INDF2bits_t INDF2bits __attribute__((address(0xFDF)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16451 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16451 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16451 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7445,7 +8278,11 @@ typedef union {
 extern volatile FSR1Lbits_t FSR1Lbits __attribute__((address(0xFE1)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16485 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16485 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16485 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7472,7 +8309,11 @@ typedef union {
 extern volatile PLUSW1bits_t PLUSW1bits __attribute__((address(0xFE3)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16512 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16512 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16512 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7492,7 +8333,11 @@ typedef union {
 extern volatile PREINC1bits_t PREINC1bits __attribute__((address(0xFE4)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16532 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16532 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16532 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7512,7 +8357,11 @@ typedef union {
 extern volatile POSTDEC1bits_t POSTDEC1bits __attribute__((address(0xFE5)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16552 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16552 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16552 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7532,7 +8381,11 @@ typedef union {
 extern volatile POSTINC1bits_t POSTINC1bits __attribute__((address(0xFE6)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16572 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16572 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16572 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7552,7 +8405,11 @@ typedef union {
 extern volatile INDF1bits_t INDF1bits __attribute__((address(0xFE7)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16592 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16592 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16592 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7590,7 +8447,11 @@ typedef union {
 extern volatile Wbits_t Wbits __attribute__((address(0xFE8)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16630 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16630 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16630 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7617,7 +8478,11 @@ typedef union {
 extern volatile FSR0Lbits_t FSR0Lbits __attribute__((address(0xFE9)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16657 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16657 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16657 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7644,7 +8509,11 @@ typedef union {
 extern volatile PLUSW0bits_t PLUSW0bits __attribute__((address(0xFEB)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16684 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16684 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16684 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7664,7 +8533,11 @@ typedef union {
 extern volatile PREINC0bits_t PREINC0bits __attribute__((address(0xFEC)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16704 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16704 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16704 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7684,7 +8557,11 @@ typedef union {
 extern volatile POSTDEC0bits_t POSTDEC0bits __attribute__((address(0xFED)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16724 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16724 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16724 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7704,7 +8581,11 @@ typedef union {
 extern volatile POSTINC0bits_t POSTINC0bits __attribute__((address(0xFEE)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16744 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16744 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16744 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7724,7 +8605,11 @@ typedef union {
 extern volatile INDF0bits_t INDF0bits __attribute__((address(0xFEF)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16764 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16764 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16764 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7761,7 +8646,11 @@ typedef union {
 extern volatile INTCON3bits_t INTCON3bits __attribute__((address(0xFF0)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16856 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16856 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16856 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7796,7 +8685,11 @@ typedef union {
 extern volatile INTCON2bits_t INTCON2bits __attribute__((address(0xFF1)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 16926 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 16926 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 16926 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7838,7 +8731,11 @@ typedef union {
 extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 17043 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 17043 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 17043 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7865,7 +8762,11 @@ typedef union {
 extern volatile PRODLbits_t PRODLbits __attribute__((address(0xFF3)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 17070 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 17070 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 17070 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7885,7 +8786,11 @@ typedef union {
 extern volatile PRODHbits_t PRODHbits __attribute__((address(0xFF4)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 17090 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 17090 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 17090 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7905,7 +8810,11 @@ typedef union {
 extern volatile TABLATbits_t TABLATbits __attribute__((address(0xFF5)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 17111 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 17111 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 17111 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7933,7 +8842,11 @@ typedef union {
 extern volatile TBLPTRLbits_t TBLPTRLbits __attribute__((address(0xFF6)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 17139 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 17139 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 17139 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7953,7 +8866,11 @@ typedef union {
 extern volatile TBLPTRHbits_t TBLPTRHbits __attribute__((address(0xFF7)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 17159 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 17159 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 17159 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -7977,7 +8894,11 @@ typedef union {
 extern volatile TBLPTRUbits_t TBLPTRUbits __attribute__((address(0xFF8)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 17189 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 17189 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 17189 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -8012,7 +8933,11 @@ typedef union {
 extern volatile PCLbits_t PCLbits __attribute__((address(0xFF9)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 17224 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 17224 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 17224 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -8032,7 +8957,11 @@ typedef union {
 extern volatile PCLATHbits_t PCLATHbits __attribute__((address(0xFFA)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 17244 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 17244 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 17244 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -8078,7 +9007,11 @@ typedef union {
 extern volatile STKPTRbits_t STKPTRbits __attribute__((address(0xFFC)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 17356 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 17356 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 17356 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -8106,7 +9039,11 @@ typedef union {
 extern volatile TOSLbits_t TOSLbits __attribute__((address(0xFFD)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 17384 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 17384 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 17384 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -8126,11 +9063,19 @@ typedef union {
 extern volatile TOSHbits_t TOSHbits __attribute__((address(0xFFE)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 17404 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
 extern volatile unsigned char TOSU __attribute__((address(0xFFF)));
 
 __asm("TOSU equ 0FFFh");
 # 17421 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\proc\\pic18f46k22.h" 3
+=======
+# 17404 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+extern volatile unsigned char TOSU __attribute__((address(0xFFF)));
+
+__asm("TOSU equ 0FFFh");
+# 17421 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 17404 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\proc\\pic18f46k22.h" 3
 extern volatile unsigned char TOSU __attribute__((address(0xFFF)));
@@ -11538,9 +12483,15 @@ extern volatile __bit nW2 __attribute__((address(0x7B6A)));
 extern volatile __bit nWRITE2 __attribute__((address(0x7B6A)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 859 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\pic18_chip_select.h" 2 3
 # 8 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\pic18.h" 2 3
 # 19 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\pic18.h" 3
+=======
+# 230 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\pic18_chip_select.h" 2 3
+# 9 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\pic18.h" 2 3
+# 19 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\pic18.h" 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 230 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\pic18_chip_select.h" 2 3
 # 9 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\pic18.h" 2 3
@@ -11562,6 +12513,7 @@ __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer suppor
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\errata.h" 1 3
 # 27 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\pic18.h" 2 3
 # 156 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\pic18.h" 3
@@ -11572,6 +12524,18 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\xc.h" 2 3
+=======
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\errata.h" 1 3
+# 28 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\pic18.h" 2 3
+# 156 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\pic18.h" 3
+__attribute__((__unsupported__("The " "Read_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) unsigned char Read_b_eep(unsigned int badd);
+__attribute__((__unsupported__("The " "Busy_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Busy_eep(void);
+__attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
+# 192 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\pic18.h" 3
+unsigned char __t1rd16on(void);
+unsigned char __t3rd16on(void);
+# 33 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 2 3
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\errata.h" 1 3
 # 28 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\\pic\\include\\pic18.h" 2 3
@@ -11669,6 +12633,7 @@ void Test(void);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 char Text1 [20] = {"Hello!"};
 char Text2 [26] = {"My love!"};
 char Text3 [30] = {"Welcome to this"};
@@ -11676,11 +12641,16 @@ char Text4 [30] = {"Microcontroller!"};
 =======
 =======
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
+=======
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 
 unsigned char Text2 [26] = {"Everyone!"};
 unsigned char Text3 [30] = {"Welcome to this"};
 unsigned char Text4 [30] = {"Microcontroller!"};
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
+=======
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
@@ -11742,7 +12712,11 @@ void Init_LCD(void) {
     Send_Instruction_Data(0, 0x01);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     _delay((unsigned long)((10)*(16000000/4000.0)));
+=======
+    _delay((unsigned long)((100)*(16000000/4000.0)));
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 =======
     _delay((unsigned long)((100)*(16000000/4000.0)));
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a

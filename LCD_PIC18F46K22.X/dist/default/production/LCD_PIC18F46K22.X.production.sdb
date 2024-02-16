@@ -29,6 +29,7 @@
 [v ___omul __omul `(uo  1 e 8 0 ]
 <<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
 <<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
+<<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
 "46 B:\MPLAB_Projects\College_Research\LCD_PIC18F46K22.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "64
@@ -54,10 +55,20 @@
 [v _Init_LCD Init_LCD `(v  1 e 1 0 ]
 "106
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46k22.X.production.sdb
+=======
+"47 C:\Apps\Git\Repositories\College_Research\LCD_PIC18F46k22.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"66
+[v _Configurations Configurations `(v  1 e 1 0 ]
+"87
+[v _Init_LCD Init_LCD `(v  1 e 1 0 ]
+"106
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46k22.X.production.sdb
 [v _Send_Instruction_Data Send_Instruction_Data `(v  1 e 1 0 ]
 "115
 [v _LCD_Instruction LCD_Instruction `(v  1 e 1 0 ]
 "128
+<<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
 <<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
 <<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
 [v _Test Test `(v  1 e 1 0 ]
@@ -72,6 +83,13 @@
 "163 C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f46k22.h
 [u S46 . 1 `S38 1 . 1 0 ]
 [v _ANSELCbits ANSELCbits `VES46  1 e 1 @3898 ]
+=======
+[v _Send_String Send_String `(v  1 e 1 0 ]
+"140
+[v _Test Test `(v  1 e 1 0 ]
+"147 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
+[v _ANSELC ANSELC `VEuc  1 e 1 @3898 ]
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46k22.X.production.sdb
 =======
 [v _Send_String Send_String `(v  1 e 1 0 ]
 "140
@@ -138,9 +156,13 @@
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
 <<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
 <<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
+<<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
 "39 B:\MPLAB_Projects\College_Research\LCD_PIC18F46K22.X\main.c
 [v _Text1 Text1 `[20]uc  1 e 20 0 ]
 "40
+=======
+"41 C:\Apps\Git\Repositories\College_Research\LCD_PIC18F46k22.X\main.c
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46k22.X.production.sdb
 =======
 "41 C:\Apps\Git\Repositories\College_Research\LCD_PIC18F46k22.X\main.c
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46k22.X.production.sdb
@@ -155,6 +177,7 @@
 "47
 [v _main main `(v  1 e 1 0 ]
 {
+<<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
 <<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
 <<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
 "60
@@ -240,6 +263,36 @@
 } 0
 "106
 >>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46k22.X.production.sdb
+=======
+"62
+} 0
+"140
+[v _Test Test `(v  1 e 1 0 ]
+{
+"166
+[v Test@j j `i  1 a 2 13 ]
+"156
+[v Test@i_184 i `i  1 a 2 11 ]
+"148
+[v Test@i i `i  1 a 2 9 ]
+"172
+} 0
+"128
+[v _Send_String Send_String `(v  1 e 1 0 ]
+{
+"130
+[v Send_String@i i `uc  1 a 1 6 ]
+"128
+[v Send_String@String String `*.31uc  1 p 1 4 ]
+"136
+} 0
+"87
+[v _Init_LCD Init_LCD `(v  1 e 1 0 ]
+{
+"102
+} 0
+"106
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46k22.X.production.sdb
 [v _Send_Instruction_Data Send_Instruction_Data `(v  1 e 1 0 ]
 {
 [v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 wreg ]
@@ -247,9 +300,15 @@
 [v Send_Instruction_Data@Data Data `uc  1 p 1 2 ]
 <<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
 <<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
+<<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
 "107
 [v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 3 ]
 "111
+=======
+"108
+[v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 3 ]
+"112
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46k22.X.production.sdb
 =======
 "108
 [v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 3 ]
@@ -272,10 +331,17 @@
 } 0
 <<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
 <<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
+<<<<<<< HEAD:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46K22.X.production.sdb
 "64
 [v _Configurations Configurations `(v  1 e 1 0 ]
 {
 "82
+=======
+"66
+[v _Configurations Configurations `(v  1 e 1 0 ]
+{
+"83
+>>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a:LCD_PIC18F46K22.X/dist/default/production/LCD_PIC18F46k22.X.production.sdb
 =======
 "66
 [v _Configurations Configurations `(v  1 e 1 0 ]
