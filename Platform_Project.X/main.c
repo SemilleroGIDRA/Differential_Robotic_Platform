@@ -49,11 +49,8 @@ void main(void) {
     Init_LCD();
 
     Send_Instruction_Data(Set, ROW2);
-<<<<<<< HEAD
-    Send_String("Hello World!");
-=======
+
     Send_String("Robotic Platform");
->>>>>>> 0a9a756187d57018cb2e94c9adb85b9f27d14747
 
     //Infinite Loop. 
     while (1) {
@@ -207,8 +204,3 @@ void Receive_Interrupt(void) {
     }
 
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0a9a756187d57018cb2e94c9adb85b9f27d14747

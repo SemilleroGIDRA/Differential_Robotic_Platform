@@ -9747,7 +9747,8 @@ void main(void) {
     Init_LCD();
 
     Send_Instruction_Data(0, 0xC0);
-    Send_String("Hello World!");
+
+    Send_String("Robotic Platform");
 
 
     while (1) {
@@ -9815,7 +9816,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 130 "main.c"
+# 131 "main.c"
 }
 
 
