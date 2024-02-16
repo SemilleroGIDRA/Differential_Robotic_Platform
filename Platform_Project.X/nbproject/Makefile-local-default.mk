@@ -15,36 +15,15 @@
 # $ makeMP_CC="/opt/microchip/mplabc30/v3.30c/bin/pic30-gcc" ...  
 #
 SHELL=cmd.exe
-<<<<<<< HEAD
-PATH_TO_IDE_BIN=B:/Applications/MPLAB/Data/mplab_platform/platform/../mplab_ide/modules/../../bin/
-# Adding MPLAB X bin directory to path.
-PATH:=B:/Applications/MPLAB/Data/mplab_platform/platform/../mplab_ide/modules/../../bin/:$(PATH)
-# Path to java used to run MPLAB X when this makefile was created
-MP_JAVA_PATH="B:\Applications\MPLAB\Data\sys\java\zulu8.64.0.19-ca-fx-jre8.0.345-win_x64/bin/"
-=======
 PATH_TO_IDE_BIN=C:/Program Files/Microchip/MPLABX/v6.20/mplab_platform/platform/../mplab_ide/modules/../../bin/
 # Adding MPLAB X bin directory to path.
 PATH:=C:/Program Files/Microchip/MPLABX/v6.20/mplab_platform/platform/../mplab_ide/modules/../../bin/:$(PATH)
 # Path to java used to run MPLAB X when this makefile was created
 MP_JAVA_PATH="C:\Program Files\Microchip\MPLABX\v6.20\sys\java\zulu8.64.0.19-ca-fx-jre8.0.345-win_x64/bin/"
->>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 OS_CURRENT="$(shell uname -s)"
 MP_CC="C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"
 # MP_CPPC is not defined
 # MP_BC is not defined
-<<<<<<< HEAD
-MP_AS="C:\Program Files\Microchip\xc8\v2.41\bin\xc8-cc.exe"
-MP_LD="C:\Program Files\Microchip\xc8\v2.41\bin\xc8-cc.exe"
-MP_AR="C:\Program Files\Microchip\xc8\v2.41\bin\xc8-ar.exe"
-DEP_GEN=${MP_JAVA_PATH}java -jar "B:/Applications/MPLAB/Data/mplab_platform/platform/../mplab_ide/modules/../../bin/extractobjectdependencies.jar"
-MP_CC_DIR="C:\Program Files\Microchip\xc8\v2.41\bin"
-# MP_CPPC_DIR is not defined
-# MP_BC_DIR is not defined
-MP_AS_DIR="C:\Program Files\Microchip\xc8\v2.41\bin"
-MP_LD_DIR="C:\Program Files\Microchip\xc8\v2.41\bin"
-MP_AR_DIR="C:\Program Files\Microchip\xc8\v2.41\bin"
-DFP_DIR=C:/Users/Alejandro/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249
-=======
 MP_AS="C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"
 MP_LD="C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"
 MP_AR="C:\Program Files\Microchip\xc8\v2.46\bin\xc8-ar.exe"
@@ -56,4 +35,3 @@ MP_AS_DIR="C:\Program Files\Microchip\xc8\v2.46\bin"
 MP_LD_DIR="C:\Program Files\Microchip\xc8\v2.46\bin"
 MP_AR_DIR="C:\Program Files\Microchip\xc8\v2.46\bin"
 DFP_DIR=C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292
->>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a

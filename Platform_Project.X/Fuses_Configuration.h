@@ -1,11 +1,9 @@
 /* 
- * File:   Fuses_Set.h
+ * File:   Fuses_Configuration.h
  * Author: Alejo
  *
- * Created on January 12, 2024, 9:41 AM
+ * Created on February 14, 2024, 6:14 PM
  */
-
-
 
 // PIC18F46K22 Configuration Bit Settings
 // 'C' source line config statements
@@ -27,7 +25,7 @@
 
 // CONFIG3H
 #pragma config CCP2MX = PORTC1  // CCP2 MUX bit (CCP2 input/output is multiplexed with RC1)
-#pragma config PBADEN = OFF     // PORTB A/D Enable bit (PORTB<5:0> pins are configured as digital I/O on Reset)
+#pragma config PBADEN = ON      // PORTB A/D Enable bit (PORTB<5:0> pins are configured as analog input channels on Reset)
 #pragma config CCP3MX = PORTB5  // P3A/CCP3 Mux bit (P3A/CCP3 input/output is multiplexed with RB5)
 #pragma config HFOFST = ON      // HFINTOSC Fast Start-up (HFINTOSC output and ready status are not delayed by the oscillator stable status)
 #pragma config T3CMX = PORTC0   // Timer3 Clock input mux bit (T3CKI is on RC0)
@@ -75,3 +73,4 @@
 #include <xc.h>
 
 #define _XTAL_FREQ 16000000
+

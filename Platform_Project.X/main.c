@@ -2,13 +2,13 @@
  * File:   main.c
  * Author: Alejo
  *
- * Created on February 14, 2024, 4:06 PM
+ * Created on February 14, 2024, 6:11 PM
  */
 
 
 #include <xc.h>
+#include <stdint.h>
 #include "Fuses_Configuration.h"
-#include <stdint.h> //Function to use 8 bits integer
 
 //Instructions or commands of the LCD 
 #define CLR 0x01 //Command to clear the LCD. 
@@ -25,48 +25,51 @@
 #define Set 0 //Command to configuration an instruction. 
 #define Write 1 //Command to write on the LCD. 
 
-//Pins of the LCD 
+//Pins of the LCD.
 #define RS LATCbits.LATC4 //Define pin (RC4) Register Select as bit flag.
 #define EN LATCbits.LATC5 //Define pin (RC5) Enable as bit flag.
 
-//Prototype Functions.
+//Prototype functions. 
 void Configurations(void); //Function to set registers.
 void Init_LCD(void); //Function to initialize the LCD. 
 void LCD_Instruction(unsigned char Instruction); //Function to send data or instruction inside LCD.
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data); //Function to enable or disable RS.
-void Send_String(unsigned char *String);
-void Test(void);
-<<<<<<< HEAD
-//Global variables. 
-char Text1 [20] = {"Hello!"}; //Variable to show on first row of the LCD.
-char Text2 [26] = {"My love!"}; //Variable to show on the second row of the LCD. 
-char Text3 [30] = {"Welcome to this"};
-char Text4 [30] = {"Microcontroller!"};
-=======
->>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
+void Send_String(unsigned char *String); //Function to send data to the LCD.
+void Receive_Interrupt(void);
 
-//Global variables. 
-unsigned char Text2 [26] = {"Everyone!"}; //Variable to show on the second row of the LCD. 
-unsigned char Text3 [30] = {"Welcome to this"};
-unsigned char Text4 [30] = {"Microcontroller!"};
+//Global variables.
+unsigned char Rx_Buffer;
 
-//Main function 
+//Main function.
 
 void main(void) {
 
     //Call functions. 
     Configurations();
     Init_LCD();
-    Test();
 
-    //Infinite loop.
+    Send_Instruction_Data(Set, ROW2);
+    Send_String("Hello World!");
+
+    //Infinite Loop. 
     while (1) {
 
 
 
     }
 
-    return;
+}
+
+//Develop interrupt function
+
+void __interrupt() Interrupts(void) {
+
+    if (PIR1bits.RC1IF) { //Check interrupt has been activated. 
+
+        Receive_Interrupt();
+
+    }
+
 }
 
 //Develop configurations function
@@ -88,6 +91,42 @@ void Configurations(void) {
 
     LATD = 0;
 
+    //---- Interrupts Configurations ----
+    INTCONbits.GIE = 1; //Global Interrupt Enabled. 
+    INTCONbits.PEIE = 1; //Peripheral Interrupt Enabled. 
+    RCONbits.IPEN = 0; //Interrupt Priority disabled. 
+
+    PIE1bits.RC1IE = 1; //Receive Enabled. 
+    PIR1bits.RC1IF = 0; //Receive Flag cleared. 
+
+    //---- EUSART Configurations ----
+    SPBRG = 103; //Configuration 9600 bauds. 
+    TRISCbits.RC6 = 1; //Enable pin RC6 (TX1).
+    TRISCbits.RC7 = 1; //Enable pin RC7 (RX1).
+
+    //---- Transmitter configuration TXSTA1 (TX). 
+    TXSTA1bits.TX91 = 0; //9 bits transmitter disabled. 
+    TXSTA1bits.TXEN1 = 1; //Transmit Enabled. 
+    TXSTA1bits.SYNC1 = 0; //Asynchronous mode. 
+    TXSTA1bits.BRGH1 = 1; //High baud rate. 
+
+    //---- Receive configuration RCSTA1 register (RX).
+    RCSTAbits.SPEN1 = 1; //Serial port enable bit. 
+    RCSTAbits.RX91 = 0; //9 bits transmitter disabled. 
+    RCSTAbits.CREN1 = 1; //Receive continuous enabled. 
+
+    //---- Baud configuration BAUDCON1. 
+    BAUDCON1bits.BRG16 = 0; //16 bits mode disabled. 
+
+    /*
+     
+     Remember data buffers. 
+     * 
+        RCREG1; ----> Receive buffer.
+        TXREG1; ----> Transmitter buffer.
+      
+     */
+
 }
 
 //Develop initialize LCD function.
@@ -99,15 +138,6 @@ void Init_LCD(void) {
     __delay_ms(5); //Delay set by the manufacturer. 
     Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer. 
     __delay_ms(5); //Delay set by the manufacturer. 
-<<<<<<< HEAD
-    Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer.  
-    Send_Instruction_Data(Set, 0x02); //Data set by the manufacturer.
-    Send_Instruction_Data(Set, EMS);
-    Send_Instruction_Data(Set, DC);
-    Send_Instruction_Data(Set, FS);
-    Send_Instruction_Data(Set, CLR);
-    __delay_ms(10); //Delay set by the manufacturer. 
-=======
     Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer. 
     Send_Instruction_Data(Set, 0x02); //Data set by the manufacturer. 
     Send_Instruction_Data(Set, EMS); //Send entry mode set.
@@ -115,7 +145,6 @@ void Init_LCD(void) {
     Send_Instruction_Data(Set, FS); //Send command control.
     Send_Instruction_Data(Set, CLR); //Send clear LCD. 
     __delay_ms(100); //Delay set by the manufacturer. 
->>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
 
 }
 
@@ -153,46 +182,24 @@ void Send_String(unsigned char *String) { //Receiver string data.
 
 }
 
-//Develop test function to send data to show in LCD.
+void Receive_Interrupt(void) {
 
-void Test(void) {
+    Rx_Buffer = RCREG1;
 
-    Send_Instruction_Data(Set, ROW1);
-    Send_String("Hello World!");
+    if (Rx_Buffer == 'A') {
 
-    __delay_ms(1000);
+        Send_Instruction_Data(Set, ROW1);
+        Send_String("Data test: A");
 
-    Send_Instruction_Data(Set, ROW2);
-    for (int i = 0; Text3[i] != '\0'; i++) {
+    } else if (Rx_Buffer == 'B') {
 
-        Send_Instruction_Data(Write, Text3[i]);
+        Send_Instruction_Data(Set, ROW4);
+        Send_String("Platform!");
 
+    } else if (Rx_Buffer == 'C') {
+
+        Send_Instruction_Data(Set, CLR);
+        
     }
-
-    Send_Instruction_Data(Set, ROW3);
-
-    for (int i = 0; Text4[i] != '\0'; i++) {
-
-        Send_Instruction_Data(Write, Text4[i]);
-
-    }
-
-    __delay_ms(100);
-
-    Send_Instruction_Data(Set, ROW4);
-
-    for (int j = 0; Text2[j] != '\0'; j++) {
-
-        Send_Instruction_Data(Write, Text2[j]);
-
-    }
-
-<<<<<<< HEAD
-    __delay_ms(5000);
-
-    Send_Instruction_Data(Set, CLR);
 
 }
-=======
-}
->>>>>>> 17905a16d7b320c39b54fa0a352bb63a9431c71a
