@@ -17,6 +17,11 @@
 #define _XTAL_FREQ 16000000 //  Internal crystal frequency configuration (16Mhz). 
 #define Time 1000
 
+#define Forward 0x11
+#define Backward 0x06
+#define Shift_Right 0x08
+#define Shift_Left 0x02
+
 //  Functions prototype.
 void Configurations(void);
 
