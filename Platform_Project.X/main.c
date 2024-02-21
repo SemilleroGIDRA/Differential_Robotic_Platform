@@ -64,9 +64,9 @@ void main(void) {
 
 }
 
-//Develop interrupt function
+//Develop interrupt high priority function.
 
-void __interrupt() Interrupts(void) {
+void __interrupt(high_priority) Interrupt_Rx(void) {
 
     if (PIR1bits.RC1IF) { //Check interrupt has been activated. 
 
@@ -75,6 +75,14 @@ void __interrupt() Interrupts(void) {
     }
 
 }
+
+//Develop interrupt low priority function.
+
+void __interrupt(low_priority) Interrupt(void){
+    
+    
+    
+} 
 
 //Develop configurations function
 

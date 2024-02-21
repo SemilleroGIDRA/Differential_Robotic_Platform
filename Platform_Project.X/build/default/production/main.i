@@ -9761,13 +9761,21 @@ void main(void) {
 
 
 
-void __attribute__((picinterrupt(("")))) Interrupts(void) {
+void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
 
     if (PIR1bits.RC1IF) {
 
         Receive_Interrupt();
 
     }
+
+}
+
+
+
+void __attribute__((picinterrupt(("low_priority")))) Interrupt(void){
+
+
 
 }
 
@@ -9816,7 +9824,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 134 "main.c"
+# 142 "main.c"
 }
 
 
