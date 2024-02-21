@@ -9727,13 +9727,14 @@ unsigned char __t3rd16on(void);
 
 #pragma config EBTRB = OFF
 # 11 "main.c" 2
-# 39 "main.c"
+# 41 "main.c"
 void Configurations(void);
 void Init_LCD(void);
 void LCD_Instruction(unsigned char Instruction);
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
 void Send_String(unsigned char *String);
 void Receive_Interrupt(void);
+void Moving_Platform(unsigned char Command);
 
 
 unsigned char Rx_Buffer;
@@ -9772,7 +9773,7 @@ void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
 
 
 
-void __attribute__((picinterrupt(("low_priority")))) Interrupt(void){
+void __attribute__((picinterrupt(("low_priority")))) Interrupt(void) {
 
 
 
@@ -9786,16 +9787,18 @@ void Configurations(void) {
 
     ANSELC = 0;
     ANSELD = 0;
+    ANSELE = 0;
 
     TRISCbits.RC4 = 0;
     TRISCbits.RC5 = 0;
-
     TRISD = 0;
+    TRISE = 0;
+
 
     LATCbits.LC4 = 0;
     LATCbits.LC5 = 0;
-
     LATD = 0;
+    LATE = 0;
 
 
     INTCONbits.GIE = 1;
@@ -9823,7 +9826,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 144 "main.c"
+# 149 "main.c"
 }
 
 
@@ -9883,20 +9886,28 @@ void Receive_Interrupt(void) {
 
     Rx_Buffer = RCREG1;
 
-    if (Rx_Buffer == 'A') {
+    switch (Rx_Buffer) {
 
-        Send_Instruction_Data(0, 0X80);
-        Send_String("Data test: A");
+        case 'M':
+            Moving_Platform(0b10100000);
+            break;
 
-    } else if (Rx_Buffer == 'B') {
+        case 'A':
+            Moving_Platform(0b01010000);
+            break;
 
-        Send_Instruction_Data(0, 0XD4);
-        Send_String("Platform!");
-
-    } else if (Rx_Buffer == 'C') {
-
-        Send_Instruction_Data(0, 0x01);
+        default:
+            LATD = 0x00;
+            break;
 
     }
+
+}
+
+void Moving_Platform(unsigned char Command) {
+
+    LATEbits.LATE0 = 1;
+    LATEbits.LATE2 = 1;
+    LATD = Command;
 
 }

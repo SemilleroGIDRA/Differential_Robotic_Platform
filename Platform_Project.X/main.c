@@ -30,10 +30,12 @@
 #define EN LATCbits.LATC5 //Define pin (RC5) Enable as bit flag.
 
 //Driver LN298 commands to move platform.
-#define Forward 0x11
-#define Backward 0x06 
+#define Forward 0b10100000
+#define Backward 0b01010000
 #define Shift_Right 0x08 
 #define Shift_Left 0x02
+#define Right_Motor LATEbits.LATE0
+#define Left_Motor LATEbits.LATE2
 
 //Prototype functions. 
 void Configurations(void); //Function to set registers.
@@ -42,6 +44,7 @@ void LCD_Instruction(unsigned char Instruction); //Function to send data or inst
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data); //Function to enable or disable RS.
 void Send_String(unsigned char *String); //Function to send data to the LCD.
 void Receive_Interrupt(void);
+void Moving_Platform(unsigned char Command);
 
 //Global variables.
 unsigned char Rx_Buffer;
@@ -80,11 +83,11 @@ void __interrupt(high_priority) Interrupt_Rx(void) {
 
 //Develop interrupt low priority function.
 
-void __interrupt(low_priority) Interrupt(void){
-    
-    
-    
-} 
+void __interrupt(low_priority) Interrupt(void) {
+
+
+
+}
 
 //Develop configurations function
 
@@ -94,16 +97,18 @@ void Configurations(void) {
     //Set pins as digital
     ANSELC = 0;
     ANSELD = 0;
+    ANSELE = 0;
     //Set pins as outputs
     TRISCbits.RC4 = 0;
     TRISCbits.RC5 = 0;
-
     TRISD = 0;
+    TRISE = 0;
+
     //Clean pins 
     LATCbits.LC4 = 0;
     LATCbits.LC5 = 0;
-
     LATD = 0;
+    LATE = 0;
 
     //---- Interrupts Configurations ----
     INTCONbits.GIE = 1; //Global Interrupt Enabled. 
@@ -200,20 +205,28 @@ void Receive_Interrupt(void) {
 
     Rx_Buffer = RCREG1;
 
-    if (Rx_Buffer == 'A') {
+    switch (Rx_Buffer) {
 
-        Send_Instruction_Data(Set, ROW1);
-        Send_String("Data test: A");
+        case 'M':
+            Moving_Platform(Forward);
+            break;
 
-    } else if (Rx_Buffer == 'B') {
+        case 'A':
+            Moving_Platform(Backward);
+            break;
 
-        Send_Instruction_Data(Set, ROW4);
-        Send_String("Platform!");
+        default:
+            LATD = 0x00;
+            break;
 
-    } else if (Rx_Buffer == 'C') {
-
-        Send_Instruction_Data(Set, CLR);
-        
     }
+
+}
+
+void Moving_Platform(unsigned char Command) {
+
+    Right_Motor = 1;
+    Left_Motor = 1;
+    LATD = Command;
 
 }
