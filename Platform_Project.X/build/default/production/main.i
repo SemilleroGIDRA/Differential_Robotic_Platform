@@ -9727,7 +9727,7 @@ unsigned char __t3rd16on(void);
 
 #pragma config EBTRB = OFF
 # 11 "main.c" 2
-# 33 "main.c"
+# 36 "main.c"
 void Configurations(void);
 void Init_LCD(void);
 void LCD_Instruction(unsigned char Instruction);
@@ -9793,7 +9793,7 @@ void Configurations(void) {
 
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
-    RCONbits.IPEN = 0;
+    RCONbits.IPEN = 1;
 
     PIE1bits.RC1IE = 1;
     PIR1bits.RC1IF = 0;
@@ -9816,7 +9816,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 131 "main.c"
+# 134 "main.c"
 }
 
 

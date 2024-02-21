@@ -29,6 +29,9 @@
 #define RS LATCbits.LATC4 //Define pin (RC4) Register Select as bit flag.
 #define EN LATCbits.LATC5 //Define pin (RC5) Enable as bit flag.
 
+//Driver LN298 
+
+
 //Prototype functions. 
 void Configurations(void); //Function to set registers.
 void Init_LCD(void); //Function to initialize the LCD. 
@@ -95,7 +98,7 @@ void Configurations(void) {
     //---- Interrupts Configurations ----
     INTCONbits.GIE = 1; //Global Interrupt Enabled. 
     INTCONbits.PEIE = 1; //Peripheral Interrupt Enabled. 
-    RCONbits.IPEN = 0; //Interrupt Priority disabled. 
+    RCONbits.IPEN = 1; //Interrupt Priority Enabled. 
 
     PIE1bits.RC1IE = 1; //Receive Enabled. 
     PIR1bits.RC1IF = 0; //Receive Flag cleared. 
