@@ -29,8 +29,11 @@
 #define RS LATCbits.LATC4 //Define pin (RC4) Register Select as bit flag.
 #define EN LATCbits.LATC5 //Define pin (RC5) Enable as bit flag.
 
-//Driver LN298 
-
+//Driver LN298 commands to move platform.
+#define Forward 0x11
+#define Backward 0x06 
+#define Shift_Right 0x08 
+#define Shift_Left 0x02
 
 //Prototype functions. 
 void Configurations(void); //Function to set registers.
@@ -52,7 +55,6 @@ void main(void) {
     Init_LCD();
 
     Send_Instruction_Data(Set, ROW2);
-
     Send_String("Robotic Platform");
 
     //Infinite Loop. 

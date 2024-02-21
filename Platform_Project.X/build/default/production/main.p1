@@ -1,16 +1,16 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"36 main.c
-[; ;main.c: 36: void Configurations(void);
+"39 main.c
+[; ;main.c: 39: void Configurations(void);
 [v _Configurations `(v ~T0 @X0 0 ef ]
-"37
-[; ;main.c: 37: void Init_LCD(void);
-[v _Init_LCD `(v ~T0 @X0 0 ef ]
-"39
-[; ;main.c: 39: void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
-[v _Send_Instruction_Data `(v ~T0 @X0 0 ef2`uc`uc ]
 "40
-[; ;main.c: 40: void Send_String(unsigned char *String);
+[; ;main.c: 40: void Init_LCD(void);
+[v _Init_LCD `(v ~T0 @X0 0 ef ]
+"42
+[; ;main.c: 42: void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
+[v _Send_Instruction_Data `(v ~T0 @X0 0 ef2`uc`uc ]
+"43
+[; ;main.c: 43: void Send_String(unsigned char *String);
 [v _Send_String `(v ~T0 @X0 0 ef1`*uc ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt high_priority ]
@@ -29,8 +29,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "9513
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9513: extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
 [v _PIR1bits `VS440 ~T0 @X0 0 e@3998 ]
-"41 main.c
-[; ;main.c: 41: void Receive_Interrupt(void);
+"44 main.c
+[; ;main.c: 44: void Receive_Interrupt(void);
 [v _Receive_Interrupt `(v ~T0 @X0 0 ef ]
 [t T2 __interrupt low_priority ]
 "16046 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
@@ -239,8 +239,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "20 C:\Program Files\Microchip\xc8\v2.46\pic\include\builtins.h
 [v __delay `JF205 ~T0 @X0 0 e ]
 [p i __delay ]
-"38 main.c
-[; ;main.c: 38: void LCD_Instruction(unsigned char Instruction);
+"41 main.c
+[; ;main.c: 41: void LCD_Instruction(unsigned char Instruction);
 [v _LCD_Instruction `(v ~T0 @X0 0 ef1`uc ]
 "11288 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11288: extern volatile unsigned char RCREG1 __attribute__((address(0xFAE)));
@@ -1080,175 +1080,169 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3  =  OFF       ]
 "68
 [p x EBTRB  =  OFF       ]
-"44 main.c
-[; ;main.c: 44: unsigned char Rx_Buffer;
+"47 main.c
+[; ;main.c: 47: unsigned char Rx_Buffer;
 [v _Rx_Buffer `uc ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"48
-[; ;main.c: 48: void main(void) {
+"51
+[; ;main.c: 51: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"51
-[; ;main.c: 51:     Configurations();
-[e ( _Configurations ..  ]
-"52
-[; ;main.c: 52:     Init_LCD();
-[e ( _Init_LCD ..  ]
 "54
-[; ;main.c: 54:     Send_Instruction_Data(0, 0xC0);
+[; ;main.c: 54:     Configurations();
+[e ( _Configurations ..  ]
+"55
+[; ;main.c: 55:     Init_LCD();
+[e ( _Init_LCD ..  ]
+"57
+[; ;main.c: 57:     Send_Instruction_Data(0, 0xC0);
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
-"56
-[; ;main.c: 56:     Send_String("Robotic Platform");
+"58
+[; ;main.c: 58:     Send_String("Robotic Platform");
 [e ( _Send_String (1 :s 1C ]
-"59
-[; ;main.c: 59:     while (1) {
+"61
+[; ;main.c: 61:     while (1) {
 [e :U 856 ]
 {
-"63
-[; ;main.c: 63:     }
+"65
+[; ;main.c: 65:     }
 }
 [e :U 855 ]
 [e $U 856  ]
 [e :U 857 ]
-"65
-[; ;main.c: 65: }
+"67
+[; ;main.c: 67: }
 [e :UE 854 ]
 }
 [v $root$_Interrupt_Rx `(v ~T0 @X0 0 e ]
-"69
-[; ;main.c: 69: void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
+"71
+[; ;main.c: 71: void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
 [v _Interrupt_Rx `(v ~T1 @X0 1 ef ]
 {
 [e :U _Interrupt_Rx ]
 [f ]
-"71
-[; ;main.c: 71:     if (PIR1bits.RC1IF) {
+"73
+[; ;main.c: 73:     if (PIR1bits.RC1IF) {
 [e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 859  ]
 {
-"73
-[; ;main.c: 73:         Receive_Interrupt();
-[e ( _Receive_Interrupt ..  ]
 "75
-[; ;main.c: 75:     }
+[; ;main.c: 75:         Receive_Interrupt();
+[e ( _Receive_Interrupt ..  ]
+"77
+[; ;main.c: 77:     }
 }
 [e :U 859 ]
-"77
-[; ;main.c: 77: }
+"79
+[; ;main.c: 79: }
 [e :UE 858 ]
 }
 [v $root$_Interrupt `(v ~T0 @X0 0 e ]
-"81
-[; ;main.c: 81: void __attribute__((picinterrupt(("low_priority")))) Interrupt(void){
+"83
+[; ;main.c: 83: void __attribute__((picinterrupt(("low_priority")))) Interrupt(void){
 [v _Interrupt `(v ~T2 @X0 1 ef ]
 {
 [e :U _Interrupt ]
 [f ]
-"85
-[; ;main.c: 85: }
+"87
+[; ;main.c: 87: }
 [e :UE 860 ]
 }
-"89
-[; ;main.c: 89: void Configurations(void) {
+"91
+[; ;main.c: 91: void Configurations(void) {
 [v _Configurations `(v ~T0 @X0 1 ef ]
 {
 [e :U _Configurations ]
 [f ]
-"91
-[; ;main.c: 91:     OSCCON = 0x72;
-[e = _OSCCON -> -> 114 `i `uc ]
 "93
-[; ;main.c: 93:     ANSELC = 0;
+[; ;main.c: 93:     OSCCON = 0x72;
+[e = _OSCCON -> -> 114 `i `uc ]
+"95
+[; ;main.c: 95:     ANSELC = 0;
 [e = _ANSELC -> -> 0 `i `uc ]
-"94
-[; ;main.c: 94:     ANSELD = 0;
-[e = _ANSELD -> -> 0 `i `uc ]
 "96
-[; ;main.c: 96:     TRISCbits.RC4 = 0;
+[; ;main.c: 96:     ANSELD = 0;
+[e = _ANSELD -> -> 0 `i `uc ]
+"98
+[; ;main.c: 98:     TRISCbits.RC4 = 0;
 [e = . . _TRISCbits 1 4 -> -> 0 `i `uc ]
-"97
-[; ;main.c: 97:     TRISCbits.RC5 = 0;
-[e = . . _TRISCbits 1 5 -> -> 0 `i `uc ]
 "99
-[; ;main.c: 99:     TRISD = 0;
-[e = _TRISD -> -> 0 `i `uc ]
+[; ;main.c: 99:     TRISCbits.RC5 = 0;
+[e = . . _TRISCbits 1 5 -> -> 0 `i `uc ]
 "101
-[; ;main.c: 101:     LATCbits.LC4 = 0;
+[; ;main.c: 101:     TRISD = 0;
+[e = _TRISD -> -> 0 `i `uc ]
+"103
+[; ;main.c: 103:     LATCbits.LC4 = 0;
 [e = . . _LATCbits 1 4 -> -> 0 `i `uc ]
-"102
-[; ;main.c: 102:     LATCbits.LC5 = 0;
-[e = . . _LATCbits 1 5 -> -> 0 `i `uc ]
 "104
-[; ;main.c: 104:     LATD = 0;
+[; ;main.c: 104:     LATCbits.LC5 = 0;
+[e = . . _LATCbits 1 5 -> -> 0 `i `uc ]
+"106
+[; ;main.c: 106:     LATD = 0;
 [e = _LATD -> -> 0 `i `uc ]
-"107
-[; ;main.c: 107:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"108
-[; ;main.c: 108:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
 "109
-[; ;main.c: 109:     RCONbits.IPEN = 1;
-[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
+[; ;main.c: 109:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"110
+[; ;main.c: 110:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
 "111
-[; ;main.c: 111:     PIE1bits.RC1IE = 1;
+[; ;main.c: 111:     RCONbits.IPEN = 1;
+[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
+"113
+[; ;main.c: 113:     PIE1bits.RC1IE = 1;
 [e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
-"112
-[; ;main.c: 112:     PIR1bits.RC1IF = 0;
+"114
+[; ;main.c: 114:     PIR1bits.RC1IF = 0;
 [e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-"115
-[; ;main.c: 115:     SPBRG = 103;
-[e = _SPBRG -> -> 103 `i `uc ]
-"116
-[; ;main.c: 116:     TRISCbits.RC6 = 1;
-[e = . . _TRISCbits 1 6 -> -> 1 `i `uc ]
 "117
-[; ;main.c: 117:     TRISCbits.RC7 = 1;
+[; ;main.c: 117:     SPBRG = 103;
+[e = _SPBRG -> -> 103 `i `uc ]
+"118
+[; ;main.c: 118:     TRISCbits.RC6 = 1;
+[e = . . _TRISCbits 1 6 -> -> 1 `i `uc ]
+"119
+[; ;main.c: 119:     TRISCbits.RC7 = 1;
 [e = . . _TRISCbits 1 7 -> -> 1 `i `uc ]
-"120
-[; ;main.c: 120:     TXSTA1bits.TX91 = 0;
-[e = . . _TXSTA1bits 1 6 -> -> 0 `i `uc ]
-"121
-[; ;main.c: 121:     TXSTA1bits.TXEN1 = 1;
-[e = . . _TXSTA1bits 1 5 -> -> 1 `i `uc ]
 "122
-[; ;main.c: 122:     TXSTA1bits.SYNC1 = 0;
-[e = . . _TXSTA1bits 1 4 -> -> 0 `i `uc ]
+[; ;main.c: 122:     TXSTA1bits.TX91 = 0;
+[e = . . _TXSTA1bits 1 6 -> -> 0 `i `uc ]
 "123
-[; ;main.c: 123:     TXSTA1bits.BRGH1 = 1;
+[; ;main.c: 123:     TXSTA1bits.TXEN1 = 1;
+[e = . . _TXSTA1bits 1 5 -> -> 1 `i `uc ]
+"124
+[; ;main.c: 124:     TXSTA1bits.SYNC1 = 0;
+[e = . . _TXSTA1bits 1 4 -> -> 0 `i `uc ]
+"125
+[; ;main.c: 125:     TXSTA1bits.BRGH1 = 1;
 [e = . . _TXSTA1bits 1 2 -> -> 1 `i `uc ]
-"126
-[; ;main.c: 126:     RCSTAbits.SPEN1 = 1;
-[e = . . _RCSTAbits 2 7 -> -> 1 `i `uc ]
-"127
-[; ;main.c: 127:     RCSTAbits.RX91 = 0;
-[e = . . _RCSTAbits 2 6 -> -> 0 `i `uc ]
 "128
-[; ;main.c: 128:     RCSTAbits.CREN1 = 1;
+[; ;main.c: 128:     RCSTAbits.SPEN1 = 1;
+[e = . . _RCSTAbits 2 7 -> -> 1 `i `uc ]
+"129
+[; ;main.c: 129:     RCSTAbits.RX91 = 0;
+[e = . . _RCSTAbits 2 6 -> -> 0 `i `uc ]
+"130
+[; ;main.c: 130:     RCSTAbits.CREN1 = 1;
 [e = . . _RCSTAbits 2 4 -> -> 1 `i `uc ]
-"131
-[; ;main.c: 131:     BAUDCON1bits.BRG16 = 0;
+"133
+[; ;main.c: 133:     BAUDCON1bits.BRG16 = 0;
 [e = . . _BAUDCON1bits 0 3 -> -> 0 `i `uc ]
-"142
-[; ;main.c: 142: }
+"144
+[; ;main.c: 144: }
 [e :UE 861 ]
 }
-"146
-[; ;main.c: 146: void Init_LCD(void) {
+"148
+[; ;main.c: 148: void Init_LCD(void) {
 [v _Init_LCD `(v ~T0 @X0 1 ef ]
 {
 [e :U _Init_LCD ]
 [f ]
-"148
-[; ;main.c: 148:     _delay((unsigned long)((60)*(16000000/4000.0)));
-[e ( __delay (1 -> * -> -> 60 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"149
-[; ;main.c: 149:     Send_Instruction_Data(0, 0x30);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 48 `i `uc ]
 "150
-[; ;main.c: 150:     _delay((unsigned long)((5)*(16000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;main.c: 150:     _delay((unsigned long)((60)*(16000000/4000.0)));
+[e ( __delay (1 -> * -> -> 60 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "151
 [; ;main.c: 151:     Send_Instruction_Data(0, 0x30);
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 48 `i `uc ]
@@ -1259,157 +1253,163 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 153:     Send_Instruction_Data(0, 0x30);
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 48 `i `uc ]
 "154
-[; ;main.c: 154:     Send_Instruction_Data(0, 0x02);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
+[; ;main.c: 154:     _delay((unsigned long)((5)*(16000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "155
-[; ;main.c: 155:     Send_Instruction_Data(0, 0x06);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 6 `i `uc ]
+[; ;main.c: 155:     Send_Instruction_Data(0, 0x30);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 48 `i `uc ]
 "156
-[; ;main.c: 156:     Send_Instruction_Data(0, 0x0F);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 15 `i `uc ]
+[; ;main.c: 156:     Send_Instruction_Data(0, 0x02);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
 "157
-[; ;main.c: 157:     Send_Instruction_Data(0, 0x28);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 40 `i `uc ]
+[; ;main.c: 157:     Send_Instruction_Data(0, 0x06);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 6 `i `uc ]
 "158
-[; ;main.c: 158:     Send_Instruction_Data(0, 0x01);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 158:     Send_Instruction_Data(0, 0x0F);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 15 `i `uc ]
 "159
-[; ;main.c: 159:     _delay((unsigned long)((100)*(16000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;main.c: 159:     Send_Instruction_Data(0, 0x28);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 40 `i `uc ]
+"160
+[; ;main.c: 160:     Send_Instruction_Data(0, 0x01);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "161
-[; ;main.c: 161: }
+[; ;main.c: 161:     _delay((unsigned long)((100)*(16000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+"163
+[; ;main.c: 163: }
 [e :UE 862 ]
 }
-"165
-[; ;main.c: 165: void Send_Instruction_Data(unsigned char Instruction, unsigned char Data) {
+"167
+[; ;main.c: 167: void Send_Instruction_Data(unsigned char Instruction, unsigned char Data) {
 [v _Send_Instruction_Data `(v ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _Send_Instruction_Data ]
 [v _Instruction `uc ~T0 @X0 1 r1 ]
 [v _Data `uc ~T0 @X0 1 r2 ]
 [f ]
-"167
-[; ;main.c: 167:     LATCbits.LATC4 = Instruction;
-[e = . . _LATCbits 0 4 _Instruction ]
-"168
-[; ;main.c: 168:     LCD_Instruction(Data >> 4);
-[e ( _LCD_Instruction (1 -> >> -> _Data `i -> 4 `i `uc ]
 "169
-[; ;main.c: 169:     LCD_Instruction(Data);
-[e ( _LCD_Instruction (1 _Data ]
+[; ;main.c: 169:     LATCbits.LATC4 = Instruction;
+[e = . . _LATCbits 0 4 _Instruction ]
+"170
+[; ;main.c: 170:     LCD_Instruction(Data >> 4);
+[e ( _LCD_Instruction (1 -> >> -> _Data `i -> 4 `i `uc ]
 "171
-[; ;main.c: 171: }
+[; ;main.c: 171:     LCD_Instruction(Data);
+[e ( _LCD_Instruction (1 _Data ]
+"173
+[; ;main.c: 173: }
 [e :UE 863 ]
 }
-"174
-[; ;main.c: 174: void LCD_Instruction(unsigned char Instruction) {
+"176
+[; ;main.c: 176: void LCD_Instruction(unsigned char Instruction) {
 [v _LCD_Instruction `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _LCD_Instruction ]
 [v _Instruction `uc ~T0 @X0 1 r1 ]
 [f ]
-"176
-[; ;main.c: 176:     LATCbits.LATC5 = 1;
-[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
-"177
-[; ;main.c: 177:     _delay((unsigned long)((15)*(16000000/4000.0)));
-[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "178
-[; ;main.c: 178:     LATD = Instruction;
-[e = _LATD _Instruction ]
+[; ;main.c: 178:     LATCbits.LATC5 = 1;
+[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
 "179
 [; ;main.c: 179:     _delay((unsigned long)((15)*(16000000/4000.0)));
 [e ( __delay (1 -> * -> -> 15 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "180
-[; ;main.c: 180:     LATCbits.LATC5 = 0;
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 180:     LATD = Instruction;
+[e = _LATD _Instruction ]
 "181
 [; ;main.c: 181:     _delay((unsigned long)((15)*(16000000/4000.0)));
 [e ( __delay (1 -> * -> -> 15 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+"182
+[; ;main.c: 182:     LATCbits.LATC5 = 0;
+[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
 "183
-[; ;main.c: 183: }
+[; ;main.c: 183:     _delay((unsigned long)((15)*(16000000/4000.0)));
+[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+"185
+[; ;main.c: 185: }
 [e :UE 864 ]
 }
-"187
-[; ;main.c: 187: void Send_String(unsigned char *String) {
+"189
+[; ;main.c: 189: void Send_String(unsigned char *String) {
 [v _Send_String `(v ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _Send_String ]
 [v _String `*uc ~T0 @X0 1 r1 ]
 [f ]
-"189
-[; ;main.c: 189:     for (uint8_t i = 0; String[i] != '\0'; i++) {
+"191
+[; ;main.c: 191:     for (uint8_t i = 0; String[i] != '\0'; i++) {
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $U 869  ]
 [e :U 866 ]
 {
-"191
-[; ;main.c: 191:         Send_Instruction_Data(1, String[i]);
-[e ( _Send_Instruction_Data (2 , -> -> 1 `i `uc *U + _String * -> _i `ux -> -> # *U _String `ui `ux ]
 "193
-[; ;main.c: 193:     }
+[; ;main.c: 193:         Send_Instruction_Data(1, String[i]);
+[e ( _Send_Instruction_Data (2 , -> -> 1 `i `uc *U + _String * -> _i `ux -> -> # *U _String `ui `ux ]
+"195
+[; ;main.c: 195:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 869 ]
 [e $ != -> *U + _String * -> _i `ux -> -> # *U _String `ui `ux `ui -> 0 `ui 866  ]
 [e :U 867 ]
 }
-"195
-[; ;main.c: 195: }
+"197
+[; ;main.c: 197: }
 [e :UE 865 ]
 }
-"197
-[; ;main.c: 197: void Receive_Interrupt(void) {
+"199
+[; ;main.c: 199: void Receive_Interrupt(void) {
 [v _Receive_Interrupt `(v ~T0 @X0 1 ef ]
 {
 [e :U _Receive_Interrupt ]
 [f ]
-"199
-[; ;main.c: 199:     Rx_Buffer = RCREG1;
-[e = _Rx_Buffer _RCREG1 ]
 "201
-[; ;main.c: 201:     if (Rx_Buffer == 'A') {
+[; ;main.c: 201:     Rx_Buffer = RCREG1;
+[e = _Rx_Buffer _RCREG1 ]
+"203
+[; ;main.c: 203:     if (Rx_Buffer == 'A') {
 [e $ ! == -> _Rx_Buffer `ui -> 65 `ui 871  ]
 {
-"203
-[; ;main.c: 203:         Send_Instruction_Data(0, 0X80);
+"205
+[; ;main.c: 205:         Send_Instruction_Data(0, 0X80);
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
-"204
-[; ;main.c: 204:         Send_String("Data test: A");
-[e ( _Send_String (1 :s 2C ]
 "206
-[; ;main.c: 206:     } else if (Rx_Buffer == 'B') {
+[; ;main.c: 206:         Send_String("Data test: A");
+[e ( _Send_String (1 :s 2C ]
+"208
+[; ;main.c: 208:     } else if (Rx_Buffer == 'B') {
 }
 [e $U 872  ]
 [e :U 871 ]
 [e $ ! == -> _Rx_Buffer `ui -> 66 `ui 873  ]
 {
-"208
-[; ;main.c: 208:         Send_Instruction_Data(0, 0XD4);
+"210
+[; ;main.c: 210:         Send_Instruction_Data(0, 0XD4);
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 212 `i `uc ]
-"209
-[; ;main.c: 209:         Send_String("Platform!");
-[e ( _Send_String (1 :s 3C ]
 "211
-[; ;main.c: 211:     } else if (Rx_Buffer == 'C') {
+[; ;main.c: 211:         Send_String("Platform!");
+[e ( _Send_String (1 :s 3C ]
+"213
+[; ;main.c: 213:     } else if (Rx_Buffer == 'C') {
 }
 [e $U 874  ]
 [e :U 873 ]
 [e $ ! == -> _Rx_Buffer `ui -> 67 `ui 875  ]
 {
-"213
-[; ;main.c: 213:         Send_Instruction_Data(0, 0x01);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "215
-[; ;main.c: 215:     }
+[; ;main.c: 215:         Send_Instruction_Data(0, 0x01);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"217
+[; ;main.c: 217:     }
 }
 [e :U 875 ]
 [e :U 874 ]
 [e :U 872 ]
-"217
-[; ;main.c: 217: }
+"219
+[; ;main.c: 219: }
 [e :UE 870 ]
 }
 [a 1C 82 111 98 111 116 105 99 32 80 108 97 116 102 111 114 109 0 ]

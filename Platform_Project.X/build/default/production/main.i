@@ -9727,7 +9727,7 @@ unsigned char __t3rd16on(void);
 
 #pragma config EBTRB = OFF
 # 11 "main.c" 2
-# 36 "main.c"
+# 39 "main.c"
 void Configurations(void);
 void Init_LCD(void);
 void LCD_Instruction(unsigned char Instruction);
@@ -9747,7 +9747,6 @@ void main(void) {
     Init_LCD();
 
     Send_Instruction_Data(0, 0xC0);
-
     Send_String("Robotic Platform");
 
 
@@ -9824,7 +9823,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 142 "main.c"
+# 144 "main.c"
 }
 
 

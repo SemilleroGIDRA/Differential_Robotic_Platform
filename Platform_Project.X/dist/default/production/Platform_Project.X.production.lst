@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
-                                                                                               Wed Feb 21 15:54:02 2024
+                                                                                               Wed Feb 21 16:37:36 2024
 
 Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
      1                           	processor	18F46K22
@@ -255,7 +255,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    241 ;;
    242 ;; *************** function _main *****************
    243 ;; Defined at:
-   244 ;;		line 48 in file "main.c"
+   244 ;;		line 51 in file "main.c"
    245 ;; Parameters:    Size  Location     Type
    246 ;;		None
    247 ;; Auto vars:     Size  Location     Type
@@ -296,19 +296,19 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    277   0012AE                     _main:
    278                           	callstack 22
    279   0012AE                     
-   280                           ;main.c: 51:     Configurations();
+   280                           ;main.c: 54:     Configurations();
    281   0012AE  EC9F  F008         	call	_Configurations	;wreg free
    282   0012B2                     
-   283                           ;main.c: 52:     Init_LCD();
+   283                           ;main.c: 55:     Init_LCD();
    284   0012B2  EC15  F008         	call	_Init_LCD	;wreg free
    285   0012B6                     
-   286                           ;main.c: 54:     Send_Instruction_Data(0, 0xC0);
+   286                           ;main.c: 57:     Send_Instruction_Data(0, 0xC0);
    287   0012B6  0EC0               	movlw	192
    288   0012B8  6E0F               	movwf	Send_Instruction_Data@Data^0,c
    289   0012BA  0E00               	movlw	0
    290   0012BC  EC68  F009         	call	_Send_Instruction_Data
    291   0012C0                     
-   292                           ;main.c: 56:     Send_String("Robotic Platform");
+   292                           ;main.c: 58:     Send_String("Robotic Platform");
    293   0012C0  0E01               	movlw	low STR_1
    294   0012C2  6E11               	movwf	Send_String@String^0,c
    295   0012C4  ECC0  F008         	call	_Send_String	;wreg free
@@ -320,7 +320,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    301                           
    302 ;; *************** function _Send_String *****************
    303 ;; Defined at:
-   304 ;;		line 187 in file "main.c"
+   304 ;;		line 189 in file "main.c"
    305 ;; Parameters:    Size  Location     Type
    306 ;;  String          1   16[COMRAM] PTR unsigned char 
    307 ;;		 -> STR_3(10), STR_2(13), STR_1(17), 
@@ -360,13 +360,13 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    336   001180                     _Send_String:
    337                           	callstack 22
    338   001180                     
-   339                           ;main.c: 189:     for (uint8_t i = 0; String[i] != '\0'; i++) {
+   339                           ;main.c: 191:     for (uint8_t i = 0; String[i] != '\0'; i++) {
    340   001180  0E00               	movlw	0
    341   001182  6E13               	movwf	Send_String@i^0,c
    342   001184  EFD0  F008         	goto	l973
    343   001188                     l969:
    344                           
-   345                           ;main.c: 191:         Send_Instruction_Data(1, String[i]);
+   345                           ;main.c: 193:         Send_Instruction_Data(1, String[i]);
    346   001188  5011               	movf	Send_String@String^0,w,c
    347   00118A  2413               	addwf	Send_String@i^0,w,c
    348   00118C  6E12               	movwf	??_Send_String^0,c
@@ -382,7 +382,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    358   001198  0E01               	movlw	1
    359   00119A  EC68  F009         	call	_Send_Instruction_Data
    360   00119E                     
-   361                           ;main.c: 193:     }
+   361                           ;main.c: 195:     }
    362   00119E  2A13               	incf	Send_String@i^0,f,c
    363   0011A0                     l973:
    364   0011A0  5011               	movf	Send_String@String^0,w,c
@@ -410,7 +410,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    386                           
    387 ;; *************** function _Init_LCD *****************
    388 ;; Defined at:
-   389 ;;		line 146 in file "main.c"
+   389 ;;		line 148 in file "main.c"
    390 ;; Parameters:    Size  Location     Type
    391 ;;		None
    392 ;; Auto vars:     Size  Location     Type
@@ -449,7 +449,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    420   00102A                     _Init_LCD:
    421                           	callstack 22
    422   00102A                     
-   423                           ;main.c: 148:     _delay((unsigned long)((60)*(16000000/4000.0)));
+   423                           ;main.c: 150:     _delay((unsigned long)((60)*(16000000/4000.0)));
    424   00102A  0E02               	movlw	2
    425   00102C  6E12               	movwf	(??_Init_LCD+1)^0,c
    426   00102E  0E38               	movlw	56
@@ -464,13 +464,13 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    435   00103E  D7FA               	bra	u177
    436   001040  0000               	nop	
    437   001042                     
-   438                           ;main.c: 149:     Send_Instruction_Data(0, 0x30);
+   438                           ;main.c: 151:     Send_Instruction_Data(0, 0x30);
    439   001042  0E30               	movlw	48
    440   001044  6E0F               	movwf	Send_Instruction_Data@Data^0,c
    441   001046  0E00               	movlw	0
    442   001048  EC68  F009         	call	_Send_Instruction_Data
    443   00104C                     
-   444                           ;main.c: 150:     _delay((unsigned long)((5)*(16000000/4000.0)));
+   444                           ;main.c: 152:     _delay((unsigned long)((5)*(16000000/4000.0)));
    445   00104C  0E1A               	movlw	26
    446   00104E  6E11               	movwf	??_Init_LCD^0,c
    447   001050  0EF8               	movlw	248
@@ -481,13 +481,13 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    452   001058  D7FC               	bra	u187
    453   00105A  D000               	nop2	
    454                           
-   455                           ;main.c: 151:     Send_Instruction_Data(0, 0x30);
+   455                           ;main.c: 153:     Send_Instruction_Data(0, 0x30);
    456   00105C  0E30               	movlw	48
    457   00105E  6E0F               	movwf	Send_Instruction_Data@Data^0,c
    458   001060  0E00               	movlw	0
    459   001062  EC68  F009         	call	_Send_Instruction_Data
    460   001066                     
-   461                           ;main.c: 152:     _delay((unsigned long)((5)*(16000000/4000.0)));
+   461                           ;main.c: 154:     _delay((unsigned long)((5)*(16000000/4000.0)));
    462   001066  0E1A               	movlw	26
    463   001068  6E11               	movwf	??_Init_LCD^0,c
    464   00106A  0EF8               	movlw	248
@@ -498,43 +498,43 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    469   001072  D7FC               	bra	u197
    470   001074  D000               	nop2	
    471   001076                     
-   472                           ;main.c: 153:     Send_Instruction_Data(0, 0x30);
+   472                           ;main.c: 155:     Send_Instruction_Data(0, 0x30);
    473   001076  0E30               	movlw	48
    474   001078  6E0F               	movwf	Send_Instruction_Data@Data^0,c
    475   00107A  0E00               	movlw	0
    476   00107C  EC68  F009         	call	_Send_Instruction_Data
    477   001080                     
-   478                           ;main.c: 154:     Send_Instruction_Data(0, 0x02);
+   478                           ;main.c: 156:     Send_Instruction_Data(0, 0x02);
    479   001080  0E02               	movlw	2
    480   001082  6E0F               	movwf	Send_Instruction_Data@Data^0,c
    481   001084  0E00               	movlw	0
    482   001086  EC68  F009         	call	_Send_Instruction_Data
    483   00108A                     
-   484                           ;main.c: 155:     Send_Instruction_Data(0, 0x06);
+   484                           ;main.c: 157:     Send_Instruction_Data(0, 0x06);
    485   00108A  0E06               	movlw	6
    486   00108C  6E0F               	movwf	Send_Instruction_Data@Data^0,c
    487   00108E  0E00               	movlw	0
    488   001090  EC68  F009         	call	_Send_Instruction_Data
    489   001094                     
-   490                           ;main.c: 156:     Send_Instruction_Data(0, 0x0F);
+   490                           ;main.c: 158:     Send_Instruction_Data(0, 0x0F);
    491   001094  0E0F               	movlw	15
    492   001096  6E0F               	movwf	Send_Instruction_Data@Data^0,c
    493   001098  0E00               	movlw	0
    494   00109A  EC68  F009         	call	_Send_Instruction_Data
    495   00109E                     
-   496                           ;main.c: 157:     Send_Instruction_Data(0, 0x28);
+   496                           ;main.c: 159:     Send_Instruction_Data(0, 0x28);
    497   00109E  0E28               	movlw	40
    498   0010A0  6E0F               	movwf	Send_Instruction_Data@Data^0,c
    499   0010A2  0E00               	movlw	0
    500   0010A4  EC68  F009         	call	_Send_Instruction_Data
    501   0010A8                     
-   502                           ;main.c: 158:     Send_Instruction_Data(0, 0x01);
+   502                           ;main.c: 160:     Send_Instruction_Data(0, 0x01);
    503   0010A8  0E01               	movlw	1
    504   0010AA  6E0F               	movwf	Send_Instruction_Data@Data^0,c
    505   0010AC  0E00               	movlw	0
    506   0010AE  EC68  F009         	call	_Send_Instruction_Data
    507   0010B2                     
-   508                           ;main.c: 159:     _delay((unsigned long)((100)*(16000000/4000.0)));
+   508                           ;main.c: 161:     _delay((unsigned long)((100)*(16000000/4000.0)));
    509   0010B2  0E03               	movlw	3
    510   0010B4  6E12               	movwf	(??_Init_LCD+1)^0,c
    511   0010B6  0E08               	movlw	8
@@ -554,7 +554,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    525                           
    526 ;; *************** function _Send_Instruction_Data *****************
    527 ;; Defined at:
-   528 ;;		line 165 in file "main.c"
+   528 ;;		line 167 in file "main.c"
    529 ;; Parameters:    Size  Location     Type
    530 ;;  Instruction     1    wreg     unsigned char 
    531 ;;  Data            1   14[COMRAM] unsigned char 
@@ -600,7 +600,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    566                           ;Send_Instruction_Data@Instruction stored from wreg
    567   0012D0  6E10               	movwf	Send_Instruction_Data@Instruction^0,c
    568   0012D2                     
-   569                           ;main.c: 167:     LATCbits.LATC4 = Instruction;
+   569                           ;main.c: 169:     LATCbits.LATC4 = Instruction;
    570   0012D2  B010               	btfsc	Send_Instruction_Data@Instruction^0,0,c
    571   0012D4  D002               	bra	u105
    572   0012D6  988B               	bcf	139,4,c	;volatile
@@ -609,12 +609,12 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    575   0012DA  888B               	bsf	139,4,c	;volatile
    576   0012DC                     u106:
    577   0012DC                     
-   578                           ;main.c: 168:     LCD_Instruction(Data >> 4);
+   578                           ;main.c: 170:     LCD_Instruction(Data >> 4);
    579   0012DC  380F               	swapf	Send_Instruction_Data@Data^0,w,c
    580   0012DE  0B0F               	andlw	15
    581   0012E0  EC00  F009         	call	_LCD_Instruction
    582   0012E4                     
-   583                           ;main.c: 169:     LCD_Instruction(Data);
+   583                           ;main.c: 171:     LCD_Instruction(Data);
    584   0012E4  500F               	movf	Send_Instruction_Data@Data^0,w,c
    585   0012E6  EC00  F009         	call	_LCD_Instruction
    586   0012EA  0012               	return		;funcret
@@ -623,7 +623,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    589                           
    590 ;; *************** function _LCD_Instruction *****************
    591 ;; Defined at:
-   592 ;;		line 174 in file "main.c"
+   592 ;;		line 176 in file "main.c"
    593 ;; Parameters:    Size  Location     Type
    594 ;;  Instruction     1    wreg     unsigned char 
    595 ;; Auto vars:     Size  Location     Type
@@ -666,10 +666,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    627                           ;LCD_Instruction@Instruction stored from wreg
    628   001200  6E0E               	movwf	LCD_Instruction@Instruction^0,c
    629   001202                     
-   630                           ;main.c: 176:     LATCbits.LATC5 = 1;
+   630                           ;main.c: 178:     LATCbits.LATC5 = 1;
    631   001202  8A8B               	bsf	139,5,c	;volatile
    632   001204                     
-   633                           ;main.c: 177:     _delay((unsigned long)((15)*(16000000/4000.0)));
+   633                           ;main.c: 179:     _delay((unsigned long)((15)*(16000000/4000.0)));
    634   001204  0E4E               	movlw	78
    635   001206  6E0D               	movwf	??_LCD_Instruction^0,c
    636   001208  0EEB               	movlw	235
@@ -680,10 +680,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    641   001210  D7FC               	bra	u217
    642   001212  0000               	nop	
    643   001214                     
-   644                           ;main.c: 178:     LATD = Instruction;
+   644                           ;main.c: 180:     LATD = Instruction;
    645   001214  C00E  FF8C         	movff	LCD_Instruction@Instruction,3980	;volatile
    646   001218                     
-   647                           ;main.c: 179:     _delay((unsigned long)((15)*(16000000/4000.0)));
+   647                           ;main.c: 181:     _delay((unsigned long)((15)*(16000000/4000.0)));
    648   001218  0E4E               	movlw	78
    649   00121A  6E0D               	movwf	??_LCD_Instruction^0,c
    650   00121C  0EEB               	movlw	235
@@ -694,10 +694,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    655   001224  D7FC               	bra	u227
    656   001226  0000               	nop	
    657   001228                     
-   658                           ;main.c: 180:     LATCbits.LATC5 = 0;
+   658                           ;main.c: 182:     LATCbits.LATC5 = 0;
    659   001228  9A8B               	bcf	139,5,c	;volatile
    660   00122A                     
-   661                           ;main.c: 181:     _delay((unsigned long)((15)*(16000000/4000.0)));
+   661                           ;main.c: 183:     _delay((unsigned long)((15)*(16000000/4000.0)));
    662   00122A  0E4E               	movlw	78
    663   00122C  6E0D               	movwf	??_LCD_Instruction^0,c
    664   00122E  0EEB               	movlw	235
@@ -713,7 +713,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    674                           
    675 ;; *************** function _Configurations *****************
    676 ;; Defined at:
-   677 ;;		line 89 in file "main.c"
+   677 ;;		line 91 in file "main.c"
    678 ;; Parameters:    Size  Location     Type
    679 ;;		None
    680 ;; Auto vars:     Size  Location     Type
@@ -752,105 +752,105 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    708   00113E                     _Configurations:
    709                           	callstack 24
    710   00113E                     
-   711                           ;main.c: 91:     OSCCON = 0x72;
+   711                           ;main.c: 93:     OSCCON = 0x72;
    712   00113E  0E72               	movlw	114
    713   001140  6ED3               	movwf	211,c	;volatile
    714                           
-   715                           ;main.c: 93:     ANSELC = 0;
+   715                           ;main.c: 95:     ANSELC = 0;
    716   001142  0E00               	movlw	0
    717   001144  010F               	movlb	15	; () banked
    718   001146  6F3A               	movwf	58,b	;volatile
    719                           
-   720                           ;main.c: 94:     ANSELD = 0;
+   720                           ;main.c: 96:     ANSELD = 0;
    721   001148  0E00               	movlw	0
    722   00114A  6F3B               	movwf	59,b	;volatile
    723   00114C                     
    724                           ; BSR set to: 15
-   725                           ;main.c: 96:     TRISCbits.RC4 = 0;
+   725                           ;main.c: 98:     TRISCbits.RC4 = 0;
    726   00114C  9894               	bcf	148,4,c	;volatile
    727   00114E                     
    728                           ; BSR set to: 15
-   729                           ;main.c: 97:     TRISCbits.RC5 = 0;
+   729                           ;main.c: 99:     TRISCbits.RC5 = 0;
    730   00114E  9A94               	bcf	148,5,c	;volatile
    731                           
-   732                           ;main.c: 99:     TRISD = 0;
+   732                           ;main.c: 101:     TRISD = 0;
    733   001150  0E00               	movlw	0
    734   001152  6E95               	movwf	149,c	;volatile
    735   001154                     
    736                           ; BSR set to: 15
-   737                           ;main.c: 101:     LATCbits.LC4 = 0;
+   737                           ;main.c: 103:     LATCbits.LC4 = 0;
    738   001154  988B               	bcf	139,4,c	;volatile
    739   001156                     
    740                           ; BSR set to: 15
-   741                           ;main.c: 102:     LATCbits.LC5 = 0;
+   741                           ;main.c: 104:     LATCbits.LC5 = 0;
    742   001156  9A8B               	bcf	139,5,c	;volatile
    743                           
-   744                           ;main.c: 104:     LATD = 0;
+   744                           ;main.c: 106:     LATD = 0;
    745   001158  0E00               	movlw	0
    746   00115A  6E8C               	movwf	140,c	;volatile
    747   00115C                     
    748                           ; BSR set to: 15
-   749                           ;main.c: 107:     INTCONbits.GIE = 1;
+   749                           ;main.c: 109:     INTCONbits.GIE = 1;
    750   00115C  8EF2               	bsf	242,7,c	;volatile
    751   00115E                     
    752                           ; BSR set to: 15
-   753                           ;main.c: 108:     INTCONbits.PEIE = 1;
+   753                           ;main.c: 110:     INTCONbits.PEIE = 1;
    754   00115E  8CF2               	bsf	242,6,c	;volatile
    755   001160                     
    756                           ; BSR set to: 15
-   757                           ;main.c: 109:     RCONbits.IPEN = 1;
+   757                           ;main.c: 111:     RCONbits.IPEN = 1;
    758   001160  8ED0               	bsf	208,7,c	;volatile
    759   001162                     
    760                           ; BSR set to: 15
-   761                           ;main.c: 111:     PIE1bits.RC1IE = 1;
+   761                           ;main.c: 113:     PIE1bits.RC1IE = 1;
    762   001162  8A9D               	bsf	157,5,c	;volatile
    763   001164                     
    764                           ; BSR set to: 15
-   765                           ;main.c: 112:     PIR1bits.RC1IF = 0;
+   765                           ;main.c: 114:     PIR1bits.RC1IF = 0;
    766   001164  9A9E               	bcf	158,5,c	;volatile
    767                           
-   768                           ;main.c: 115:     SPBRG = 103;
+   768                           ;main.c: 117:     SPBRG = 103;
    769   001166  0E67               	movlw	103
    770   001168  6EAF               	movwf	175,c	;volatile
    771   00116A                     
    772                           ; BSR set to: 15
-   773                           ;main.c: 116:     TRISCbits.RC6 = 1;
+   773                           ;main.c: 118:     TRISCbits.RC6 = 1;
    774   00116A  8C94               	bsf	148,6,c	;volatile
    775   00116C                     
    776                           ; BSR set to: 15
-   777                           ;main.c: 117:     TRISCbits.RC7 = 1;
+   777                           ;main.c: 119:     TRISCbits.RC7 = 1;
    778   00116C  8E94               	bsf	148,7,c	;volatile
    779   00116E                     
    780                           ; BSR set to: 15
-   781                           ;main.c: 120:     TXSTA1bits.TX91 = 0;
+   781                           ;main.c: 122:     TXSTA1bits.TX91 = 0;
    782   00116E  9CAC               	bcf	172,6,c	;volatile
    783   001170                     
    784                           ; BSR set to: 15
-   785                           ;main.c: 121:     TXSTA1bits.TXEN1 = 1;
+   785                           ;main.c: 123:     TXSTA1bits.TXEN1 = 1;
    786   001170  8AAC               	bsf	172,5,c	;volatile
    787   001172                     
    788                           ; BSR set to: 15
-   789                           ;main.c: 122:     TXSTA1bits.SYNC1 = 0;
+   789                           ;main.c: 124:     TXSTA1bits.SYNC1 = 0;
    790   001172  98AC               	bcf	172,4,c	;volatile
    791   001174                     
    792                           ; BSR set to: 15
-   793                           ;main.c: 123:     TXSTA1bits.BRGH1 = 1;
+   793                           ;main.c: 125:     TXSTA1bits.BRGH1 = 1;
    794   001174  84AC               	bsf	172,2,c	;volatile
    795   001176                     
    796                           ; BSR set to: 15
-   797                           ;main.c: 126:     RCSTAbits.SPEN1 = 1;
+   797                           ;main.c: 128:     RCSTAbits.SPEN1 = 1;
    798   001176  8EAB               	bsf	171,7,c	;volatile
    799   001178                     
    800                           ; BSR set to: 15
-   801                           ;main.c: 127:     RCSTAbits.RX91 = 0;
+   801                           ;main.c: 129:     RCSTAbits.RX91 = 0;
    802   001178  9CAB               	bcf	171,6,c	;volatile
    803   00117A                     
    804                           ; BSR set to: 15
-   805                           ;main.c: 128:     RCSTAbits.CREN1 = 1;
+   805                           ;main.c: 130:     RCSTAbits.CREN1 = 1;
    806   00117A  88AB               	bsf	171,4,c	;volatile
    807   00117C                     
    808                           ; BSR set to: 15
-   809                           ;main.c: 131:     BAUDCON1bits.BRG16 = 0;
+   809                           ;main.c: 133:     BAUDCON1bits.BRG16 = 0;
    810   00117C  96B8               	bcf	184,3,c	;volatile
    811   00117E                     
    812                           ; BSR set to: 15
@@ -860,7 +860,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    816                           
    817 ;; *************** function _Interrupt *****************
    818 ;; Defined at:
-   819 ;;		line 81 in file "main.c"
+   819 ;;		line 83 in file "main.c"
    820 ;; Parameters:    Size  Location     Type
    821 ;;		None
    822 ;; Auto vars:     Size  Location     Type
@@ -911,7 +911,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    862                           
    863 ;; *************** function _Interrupt_Rx *****************
    864 ;; Defined at:
-   865 ;;		line 69 in file "main.c"
+   865 ;;		line 71 in file "main.c"
    866 ;; Parameters:    Size  Location     Type
    867 ;;		None
    868 ;; Auto vars:     Size  Location     Type
@@ -964,7 +964,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    910   001280  CFF8 F00A          	movff	tblptru,??_Interrupt_Rx+2
    911   001284  CFF5 F00B          	movff	tablat,??_Interrupt_Rx+3
    912   001288                     
-   913                           ;main.c: 71:     if (PIR1bits.RC1IF) {
+   913                           ;main.c: 73:     if (PIR1bits.RC1IF) {
    914   001288  AA9E               	btfss	158,5,c	;volatile
    915   00128A  EF49  F009         	goto	i2u16_41
    916   00128E  EF4B  F009         	goto	i2u16_40
@@ -972,7 +972,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    918   001292  EF4D  F009         	goto	i2l62
    919   001296                     i2u16_40:
    920   001296                     
-   921                           ;main.c: 73:         Receive_Interrupt();
+   921                           ;main.c: 75:         Receive_Interrupt();
    922   001296  EC66  F008         	call	_Receive_Interrupt	;wreg free
    923   00129A                     i2l62:
    924   00129A  C00B  FFF5         	movff	??_Interrupt_Rx+3,tablat
@@ -986,7 +986,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    932                           
    933 ;; *************** function _Receive_Interrupt *****************
    934 ;; Defined at:
-   935 ;;		line 197 in file "main.c"
+   935 ;;		line 199 in file "main.c"
    936 ;; Parameters:    Size  Location     Type
    937 ;;		None
    938 ;; Auto vars:     Size  Location     Type
@@ -1026,10 +1026,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    967   0010CC                     _Receive_Interrupt:
    968                           	callstack 22
    969   0010CC                     
-   970                           ;main.c: 199:     Rx_Buffer = RCREG1;
+   970                           ;main.c: 201:     Rx_Buffer = RCREG1;
    971   0010CC  CFAE F014          	movff	4014,_Rx_Buffer	;volatile
    972   0010D0                     
-   973                           ;main.c: 201:     if (Rx_Buffer == 'A') {
+   973                           ;main.c: 203:     if (Rx_Buffer == 'A') {
    974   0010D0  0E41               	movlw	65
    975   0010D2  1814               	xorwf	_Rx_Buffer^0,w,c
    976   0010D4  A4D8               	btfss	status,2,c
@@ -1039,18 +1039,18 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    980   0010DE  EF7C  F008         	goto	i2l983
    981   0010E2                     i2u13_40:
    982   0010E2                     
-   983                           ;main.c: 203:         Send_Instruction_Data(0, 0X80);
+   983                           ;main.c: 205:         Send_Instruction_Data(0, 0X80);
    984   0010E2  0E80               	movlw	128
    985   0010E4  6E03               	movwf	i2Send_Instruction_Data@Data^0,c
    986   0010E6  0E00               	movlw	0
    987   0010E8  EC76  F009         	call	i2_Send_Instruction_Data
    988   0010EC                     
-   989                           ;main.c: 204:         Send_String("Data test: A");
+   989                           ;main.c: 206:         Send_String("Data test: A");
    990   0010EC  0E12               	movlw	low STR_2
    991   0010EE  6E05               	movwf	i2Send_String@String^0,c
    992   0010F0  ECE0  F008         	call	i2_Send_String	;wreg free
    993                           
-   994                           ;main.c: 206:     } else if (Rx_Buffer == 'B') {
+   994                           ;main.c: 208:     } else if (Rx_Buffer == 'B') {
    995   0010F4  EF9E  F008         	goto	i2l93
    996   0010F8                     i2l983:
    997   0010F8  0E42               	movlw	66
@@ -1062,18 +1062,18 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1003   001106  EF90  F008         	goto	i2l989
   1004   00110A                     i2u14_40:
   1005   00110A                     
-  1006                           ;main.c: 208:         Send_Instruction_Data(0, 0XD4);
+  1006                           ;main.c: 210:         Send_Instruction_Data(0, 0XD4);
   1007   00110A  0ED4               	movlw	212
   1008   00110C  6E03               	movwf	i2Send_Instruction_Data@Data^0,c
   1009   00110E  0E00               	movlw	0
   1010   001110  EC76  F009         	call	i2_Send_Instruction_Data
   1011   001114                     
-  1012                           ;main.c: 209:         Send_String("Platform!");
+  1012                           ;main.c: 211:         Send_String("Platform!");
   1013   001114  0E1F               	movlw	low STR_3
   1014   001116  6E05               	movwf	i2Send_String@String^0,c
   1015   001118  ECE0  F008         	call	i2_Send_String	;wreg free
   1016                           
-  1017                           ;main.c: 211:     } else if (Rx_Buffer == 'C') {
+  1017                           ;main.c: 213:     } else if (Rx_Buffer == 'C') {
   1018   00111C  EF9E  F008         	goto	i2l93
   1019   001120                     i2l989:
   1020   001120  0E43               	movlw	67
@@ -1085,7 +1085,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1026   00112E  EF9E  F008         	goto	i2l93
   1027   001132                     i2u15_40:
   1028   001132                     
-  1029                           ;main.c: 213:         Send_Instruction_Data(0, 0x01);
+  1029                           ;main.c: 215:         Send_Instruction_Data(0, 0x01);
   1030   001132  0E01               	movlw	1
   1031   001134  6E03               	movwf	i2Send_Instruction_Data@Data^0,c
   1032   001136  0E00               	movlw	0
@@ -1097,7 +1097,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1038                           
   1039 ;; *************** function i2_Send_String *****************
   1040 ;; Defined at:
-  1041 ;;		line 187 in file "main.c"
+  1041 ;;		line 189 in file "main.c"
   1042 ;; Parameters:    Size  Location     Type
   1043 ;;  String          1    4[COMRAM] PTR unsigned char 
   1044 ;;		 -> STR_3(10), STR_2(13), STR_1(17), 
@@ -1137,13 +1137,13 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1073   0011C0                     i2_Send_String:
   1074                           	callstack 22
   1075   0011C0                     
-  1076                           ;main.c: 189:     for (uint8_t i = 0; String[i] != '\0'; i++) {
+  1076                           ;main.c: 191:     for (uint8_t i = 0; String[i] != '\0'; i++) {
   1077   0011C0  0E00               	movlw	0
   1078   0011C2  6E07               	movwf	i2Send_String@i^0,c
   1079   0011C4  EFF0  F008         	goto	i2l943
   1080   0011C8                     i2l939:
   1081                           
-  1082                           ;main.c: 191:         Send_Instruction_Data(1, String[i]);
+  1082                           ;main.c: 193:         Send_Instruction_Data(1, String[i]);
   1083   0011C8  5005               	movf	i2Send_String@String^0,w,c
   1084   0011CA  2407               	addwf	i2Send_String@i^0,w,c
   1085   0011CC  6E06               	movwf	??i2_Send_String^0,c
@@ -1159,7 +1159,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1095   0011D8  0E01               	movlw	1
   1096   0011DA  EC76  F009         	call	i2_Send_Instruction_Data
   1097   0011DE                     
-  1098                           ;main.c: 193:     }
+  1098                           ;main.c: 195:     }
   1099   0011DE  2A07               	incf	i2Send_String@i^0,f,c
   1100   0011E0                     i2l943:
   1101   0011E0  5005               	movf	i2Send_String@String^0,w,c
@@ -1187,7 +1187,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1123                           
   1124 ;; *************** function i2_Send_Instruction_Data *****************
   1125 ;; Defined at:
-  1126 ;;		line 165 in file "main.c"
+  1126 ;;		line 167 in file "main.c"
   1127 ;; Parameters:    Size  Location     Type
   1128 ;;  Instruction     1    wreg     unsigned char 
   1129 ;;  Data            1    2[COMRAM] unsigned char 
@@ -1232,7 +1232,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1163                           ;i2Send_Instruction_Data@Instruction stored from wreg
   1164   0012EC  6E04               	movwf	i2Send_Instruction_Data@Instruction^0,c
   1165   0012EE                     
-  1166                           ;main.c: 167:     LATCbits.LATC4 = Instruction;
+  1166                           ;main.c: 169:     LATCbits.LATC4 = Instruction;
   1167   0012EE  B004               	btfsc	i2Send_Instruction_Data@Instruction^0,0,c
   1168   0012F0  D002               	bra	i2u9_45
   1169   0012F2  988B               	bcf	139,4,c	;volatile
@@ -1241,12 +1241,12 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1172   0012F6  888B               	bsf	139,4,c	;volatile
   1173   0012F8                     i2u9_46:
   1174   0012F8                     
-  1175                           ;main.c: 168:     LCD_Instruction(Data >> 4);
+  1175                           ;main.c: 170:     LCD_Instruction(Data >> 4);
   1176   0012F8  3803               	swapf	i2Send_Instruction_Data@Data^0,w,c
   1177   0012FA  0B0F               	andlw	15
   1178   0012FC  EC1E  F009         	call	i2_LCD_Instruction
   1179   001300                     
-  1180                           ;main.c: 169:     LCD_Instruction(Data);
+  1180                           ;main.c: 171:     LCD_Instruction(Data);
   1181   001300  5003               	movf	i2Send_Instruction_Data@Data^0,w,c
   1182   001302  EC1E  F009         	call	i2_LCD_Instruction
   1183   001306  0012               	return		;funcret
@@ -1255,7 +1255,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1186                           
   1187 ;; *************** function i2_LCD_Instruction *****************
   1188 ;; Defined at:
-  1189 ;;		line 174 in file "main.c"
+  1189 ;;		line 176 in file "main.c"
   1190 ;; Parameters:    Size  Location     Type
   1191 ;;  Instruction     1    wreg     unsigned char 
   1192 ;; Auto vars:     Size  Location     Type
@@ -1297,10 +1297,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1223                           ;i2LCD_Instruction@Instruction stored from wreg
   1224   00123C  6E02               	movwf	i2LCD_Instruction@Instruction^0,c
   1225   00123E                     
-  1226                           ;main.c: 176:     LATCbits.LATC5 = 1;
+  1226                           ;main.c: 178:     LATCbits.LATC5 = 1;
   1227   00123E  8A8B               	bsf	139,5,c	;volatile
   1228   001240                     
-  1229                           ;main.c: 177:     _delay((unsigned long)((15)*(16000000/4000.0)));
+  1229                           ;main.c: 179:     _delay((unsigned long)((15)*(16000000/4000.0)));
   1230   001240  0E4E               	movlw	78
   1231   001242  6E01               	movwf	??i2_LCD_Instruction^0,c
   1232   001244  0EEB               	movlw	235
@@ -1311,10 +1311,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1237   00124C  D7FC               	bra	i2u24_47
   1238   00124E  0000               	nop	
   1239   001250                     
-  1240                           ;main.c: 178:     LATD = Instruction;
+  1240                           ;main.c: 180:     LATD = Instruction;
   1241   001250  C002  FF8C         	movff	i2LCD_Instruction@Instruction,3980	;volatile
   1242   001254                     
-  1243                           ;main.c: 179:     _delay((unsigned long)((15)*(16000000/4000.0)));
+  1243                           ;main.c: 181:     _delay((unsigned long)((15)*(16000000/4000.0)));
   1244   001254  0E4E               	movlw	78
   1245   001256  6E01               	movwf	??i2_LCD_Instruction^0,c
   1246   001258  0EEB               	movlw	235
@@ -1325,10 +1325,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1251   001260  D7FC               	bra	i2u25_47
   1252   001262  0000               	nop	
   1253   001264                     
-  1254                           ;main.c: 180:     LATCbits.LATC5 = 0;
+  1254                           ;main.c: 182:     LATCbits.LATC5 = 0;
   1255   001264  9A8B               	bcf	139,5,c	;volatile
   1256   001266                     
-  1257                           ;main.c: 181:     _delay((unsigned long)((15)*(16000000/4000.0)));
+  1257                           ;main.c: 183:     _delay((unsigned long)((15)*(16000000/4000.0)));
   1258   001266  0E4E               	movlw	78
   1259   001268  6E01               	movwf	??i2_LCD_Instruction^0,c
   1260   00126A  0EEB               	movlw	235
@@ -1920,7 +1920,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.46 build 20240104201356 
-Symbol Table                                                                                   Wed Feb 21 15:54:02 2024
+Symbol Table                                                                                   Wed Feb 21 16:37:36 2024
 
                                 l53 12C8                                  l70 117E  
                                 l54 12C8                                  l73 10CA  
