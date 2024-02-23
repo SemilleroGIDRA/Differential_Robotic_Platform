@@ -9735,6 +9735,7 @@ void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
 void Send_String(unsigned char *String);
 void Receive_Interrupt(void);
 void Moving_Platform(unsigned char Command);
+void Init_Message_Platform(void);
 
 
 unsigned char Rx_Buffer;
@@ -9746,9 +9747,7 @@ void main(void) {
 
     Configurations();
     Init_LCD();
-
-    Send_Instruction_Data(0, 0xC0);
-    Send_String("Robotic Platform");
+    Init_Message_Platform();
 
 
     while (1) {
@@ -9826,7 +9825,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 149 "main.c"
+# 148 "main.c"
 }
 
 
@@ -9866,7 +9865,7 @@ void LCD_Instruction(unsigned char Instruction) {
     LATD = Instruction;
     _delay((unsigned long)((15)*(16000000/4000.0)));
     LATCbits.LATC5 = 0;
-    _delay((unsigned long)((15)*(16000000/4000.0)));
+    _delay((unsigned long)((10)*(16000000/4000.0)));
 
 }
 
@@ -9909,5 +9908,16 @@ void Moving_Platform(unsigned char Command) {
     LATEbits.LATE0 = 1;
     LATEbits.LATE2 = 1;
     LATD = Command;
+
+}
+
+
+
+void Init_Message_Platform(void) {
+
+    Send_Instruction_Data(0, 0X80);
+    Send_String("Research Project");
+    Send_Instruction_Data(0, 0xC0);
+    Send_String("Robotic Platform");
 
 }

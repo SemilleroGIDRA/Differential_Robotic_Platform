@@ -45,6 +45,7 @@ void Send_Instruction_Data(unsigned char Instruction, unsigned char Data); //Fun
 void Send_String(unsigned char *String); //Function to send data to the LCD.
 void Receive_Interrupt(void);
 void Moving_Platform(unsigned char Command);
+void Init_Message_Platform(void);
 
 //Global variables.
 unsigned char Rx_Buffer;
@@ -56,9 +57,7 @@ void main(void) {
     //Call functions. 
     Configurations();
     Init_LCD();
-
-    Send_Instruction_Data(Set, ROW2);
-    Send_String("Robotic Platform");
+    Init_Message_Platform(); 
 
     //Infinite Loop. 
     while (1) {
@@ -185,7 +184,7 @@ void LCD_Instruction(unsigned char Instruction) {
     LATD = Instruction; //Send Instruction to the port. 
     __delay_ms(15); //Wait for the instruction. 
     EN = 0; //Pin disabled.
-    __delay_ms(15); //Wait for the instruction. 
+    __delay_ms(10); //Wait for the instruction. 
 
 }
 
@@ -228,5 +227,16 @@ void Moving_Platform(unsigned char Command) {
     Right_Motor = 1;
     Left_Motor = 1;
     LATD = Command;
+
+}
+
+//Develop message platform function
+
+void Init_Message_Platform(void) {
+
+    Send_Instruction_Data(Set, ROW1);
+    Send_String("Research Project");
+    Send_Instruction_Data(Set, ROW2);
+    Send_String("Robotic Platform");
 
 }
