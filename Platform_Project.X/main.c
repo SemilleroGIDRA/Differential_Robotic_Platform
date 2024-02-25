@@ -57,7 +57,7 @@ void main(void) {
     //Call functions. 
     Configurations();
     Init_LCD();
-    Init_Message_Platform(); 
+    //Init_Message_Platform(); 
 
     //Infinite Loop. 
     while (1) {
