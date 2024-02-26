@@ -144,6 +144,9 @@ void Configurations(void) {
         TXREG1; ----> Transmitter buffer.
       
      */
+    
+    //----PWM Configurations ----
+
 
 }
 

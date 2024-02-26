@@ -889,132 +889,132 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _RCSTAbits 2 4 -> -> 1 `i `uc ]
 "137
 [e = . . _BAUDCON1bits 0 3 -> -> 0 `i `uc ]
-"148
+"151
 [e :UE 861 ]
 }
-"152
+"155
 [v _Init_LCD `(v ~T0 @X0 1 ef ]
 {
 [e :U _Init_LCD ]
 [f ]
-"154
-[e ( __delay (1 -> * -> -> 60 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"155
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 48 `i `uc ]
-"156
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "157
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 48 `i `uc ]
+[e ( __delay (1 -> * -> -> 60 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "158
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"159
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 48 `i `uc ]
+"159
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "160
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 48 `i `uc ]
 "161
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 6 `i `uc ]
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "162
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 15 `i `uc ]
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 48 `i `uc ]
 "163
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 40 `i `uc ]
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
 "164
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 6 `i `uc ]
 "165
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 15 `i `uc ]
+"166
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 40 `i `uc ]
 "167
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"168
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+"170
 [e :UE 862 ]
 }
-"171
+"174
 [v _Send_Instruction_Data `(v ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _Send_Instruction_Data ]
 [v _Instruction `uc ~T0 @X0 1 r1 ]
 [v _Data `uc ~T0 @X0 1 r2 ]
 [f ]
-"173
+"176
 [e = . . _LATCbits 0 4 _Instruction ]
-"174
-[e ( _LCD_Instruction (1 -> >> -> _Data `i -> 4 `i `uc ]
-"175
-[e ( _LCD_Instruction (1 _Data ]
 "177
+[e ( _LCD_Instruction (1 -> >> -> _Data `i -> 4 `i `uc ]
+"178
+[e ( _LCD_Instruction (1 _Data ]
+"180
 [e :UE 863 ]
 }
-"180
+"183
 [v _LCD_Instruction `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _LCD_Instruction ]
 [v _Instruction `uc ~T0 @X0 1 r1 ]
 [f ]
-"182
-[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
-"183
-[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"184
-[e = _LATD _Instruction ]
 "185
-[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
 "186
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
+[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "187
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[e = _LATD _Instruction ]
+"188
+[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "189
+[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
+"190
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+"192
 [e :UE 864 ]
 }
-"193
+"196
 [v _Send_String `(v ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _Send_String ]
 [v _String `*uc ~T0 @X0 1 r1 ]
 [f ]
-"195
+"198
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $U 869  ]
 [e :U 866 ]
 {
-"197
+"200
 [e ( _Send_Instruction_Data (2 , -> -> 1 `i `uc *U + _String * -> _i `ux -> -> # *U _String `ui `ux ]
-"199
+"202
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 869 ]
 [e $ != -> *U + _String * -> _i `ux -> -> # *U _String `ui `ux `ui -> 0 `ui 866  ]
 [e :U 867 ]
 }
-"201
+"204
 [e :UE 865 ]
 }
-"203
+"206
 [v _Receive_Interrupt `(v ~T0 @X0 1 ef ]
 {
 [e :U _Receive_Interrupt ]
 [f ]
-"205
+"208
 [e = _Rx_Buffer _RCREG1 ]
-"207
+"210
 [e $U 872  ]
 {
-"209
+"212
 [e :U 873 ]
-"210
-[e ( _Moving_Platform (1 -> -> 160 `i `uc ]
-"211
-[e $U 871  ]
 "213
-[e :U 874 ]
+[e ( _Moving_Platform (1 -> -> 160 `i `uc ]
 "214
-[e ( _Moving_Platform (1 -> -> 80 `i `uc ]
-"215
 [e $U 871  ]
+"216
+[e :U 874 ]
 "217
-[e :U 875 ]
+[e ( _Moving_Platform (1 -> -> 80 `i `uc ]
 "218
-[e = _LATD -> -> 0 `i `uc ]
-"219
 [e $U 871  ]
+"220
+[e :U 875 ]
 "221
+[e = _LATD -> -> 0 `i `uc ]
+"222
+[e $U 871  ]
+"224
 }
 [e $U 871  ]
 [e :U 872 ]
@@ -1022,38 +1022,38 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 65 `ui `i 874
  875 ]
 [e :U 871 ]
-"223
+"226
 [e :UE 870 ]
 }
-"225
+"228
 [v _Moving_Platform `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _Moving_Platform ]
 [v _Command `uc ~T0 @X0 1 r1 ]
 [f ]
-"227
+"230
 [e = . . _LATEbits 0 0 -> -> 1 `i `uc ]
-"228
-[e = . . _LATEbits 0 2 -> -> 1 `i `uc ]
-"229
-[e = _LATD _Command ]
 "231
+[e = . . _LATEbits 0 2 -> -> 1 `i `uc ]
+"232
+[e = _LATD _Command ]
+"234
 [e :UE 876 ]
 }
-"235
+"238
 [v _Init_Message_Platform `(v ~T0 @X0 1 ef ]
 {
 [e :U _Init_Message_Platform ]
 [f ]
-"237
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
-"238
-[e ( _Send_String (1 :s 1C ]
-"239
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
 "240
-[e ( _Send_String (1 :s 2C ]
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
+"241
+[e ( _Send_String (1 :s 1C ]
 "242
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
+"243
+[e ( _Send_String (1 :s 2C ]
+"245
 [e :UE 877 ]
 }
 [a 1C 82 101 115 101 97 114 99 104 32 80 114 111 106 101 99 116 0 ]

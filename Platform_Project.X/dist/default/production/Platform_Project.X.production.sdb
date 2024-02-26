@@ -35,17 +35,17 @@
 [v _Interrupt Interrupt `IIL(v  1 e 1 0 ]
 "93
 [v _Configurations Configurations `(v  1 e 1 0 ]
-"152
+"155
 [v _Init_LCD Init_LCD `(v  1 e 1 0 ]
-"171
+"174
 [v _Send_Instruction_Data Send_Instruction_Data `(v  1 e 1 0 ]
-"180
+"183
 [v _LCD_Instruction LCD_Instruction `(v  1 e 1 0 ]
-"193
+"196
 [v _Send_String Send_String `(v  1 e 1 0 ]
-"203
+"206
 [v _Receive_Interrupt Receive_Interrupt `(v  1 e 1 0 ]
-"225
+"228
 [v _Moving_Platform Moving_Platform `(v  1 e 1 0 ]
 "147 C:/Users/Alejandro/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [v _ANSELC ANSELC `VEuc  1 e 1 @3898 ]
@@ -315,34 +315,34 @@
 {
 "69
 } 0
-"152
+"155
 [v _Init_LCD Init_LCD `(v  1 e 1 0 ]
 {
-"167
+"170
 } 0
-"171
+"174
 [v _Send_Instruction_Data Send_Instruction_Data `(v  1 e 1 0 ]
 {
 [v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 wreg ]
 [v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 wreg ]
 [v Send_Instruction_Data@Data Data `uc  1 p 1 6 ]
-"173
+"176
 [v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 7 ]
-"177
-} 0
 "180
+} 0
+"183
 [v _LCD_Instruction LCD_Instruction `(v  1 e 1 0 ]
 {
 [v LCD_Instruction@Instruction Instruction `uc  1 a 1 wreg ]
 [v LCD_Instruction@Instruction Instruction `uc  1 a 1 wreg ]
-"182
+"185
 [v LCD_Instruction@Instruction Instruction `uc  1 a 1 5 ]
-"189
+"192
 } 0
 "93
 [v _Configurations Configurations `(v  1 e 1 0 ]
 {
-"148
+"151
 } 0
 "85
 [v _Interrupt Interrupt `IIL(v  1 e 1 0 ]
@@ -354,17 +354,17 @@
 {
 "81
 } 0
-"203
+"206
 [v _Receive_Interrupt Receive_Interrupt `(v  1 e 1 0 ]
 {
-"223
+"226
 } 0
-"225
+"228
 [v _Moving_Platform Moving_Platform `(v  1 e 1 0 ]
 {
 [v Moving_Platform@Command Command `uc  1 a 1 wreg ]
 [v Moving_Platform@Command Command `uc  1 a 1 wreg ]
-"227
+"230
 [v Moving_Platform@Command Command `uc  1 a 1 0 ]
-"231
+"234
 } 0
