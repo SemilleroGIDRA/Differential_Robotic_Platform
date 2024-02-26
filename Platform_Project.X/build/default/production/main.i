@@ -9663,7 +9663,7 @@ unsigned char __t3rd16on(void);
 
 #pragma config CCP2MX = PORTC1
 #pragma config PBADEN = ON
-#pragma config CCP3MX = PORTB5
+#pragma config CCP3MX = PORTE0
 #pragma config HFOFST = ON
 #pragma config T3CMX = PORTC0
 #pragma config P2BMX = PORTD2
@@ -9728,7 +9728,7 @@ void main(void) {
 
 
     Configurations();
-
+    Init_LCD();
 
 
 
@@ -9807,7 +9807,13 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 129 "main.c"
+# 127 "main.c"
+    PR2 = 0xF9;
+    CCP3CON = 0x0C;
+    CCPR3L = 0x7D;
+    T2CON = 0x02;
+    T2CONbits.TMR2ON = 1;
+
 }
 
 void Receive_Interrupt(void) {

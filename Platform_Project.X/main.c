@@ -34,7 +34,7 @@ void main(void) {
 
     //Call functions. 
     Configurations();
-    //Init_LCD();
+    Init_LCD();
     //Init_Message_Platform(); 
 
     //Infinite Loop. 
@@ -122,9 +122,13 @@ void Configurations(void) {
         TXREG1; ----> Transmitter buffer.
       
      */
-    
-    //----PWM Configurations ----
 
+    //----PWM Configurations ----
+    PR2 = 0xF9; //Set period signal.
+    CCP3CON = 0x0C; //Half to duty cycle of 50% and PWM mode. 
+    CCPR3L = 0x7D; //Send Duty cycle of 50%
+    T2CON = 0x02; //TMR off, prescaler 16. 
+    T2CONbits.TMR2ON = 1; //Turn on timer 2. 
 
 }
 

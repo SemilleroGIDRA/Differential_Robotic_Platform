@@ -3,6 +3,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "23 main.c
 [; ;main.c: 23: void Configurations(void);
 [v _Configurations `(v ~T0 @X0 0 ef ]
+"39 ./LCD_Library.h
+[; ;./LCD_Library.h: 39: void Init_LCD(void);
+[v _Init_LCD `(v ~T0 @X0 0 ef ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt high_priority ]
 "9497 C:/Users/Alejandro/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
@@ -235,6 +238,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12472
 [; ;C:/Users/Alejandro/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 12472: extern volatile BAUDCON1bits_t BAUDCON1bits __attribute__((address(0xFB8)));
 [v _BAUDCON1bits `VS588 ~T0 @X0 0 e@4024 ]
+"13303
+[; ;C:/Users/Alejandro/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13303: extern volatile unsigned char PR2 __attribute__((address(0xFBB)));
+[v _PR2 `Vuc ~T0 @X0 0 e@4027 ]
+"2546
+[; ;C:/Users/Alejandro/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2546: extern volatile unsigned char CCP3CON __attribute__((address(0xF5D)));
+[v _CCP3CON `Vuc ~T0 @X0 0 e@3933 ]
+"2635
+[; ;C:/Users/Alejandro/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2635: extern volatile unsigned char CCPR3L __attribute__((address(0xF5E)));
+[v _CCPR3L `Vuc ~T0 @X0 0 e@3934 ]
+"13232
+[; ;C:/Users/Alejandro/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13232: extern volatile unsigned char T2CON __attribute__((address(0xFBA)));
+[v _T2CON `Vuc ~T0 @X0 0 e@4026 ]
+"13238
+[; ;C:/Users/Alejandro/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13238:     struct {
+[s S627 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S627 . T2CKPS TMR2ON T2OUTPS ]
+"13243
+[; ;C:/Users/Alejandro/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13243:     struct {
+[s S628 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S628 . T2CKPS0 T2CKPS1 . T2OUTPS0 T2OUTPS1 T2OUTPS2 T2OUTPS3 ]
+"13237
+[; ;C:/Users/Alejandro/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13237: typedef union {
+[u S626 `S627 1 `S628 1 ]
+[n S626 . . . ]
+"13253
+[; ;C:/Users/Alejandro/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13253: extern volatile T2CONbits_t T2CONbits __attribute__((address(0xFBA)));
+[v _T2CONbits `VS626 ~T0 @X0 0 e@4026 ]
 "11288
 [; ;C:/Users/Alejandro/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11288: extern volatile unsigned char RCREG1 __attribute__((address(0xFAE)));
 [v _RCREG1 `Vuc ~T0 @X0 0 e@4014 ]
@@ -1046,7 +1076,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28
 [p x PBADEN  =  ON       ]
 "29
-[p x CCP3MX  =  PORTB5   ]
+[p x CCP3MX  =  PORTE0   ]
 "30
 [p x HFOFST  =  ON       ]
 "31
@@ -1110,6 +1140,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36
 [; ;main.c: 36:     Configurations();
 [e ( _Configurations ..  ]
+"37
+[; ;main.c: 37:     Init_LCD();
+[e ( _Init_LCD ..  ]
 "41
 [; ;main.c: 41:     while (1) {
 [e :U 856 ]
@@ -1247,52 +1280,67 @@ Version 4.0 HI-TECH Software Intermediate Code
 "115
 [; ;main.c: 115:     BAUDCON1bits.BRG16 = 0;
 [e = . . _BAUDCON1bits 0 3 -> -> 0 `i `uc ]
+"127
+[; ;main.c: 127:     PR2 = 0xF9;
+[e = _PR2 -> -> 249 `i `uc ]
+"128
+[; ;main.c: 128:     CCP3CON = 0x0C;
+[e = _CCP3CON -> -> 12 `i `uc ]
 "129
-[; ;main.c: 129: }
+[; ;main.c: 129:     CCPR3L = 0x7D;
+[e = _CCPR3L -> -> 125 `i `uc ]
+"130
+[; ;main.c: 130:     T2CON = 0x02;
+[e = _T2CON -> -> 2 `i `uc ]
+"131
+[; ;main.c: 131:     T2CONbits.TMR2ON = 1;
+[e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
+"133
+[; ;main.c: 133: }
 [e :UE 861 ]
 }
-"131
-[; ;main.c: 131: void Receive_Interrupt(void) {
+"135
+[; ;main.c: 135: void Receive_Interrupt(void) {
 [v _Receive_Interrupt `(v ~T0 @X0 1 ef ]
 {
 [e :U _Receive_Interrupt ]
 [f ]
-"133
-[; ;main.c: 133:     Rx_Buffer = RCREG1;
+"137
+[; ;main.c: 137:     Rx_Buffer = RCREG1;
 [e = _Rx_Buffer _RCREG1 ]
-"135
-[; ;main.c: 135:     switch (Rx_Buffer) {
+"139
+[; ;main.c: 139:     switch (Rx_Buffer) {
 [e $U 864  ]
 {
-"137
-[; ;main.c: 137:         case 'M':
-[e :U 865 ]
-"138
-[; ;main.c: 138:             Moving_Platform(0b10100000);
-[e ( _Moving_Platform (1 -> -> 160 `i `uc ]
-"139
-[; ;main.c: 139:             break;
-[e $U 863  ]
 "141
-[; ;main.c: 141:         case 'A':
-[e :U 866 ]
+[; ;main.c: 141:         case 'M':
+[e :U 865 ]
 "142
-[; ;main.c: 142:             Moving_Platform(0b01010000);
-[e ( _Moving_Platform (1 -> -> 80 `i `uc ]
+[; ;main.c: 142:             Moving_Platform(0b10100000);
+[e ( _Moving_Platform (1 -> -> 160 `i `uc ]
 "143
 [; ;main.c: 143:             break;
 [e $U 863  ]
 "145
-[; ;main.c: 145:         default:
-[e :U 867 ]
+[; ;main.c: 145:         case 'A':
+[e :U 866 ]
 "146
-[; ;main.c: 146:             LATD = 0x00;
-[e = _LATD -> -> 0 `i `uc ]
+[; ;main.c: 146:             Moving_Platform(0b01010000);
+[e ( _Moving_Platform (1 -> -> 80 `i `uc ]
 "147
 [; ;main.c: 147:             break;
 [e $U 863  ]
 "149
-[; ;main.c: 149:     }
+[; ;main.c: 149:         default:
+[e :U 867 ]
+"150
+[; ;main.c: 150:             LATD = 0x00;
+[e = _LATD -> -> 0 `i `uc ]
+"151
+[; ;main.c: 151:             break;
+[e $U 863  ]
+"153
+[; ;main.c: 153:     }
 }
 [e $U 863  ]
 [e :U 864 ]
@@ -1300,50 +1348,50 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 65 `ui `i 866
  867 ]
 [e :U 863 ]
-"151
-[; ;main.c: 151: }
+"155
+[; ;main.c: 155: }
 [e :UE 862 ]
 }
-"153
-[; ;main.c: 153: void Moving_Platform(unsigned char Command) {
+"157
+[; ;main.c: 157: void Moving_Platform(unsigned char Command) {
 [v _Moving_Platform `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _Moving_Platform ]
 [v _Command `uc ~T0 @X0 1 r1 ]
 [f ]
-"155
-[; ;main.c: 155:     LATEbits.LATE0 = 1;
-[e = . . _LATEbits 0 0 -> -> 1 `i `uc ]
-"156
-[; ;main.c: 156:     LATEbits.LATE2 = 1;
-[e = . . _LATEbits 0 2 -> -> 1 `i `uc ]
-"157
-[; ;main.c: 157:     LATD = Command;
-[e = _LATD _Command ]
 "159
-[; ;main.c: 159: }
+[; ;main.c: 159:     LATEbits.LATE0 = 1;
+[e = . . _LATEbits 0 0 -> -> 1 `i `uc ]
+"160
+[; ;main.c: 160:     LATEbits.LATE2 = 1;
+[e = . . _LATEbits 0 2 -> -> 1 `i `uc ]
+"161
+[; ;main.c: 161:     LATD = Command;
+[e = _LATD _Command ]
+"163
+[; ;main.c: 163: }
 [e :UE 868 ]
 }
-"163
-[; ;main.c: 163: void Init_Message_Platform(void) {
+"167
+[; ;main.c: 167: void Init_Message_Platform(void) {
 [v _Init_Message_Platform `(v ~T0 @X0 1 ef ]
 {
 [e :U _Init_Message_Platform ]
 [f ]
-"165
-[; ;main.c: 165:     Send_Instruction_Data(0, 0X80);
+"169
+[; ;main.c: 169:     Send_Instruction_Data(0, 0X80);
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
-"166
-[; ;main.c: 166:     Send_String("Research Project");
-[e ( _Send_String (1 :s 1C ]
-"167
-[; ;main.c: 167:     Send_Instruction_Data(0, 0xC0);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
-"168
-[; ;main.c: 168:     Send_String("Robotic Platform");
-[e ( _Send_String (1 :s 2C ]
 "170
-[; ;main.c: 170: }
+[; ;main.c: 170:     Send_String("Research Project");
+[e ( _Send_String (1 :s 1C ]
+"171
+[; ;main.c: 171:     Send_Instruction_Data(0, 0xC0);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
+"172
+[; ;main.c: 172:     Send_String("Robotic Platform");
+[e ( _Send_String (1 :s 2C ]
+"174
+[; ;main.c: 174: }
 [e :UE 869 ]
 }
 [a 1C 82 101 115 101 97 114 99 104 32 80 114 111 106 101 99 116 0 ]
