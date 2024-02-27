@@ -793,8 +793,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _Init_LCD ]
 [f ]
 "7
-[; ;LCD_Library.c: 7:     _delay((unsigned long)((60)*(16000000/4000.0)));
-[e ( __delay (1 -> * -> -> 60 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;LCD_Library.c: 7:     _delay((unsigned long)((100)*(16000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "8
 [; ;LCD_Library.c: 8:     Send_Instruction_Data(0, 0x30);
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 48 `i `uc ]

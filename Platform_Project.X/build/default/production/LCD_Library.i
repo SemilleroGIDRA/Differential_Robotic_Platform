@@ -9648,7 +9648,7 @@ void Send_String(unsigned char *String);
 
 void Init_LCD(void) {
 
-    _delay((unsigned long)((60)*(16000000/4000.0)));
+    _delay((unsigned long)((100)*(16000000/4000.0)));
     Send_Instruction_Data(0, 0x30);
     _delay((unsigned long)((5)*(16000000/4000.0)));
     Send_Instruction_Data(0, 0x30);

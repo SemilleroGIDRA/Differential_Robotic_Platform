@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.41 build 20230208172133 
-                                                                                               Mon Feb 26 17:42:44 2024
+                                                                                               Mon Feb 26 23:02:59 2024
 
 Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1 
      1                           	processor	18F46K22
@@ -302,12 +302,12 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    278   001024                     _Init_LCD:
    279                           	callstack 24
    280   001024                     
-   281                           ;LCD_Library.c: 7:     _delay((unsigned long)((60)*(16000000/4000.0)));
-   282   001024  0E02               	movlw	2
+   281                           ;LCD_Library.c: 7:     _delay((unsigned long)((100)*(16000000/4000.0)));
+   282   001024  0E03               	movlw	3
    283   001026  6E0A               	movwf	(??_Init_LCD+1)^0,c
-   284   001028  0E38               	movlw	56
+   284   001028  0E08               	movlw	8
    285   00102A  6E09               	movwf	??_Init_LCD^0,c
-   286   00102C  0EAD               	movlw	173
+   286   00102C  0E77               	movlw	119
    287   00102E                     u67:
    288   00102E  2EE8               	decfsz	wreg,f,c
    289   001030  D7FE               	bra	u67
@@ -1581,7 +1581,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.41 build 20230208172133 
-Symbol Table                                                                                   Mon Feb 26 17:42:44 2024
+Symbol Table                                                                                   Mon Feb 26 23:02:59 2024
 
                               l70 11FC                                l69 11FC                                l86 1124  
                               u45 11BC                                u46 11BE                                u67 102E  
