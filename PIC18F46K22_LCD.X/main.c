@@ -85,7 +85,7 @@ void Configurations(void) {
 
 void Init_LCD(void) {
 
-    __delay_ms(60); //Delay set by the manufacturer. 
+    __delay_ms(100); //Delay set by the manufacturer. 
     Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer. 
     __delay_ms(5); //Delay set by the manufacturer. 
     Send_Instruction_Data(Set, 0x30); //Data set by the manufacturer. 
