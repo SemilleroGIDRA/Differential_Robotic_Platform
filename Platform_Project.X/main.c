@@ -25,7 +25,8 @@ void Configurations(void); //Function to set registers.
 void Receive_Interrupt(void);
 void Moving_Platform(unsigned char Command);
 void Init_Message_Platform(void);
-void Set_PWM(float value_pwm);
+void Set_PWM_Right_Motor(float value1_pwm);
+void Set_PWM_Left_Motor(float value2_pwm);
 void __interrupt(high_priority) Interrupt_Rx(void);
 void __interrupt(low_priority) Interrupt(void);
 
@@ -148,37 +149,55 @@ void Receive_Interrupt(void) {
         case 'M':
             //Moving_Platform(Forward);
 
-            break;
+            Set_PWM_Right_Motor(800.00);
+            IN1 = 0;
+            IN2 = 1;
+            Set_PWM_Left_Motor(800.00);
+            IN3 = 1;
+            IN4 = 0;
 
-        case 'A':
-            //Moving_Platform(Backward);
-            break;
-
-        case 'Q':
-            Init_Message_Platform();
+            __delay_ms(5000);
+            
             break;
 
         default:
-            LATD = 0x00;
+            
+            IN1 = 0; 
+            IN2 = 0; 
+            IN3 = 0; 
+            IN4 = 0; 
+            
             break;
 
     }
 
 }
 
-//Develop to set PWM.
+//Develop to set PWM for right motor.
 
-void Set_PWM(float value_pwm) {
+void Set_PWM_Right_Motor(float value1_pwm) {
 
+    Duty_Cycle1 = (float) (value1_pwm * (1000.00 / Cycle_100));
+    CCPR3L = (int) Duty_Cycle1 >> 2;
+    CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4));
 
+}
+
+//Develop to set PWM for left motor.
+
+void Set_PWM_Left_Motor(float value2_pwm) {
+
+    Duty_Cycle2 = (float) (value2_pwm * (1000.00 / Cycle_100));
+    CCPR5L = (int) Duty_Cycle2 >> 2;
+    CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
 
 }
 
 void Moving_Platform(unsigned char Command) {
 
-//    Right_Motor = 1;
-//    Left_Motor = 1;
-//    LATD = Command;
+    //    Right_Motor = 1;
+    //    Left_Motor = 1;
+    //    LATD = Command;
 
 }
 

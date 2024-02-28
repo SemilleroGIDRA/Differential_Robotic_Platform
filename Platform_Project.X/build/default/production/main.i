@@ -9741,7 +9741,8 @@ void Configurations(void);
 void Receive_Interrupt(void);
 void Moving_Platform(unsigned char Command);
 void Init_Message_Platform(void);
-void Set_PWM(float value_pwm);
+void Set_PWM_Right_Motor(float value1_pwm);
+void Set_PWM_Left_Motor(float value2_pwm);
 void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void);
 void __attribute__((picinterrupt(("low_priority")))) Interrupt(void);
 
@@ -9834,7 +9835,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 132 "main.c"
+# 133 "main.c"
     PR2 = 0xF9;
     T2CON = 0x00;
     CCP3CON = 0x0C;
@@ -9854,18 +9855,24 @@ void Receive_Interrupt(void) {
         case 'M':
 
 
-            break;
+            Set_PWM_Right_Motor(800.00);
+            LATDbits.LD4 = 0;
+            LATDbits.LD5 = 1;
+            Set_PWM_Left_Motor(800.00);
+            LATDbits.LD6 = 1;
+            LATDbits.LD7 = 0;
 
-        case 'A':
+            _delay((unsigned long)((5000)*(16000000/4000.0)));
 
-            break;
-
-        case 'Q':
-            Init_Message_Platform();
             break;
 
         default:
-            LATD = 0x00;
+
+            LATDbits.LD4 = 0;
+            LATDbits.LD5 = 0;
+            LATDbits.LD6 = 0;
+            LATDbits.LD7 = 0;
+
             break;
 
     }
@@ -9874,9 +9881,21 @@ void Receive_Interrupt(void) {
 
 
 
-void Set_PWM(float value_pwm) {
+void Set_PWM_Right_Motor(float value1_pwm) {
+
+    Duty_Cycle1 = (float) (value1_pwm * (1000.00 / 1023.00));
+    CCPR3L = (int) Duty_Cycle1 >> 2;
+    CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4));
+
+}
 
 
+
+void Set_PWM_Left_Motor(float value2_pwm) {
+
+    Duty_Cycle2 = (float) (value2_pwm * (1000.00 / 1023.00));
+    CCPR5L = (int) Duty_Cycle2 >> 2;
+    CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
 
 }
 
