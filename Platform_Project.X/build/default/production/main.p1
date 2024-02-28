@@ -277,6 +277,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "31 main.c
 [; ;main.c: 31: void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor);
 [v _Send_PWM_Motors `(v ~T0 @X0 0 ef2`f`f ]
+"32
+[; ;main.c: 32: void Manage_Motor_Direction(char in1, char in2, char in3, char in4);
+[v _Manage_Motor_Direction `(v ~T0 @X0 0 ef4`uc`uc`uc`uc ]
+[v F205 `(v ~T0 @X0 1 tf1`ul ]
+"20 C:\Program Files\Microchip\xc8\v2.46\pic\include\builtins.h
+[v __delay `JF205 ~T0 @X0 0 e ]
+[p i __delay ]
 "7902 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7902:     struct {
 [s S389 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -292,10 +299,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7923
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7923: extern volatile LATDbits_t LATDbits __attribute__((address(0xF8C)));
 [v _LATDbits `VS388 ~T0 @X0 0 e@3980 ]
-[v F205 `(v ~T0 @X0 1 tf1`ul ]
-"20 C:\Program Files\Microchip\xc8\v2.46\pic\include\builtins.h
-[v __delay `JF205 ~T0 @X0 0 e ]
-[p i __delay ]
 "41 ./LCD_Library.h
 [; ;./LCD_Library.h: 41: void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
 [v _Send_Instruction_Data `(v ~T0 @X0 0 ef2`uc`uc ]
@@ -1339,38 +1342,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 152:             Send_PWM_Motors(1023.00, 1023.00);
 [e ( _Send_PWM_Motors (2 , -> .1023.00 `f -> .1023.00 `f ]
 "153
-[; ;main.c: 153:             LATDbits.LD4 = 0;
-[e = . . _LATDbits 1 4 -> -> 0 `i `uc ]
+[; ;main.c: 153:             Manage_Motor_Direction(0, 1, 1, 0);
+[e ( _Manage_Motor_Direction (4 , , , -> -> 0 `i `uc -> -> 1 `i `uc -> -> 1 `i `uc -> -> 0 `i `uc ]
 "154
-[; ;main.c: 154:             LATDbits.LD5 = 1;
-[e = . . _LATDbits 1 5 -> -> 1 `i `uc ]
-"155
-[; ;main.c: 155:             LATDbits.LD6 = 1;
-[e = . . _LATDbits 1 6 -> -> 1 `i `uc ]
-"156
-[; ;main.c: 156:             LATDbits.LD7 = 0;
-[e = . . _LATDbits 1 7 -> -> 0 `i `uc ]
-"158
-[; ;main.c: 158:             _delay((unsigned long)((5000)*(16000000/4000.0)));
+[; ;main.c: 154:             _delay((unsigned long)((5000)*(16000000/4000.0)));
 [e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"160
-[; ;main.c: 160:             break;
+"156
+[; ;main.c: 156:             break;
 [e $U 863  ]
-"162
-[; ;main.c: 162:         default:
+"158
+[; ;main.c: 158:         case 'A':
 [e :U 866 ]
+"160
+[; ;main.c: 160:             Send_PWM_Motors(1023.00, 1023.00);
+[e ( _Send_PWM_Motors (2 , -> .1023.00 `f -> .1023.00 `f ]
+"161
+[; ;main.c: 161:             Manage_Motor_Direction(1, 0, 0, 1);
+[e ( _Manage_Motor_Direction (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 1 `i `uc ]
+"162
+[; ;main.c: 162:             _delay((unsigned long)((5000)*(16000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "164
-[; ;main.c: 164:             LATDbits.LD4 = 0;
-[e = . . _LATDbits 1 4 -> -> 0 `i `uc ]
-"165
-[; ;main.c: 165:             LATDbits.LD5 = 0;
-[e = . . _LATDbits 1 5 -> -> 0 `i `uc ]
+[; ;main.c: 164:         default:
+[e :U 867 ]
 "166
-[; ;main.c: 166:             LATDbits.LD6 = 0;
-[e = . . _LATDbits 1 6 -> -> 0 `i `uc ]
+[; ;main.c: 166:             Send_PWM_Motors(0.00, 0.00);
+[e ( _Send_PWM_Motors (2 , -> .0.00 `f -> .0.00 `f ]
 "167
-[; ;main.c: 167:             LATDbits.LD7 = 0;
-[e = . . _LATDbits 1 7 -> -> 0 `i `uc ]
+[; ;main.c: 167:             Manage_Motor_Direction(1, 0, 0, 1);
+[e ( _Manage_Motor_Direction (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 1 `i `uc ]
 "169
 [; ;main.c: 169:             break;
 [e $U 863  ]
@@ -1380,7 +1380,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 863  ]
 [e :U 864 ]
 [e [\ _Rx_Buffer , $ -> -> 77 `ui `i 865
- 866 ]
+ , $ -> -> 65 `ui `i 866
+ 867 ]
 [e :U 863 ]
 "173
 [; ;main.c: 173: }
@@ -1414,10 +1415,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _CCP5CON -> | & -> _CCP3CON `i -> 15 `i << & -> _Duty_Cycle2 `i -> 3 `i -> 4 `i `uc ]
 "187
 [; ;main.c: 187: }
-[e :UE 867 ]
+[e :UE 868 ]
 }
 "191
-[; ;main.c: 191: void Manage_Motor_Direction(unsigned char in1, unsigned char in2, unsigned char in3, unsigned char in4) {
+[; ;main.c: 191: void Manage_Motor_Direction(char in1, char in2, char in3, char in4) {
 [v _Manage_Motor_Direction `(v ~T0 @X0 1 ef4`uc`uc`uc`uc ]
 {
 [e :U _Manage_Motor_Direction ]
@@ -1426,31 +1427,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _in3 `uc ~T0 @X0 1 r3 ]
 [v _in4 `uc ~T0 @X0 1 r4 ]
 [f ]
+"193
+[; ;main.c: 193:     LATDbits.LD4 = in1;
+[e = . . _LATDbits 1 4 -> _in1 `uc ]
+"194
+[; ;main.c: 194:     LATDbits.LD5 = in2;
+[e = . . _LATDbits 1 5 -> _in2 `uc ]
 "195
-[; ;main.c: 195: }
-[e :UE 868 ]
+[; ;main.c: 195:     LATDbits.LD6 = in3;
+[e = . . _LATDbits 1 6 -> _in3 `uc ]
+"196
+[; ;main.c: 196:     LATDbits.LD7 = in4;
+[e = . . _LATDbits 1 7 -> _in4 `uc ]
+"198
+[; ;main.c: 198: }
+[e :UE 869 ]
 }
-"199
-[; ;main.c: 199: void Init_Message_Platform(void) {
+"202
+[; ;main.c: 202: void Init_Message_Platform(void) {
 [v _Init_Message_Platform `(v ~T0 @X0 1 ef ]
 {
 [e :U _Init_Message_Platform ]
 [f ]
-"201
-[; ;main.c: 201:     Send_Instruction_Data(0, 0X80);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
-"202
-[; ;main.c: 202:     Send_String("Research Project");
-[e ( _Send_String (1 :s 1C ]
-"203
-[; ;main.c: 203:     Send_Instruction_Data(0, 0xC0);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
 "204
-[; ;main.c: 204:     Send_String("Robotic Platform");
-[e ( _Send_String (1 :s 2C ]
+[; ;main.c: 204:     Send_Instruction_Data(0, 0X80);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
+"205
+[; ;main.c: 205:     Send_String("Research Project");
+[e ( _Send_String (1 :s 1C ]
 "206
-[; ;main.c: 206: }
-[e :UE 869 ]
+[; ;main.c: 206:     Send_Instruction_Data(0, 0xC0);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
+"207
+[; ;main.c: 207:     Send_String("Robotic Platform");
+[e ( _Send_String (1 :s 2C ]
+"209
+[; ;main.c: 209: }
+[e :UE 870 ]
 }
 [a 1C 82 101 115 101 97 114 99 104 32 80 114 111 106 101 99 116 0 ]
 [a 2C 82 111 98 111 116 105 99 32 80 108 97 116 102 111 114 109 0 ]

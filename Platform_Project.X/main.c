@@ -29,7 +29,7 @@ void Configurations(void); //Function to set registers.
 void Receive_Interrupt(void); //Function to EUSART module. 
 void Init_Message_Platform(void); //Function to test LCD.
 void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor); //Function to send PWM to each motor. 
-void Manage_Motor_Direction(unsigned char in1, unsigned char in2, unsigned char in3, unsigned char in4); //Function to control polarity of the motors. 
+void Manage_Motor_Direction(char in1, char in2, char in3, char in4); //Function to control polarity of the motors. 
 
 //Global variables.
 unsigned char Rx_Buffer; //Variable to read RCREG1 register. 
@@ -150,21 +150,21 @@ void Receive_Interrupt(void) {
         case 'M': //Test
 
             Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
-            IN1 = 0;
-            IN2 = 1;
-            IN3 = 1;
-            IN4 = 0;
-
+            Manage_Motor_Direction(0, 1, 1, 0); //Backward Instruction. 
             __delay_ms(5000);
 
             break;
 
+        case 'A':
+
+            Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
+            Manage_Motor_Direction(1, 0, 0, 1); //Forward Instruction. 
+            __delay_ms(5000);
+
         default: //Stop 
 
-            IN1 = 0;
-            IN2 = 0;
-            IN3 = 0;
-            IN4 = 0;
+            Send_PWM_Motors(Duty_Cycle_0, Duty_Cycle_0);
+            Manage_Motor_Direction(1, 0, 0, 1); //Forward Instruction. 
 
             break;
 
@@ -188,9 +188,12 @@ void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
 
 //Develop function to control direction 
 
-void Manage_Motor_Direction(unsigned char in1, unsigned char in2, unsigned char in3, unsigned char in4) {
+void Manage_Motor_Direction(char in1, char in2, char in3, char in4) {
 
-
+    IN1 = in1;
+    IN2 = in2;
+    IN3 = in3;
+    IN4 = in4;
 
 }
 

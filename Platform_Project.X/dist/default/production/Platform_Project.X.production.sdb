@@ -49,6 +49,8 @@
 [v _Receive_Interrupt Receive_Interrupt `(v  1 e 1 0 ]
 "177
 [v _Send_PWM_Motors Send_PWM_Motors `(v  1 e 1 0 ]
+"191
+[v _Manage_Motor_Direction Manage_Motor_Direction `(v  1 e 1 0 ]
 "147 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [v _ANSELC ANSELC `VEuc  1 e 1 @3898 ]
 "198
@@ -86,7 +88,7 @@
 [v _LATCbits LATCbits `VES130  1 e 1 @3979 ]
 "7896
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
-[s S544 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S558 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -96,7 +98,7 @@
 `uc 1 LATD7 1 0 :1:7 
 ]
 "7923
-[s S553 . 1 `uc 1 LD0 1 0 :1:0 
+[s S567 . 1 `uc 1 LD0 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
 `uc 1 LD2 1 0 :1:2 
 `uc 1 LD3 1 0 :1:3 
@@ -105,8 +107,8 @@
 `uc 1 LD6 1 0 :1:6 
 `uc 1 LD7 1 0 :1:7 
 ]
-[u S562 . 1 `S544 1 . 1 0 `S553 1 . 1 0 ]
-[v _LATDbits LATDbits `VES562  1 e 1 @3980 ]
+[u S576 . 1 `S558 1 . 1 0 `S567 1 . 1 0 ]
+[v _LATDbits LATDbits `VES576  1 e 1 @3980 ]
 "8008
 [v _LATE LATE `VEuc  1 e 1 @3981 ]
 [s S70 . 1 `uc 1 TRISC0 1 0 :1:0 
@@ -421,17 +423,17 @@
 "8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1063 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1071 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1068 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1071 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1063 1 fAsBytes 4 0 `S1068 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1071  1 a 4 19 ]
+[s S1076 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1079 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1071 1 fAsBytes 4 0 `S1076 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1079  1 a 4 19 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 13 ]
-[s S1139 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1147 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1142 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1139 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1142  1 a 2 23 ]
+[u S1150 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1147 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1150  1 a 2 23 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 18 ]
 "11
@@ -442,4 +444,16 @@
 [v ___flmul@b b `d  1 p 4 0 ]
 [v ___flmul@a a `d  1 p 4 4 ]
 "205
+} 0
+"191 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
+[v _Manage_Motor_Direction Manage_Motor_Direction `(v  1 e 1 0 ]
+{
+[v Manage_Motor_Direction@in1 in1 `uc  1 a 1 wreg ]
+[v Manage_Motor_Direction@in1 in1 `uc  1 a 1 wreg ]
+[v Manage_Motor_Direction@in2 in2 `uc  1 p 1 0 ]
+[v Manage_Motor_Direction@in3 in3 `uc  1 p 1 1 ]
+[v Manage_Motor_Direction@in4 in4 `uc  1 p 1 2 ]
+"193
+[v Manage_Motor_Direction@in1 in1 `uc  1 a 1 3 ]
+"198
 } 0

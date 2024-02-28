@@ -9741,7 +9741,7 @@ void Configurations(void);
 void Receive_Interrupt(void);
 void Init_Message_Platform(void);
 void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor);
-void Manage_Motor_Direction(unsigned char in1, unsigned char in2, unsigned char in3, unsigned char in4);
+void Manage_Motor_Direction(char in1, char in2, char in3, char in4);
 
 
 unsigned char Rx_Buffer;
@@ -9852,21 +9852,21 @@ void Receive_Interrupt(void) {
         case 'M':
 
             Send_PWM_Motors(1023.00, 1023.00);
-            LATDbits.LD4 = 0;
-            LATDbits.LD5 = 1;
-            LATDbits.LD6 = 1;
-            LATDbits.LD7 = 0;
-
+            Manage_Motor_Direction(0, 1, 1, 0);
             _delay((unsigned long)((5000)*(16000000/4000.0)));
 
             break;
 
+        case 'A':
+
+            Send_PWM_Motors(1023.00, 1023.00);
+            Manage_Motor_Direction(1, 0, 0, 1);
+            _delay((unsigned long)((5000)*(16000000/4000.0)));
+
         default:
 
-            LATDbits.LD4 = 0;
-            LATDbits.LD5 = 0;
-            LATDbits.LD6 = 0;
-            LATDbits.LD7 = 0;
+            Send_PWM_Motors(0.00, 0.00);
+            Manage_Motor_Direction(1, 0, 0, 1);
 
             break;
 
@@ -9890,9 +9890,12 @@ void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
 
 
 
-void Manage_Motor_Direction(unsigned char in1, unsigned char in2, unsigned char in3, unsigned char in4) {
+void Manage_Motor_Direction(char in1, char in2, char in3, char in4) {
 
-
+    LATDbits.LD4 = in1;
+    LATDbits.LD5 = in2;
+    LATDbits.LD6 = in3;
+    LATDbits.LD7 = in4;
 
 }
 
