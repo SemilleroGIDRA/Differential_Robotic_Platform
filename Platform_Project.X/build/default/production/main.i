@@ -9736,6 +9736,8 @@ void Send_String(unsigned char *String);
 void Receive_Interrupt(void);
 void Moving_Platform(unsigned char Command);
 void Init_Message_Platform(void);
+void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void);
+void __attribute__((picinterrupt(("low_priority")))) Interrupt(void);
 
 
 unsigned char Rx_Buffer;
@@ -9747,7 +9749,7 @@ void main(void) {
 
     Configurations();
     Init_LCD();
-    Init_Message_Platform();
+
 
 
     while (1) {
@@ -9825,7 +9827,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 148 "main.c"
+# 150 "main.c"
 }
 
 

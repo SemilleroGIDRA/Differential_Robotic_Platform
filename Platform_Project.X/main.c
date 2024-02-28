@@ -46,6 +46,8 @@ void Send_String(unsigned char *String); //Function to send data to the LCD.
 void Receive_Interrupt(void);
 void Moving_Platform(unsigned char Command);
 void Init_Message_Platform(void);
+void __interrupt(high_priority) Interrupt_Rx(void);
+void __interrupt(low_priority) Interrupt(void);
 
 //Global variables.
 unsigned char Rx_Buffer;
@@ -57,7 +59,7 @@ void main(void) {
     //Call functions. 
     Configurations();
     Init_LCD();
-    Init_Message_Platform(); 
+
 
     //Infinite Loop. 
     while (1) {
