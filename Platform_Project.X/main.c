@@ -126,9 +126,11 @@ void Configurations(void) {
 
     //----PWM Configurations ----
     PR2 = 0xF9; //Set period signal.
-    CCP3CON = 0x0C; //Half to duty cycle of 50% and PWM mode. 
-    CCPR3L = 0x7D; //Send Duty cycle of 50%
-    T2CON = 0x02; //TMR off, prescaler 16. 
+    CCP3CON = 0x00; //Half to duty cycle of 50% and PWM mode. 
+    CCPR3L = 0xFA; //Send Duty cycle of 100%
+    CCP5CON = 0x00; 
+    CCPR5L = 0xFA; 
+    T2CON = 0x00; //TMR off, prescaler 16.      
     T2CONbits.TMR2ON = 1; //Turn on timer 2. 
 
 }
@@ -141,11 +143,15 @@ void Receive_Interrupt(void) {
 
         case 'M':
             Moving_Platform(Forward);
-            
+
             break;
 
         case 'A':
             Moving_Platform(Backward);
+            break;
+
+        case 'Q':
+            Init_Message_Platform();
             break;
 
         default:

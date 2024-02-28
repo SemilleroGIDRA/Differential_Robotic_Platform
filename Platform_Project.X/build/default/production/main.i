@@ -9833,9 +9833,11 @@ void Configurations(void) {
     BAUDCON1bits.BRG16 = 0;
 # 128 "main.c"
     PR2 = 0xF9;
-    CCP3CON = 0x0C;
-    CCPR3L = 0x7D;
-    T2CON = 0x02;
+    CCP3CON = 0x00;
+    CCPR3L = 0xFA;
+    CCP5CON = 0x00;
+    CCPR5L = 0xFA;
+    T2CON = 0x00;
     T2CONbits.TMR2ON = 1;
 
 }
@@ -9853,6 +9855,10 @@ void Receive_Interrupt(void) {
 
         case 'A':
             Moving_Platform(0b01010000);
+            break;
+
+        case 'Q':
+            Init_Message_Platform();
             break;
 
         default:
