@@ -12,23 +12,26 @@
 #include "LCD_Library.h"
 
 //Driver LN298 commands to move platform.
-#define Forward 0b10100000
-#define Backward 0b01010000
-#define Shift_Right 0x08 
-#define Shift_Left 0x02
-#define Right_Motor LATEbits.LATE0
-#define Left_Motor LATEbits.LATE2
+#define IN1 LATDbits.LD4 
+#define IN2 LATDbits.LD5
+#define IN3 LATDbits.LD6
+#define IN4 LATDbits.LD7
+#define Right_Motor_Enable LATEbits.LATE0 //Macro to enable right output of driver
+#define Left_Motor_Enable LATEbits.LATE2 //Macro to enable left output of driver
+#define Cycle_100 1023.00 //Macro to use 100% of PWM signal.
 
 //Prototype functions. 
 void Configurations(void); //Function to set registers.
 void Receive_Interrupt(void);
 void Moving_Platform(unsigned char Command);
 void Init_Message_Platform(void);
+void Set_PWM(float value_pwm);
 void __interrupt(high_priority) Interrupt_Rx(void);
 void __interrupt(low_priority) Interrupt(void);
 
 //Global variables.
 unsigned char Rx_Buffer;
+float Duty_Cycle1, Duty_Cycle2;
 
 //Main function.
 
@@ -76,11 +79,12 @@ void Configurations(void) {
     ANSELC = 0;
     ANSELD = 0;
     ANSELE = 0;
+
     //Set pins as outputs
-    TRISCbits.RC4 = 0;
+    TRISCbits.RC4 = 0; //Pins to LCD 
     TRISCbits.RC5 = 0;
-    TRISD = 0;
-    TRISE = 0;
+    TRISD = 0; //Pins configuration to LCD and Motor driver. 
+    TRISE = 0; //Pins configuration to PWM.
 
     //Clean pins 
     LATCbits.LC4 = 0;
@@ -125,12 +129,12 @@ void Configurations(void) {
      */
 
     //----PWM Configurations ----
-    PR2 = 0xF9; //Set period signal.
-    CCP3CON = 0x00; //Half to duty cycle of 50% and PWM mode. 
-    CCPR3L = 0xFA; //Send Duty cycle of 100%
-    CCP5CON = 0x00; 
-    CCPR5L = 0xFA; 
-    T2CON = 0x00; //TMR off, prescaler 16.      
+    PR2 = 0xF9; //Set period signal (1 ms) 8 bits using.
+    T2CON = 0x00; //Timer 2 configuration. TMR off, prescaler 16.
+    CCP3CON = 0x0C; //Duty cycle of 100%. 
+    CCPR3L = 0xFA; //Send Duty cycle of 100%.
+    CCP5CON = 0x0C; //Duty cycle of 100%.
+    CCPR5L = 0xFA; //      
     T2CONbits.TMR2ON = 1; //Turn on timer 2. 
 
 }
@@ -142,12 +146,12 @@ void Receive_Interrupt(void) {
     switch (Rx_Buffer) {
 
         case 'M':
-            Moving_Platform(Forward);
+            //Moving_Platform(Forward);
 
             break;
 
         case 'A':
-            Moving_Platform(Backward);
+            //Moving_Platform(Backward);
             break;
 
         case 'Q':
@@ -162,11 +166,19 @@ void Receive_Interrupt(void) {
 
 }
 
+//Develop to set PWM.
+
+void Set_PWM(float value_pwm) {
+
+
+
+}
+
 void Moving_Platform(unsigned char Command) {
 
-    Right_Motor = 1;
-    Left_Motor = 1;
-    LATD = Command;
+//    Right_Motor = 1;
+//    Left_Motor = 1;
+//    LATD = Command;
 
 }
 

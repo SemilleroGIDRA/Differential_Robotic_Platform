@@ -37,19 +37,17 @@
 [v i2_LCD_Instruction LCD_Instruction `(v  1 e 1 0 ]
 "46
 [v _Send_String Send_String `(v  1 e 1 0 ]
-"35 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
+"38 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"52
+"55
 [v _Interrupt_Rx Interrupt_Rx `IIH(v  1 e 1 0 ]
-"64
+"67
 [v _Interrupt Interrupt `IIL(v  1 e 1 0 ]
-"72
+"75
 [v _Configurations Configurations `(v  1 e 1 0 ]
-"138
+"142
 [v _Receive_Interrupt Receive_Interrupt `(v  1 e 1 0 ]
-"165
-[v _Moving_Platform Moving_Platform `(v  1 e 1 0 ]
-"175
+"187
 [v _Init_Message_Platform Init_Message_Platform `(v  1 e 1 0 ]
 "147 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [v _ANSELC ANSELC `VEuc  1 e 1 @3898 ]
@@ -90,17 +88,6 @@
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
 "8008
 [v _LATE LATE `VEuc  1 e 1 @3981 ]
-[s S547 . 1 `uc 1 LATE0 1 0 :1:0 
-`uc 1 LATE1 1 0 :1:1 
-`uc 1 LATE2 1 0 :1:2 
-]
-"8025
-[s S551 . 1 `uc 1 LE0 1 0 :1:0 
-`uc 1 LE1 1 0 :1:1 
-`uc 1 LE2 1 0 :1:2 
-]
-[u S555 . 1 `S547 1 . 1 0 `S551 1 . 1 0 ]
-[v _LATEbits LATEbits `VES555  1 e 1 @3981 ]
 [s S70 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
@@ -339,12 +326,12 @@
 ]
 [u S176 . 1 `S154 1 . 1 0 `S163 1 . 1 0 `S172 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES176  1 e 1 @4082 ]
-"31 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
+"33 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
 [v _Rx_Buffer Rx_Buffer `uc  1 e 1 0 ]
-"35
+"38
 [v _main main `(v  1 e 1 0 ]
 {
-"48
+"51
 } 0
 "5 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\LCD_Library.c
 [v _Init_LCD Init_LCD `(v  1 e 1 0 ]
@@ -370,39 +357,30 @@
 [v LCD_Instruction@Instruction Instruction `uc  1 a 1 13 ]
 "42
 } 0
-"72 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
+"75 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
 [v _Configurations Configurations `(v  1 e 1 0 ]
 {
-"136
+"140
 } 0
-"64
+"67
 [v _Interrupt Interrupt `IIL(v  1 e 1 0 ]
 {
-"68
+"71
 } 0
-"52
+"55
 [v _Interrupt_Rx Interrupt_Rx `IIH(v  1 e 1 0 ]
 {
-"60
+"63
 } 0
-"138
+"142
 [v _Receive_Interrupt Receive_Interrupt `(v  1 e 1 0 ]
 {
-"163
-} 0
-"165
-[v _Moving_Platform Moving_Platform `(v  1 e 1 0 ]
-{
-[v Moving_Platform@Command Command `uc  1 a 1 wreg ]
-[v Moving_Platform@Command Command `uc  1 a 1 wreg ]
 "167
-[v Moving_Platform@Command Command `uc  1 a 1 0 ]
-"171
 } 0
-"175
+"187
 [v _Init_Message_Platform Init_Message_Platform `(v  1 e 1 0 ]
 {
-"182
+"194
 } 0
 "46 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\LCD_Library.c
 [v _Send_String Send_String `(v  1 e 1 0 ]

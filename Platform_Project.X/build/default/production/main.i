@@ -9736,16 +9736,18 @@ void LCD_Instruction(unsigned char Instruction);
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
 void Send_String(unsigned char *String);
 # 12 "main.c" 2
-# 23 "main.c"
+# 24 "main.c"
 void Configurations(void);
 void Receive_Interrupt(void);
 void Moving_Platform(unsigned char Command);
 void Init_Message_Platform(void);
+void Set_PWM(float value_pwm);
 void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void);
 void __attribute__((picinterrupt(("low_priority")))) Interrupt(void);
 
 
 unsigned char Rx_Buffer;
+float Duty_Cycle1, Duty_Cycle2;
 
 
 
@@ -9794,6 +9796,7 @@ void Configurations(void) {
     ANSELD = 0;
     ANSELE = 0;
 
+
     TRISCbits.RC4 = 0;
     TRISCbits.RC5 = 0;
     TRISD = 0;
@@ -9831,13 +9834,13 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 128 "main.c"
+# 132 "main.c"
     PR2 = 0xF9;
-    CCP3CON = 0x00;
-    CCPR3L = 0xFA;
-    CCP5CON = 0x00;
-    CCPR5L = 0xFA;
     T2CON = 0x00;
+    CCP3CON = 0x0C;
+    CCPR3L = 0xFA;
+    CCP5CON = 0x0C;
+    CCPR5L = 0xFA;
     T2CONbits.TMR2ON = 1;
 
 }
@@ -9849,12 +9852,12 @@ void Receive_Interrupt(void) {
     switch (Rx_Buffer) {
 
         case 'M':
-            Moving_Platform(0b10100000);
+
 
             break;
 
         case 'A':
-            Moving_Platform(0b01010000);
+
             break;
 
         case 'Q':
@@ -9869,11 +9872,19 @@ void Receive_Interrupt(void) {
 
 }
 
+
+
+void Set_PWM(float value_pwm) {
+
+
+
+}
+
 void Moving_Platform(unsigned char Command) {
 
-    LATEbits.LATE0 = 1;
-    LATEbits.LATE2 = 1;
-    LATD = Command;
+
+
+
 
 }
 
