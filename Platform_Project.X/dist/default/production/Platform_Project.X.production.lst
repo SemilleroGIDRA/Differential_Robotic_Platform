@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
-                                                                                               Wed Feb 28 16:15:07 2024
+                                                                                               Wed Feb 28 17:06:28 2024
 
 Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
      1                           	processor	18F46K22
@@ -291,7 +291,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    277 ;;
    278 ;; *************** function _main *****************
    279 ;; Defined at:
-   280 ;;		line 39 in file "main.c"
+   280 ;;		line 40 in file "main.c"
    281 ;; Parameters:    Size  Location     Type
    282 ;;		None
    283 ;; Auto vars:     Size  Location     Type
@@ -330,10 +330,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    311   00186E                     _main:
    312                           	callstack 23
    313   00186E                     
-   314                           ;main.c: 42:     Configurations();
+   314                           ;main.c: 43:     Configurations();
    315   00186E  ECB7  F00B         	call	_Configurations	;wreg free
    316   001872                     
-   317                           ;main.c: 43:     Init_LCD();
+   317                           ;main.c: 44:     Init_LCD();
    318   001872  ECAA  F00A         	call	_Init_LCD	;wreg free
    319   001876                     l81:
    320   001876  EF3B  F00C         	goto	l81
@@ -646,7 +646,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    612                           
    613 ;; *************** function _Configurations *****************
    614 ;; Defined at:
-   615 ;;		line 76 in file "main.c"
+   615 ;;		line 77 in file "main.c"
    616 ;; Parameters:    Size  Location     Type
    617 ;;		None
    618 ;; Auto vars:     Size  Location     Type
@@ -685,145 +685,145 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    646   00176E                     _Configurations:
    647                           	callstack 25
    648   00176E                     
-   649                           ;main.c: 78:     OSCCON = 0x72;
+   649                           ;main.c: 79:     OSCCON = 0x72;
    650   00176E  0E72               	movlw	114
    651   001770  6ED3               	movwf	211,c	;volatile
    652                           
-   653                           ;main.c: 80:     ANSELC = 0;
+   653                           ;main.c: 81:     ANSELC = 0;
    654   001772  0E00               	movlw	0
    655   001774  010F               	movlb	15	; () banked
    656   001776  6F3A               	movwf	58,b	;volatile
    657                           
-   658                           ;main.c: 81:     ANSELD = 0;
+   658                           ;main.c: 82:     ANSELD = 0;
    659   001778  0E00               	movlw	0
    660   00177A  6F3B               	movwf	59,b	;volatile
    661                           
-   662                           ;main.c: 82:     ANSELE = 0;
+   662                           ;main.c: 83:     ANSELE = 0;
    663   00177C  0E00               	movlw	0
    664   00177E  6F3C               	movwf	60,b	;volatile
    665   001780                     
    666                           ; BSR set to: 15
-   667                           ;main.c: 85:     TRISCbits.RC4 = 0;
+   667                           ;main.c: 86:     TRISCbits.RC4 = 0;
    668   001780  9894               	bcf	148,4,c	;volatile
    669   001782                     
    670                           ; BSR set to: 15
-   671                           ;main.c: 86:     TRISCbits.RC5 = 0;
+   671                           ;main.c: 87:     TRISCbits.RC5 = 0;
    672   001782  9A94               	bcf	148,5,c	;volatile
    673                           
-   674                           ;main.c: 87:     TRISD = 0;
+   674                           ;main.c: 88:     TRISD = 0;
    675   001784  0E00               	movlw	0
    676   001786  6E95               	movwf	149,c	;volatile
    677                           
-   678                           ;main.c: 88:     TRISE = 0;
+   678                           ;main.c: 89:     TRISE = 0;
    679   001788  0E00               	movlw	0
    680   00178A  6E96               	movwf	150,c	;volatile
    681   00178C                     
    682                           ; BSR set to: 15
-   683                           ;main.c: 91:     LATCbits.LC4 = 0;
+   683                           ;main.c: 92:     LATCbits.LC4 = 0;
    684   00178C  988B               	bcf	139,4,c	;volatile
    685   00178E                     
    686                           ; BSR set to: 15
-   687                           ;main.c: 92:     LATCbits.LC5 = 0;
+   687                           ;main.c: 93:     LATCbits.LC5 = 0;
    688   00178E  9A8B               	bcf	139,5,c	;volatile
    689                           
-   690                           ;main.c: 93:     LATD = 0;
+   690                           ;main.c: 94:     LATD = 0;
    691   001790  0E00               	movlw	0
    692   001792  6E8C               	movwf	140,c	;volatile
    693                           
-   694                           ;main.c: 94:     LATE = 0;
+   694                           ;main.c: 95:     LATE = 0;
    695   001794  0E00               	movlw	0
    696   001796  6E8D               	movwf	141,c	;volatile
    697   001798                     
    698                           ; BSR set to: 15
-   699                           ;main.c: 97:     INTCONbits.GIE = 1;
+   699                           ;main.c: 98:     INTCONbits.GIE = 1;
    700   001798  8EF2               	bsf	242,7,c	;volatile
    701   00179A                     
    702                           ; BSR set to: 15
-   703                           ;main.c: 98:     INTCONbits.PEIE = 1;
+   703                           ;main.c: 99:     INTCONbits.PEIE = 1;
    704   00179A  8CF2               	bsf	242,6,c	;volatile
    705   00179C                     
    706                           ; BSR set to: 15
-   707                           ;main.c: 99:     RCONbits.IPEN = 1;
+   707                           ;main.c: 100:     RCONbits.IPEN = 1;
    708   00179C  8ED0               	bsf	208,7,c	;volatile
    709   00179E                     
    710                           ; BSR set to: 15
-   711                           ;main.c: 101:     PIE1bits.RC1IE = 1;
+   711                           ;main.c: 102:     PIE1bits.RC1IE = 1;
    712   00179E  8A9D               	bsf	157,5,c	;volatile
    713   0017A0                     
    714                           ; BSR set to: 15
-   715                           ;main.c: 102:     PIR1bits.RC1IF = 0;
+   715                           ;main.c: 103:     PIR1bits.RC1IF = 0;
    716   0017A0  9A9E               	bcf	158,5,c	;volatile
    717                           
-   718                           ;main.c: 105:     SPBRG = 103;
+   718                           ;main.c: 106:     SPBRG = 103;
    719   0017A2  0E67               	movlw	103
    720   0017A4  6EAF               	movwf	175,c	;volatile
    721   0017A6                     
    722                           ; BSR set to: 15
-   723                           ;main.c: 106:     TRISCbits.RC6 = 1;
+   723                           ;main.c: 107:     TRISCbits.RC6 = 1;
    724   0017A6  8C94               	bsf	148,6,c	;volatile
    725   0017A8                     
    726                           ; BSR set to: 15
-   727                           ;main.c: 107:     TRISCbits.RC7 = 1;
+   727                           ;main.c: 108:     TRISCbits.RC7 = 1;
    728   0017A8  8E94               	bsf	148,7,c	;volatile
    729   0017AA                     
    730                           ; BSR set to: 15
-   731                           ;main.c: 110:     TXSTA1bits.TX91 = 0;
+   731                           ;main.c: 111:     TXSTA1bits.TX91 = 0;
    732   0017AA  9CAC               	bcf	172,6,c	;volatile
    733   0017AC                     
    734                           ; BSR set to: 15
-   735                           ;main.c: 111:     TXSTA1bits.TXEN1 = 1;
+   735                           ;main.c: 112:     TXSTA1bits.TXEN1 = 1;
    736   0017AC  8AAC               	bsf	172,5,c	;volatile
    737   0017AE                     
    738                           ; BSR set to: 15
-   739                           ;main.c: 112:     TXSTA1bits.SYNC1 = 0;
+   739                           ;main.c: 113:     TXSTA1bits.SYNC1 = 0;
    740   0017AE  98AC               	bcf	172,4,c	;volatile
    741   0017B0                     
    742                           ; BSR set to: 15
-   743                           ;main.c: 113:     TXSTA1bits.BRGH1 = 1;
+   743                           ;main.c: 114:     TXSTA1bits.BRGH1 = 1;
    744   0017B0  84AC               	bsf	172,2,c	;volatile
    745   0017B2                     
    746                           ; BSR set to: 15
-   747                           ;main.c: 116:     RCSTAbits.SPEN1 = 1;
+   747                           ;main.c: 117:     RCSTAbits.SPEN1 = 1;
    748   0017B2  8EAB               	bsf	171,7,c	;volatile
    749   0017B4                     
    750                           ; BSR set to: 15
-   751                           ;main.c: 117:     RCSTAbits.RX91 = 0;
+   751                           ;main.c: 118:     RCSTAbits.RX91 = 0;
    752   0017B4  9CAB               	bcf	171,6,c	;volatile
    753   0017B6                     
    754                           ; BSR set to: 15
-   755                           ;main.c: 118:     RCSTAbits.CREN1 = 1;
+   755                           ;main.c: 119:     RCSTAbits.CREN1 = 1;
    756   0017B6  88AB               	bsf	171,4,c	;volatile
    757   0017B8                     
    758                           ; BSR set to: 15
-   759                           ;main.c: 121:     BAUDCON1bits.BRG16 = 0;
+   759                           ;main.c: 122:     BAUDCON1bits.BRG16 = 0;
    760   0017B8  96B8               	bcf	184,3,c	;volatile
    761                           
-   762                           ;main.c: 133:     PR2 = 0xF9;
+   762                           ;main.c: 134:     PR2 = 0xF9;
    763   0017BA  0EF9               	movlw	249
    764   0017BC  6EBB               	movwf	187,c	;volatile
    765                           
-   766                           ;main.c: 134:     T2CON = 0x00;
+   766                           ;main.c: 135:     T2CON = 0x00;
    767   0017BE  0E00               	movlw	0
    768   0017C0  6EBA               	movwf	186,c	;volatile
    769                           
-   770                           ;main.c: 135:     CCP3CON = 0x0C;
-   771   0017C2  0E0C               	movlw	12
+   770                           ;main.c: 136:     CCP3CON = 0x00;
+   771   0017C2  0E00               	movlw	0
    772   0017C4  6F5D               	movwf	93,b	;volatile
    773                           
-   774                           ;main.c: 136:     CCPR3L = 0xFA;
-   775   0017C6  0EFA               	movlw	250
+   774                           ;main.c: 137:     CCPR3L = 0x00;
+   775   0017C6  0E00               	movlw	0
    776   0017C8  6F5E               	movwf	94,b	;volatile
    777                           
-   778                           ;main.c: 137:     CCP5CON = 0x0C;
-   779   0017CA  0E0C               	movlw	12
+   778                           ;main.c: 138:     CCP5CON = 0x00;
+   779   0017CA  0E00               	movlw	0
    780   0017CC  6F54               	movwf	84,b	;volatile
    781                           
-   782                           ;main.c: 138:     CCPR5L = 0xFA;
-   783   0017CE  0EFA               	movlw	250
+   782                           ;main.c: 139:     CCPR5L = 0x00;
+   783   0017CE  0E00               	movlw	0
    784   0017D0  6F55               	movwf	85,b	;volatile
    785   0017D2                     
    786                           ; BSR set to: 15
-   787                           ;main.c: 139:     T2CONbits.TMR2ON = 1;
+   787                           ;main.c: 140:     T2CONbits.TMR2ON = 1;
    788   0017D2  84BA               	bsf	186,2,c	;volatile
    789   0017D4                     
    790                           ; BSR set to: 15
@@ -833,7 +833,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    794                           
    795 ;; *************** function _Interrupt *****************
    796 ;; Defined at:
-   797 ;;		line 68 in file "main.c"
+   797 ;;		line 69 in file "main.c"
    798 ;; Parameters:    Size  Location     Type
    799 ;;		None
    800 ;; Auto vars:     Size  Location     Type
@@ -884,7 +884,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    840                           
    841 ;; *************** function _Interrupt_Rx *****************
    842 ;; Defined at:
-   843 ;;		line 56 in file "main.c"
+   843 ;;		line 57 in file "main.c"
    844 ;; Parameters:    Size  Location     Type
    845 ;;		None
    846 ;; Auto vars:     Size  Location     Type
@@ -935,7 +935,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    886   001812  CFF3 F020          	movff	prodl,??_Interrupt_Rx
    887   001816  CFF4 F021          	movff	prodh,??_Interrupt_Rx+1
    888   00181A                     
-   889                           ;main.c: 58:     if (PIR1bits.RC1IF) {
+   889                           ;main.c: 59:     if (PIR1bits.RC1IF) {
    890   00181A  AA9E               	btfss	158,5,c	;volatile
    891   00181C  EF12  F00C         	goto	i2u57_41
    892   001820  EF14  F00C         	goto	i2u57_40
@@ -943,7 +943,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    894   001824  EF16  F00C         	goto	i2l90
    895   001828                     i2u57_40:
    896   001828                     
-   897                           ;main.c: 60:         Receive_Interrupt();
+   897                           ;main.c: 61:         Receive_Interrupt();
    898   001828  EC7F  F00B         	call	_Receive_Interrupt	;wreg free
    899   00182C                     i2l90:
    900   00182C  C021  FFF4         	movff	??_Interrupt_Rx+1,prodh
@@ -955,7 +955,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    906                           
    907 ;; *************** function _Receive_Interrupt *****************
    908 ;; Defined at:
-   909 ;;		line 143 in file "main.c"
+   909 ;;		line 144 in file "main.c"
    910 ;; Parameters:    Size  Location     Type
    911 ;;		None
    912 ;; Auto vars:     Size  Location     Type
@@ -995,12 +995,12 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    941   0016FE                     _Receive_Interrupt:
    942                           	callstack 23
    943   0016FE                     
-   944                           ;main.c: 145:     Rx_Buffer = RCREG1;
+   944                           ;main.c: 146:     Rx_Buffer = RCREG1;
    945   0016FE  CFAE F031          	movff	4014,_Rx_Buffer	;volatile
    946                           
-   947                           ;main.c: 147:     switch (Rx_Buffer) {
-   948   001702  EFAF  F00B         	goto	i2l1356
-   949   001706                     i2l1342:
+   947                           ;main.c: 148:     switch (Rx_Buffer) {
+   948   001702  EFAF  F00B         	goto	i2l1353
+   949   001706                     i2l1339:
    950                           
    951                           ;main.c: 152:             Set_PWM_Right_Motor(800.00);
    952   001706  0E00               	movlw	0
@@ -1069,7 +1069,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1015                           
   1016                           ;main.c: 170:             break;
   1017   00175A  EFB6  F00B         	goto	i2l105
-  1018   00175E                     i2l1356:
+  1018   00175E                     i2l1353:
   1019   00175E  5031               	movf	_Rx_Buffer^0,w,c
   1020                           
   1021                           ; Switch size 1, requested type "simple"
@@ -1080,7 +1080,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1026                           ;	Chosen strategy is simple_byte
   1027   001760  0A4D               	xorlw	77	; case 77
   1028   001762  B4D8               	btfsc	status,2,c
-  1029   001764  EF83  F00B         	goto	i2l1342
+  1029   001764  EF83  F00B         	goto	i2l1339
   1030   001768  EFA9  F00B         	goto	i2l104
   1031   00176C                     i2l105:
   1032   00176C  0012               	return		;funcret
@@ -1336,9 +1336,9 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1267   001458  EF30  F00A         	goto	i2u49_41
   1268   00145C  EF32  F00A         	goto	i2u49_40
   1269   001460                     i2u49_41:
-  1270   001460  EF3C  F00A         	goto	i2l1262
+  1270   001460  EF3C  F00A         	goto	i2l1259
   1271   001464                     i2u49_40:
-  1272   001464                     i2l1258:
+  1272   001464                     i2l1255:
   1273   001464  0E00               	movlw	0
   1274   001466  6E01               	movwf	?___fltol^0,c
   1275   001468  0E00               	movlw	0
@@ -1347,8 +1347,8 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1278   00146E  6E03               	movwf	(?___fltol+2)^0,c
   1279   001470  0E00               	movlw	0
   1280   001472  6E04               	movwf	(?___fltol+3)^0,c
-  1281   001474  EFA9  F00A         	goto	i2l442
-  1282   001478                     i2l1262:
+  1281   001474  EFA9  F00A         	goto	i2l439
+  1282   001478                     i2l1259:
   1283   001478  C001  F005         	movff	___fltol@f1,??___fltol
   1284   00147C  C002  F006         	movff	___fltol@f1+1,??___fltol+1
   1285   001480  C003  F007         	movff	___fltol@f1+2,??___fltol+2
@@ -1381,7 +1381,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1312   0014BA  EF63  F00A         	goto	i2u51_40
   1313   0014BE  EF61  F00A         	goto	i2u51_41
   1314   0014C2                     i2u51_41:
-  1315   0014C2  EF79  F00A         	goto	i2l1282
+  1315   0014C2  EF79  F00A         	goto	i2l1279
   1316   0014C6                     i2u51_40:
   1317   0014C6  500A               	movf	___fltol@exp1^0,w,c
   1318   0014C8  0A80               	xorlw	128
@@ -1390,49 +1390,49 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1321   0014CE  EF6B  F00A         	goto	i2u52_41
   1322   0014D2  EF6D  F00A         	goto	i2u52_40
   1323   0014D6                     i2u52_41:
-  1324   0014D6  EF6F  F00A         	goto	i2l1278
+  1324   0014D6  EF6F  F00A         	goto	i2l1275
   1325   0014DA                     i2u52_40:
-  1326   0014DA  EF32  F00A         	goto	i2l1258
-  1327   0014DE                     i2l1278:
+  1326   0014DA  EF32  F00A         	goto	i2l1255
+  1327   0014DE                     i2l1275:
   1328   0014DE  90D8               	bcf	status,0,c
   1329   0014E0  3204               	rrcf	(___fltol@f1+3)^0,f,c
   1330   0014E2  3203               	rrcf	(___fltol@f1+2)^0,f,c
   1331   0014E4  3202               	rrcf	(___fltol@f1+1)^0,f,c
   1332   0014E6  3201               	rrcf	___fltol@f1^0,f,c
   1333   0014E8  3E0A               	incfsz	___fltol@exp1^0,f,c
-  1334   0014EA  EF6F  F00A         	goto	i2l1278
-  1335   0014EE  EF91  F00A         	goto	i2l1292
-  1336   0014F2                     i2l1282:
+  1334   0014EA  EF6F  F00A         	goto	i2l1275
+  1335   0014EE  EF91  F00A         	goto	i2l1289
+  1336   0014F2                     i2l1279:
   1337   0014F2  0E1F               	movlw	31
   1338   0014F4  640A               	cpfsgt	___fltol@exp1^0,c
   1339   0014F6  EF7F  F00A         	goto	i2u53_41
   1340   0014FA  EF81  F00A         	goto	i2u53_40
   1341   0014FE                     i2u53_41:
-  1342   0014FE  EF89  F00A         	goto	i2l1290
+  1342   0014FE  EF89  F00A         	goto	i2l1287
   1343   001502                     i2u53_40:
-  1344   001502  EF32  F00A         	goto	i2l1258
-  1345   001506                     i2l1288:
+  1344   001502  EF32  F00A         	goto	i2l1255
+  1345   001506                     i2l1285:
   1346   001506  90D8               	bcf	status,0,c
   1347   001508  3601               	rlcf	___fltol@f1^0,f,c
   1348   00150A  3602               	rlcf	(___fltol@f1+1)^0,f,c
   1349   00150C  3603               	rlcf	(___fltol@f1+2)^0,f,c
   1350   00150E  3604               	rlcf	(___fltol@f1+3)^0,f,c
   1351   001510  060A               	decf	___fltol@exp1^0,f,c
-  1352   001512                     i2l1290:
+  1352   001512                     i2l1287:
   1353   001512  500A               	movf	___fltol@exp1^0,w,c
   1354   001514  A4D8               	btfss	status,2,c
   1355   001516  EF8F  F00A         	goto	i2u54_41
   1356   00151A  EF91  F00A         	goto	i2u54_40
   1357   00151E                     i2u54_41:
-  1358   00151E  EF83  F00A         	goto	i2l1288
+  1358   00151E  EF83  F00A         	goto	i2l1285
   1359   001522                     i2u54_40:
-  1360   001522                     i2l1292:
+  1360   001522                     i2l1289:
   1361   001522  5009               	movf	___fltol@sign1^0,w,c
   1362   001524  B4D8               	btfsc	status,2,c
   1363   001526  EF97  F00A         	goto	i2u55_41
   1364   00152A  EF99  F00A         	goto	i2u55_40
   1365   00152E                     i2u55_41:
-  1366   00152E  EFA1  F00A         	goto	i2l1296
+  1366   00152E  EFA1  F00A         	goto	i2l1293
   1367   001532                     i2u55_40:
   1368   001532  1E04               	comf	(___fltol@f1+3)^0,f,c
   1369   001534  1E03               	comf	(___fltol@f1+2)^0,f,c
@@ -1442,12 +1442,12 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1373   00153C  2202               	addwfc	(___fltol@f1+1)^0,f,c
   1374   00153E  2203               	addwfc	(___fltol@f1+2)^0,f,c
   1375   001540  2204               	addwfc	(___fltol@f1+3)^0,f,c
-  1376   001542                     i2l1296:
+  1376   001542                     i2l1293:
   1377   001542  C001  F001         	movff	___fltol@f1,?___fltol
   1378   001546  C002  F002         	movff	___fltol@f1+1,?___fltol+1
   1379   00154A  C003  F003         	movff	___fltol@f1+2,?___fltol+2
   1380   00154E  C004  F004         	movff	___fltol@f1+3,?___fltol+3
-  1381   001552                     i2l442:
+  1381   001552                     i2l439:
   1382   001552  0012               	return		;funcret
   1383   001554                     __end_of___fltol:
   1384                           	callstack 0
@@ -1508,23 +1508,23 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1434   001032  EF1D  F008         	goto	i2u30_41
   1435   001036  EF1F  F008         	goto	i2u30_40
   1436   00103A                     i2u30_41:
-  1437   00103A  EF20  F008         	goto	i2l1132
+  1437   00103A  EF20  F008         	goto	i2l1129
   1438   00103E                     i2u30_40:
   1439   00103E  8013               	bsf	___flmul@bexp^0,0,c
-  1440   001040                     i2l1132:
+  1440   001040                     i2l1129:
   1441   001040  5013               	movf	___flmul@bexp^0,w,c
   1442   001042  B4D8               	btfsc	status,2,c
   1443   001044  EF26  F008         	goto	i2u31_41
   1444   001048  EF28  F008         	goto	i2u31_40
   1445   00104C                     i2u31_41:
-  1446   00104C  EF3B  F008         	goto	i2l1140
+  1446   00104C  EF3B  F008         	goto	i2l1137
   1447   001050                     i2u31_40:
   1448   001050  2813               	incf	___flmul@bexp^0,w,c
   1449   001052  A4D8               	btfss	status,2,c
   1450   001054  EF2E  F008         	goto	i2u32_41
   1451   001058  EF30  F008         	goto	i2u32_40
   1452   00105C                     i2u32_41:
-  1453   00105C  EF38  F008         	goto	i2l1138
+  1453   00105C  EF38  F008         	goto	i2l1135
   1454   001060                     i2u32_40:
   1455   001060  0E00               	movlw	0
   1456   001062  6E01               	movwf	___flmul@b^0,c
@@ -1534,10 +1534,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1460   00106A  6E03               	movwf	(___flmul@b+2)^0,c
   1461   00106C  0E00               	movlw	0
   1462   00106E  6E04               	movwf	(___flmul@b+3)^0,c
-  1463   001070                     i2l1138:
+  1463   001070                     i2l1135:
   1464   001070  8E03               	bsf	(___flmul@b+2)^0,7,c
-  1465   001072  EF43  F008         	goto	i2l1142
-  1466   001076                     i2l1140:
+  1465   001072  EF43  F008         	goto	i2l1139
+  1466   001076                     i2l1137:
   1467   001076  0E00               	movlw	0
   1468   001078  6E01               	movwf	___flmul@b^0,c
   1469   00107A  0E00               	movlw	0
@@ -1546,7 +1546,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1472   001080  6E03               	movwf	(___flmul@b+2)^0,c
   1473   001082  0E00               	movlw	0
   1474   001084  6E04               	movwf	(___flmul@b+3)^0,c
-  1475   001086                     i2l1142:
+  1475   001086                     i2l1139:
   1476   001086  5008               	movf	(___flmul@a+3)^0,w,c
   1477   001088  0B80               	andlw	128
   1478   00108A  1A0D               	xorwf	___flmul@sign^0,f,c
@@ -1557,23 +1557,23 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1483   001094  EF4E  F008         	goto	i2u33_41
   1484   001098  EF50  F008         	goto	i2u33_40
   1485   00109C                     i2u33_41:
-  1486   00109C  EF51  F008         	goto	i2l1150
+  1486   00109C  EF51  F008         	goto	i2l1147
   1487   0010A0                     i2u33_40:
   1488   0010A0  8012               	bsf	___flmul@aexp^0,0,c
-  1489   0010A2                     i2l1150:
+  1489   0010A2                     i2l1147:
   1490   0010A2  5012               	movf	___flmul@aexp^0,w,c
   1491   0010A4  B4D8               	btfsc	status,2,c
   1492   0010A6  EF57  F008         	goto	i2u34_41
   1493   0010AA  EF59  F008         	goto	i2u34_40
   1494   0010AE                     i2u34_41:
-  1495   0010AE  EF6C  F008         	goto	i2l1158
+  1495   0010AE  EF6C  F008         	goto	i2l1155
   1496   0010B2                     i2u34_40:
   1497   0010B2  2812               	incf	___flmul@aexp^0,w,c
   1498   0010B4  A4D8               	btfss	status,2,c
   1499   0010B6  EF5F  F008         	goto	i2u35_41
   1500   0010BA  EF61  F008         	goto	i2u35_40
   1501   0010BE                     i2u35_41:
-  1502   0010BE  EF69  F008         	goto	i2l1156
+  1502   0010BE  EF69  F008         	goto	i2l1153
   1503   0010C2                     i2u35_40:
   1504   0010C2  0E00               	movlw	0
   1505   0010C4  6E05               	movwf	___flmul@a^0,c
@@ -1583,10 +1583,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1509   0010CC  6E07               	movwf	(___flmul@a+2)^0,c
   1510   0010CE  0E00               	movlw	0
   1511   0010D0  6E08               	movwf	(___flmul@a+3)^0,c
-  1512   0010D2                     i2l1156:
+  1512   0010D2                     i2l1153:
   1513   0010D2  8E07               	bsf	(___flmul@a+2)^0,7,c
-  1514   0010D4  EF74  F008         	goto	i2l759
-  1515   0010D8                     i2l1158:
+  1514   0010D4  EF74  F008         	goto	i2l756
+  1515   0010D8                     i2l1155:
   1516   0010D8  0E00               	movlw	0
   1517   0010DA  6E05               	movwf	___flmul@a^0,c
   1518   0010DC  0E00               	movlw	0
@@ -1595,22 +1595,22 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1521   0010E2  6E07               	movwf	(___flmul@a+2)^0,c
   1522   0010E4  0E00               	movlw	0
   1523   0010E6  6E08               	movwf	(___flmul@a+3)^0,c
-  1524   0010E8                     i2l759:
+  1524   0010E8                     i2l756:
   1525   0010E8  5012               	movf	___flmul@aexp^0,w,c
   1526   0010EA  B4D8               	btfsc	status,2,c
   1527   0010EC  EF7A  F008         	goto	i2u36_41
   1528   0010F0  EF7C  F008         	goto	i2u36_40
   1529   0010F4                     i2u36_41:
-  1530   0010F4  EF84  F008         	goto	i2l1162
+  1530   0010F4  EF84  F008         	goto	i2l1159
   1531   0010F8                     i2u36_40:
   1532   0010F8  5013               	movf	___flmul@bexp^0,w,c
   1533   0010FA  A4D8               	btfss	status,2,c
   1534   0010FC  EF82  F008         	goto	i2u37_41
   1535   001100  EF84  F008         	goto	i2u37_40
   1536   001104                     i2u37_41:
-  1537   001104  EF8E  F008         	goto	i2l1166
+  1537   001104  EF8E  F008         	goto	i2l1163
   1538   001108                     i2u37_40:
-  1539   001108                     i2l1162:
+  1539   001108                     i2l1159:
   1540   001108  0E00               	movlw	0
   1541   00110A  6E01               	movwf	?___flmul^0,c
   1542   00110C  0E00               	movlw	0
@@ -1619,8 +1619,8 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1545   001112  6E03               	movwf	(?___flmul+2)^0,c
   1546   001114  0E00               	movlw	0
   1547   001116  6E04               	movwf	(?___flmul+3)^0,c
-  1548   001118  EF26  F00A         	goto	i2l763
-  1549   00111C                     i2l1166:
+  1548   001118  EF26  F00A         	goto	i2l760
+  1549   00111C                     i2l1163:
   1550   00111C  5007               	movf	(___flmul@a+2)^0,w,c
   1551   00111E  0201               	mulwf	___flmul@b^0,c
   1552   001120  CFF3 F018          	movff	prodl,___flmul@temp
@@ -1796,8 +1796,8 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1722   0012BA  0EFF               	movlw	255
   1723   0012BC  200A               	addwfc	(??___flmul+1)^0,w,c
   1724   0012BE  6E19               	movwf	(___flmul@temp+1)^0,c
-  1725   0012C0  EF77  F009         	goto	i2l1214
-  1726   0012C4                     i2l1208:
+  1725   0012C0  EF77  F009         	goto	i2l1211
+  1726   0012C4                     i2l1205:
   1727   0012C4  90D8               	bcf	status,0,c
   1728   0012C6  3614               	rlcf	___flmul@prod^0,f,c
   1729   0012C8  3615               	rlcf	(___flmul@prod+1)^0,f,c
@@ -1807,10 +1807,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1733   0012D0  EF6C  F009         	goto	i2u39_41
   1734   0012D4  EF6E  F009         	goto	i2u39_40
   1735   0012D8                     i2u39_41:
-  1736   0012D8  EF6F  F009         	goto	i2l766
+  1736   0012D8  EF6F  F009         	goto	i2l763
   1737   0012DC                     i2u39_40:
   1738   0012DC  8014               	bsf	___flmul@prod^0,0,c
-  1739   0012DE                     i2l766:
+  1739   0012DE                     i2l763:
   1740   0012DE  90D8               	bcf	status,0,c
   1741   0012E0  360E               	rlcf	___flmul@grs^0,f,c
   1742   0012E2  360F               	rlcf	(___flmul@grs+1)^0,f,c
@@ -1819,12 +1819,12 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1745   0012E8  0618               	decf	___flmul@temp^0,f,c
   1746   0012EA  A0D8               	btfss	status,0,c
   1747   0012EC  0619               	decf	(___flmul@temp+1)^0,f,c
-  1748   0012EE                     i2l1214:
+  1748   0012EE                     i2l1211:
   1749   0012EE  AE16               	btfss	(___flmul@prod+2)^0,7,c
   1750   0012F0  EF7C  F009         	goto	i2u40_41
   1751   0012F4  EF7E  F009         	goto	i2u40_40
   1752   0012F8                     i2u40_41:
-  1753   0012F8  EF62  F009         	goto	i2l1208
+  1753   0012F8  EF62  F009         	goto	i2l1205
   1754   0012FC                     i2u40_40:
   1755   0012FC  0E00               	movlw	0
   1756   0012FE  6E12               	movwf	___flmul@aexp^0,c
@@ -1832,7 +1832,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1758   001302  EF85  F009         	goto	i2u41_41
   1759   001306  EF87  F009         	goto	i2u41_40
   1760   00130A                     i2u41_41:
-  1761   00130A  EFAB  F009         	goto	i2l768
+  1761   00130A  EFAB  F009         	goto	i2l765
   1762   00130E                     i2u41_40:
   1763   00130E  0EFF               	movlw	255
   1764   001310  140E               	andwf	___flmul@grs^0,w,c
@@ -1854,27 +1854,27 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1780   001330  EF9C  F009         	goto	i2u42_41
   1781   001334  EF9E  F009         	goto	i2u42_40
   1782   001338                     i2u42_41:
-  1783   001338  EFA2  F009         	goto	i2l769
+  1783   001338  EFA2  F009         	goto	i2l766
   1784   00133C                     i2u42_40:
-  1785   00133C                     i2l1222:
+  1785   00133C                     i2l1219:
   1786   00133C  0E01               	movlw	1
   1787   00133E  6E12               	movwf	___flmul@aexp^0,c
-  1788   001340  EFAB  F009         	goto	i2l768
-  1789   001344                     i2l769:
+  1788   001340  EFAB  F009         	goto	i2l765
+  1789   001344                     i2l766:
   1790   001344  A014               	btfss	___flmul@prod^0,0,c
   1791   001346  EFA7  F009         	goto	i2u43_41
   1792   00134A  EFA9  F009         	goto	i2u43_40
   1793   00134E                     i2u43_41:
-  1794   00134E  EFAB  F009         	goto	i2l768
+  1794   00134E  EFAB  F009         	goto	i2l765
   1795   001352                     i2u43_40:
-  1796   001352  EF9E  F009         	goto	i2l1222
-  1797   001356                     i2l768:
+  1796   001352  EF9E  F009         	goto	i2l1219
+  1797   001356                     i2l765:
   1798   001356  5012               	movf	___flmul@aexp^0,w,c
   1799   001358  B4D8               	btfsc	status,2,c
   1800   00135A  EFB1  F009         	goto	i2u44_41
   1801   00135E  EFB3  F009         	goto	i2u44_40
   1802   001362                     i2u44_41:
-  1803   001362  EFD7  F009         	goto	i2l1234
+  1803   001362  EFD7  F009         	goto	i2l1231
   1804   001366                     i2u44_40:
   1805   001366  0E01               	movlw	1
   1806   001368  2614               	addwf	___flmul@prod^0,f,c
@@ -1886,7 +1886,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1812   001374  EFBE  F009         	goto	i2u45_41
   1813   001378  EFC0  F009         	goto	i2u45_40
   1814   00137C                     i2u45_41:
-  1815   00137C  EFD7  F009         	goto	i2l1234
+  1815   00137C  EFD7  F009         	goto	i2l1231
   1816   001380                     i2u45_40:
   1817   001380  C014  F009         	movff	___flmul@prod,??___flmul
   1818   001384  C015  F00A         	movff	___flmul@prod+1,??___flmul+1
@@ -1903,7 +1903,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1829   0013A6  C00C  F017         	movff	??___flmul+3,___flmul@prod+3
   1830   0013AA  4A18               	infsnz	___flmul@temp^0,f,c
   1831   0013AC  2A19               	incf	(___flmul@temp+1)^0,f,c
-  1832   0013AE                     i2l1234:
+  1832   0013AE                     i2l1231:
   1833   0013AE  BE19               	btfsc	(___flmul@temp+1)^0,7,c
   1834   0013B0  EFE2  F009         	goto	i2u46_41
   1835   0013B4  5019               	movf	(___flmul@temp+1)^0,w,c
@@ -1913,7 +1913,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1839   0013BC  EFE2  F009         	goto	i2u46_41
   1840   0013C0  EFE4  F009         	goto	i2u46_40
   1841   0013C4                     i2u46_41:
-  1842   0013C4  EFEE  F009         	goto	i2l1238
+  1842   0013C4  EFEE  F009         	goto	i2l1235
   1843   0013C8                     i2u46_40:
   1844   0013C8  0E00               	movlw	0
   1845   0013CA  6E14               	movwf	___flmul@prod^0,c
@@ -1923,8 +1923,8 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1849   0013D2  6E16               	movwf	(___flmul@prod+2)^0,c
   1850   0013D4  0E7F               	movlw	127
   1851   0013D6  6E17               	movwf	(___flmul@prod+3)^0,c
-  1852   0013D8  EF1C  F00A         	goto	i2l1250
-  1853   0013DC                     i2l1238:
+  1852   0013D8  EF1C  F00A         	goto	i2l1247
+  1853   0013DC                     i2l1235:
   1854   0013DC  BE19               	btfsc	(___flmul@temp+1)^0,7,c
   1855   0013DE  EFFB  F009         	goto	i2u47_40
   1856   0013E2  5019               	movf	(___flmul@temp+1)^0,w,c
@@ -1934,7 +1934,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1860   0013EA  EFF9  F009         	goto	i2u47_41
   1861   0013EE  EFFB  F009         	goto	i2u47_40
   1862   0013F2                     i2u47_41:
-  1863   0013F2  EF07  F00A         	goto	i2l776
+  1863   0013F2  EF07  F00A         	goto	i2l773
   1864   0013F6                     i2u47_40:
   1865   0013F6  0E00               	movlw	0
   1866   0013F8  6E14               	movwf	___flmul@prod^0,c
@@ -1946,8 +1946,8 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1872   001404  6E17               	movwf	(___flmul@prod+3)^0,c
   1873   001406  0E00               	movlw	0
   1874   001408  6E0D               	movwf	___flmul@sign^0,c
-  1875   00140A  EF1C  F00A         	goto	i2l1250
-  1876   00140E                     i2l776:
+  1875   00140A  EF1C  F00A         	goto	i2l1247
+  1876   00140E                     i2l773:
   1877   00140E  C018  F013         	movff	___flmul@temp,___flmul@bexp
   1878   001412  0EFF               	movlw	255
   1879   001414  1614               	andwf	___flmul@prod^0,f,c
@@ -1961,21 +1961,21 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1887   001424  EF16  F00A         	goto	i2u48_41
   1888   001428  EF18  F00A         	goto	i2u48_40
   1889   00142C                     i2u48_41:
-  1890   00142C  EF19  F00A         	goto	i2l1248
+  1890   00142C  EF19  F00A         	goto	i2l1245
   1891   001430                     i2u48_40:
   1892   001430  8E16               	bsf	(___flmul@prod+2)^0,7,c
-  1893   001432                     i2l1248:
+  1893   001432                     i2l1245:
   1894   001432  90D8               	bcf	status,0,c
   1895   001434  3013               	rrcf	___flmul@bexp^0,w,c
   1896   001436  6E17               	movwf	(___flmul@prod+3)^0,c
-  1897   001438                     i2l1250:
+  1897   001438                     i2l1247:
   1898   001438  500D               	movf	___flmul@sign^0,w,c
   1899   00143A  1217               	iorwf	(___flmul@prod+3)^0,f,c
   1900   00143C  C014  F001         	movff	___flmul@prod,?___flmul
   1901   001440  C015  F002         	movff	___flmul@prod+1,?___flmul+1
   1902   001444  C016  F003         	movff	___flmul@prod+2,?___flmul+2
   1903   001448  C017  F004         	movff	___flmul@prod+3,?___flmul+3
-  1904   00144C                     i2l763:
+  1904   00144C                     i2l760:
   1905   00144C  0012               	return		;funcret
   1906   00144E                     __end_of___flmul:
   1907                           	callstack 0
@@ -2559,31 +2559,31 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.46 build 20240104201356 
-Symbol Table                                                                                   Wed Feb 28 16:15:07 2024
+Symbol Table                                                                                   Wed Feb 28 17:06:28 2024
 
                               l81 1876                                l82 1876                                l98 17D4  
-                              bsr 0FE0                               l130 15F4                               l133 1852  
-                             l136 1810                               l820 17DA                               l822 17EA  
-                             l824 17EE                               l826 17FE                               l818 17D8  
-                             l828 1800                               _PR2 0FBB                               u607 157C  
+                              bsr 0FE0                               l130 1852                               l133 1810  
+                             l127 15F4                               l821 17EE                               l823 17FE  
+                             l815 17D8                               l825 1800                               l817 17DA  
+                             l819 17EA                               _PR2 0FBB                               u607 157C  
                              u617 1596                               u627 15E6                               u637 17E0  
                              u565 1842                               u566 1844                               u647 17F4  
                              u657 1806                               u597 155E                               wreg 0FE8  
                       _TXSTA1bits 0FAC                      ___flmul@aexp 0012                      ___flmul@bexp 0013  
                     ___flmul@sign 000D                      ___flmul@temp 0018                      ___flmul@prod 0014  
-             _Set_PWM_Right_Motor 15F6                      ___fltol@exp1 000A                              l1030 178E  
-                            l1022 176E                              l1040 17A0                              l1032 1798  
-                            l1024 1780                              l1050 17AE                              l1042 17A6  
-                            l1034 179A                              l1026 1782                              l1060 17B8  
-                            l1052 17B0                              l1044 17A8                              l1036 179C  
-                            l1028 178C                              l1062 17D2                              l1054 17B2  
-                            l1046 17AA                              l1038 179E                              l1056 17B4  
-                            l1048 17AC                              l1312 183A                              l1320 156C  
-                            l1058 17B6                              l1314 1844                              l1330 15B4  
-                            l1322 1576                              l1316 184C                              l1332 15BE  
-                            l1324 1590                              l1334 15C8                              l1326 15A0  
-                            l1318 1554                              l1336 15D2                              l1328 15AA  
-                            l1360 1872                              l1338 15DC                              l1358 186E  
+             _Set_PWM_Right_Motor 15F6                      ___fltol@exp1 000A                              l1021 1780  
+                            l1031 179A                              l1023 1782                              l1041 17A8  
+                            l1033 179C                              l1025 178C                              l1051 17B2  
+                            l1043 17AA                              l1035 179E                              l1027 178E  
+                            l1019 176E                              l1053 17B4                              l1045 17AC  
+                            l1037 17A0                              l1029 1798                              l1055 17B6  
+                            l1047 17AE                              l1039 17A6                              l1311 1844  
+                            l1057 17B8                              l1049 17B0                              l1313 184C  
+                            l1321 1590                              l1059 17D2                              l1331 15C8  
+                            l1323 15A0                              l1315 1554                              l1309 183A  
+                            l1333 15D2                              l1325 15AA                              l1317 156C  
+                            l1335 15DC                              l1327 15B4                              l1319 1576  
+                            l1329 15BE                              l1355 186E                              l1357 1872  
                             STR_1 1012                              STR_2 1001                              _LATD 0F8C  
                             _LATE 0F8D                              i1l95 001E                              i2l90 182C  
                             _main 186E                              btemp 0032                              prodh 0FF4  
@@ -2592,47 +2592,47 @@ Symbol Table                                                                    
                     _BAUDCON1bits 0FB8                     ___fltol@sign1 0009                             ?_main 0001  
                  __end_of___flmul 144E                   __end_of___fltol 1554                             _T2CON 0FBA  
                            i2l111 16FC                             i2l104 1752                             i2l105 176C  
-                           i2l108 1678                             i2l442 1552                             i2l763 144C  
-                           i2l766 12DE                             i2l759 10E8                             i2l776 140E  
-                           i2l768 1356                             i2l769 1344                             _SPBRG 0FAF  
+                           i2l108 1678                             i2l439 1552                             i2l760 144C  
+                           i2l763 12DE                             i2l756 10E8                             i2l773 140E  
+                           i2l765 1356                             i2l766 1344                             _SPBRG 0FAF  
                            _TRISD 0F95                             _TRISE 0F96                             ttemp5 0033  
                            ttemp6 0036                             ttemp7 003A                             status 0FD8  
                            wtemp8 0033                   __initialization 1854             ??_Set_PWM_Right_Motor 001E  
                     __end_of_main 187E                  __end_of_Init_LCD 15F6             _Send_Instruction_Data 1838  
                           ??_main 0029                     __activetblptr 0002                            _CCPR3L 0F5E  
                           _CCPR5L 0F55                            _ANSELC 0F3A                            _ANSELD 0F3B  
-                          _ANSELE 0F3C                            i2l1200 1238                            i2l1210 12CE  
-                          i2l1202 1262                            i2l1130 103E                            i2l1220 130E  
-                          i2l1212 12DC                            i2l1204 1298                            i2l1140 1076  
-                          i2l1132 1040                            i2l1300 15F6                            i2l1230 1380  
-                          i2l1222 133C                            i2l1214 12EE                            i2l1206 12A6  
-                          i2l1150 10A2                            i2l1142 1086                            i2l1134 1050  
-                          i2l1126 1024                            i2l1310 16D4                            i2l1302 162A  
-                          i2l1240 13F6                            i2l1232 13AA                            i2l1216 12FC  
-                          i2l1208 12C4                            i2l1160 10F8                            i2l1152 10B2  
-                          i2l1144 108C                            i2l1136 1060                            i2l1128 1030  
-                          i2l1304 1650                            i2l1242 1412                            i2l1250 1438  
-                          i2l1226 1366                            i2l1234 13AE                            i2l1218 1300  
-                          i2l1170 1132                            i2l1162 1108                            i2l1154 10C2  
-                          i2l1146 1092                            i2l1138 1070                            i2l1306 167A  
-                          i2l1252 143C                            i2l1244 1422                            i2l1236 13C8  
-                          i2l1228 1372                            i2l1180 1184                            i2l1172 1148  
-                          i2l1156 10D2                            i2l1148 10A0                            i2l1308 16AE  
-                          i2l1340 16FE                            i2l1246 1430                            i2l1238 13DC  
-                          i2l1190 11CA                            i2l1182 1192                            i2l1174 1154  
-                          i2l1166 111C                            i2l1158 10D8                            i2l1270 14B8  
-                          i2l1262 1478                            i2l1350 1734                            i2l1342 1706  
-                          i2l1248 1432                            i2l1192 11E4                            i2l1184 119E  
-                          i2l1176 116C                            i2l1168 1128                            i2l1280 14E8  
-                          i2l1272 14C6                            i2l1264 14A2                            i2l1256 144E  
-                          i2l1352 1736                            i2l1344 171A                            i2l1194 11F4  
-                          i2l1186 11AE                            i2l1178 1178                            i2l1290 1512  
-                          i2l1282 14F2                            i2l1266 14A4                            i2l1258 1464  
-                          i2l1346 171C                            i2l1362 181A                            i2l1196 1210  
-                          i2l1188 11BA                            i2l1292 1522                            i2l1268 14B4  
-                          i2l1348 1732                            i2l1356 175E                            i2l1364 1828  
-                          i2l1198 121C                            i2l1294 1532                            i2l1278 14DE  
-                          i2l1296 1542                            i2l1288 1506                            _RCREG1 0FAE  
+                          _ANSELE 0F3C                            i2l1201 1298                            i2l1211 12EE  
+                          i2l1203 12A6                            i2l1131 1050                            i2l1123 1024  
+                          i2l1213 12FC                            i2l1205 12C4                            i2l1141 108C  
+                          i2l1133 1060                            i2l1125 1030                            i2l1301 1650  
+                          i2l1223 1366                            i2l1231 13AE                            i2l1215 1300  
+                          i2l1207 12CE                            i2l1151 10C2                            i2l1143 1092  
+                          i2l1135 1070                            i2l1127 103E                            i2l1303 167A  
+                          i2l1241 1422                            i2l1233 13C8                            i2l1225 1372  
+                          i2l1217 130E                            i2l1209 12DC                            i2l1153 10D2  
+                          i2l1145 10A0                            i2l1137 1076                            i2l1129 1040  
+                          i2l1305 16AE                            i2l1243 1430                            i2l1235 13DC  
+                          i2l1227 1380                            i2l1219 133C                            i2l1171 1154  
+                          i2l1163 111C                            i2l1155 10D8                            i2l1147 10A2  
+                          i2l1139 1086                            i2l1307 16D4                            i2l1245 1432  
+                          i2l1237 13F6                            i2l1229 13AA                            i2l1181 119E  
+                          i2l1173 116C                            i2l1165 1128                            i2l1157 10F8  
+                          i2l1149 10B2                            i2l1261 14A2                            i2l1253 144E  
+                          i2l1341 171A                            i2l1239 1412                            i2l1247 1438  
+                          i2l1191 11F4                            i2l1183 11AE                            i2l1175 1178  
+                          i2l1167 1132                            i2l1159 1108                            i2l1263 14A4  
+                          i2l1255 1464                            i2l1343 171C                            i2l1249 143C  
+                          i2l1193 1210                            i2l1185 11BA                            i2l1177 1184  
+                          i2l1169 1148                            i2l1265 14B4                            i2l1345 1732  
+                          i2l1353 175E                            i2l1337 16FE                            i2l1361 1828  
+                          i2l1195 121C                            i2l1187 11CA                            i2l1179 1192  
+                          i2l1291 1532                            i2l1275 14DE                            i2l1267 14B8  
+                          i2l1259 1478                            i2l1347 1734                            i2l1339 1706  
+                          i2l1197 1238                            i2l1189 11E4                            i2l1293 1542  
+                          i2l1285 1506                            i2l1277 14E8                            i2l1269 14C6  
+                          i2l1349 1736                            i2l1199 1262                            i2l1287 1512  
+                          i2l1279 14F2                            i2l1359 181A                            i2l1289 1522  
+                          i2l1297 15F6                            i2l1299 162A                            _RCREG1 0FAE  
       LCD_Instruction@Instruction 0024                            _OSCCON 0FD3                     ?_Interrupt_Rx 0001  
          __end_of_LCD_Instruction 1812                         ??___flmul 0009                         ??___fltol 0005  
                           clear_0 185A                            isa$std 0001                      __mediumconst 0000  

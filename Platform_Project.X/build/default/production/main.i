@@ -9736,15 +9736,12 @@ void LCD_Instruction(unsigned char Instruction);
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
 void Send_String(unsigned char *String);
 # 12 "main.c" 2
-# 24 "main.c"
+# 28 "main.c"
 void Configurations(void);
 void Receive_Interrupt(void);
-void Moving_Platform(unsigned char Command);
 void Init_Message_Platform(void);
 void Set_PWM_Right_Motor(float value1_pwm);
 void Set_PWM_Left_Motor(float value2_pwm);
-void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void);
-void __attribute__((picinterrupt(("low_priority")))) Interrupt(void);
 
 
 unsigned char Rx_Buffer;
@@ -9835,13 +9832,13 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 133 "main.c"
+# 134 "main.c"
     PR2 = 0xF9;
     T2CON = 0x00;
-    CCP3CON = 0x0C;
-    CCPR3L = 0xFA;
-    CCP5CON = 0x0C;
-    CCPR5L = 0xFA;
+    CCP3CON = 0x00;
+    CCPR3L = 0x00;
+    CCP5CON = 0x00;
+    CCPR5L = 0x00;
     T2CONbits.TMR2ON = 1;
 
 }
@@ -9853,7 +9850,6 @@ void Receive_Interrupt(void) {
     switch (Rx_Buffer) {
 
         case 'M':
-
 
             Set_PWM_Right_Motor(800.00);
             LATDbits.LD4 = 0;
@@ -9896,14 +9892,6 @@ void Set_PWM_Left_Motor(float value2_pwm) {
     Duty_Cycle2 = (float) (value2_pwm * (1000.00 / 1023.00));
     CCPR5L = (int) Duty_Cycle2 >> 2;
     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
-
-}
-
-void Moving_Platform(unsigned char Command) {
-
-
-
-
 
 }
 

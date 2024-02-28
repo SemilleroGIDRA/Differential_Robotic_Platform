@@ -12,27 +12,28 @@
 #include "LCD_Library.h"
 
 //Driver LN298 commands to move platform.
+//--> Macros to control motors
 #define IN1 LATDbits.LD4 
 #define IN2 LATDbits.LD5
 #define IN3 LATDbits.LD6
 #define IN4 LATDbits.LD7
-#define Right_Motor_Enable LATEbits.LATE0 //Macro to enable right output of driver
-#define Left_Motor_Enable LATEbits.LATE2 //Macro to enable left output of driver
+// --> Macros to control PWM
 #define Cycle_100 1023.00 //Macro to use 100% of PWM signal.
+#define Cycle_75 767.25 //Macro to use 75% of PWM signal.
+#define Cycle_50 511.5 //Macro to use 50% of PWM signal.
+#define Cycle_25 255.75 //Macro to use 25% of PWM signal.
+#define Cycle_0 0.00 //Macro to stop platform. 
 
 //Prototype functions. 
 void Configurations(void); //Function to set registers.
-void Receive_Interrupt(void);
-void Moving_Platform(unsigned char Command);
-void Init_Message_Platform(void);
-void Set_PWM_Right_Motor(float value1_pwm);
-void Set_PWM_Left_Motor(float value2_pwm);
-void __interrupt(high_priority) Interrupt_Rx(void);
-void __interrupt(low_priority) Interrupt(void);
+void Receive_Interrupt(void); //Function to EUSART module. 
+void Init_Message_Platform(void); //Function to test LCD.
+void Set_PWM_Right_Motor(float value1_pwm); //Function to set PWM of right motor.
+void Set_PWM_Left_Motor(float value2_pwm); //Function to set PWM of lef motor.
 
 //Global variables.
-unsigned char Rx_Buffer;
-float Duty_Cycle1, Duty_Cycle2;
+unsigned char Rx_Buffer; //Variable to read RCREG1 register. 
+float Duty_Cycle1, Duty_Cycle2; //Variables to save PWM from equation. 
 
 //Main function.
 
@@ -57,7 +58,7 @@ void __interrupt(high_priority) Interrupt_Rx(void) {
 
     if (PIR1bits.RC1IF) { //Check interrupt has been activated. 
 
-        Receive_Interrupt();
+        Receive_Interrupt(); //Call RX function. 
 
     }
 
@@ -132,22 +133,21 @@ void Configurations(void) {
     //----PWM Configurations ----
     PR2 = 0xF9; //Set period signal (1 ms) 8 bits using.
     T2CON = 0x00; //Timer 2 configuration. TMR off, prescaler 16.
-    CCP3CON = 0x0C; //Duty cycle of 100%. 
-    CCPR3L = 0xFA; //Send Duty cycle of 100%.
-    CCP5CON = 0x0C; //Duty cycle of 100%.
-    CCPR5L = 0xFA; //      
+    CCP3CON = 0x00; //Duty cycle of 100%. 
+    CCPR3L = 0x00; //Send Duty cycle of 100%.
+    CCP5CON = 0x00; //Duty cycle of 100%.
+    CCPR5L = 0x00; //Send Duty cycle of 100%.      
     T2CONbits.TMR2ON = 1; //Turn on timer 2. 
 
 }
 
 void Receive_Interrupt(void) {
 
-    Rx_Buffer = RCREG1;
+    Rx_Buffer = RCREG1; //Assign RCREG1 buffer to clean the flag. 
 
     switch (Rx_Buffer) {
 
-        case 'M':
-            //Moving_Platform(Forward);
+        case 'M': //Test
 
             Set_PWM_Right_Motor(800.00);
             IN1 = 0;
@@ -157,16 +157,16 @@ void Receive_Interrupt(void) {
             IN4 = 0;
 
             __delay_ms(5000);
-            
+
             break;
 
-        default:
-            
-            IN1 = 0; 
-            IN2 = 0; 
-            IN3 = 0; 
-            IN4 = 0; 
-            
+        default: //Stop 
+
+            IN1 = 0;
+            IN2 = 0;
+            IN3 = 0;
+            IN4 = 0;
+
             break;
 
     }
@@ -177,9 +177,9 @@ void Receive_Interrupt(void) {
 
 void Set_PWM_Right_Motor(float value1_pwm) {
 
-    Duty_Cycle1 = (float) (value1_pwm * (1000.00 / Cycle_100));
-    CCPR3L = (int) Duty_Cycle1 >> 2;
-    CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4));
+    Duty_Cycle1 = (float) (value1_pwm * (1000.00 / 1023.00)); //Assign to the Duty_Cycle1 PWM signal. 
+    CCPR3L = (int) Duty_Cycle1 >> 2; //Bitwise operation to send 8 of the 10 Least significant bits to  CCPR3L.
+    CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4)); //Send the rest of the bits to CCP3CON. 
 
 }
 
@@ -187,17 +187,9 @@ void Set_PWM_Right_Motor(float value1_pwm) {
 
 void Set_PWM_Left_Motor(float value2_pwm) {
 
-    Duty_Cycle2 = (float) (value2_pwm * (1000.00 / Cycle_100));
-    CCPR5L = (int) Duty_Cycle2 >> 2;
-    CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
-
-}
-
-void Moving_Platform(unsigned char Command) {
-
-    //    Right_Motor = 1;
-    //    Left_Motor = 1;
-    //    LATD = Command;
+    Duty_Cycle2 = (float) (value2_pwm * (1000.00 / 1023.00)); //Assign to the Duty_Cycle2 PWM signal. 
+    CCPR5L = (int) Duty_Cycle2 >> 2; //Bitwise operation to send 8 of the 10 Least significant bits to  CCPR5L.
+    CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4)); //Send the rest of the bits to CCP5CON. 
 
 }
 
