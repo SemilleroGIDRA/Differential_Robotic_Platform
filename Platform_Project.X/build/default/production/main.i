@@ -9740,8 +9740,8 @@ void Send_String(unsigned char *String);
 void Configurations(void);
 void Receive_Interrupt(void);
 void Init_Message_Platform(void);
-void Set_PWM_Right_Motor(float value1_pwm);
-void Set_PWM_Left_Motor(float value2_pwm);
+void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor);
+void Manage_Motor_Direction(unsigned char in1, unsigned char in2, unsigned char in3, unsigned char in4);
 
 
 unsigned char Rx_Buffer;
@@ -9851,10 +9851,9 @@ void Receive_Interrupt(void) {
 
         case 'M':
 
-            Set_PWM_Right_Motor(800.00);
+            Send_PWM_Motors(1023.00, 1023.00);
             LATDbits.LD4 = 0;
             LATDbits.LD5 = 1;
-            Set_PWM_Left_Motor(800.00);
             LATDbits.LD6 = 1;
             LATDbits.LD7 = 0;
 
@@ -9877,21 +9876,23 @@ void Receive_Interrupt(void) {
 
 
 
-void Set_PWM_Right_Motor(float value1_pwm) {
+void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
 
-    Duty_Cycle1 = (float) (value1_pwm * (1000.00 / 1023.00));
+    Duty_Cycle1 = (float) (PWM_RMotor * (1000.00 / 1023.00));
     CCPR3L = (int) Duty_Cycle1 >> 2;
     CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4));
+
+    Duty_Cycle2 = (float) (PWM_LMotor * (1000.00 / 1023.00));
+    CCPR5L = (int) Duty_Cycle2 >> 2;
+    CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
 
 }
 
 
 
-void Set_PWM_Left_Motor(float value2_pwm) {
+void Manage_Motor_Direction(unsigned char in1, unsigned char in2, unsigned char in3, unsigned char in4) {
 
-    Duty_Cycle2 = (float) (value2_pwm * (1000.00 / 1023.00));
-    CCPR5L = (int) Duty_Cycle2 >> 2;
-    CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
+
 
 }
 

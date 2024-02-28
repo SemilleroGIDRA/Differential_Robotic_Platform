@@ -275,8 +275,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11288: extern volatile unsigned char RCREG1 __attribute__((address(0xFAE)));
 [v _RCREG1 `Vuc ~T0 @X0 0 e@4014 ]
 "31 main.c
-[; ;main.c: 31: void Set_PWM_Right_Motor(float value1_pwm);
-[v _Set_PWM_Right_Motor `(v ~T0 @X0 0 ef1`f ]
+[; ;main.c: 31: void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor);
+[v _Send_PWM_Motors `(v ~T0 @X0 0 ef2`f`f ]
 "7902 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7902:     struct {
 [s S389 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -292,9 +292,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7923
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7923: extern volatile LATDbits_t LATDbits __attribute__((address(0xF8C)));
 [v _LATDbits `VS388 ~T0 @X0 0 e@3980 ]
-"32 main.c
-[; ;main.c: 32: void Set_PWM_Left_Motor(float value2_pwm);
-[v _Set_PWM_Left_Motor `(v ~T0 @X0 0 ef1`f ]
 [v F205 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v2.46\pic\include\builtins.h
 [v __delay `JF205 ~T0 @X0 0 e ]
@@ -1339,8 +1336,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 150:         case 'M':
 [e :U 865 ]
 "152
-[; ;main.c: 152:             Set_PWM_Right_Motor(800.00);
-[e ( _Set_PWM_Right_Motor (1 -> .800.00 `f ]
+[; ;main.c: 152:             Send_PWM_Motors(1023.00, 1023.00);
+[e ( _Send_PWM_Motors (2 , -> .1023.00 `f -> .1023.00 `f ]
 "153
 [; ;main.c: 153:             LATDbits.LD4 = 0;
 [e = . . _LATDbits 1 4 -> -> 0 `i `uc ]
@@ -1348,110 +1345,111 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 154:             LATDbits.LD5 = 1;
 [e = . . _LATDbits 1 5 -> -> 1 `i `uc ]
 "155
-[; ;main.c: 155:             Set_PWM_Left_Motor(800.00);
-[e ( _Set_PWM_Left_Motor (1 -> .800.00 `f ]
-"156
-[; ;main.c: 156:             LATDbits.LD6 = 1;
+[; ;main.c: 155:             LATDbits.LD6 = 1;
 [e = . . _LATDbits 1 6 -> -> 1 `i `uc ]
-"157
-[; ;main.c: 157:             LATDbits.LD7 = 0;
+"156
+[; ;main.c: 156:             LATDbits.LD7 = 0;
 [e = . . _LATDbits 1 7 -> -> 0 `i `uc ]
-"159
-[; ;main.c: 159:             _delay((unsigned long)((5000)*(16000000/4000.0)));
+"158
+[; ;main.c: 158:             _delay((unsigned long)((5000)*(16000000/4000.0)));
 [e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"161
-[; ;main.c: 161:             break;
+"160
+[; ;main.c: 160:             break;
 [e $U 863  ]
-"163
-[; ;main.c: 163:         default:
+"162
+[; ;main.c: 162:         default:
 [e :U 866 ]
-"165
-[; ;main.c: 165:             LATDbits.LD4 = 0;
+"164
+[; ;main.c: 164:             LATDbits.LD4 = 0;
 [e = . . _LATDbits 1 4 -> -> 0 `i `uc ]
-"166
-[; ;main.c: 166:             LATDbits.LD5 = 0;
+"165
+[; ;main.c: 165:             LATDbits.LD5 = 0;
 [e = . . _LATDbits 1 5 -> -> 0 `i `uc ]
-"167
-[; ;main.c: 167:             LATDbits.LD6 = 0;
+"166
+[; ;main.c: 166:             LATDbits.LD6 = 0;
 [e = . . _LATDbits 1 6 -> -> 0 `i `uc ]
-"168
-[; ;main.c: 168:             LATDbits.LD7 = 0;
+"167
+[; ;main.c: 167:             LATDbits.LD7 = 0;
 [e = . . _LATDbits 1 7 -> -> 0 `i `uc ]
-"170
-[; ;main.c: 170:             break;
+"169
+[; ;main.c: 169:             break;
 [e $U 863  ]
-"172
-[; ;main.c: 172:     }
+"171
+[; ;main.c: 171:     }
 }
 [e $U 863  ]
 [e :U 864 ]
 [e [\ _Rx_Buffer , $ -> -> 77 `ui `i 865
  866 ]
 [e :U 863 ]
-"174
-[; ;main.c: 174: }
+"173
+[; ;main.c: 173: }
 [e :UE 862 ]
 }
-"178
-[; ;main.c: 178: void Set_PWM_Right_Motor(float value1_pwm) {
-[v _Set_PWM_Right_Motor `(v ~T0 @X0 1 ef1`f ]
+"177
+[; ;main.c: 177: void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
+[v _Send_PWM_Motors `(v ~T0 @X0 1 ef2`f`f ]
 {
-[e :U _Set_PWM_Right_Motor ]
-[v _value1_pwm `f ~T0 @X0 1 r1 ]
+[e :U _Send_PWM_Motors ]
+[v _PWM_RMotor `f ~T0 @X0 1 r1 ]
+[v _PWM_LMotor `f ~T0 @X0 1 r2 ]
 [f ]
+"179
+[; ;main.c: 179:     Duty_Cycle1 = (float) (PWM_RMotor * (1000.00 / 1023.00));
+[e = _Duty_Cycle1 -> * -> _PWM_RMotor `d / .1000.00 .1023.00 `f ]
 "180
-[; ;main.c: 180:     Duty_Cycle1 = (float) (value1_pwm * (1000.00 / 1023.00));
-[e = _Duty_Cycle1 -> * -> _value1_pwm `d / .1000.00 .1023.00 `f ]
-"181
-[; ;main.c: 181:     CCPR3L = (int) Duty_Cycle1 >> 2;
+[; ;main.c: 180:     CCPR3L = (int) Duty_Cycle1 >> 2;
 [e = _CCPR3L -> >> -> _Duty_Cycle1 `i -> 2 `i `uc ]
-"182
-[; ;main.c: 182:     CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4));
+"181
+[; ;main.c: 181:     CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4));
 [e = _CCP3CON -> | & -> _CCP3CON `i -> 15 `i << & -> _Duty_Cycle1 `i -> 3 `i -> 4 `i `uc ]
+"183
+[; ;main.c: 183:     Duty_Cycle2 = (float) (PWM_LMotor * (1000.00 / 1023.00));
+[e = _Duty_Cycle2 -> * -> _PWM_LMotor `d / .1000.00 .1023.00 `f ]
 "184
-[; ;main.c: 184: }
+[; ;main.c: 184:     CCPR5L = (int) Duty_Cycle2 >> 2;
+[e = _CCPR5L -> >> -> _Duty_Cycle2 `i -> 2 `i `uc ]
+"185
+[; ;main.c: 185:     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
+[e = _CCP5CON -> | & -> _CCP3CON `i -> 15 `i << & -> _Duty_Cycle2 `i -> 3 `i -> 4 `i `uc ]
+"187
+[; ;main.c: 187: }
 [e :UE 867 ]
 }
-"188
-[; ;main.c: 188: void Set_PWM_Left_Motor(float value2_pwm) {
-[v _Set_PWM_Left_Motor `(v ~T0 @X0 1 ef1`f ]
-{
-[e :U _Set_PWM_Left_Motor ]
-[v _value2_pwm `f ~T0 @X0 1 r1 ]
-[f ]
-"190
-[; ;main.c: 190:     Duty_Cycle2 = (float) (value2_pwm * (1000.00 / 1023.00));
-[e = _Duty_Cycle2 -> * -> _value2_pwm `d / .1000.00 .1023.00 `f ]
 "191
-[; ;main.c: 191:     CCPR5L = (int) Duty_Cycle2 >> 2;
-[e = _CCPR5L -> >> -> _Duty_Cycle2 `i -> 2 `i `uc ]
-"192
-[; ;main.c: 192:     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
-[e = _CCP5CON -> | & -> _CCP3CON `i -> 15 `i << & -> _Duty_Cycle2 `i -> 3 `i -> 4 `i `uc ]
-"194
-[; ;main.c: 194: }
+[; ;main.c: 191: void Manage_Motor_Direction(unsigned char in1, unsigned char in2, unsigned char in3, unsigned char in4) {
+[v _Manage_Motor_Direction `(v ~T0 @X0 1 ef4`uc`uc`uc`uc ]
+{
+[e :U _Manage_Motor_Direction ]
+[v _in1 `uc ~T0 @X0 1 r1 ]
+[v _in2 `uc ~T0 @X0 1 r2 ]
+[v _in3 `uc ~T0 @X0 1 r3 ]
+[v _in4 `uc ~T0 @X0 1 r4 ]
+[f ]
+"195
+[; ;main.c: 195: }
 [e :UE 868 ]
 }
-"198
-[; ;main.c: 198: void Init_Message_Platform(void) {
+"199
+[; ;main.c: 199: void Init_Message_Platform(void) {
 [v _Init_Message_Platform `(v ~T0 @X0 1 ef ]
 {
 [e :U _Init_Message_Platform ]
 [f ]
-"200
-[; ;main.c: 200:     Send_Instruction_Data(0, 0X80);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
 "201
-[; ;main.c: 201:     Send_String("Research Project");
-[e ( _Send_String (1 :s 1C ]
+[; ;main.c: 201:     Send_Instruction_Data(0, 0X80);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
 "202
-[; ;main.c: 202:     Send_Instruction_Data(0, 0xC0);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
+[; ;main.c: 202:     Send_String("Research Project");
+[e ( _Send_String (1 :s 1C ]
 "203
-[; ;main.c: 203:     Send_String("Robotic Platform");
+[; ;main.c: 203:     Send_Instruction_Data(0, 0xC0);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
+"204
+[; ;main.c: 204:     Send_String("Robotic Platform");
 [e ( _Send_String (1 :s 2C ]
-"205
-[; ;main.c: 205: }
+"206
+[; ;main.c: 206: }
 [e :UE 869 ]
 }
 [a 1C 82 101 115 101 97 114 99 104 32 80 114 111 106 101 99 116 0 ]
