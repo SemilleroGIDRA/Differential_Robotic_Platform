@@ -3,87 +3,52 @@
 [d edition pro ]
 [d chip 18F46K22 ]
 [d frameptr 4065 ]
-"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fleq.c
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
-"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\float.c
+"62 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\float.c
 [v ___ftpack __ftpack `(f  1 e 4 0 ]
-"86 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftadd.c
+"86 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 4 0 ]
-"54 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftdiv.c
+"54 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 4 0 ]
-"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftmul.c
+"62 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftmul.c
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
-"19 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftsub.c
+"19 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
-"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcadd.c
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "245
 [v ___flsub __flsub `(d  1 e 4 0 ]
-"11 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcdiv.c
+"11 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
-"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
+"8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
-"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul32.c
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul64.c
+"91 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-<<<<<<< HEAD
-"57 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
+"35 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"75
+"52
 [v _Interrupt_Rx Interrupt_Rx `IIH(v  1 e 1 0 ]
-"87
+"64
 [v _Interrupt Interrupt `IIL(v  1 e 1 0 ]
-"95
+"72
 [v _Configurations Configurations `(v  1 e 1 0 ]
-"154
-[v _Init_LCD Init_LCD `(v  1 e 1 0 ]
-"173
-[v _Send_Instruction_Data Send_Instruction_Data `(v  1 e 1 0 ]
-"182
-[v _LCD_Instruction LCD_Instruction `(v  1 e 1 0 ]
-"195
-[v _Send_String Send_String `(v  1 e 1 0 ]
-"205
+"136
 [v _Receive_Interrupt Receive_Interrupt `(v  1 e 1 0 ]
-"227
+"159
 [v _Moving_Platform Moving_Platform `(v  1 e 1 0 ]
 "147 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
-=======
-"5 B:\MPLAB_Projects\College_Research\Platform_Project.X\LCD_Library.c
-[v _Init_LCD Init_LCD `(v  1 e 1 0 ]
-"24
-[v _Send_Instruction_Data Send_Instruction_Data `(v  1 e 1 0 ]
-"33
-[v _LCD_Instruction LCD_Instruction `(v  1 e 1 0 ]
-"46
-[v _Send_String Send_String `(v  1 e 1 0 ]
-"33 B:\MPLAB_Projects\College_Research\Platform_Project.X\main.c
-[v _main main `(v  1 e 1 0 ]
-"51
-[v _Interrupt_Rx Interrupt_Rx `IIH(v  1 e 1 0 ]
-"63
-[v _Interrupt Interrupt `IIL(v  1 e 1 0 ]
-"71
-[v _Configurations Configurations `(v  1 e 1 0 ]
-"135
-[v _Receive_Interrupt Receive_Interrupt `(v  1 e 1 0 ]
-"157
-[v _Moving_Platform Moving_Platform `(v  1 e 1 0 ]
-"147 C:/Users/Alejandro/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
->>>>>>> 4588d6f3faf62ee213d295b5cc31396724b67c33
 [v _ANSELC ANSELC `VEuc  1 e 1 @3898 ]
 "198
 [v _ANSELD ANSELD `VEuc  1 e 1 @3899 ]
 "260
 [v _ANSELE ANSELE `VEuc  1 e 1 @3900 ]
-<<<<<<< HEAD
-=======
 "2546
 [v _CCP3CON CCP3CON `VEuc  1 e 1 @3933 ]
 "2635
 [v _CCPR3L CCPR3L `VEuc  1 e 1 @3934 ]
->>>>>>> 4588d6f3faf62ee213d295b5cc31396724b67c33
 [s S112 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
@@ -109,30 +74,17 @@
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
 "8008
 [v _LATE LATE `VEuc  1 e 1 @3981 ]
-<<<<<<< HEAD
-[s S526 . 1 `uc 1 LATE0 1 0 :1:0 
-=======
 [s S541 . 1 `uc 1 LATE0 1 0 :1:0 
->>>>>>> 4588d6f3faf62ee213d295b5cc31396724b67c33
 `uc 1 LATE1 1 0 :1:1 
 `uc 1 LATE2 1 0 :1:2 
 ]
 "8025
-<<<<<<< HEAD
-[s S530 . 1 `uc 1 LE0 1 0 :1:0 
-`uc 1 LE1 1 0 :1:1 
-`uc 1 LE2 1 0 :1:2 
-]
-[u S534 . 1 `S526 1 . 1 0 `S530 1 . 1 0 ]
-[v _LATEbits LATEbits `VES534  1 e 1 @3981 ]
-=======
 [s S545 . 1 `uc 1 LE0 1 0 :1:0 
 `uc 1 LE1 1 0 :1:1 
 `uc 1 LE2 1 0 :1:2 
 ]
 [u S549 . 1 `S541 1 . 1 0 `S545 1 . 1 0 ]
 [v _LATEbits LATEbits `VES549  1 e 1 @3981 ]
->>>>>>> 4588d6f3faf62ee213d295b5cc31396724b67c33
 [s S70 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
@@ -293,8 +245,6 @@
 ]
 [u S457 . 1 `S420 1 . 1 0 `S429 1 . 1 0 `S432 1 . 1 0 `S441 1 . 1 0 `S446 1 . 1 0 `S451 1 . 1 0 `S454 1 . 1 0 ]
 [v _BAUDCON1bits BAUDCON1bits `VES457  1 e 1 @4024 ]
-<<<<<<< HEAD
-=======
 "13232
 [v _T2CON T2CON `VEuc  1 e 1 @4026 ]
 [s S507 . 1 `uc 1 T2CKPS 1 0 :2:0 
@@ -314,7 +264,6 @@
 [v _T2CONbits T2CONbits `VES519  1 e 1 @4026 ]
 "13303
 [v _PR2 PR2 `VEuc  1 e 1 @4027 ]
->>>>>>> 4588d6f3faf62ee213d295b5cc31396724b67c33
 [s S203 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
 "15871
@@ -374,122 +323,39 @@
 ]
 [u S176 . 1 `S154 1 . 1 0 `S163 1 . 1 0 `S172 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES176  1 e 1 @4082 ]
-<<<<<<< HEAD
-"53 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
+"31 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
 [v _Rx_Buffer Rx_Buffer `uc  1 e 1 0 ]
-"57
-[v _main main `(v  1 e 1 0 ]
-{
-"71
-} 0
-"154
-[v _Init_LCD Init_LCD `(v  1 e 1 0 ]
-{
-"169
-} 0
-"173
-=======
-"29 B:\MPLAB_Projects\College_Research\Platform_Project.X\main.c
-[v _Rx_Buffer Rx_Buffer `uc  1 e 1 0 ]
-"33
-[v _main main `(v  1 e 1 0 ]
-{
-"47
-} 0
-"5 B:\MPLAB_Projects\College_Research\Platform_Project.X\LCD_Library.c
-[v _Init_LCD Init_LCD `(v  1 e 1 0 ]
-{
-"20
-} 0
-"24
->>>>>>> 4588d6f3faf62ee213d295b5cc31396724b67c33
-[v _Send_Instruction_Data Send_Instruction_Data `(v  1 e 1 0 ]
-{
-[v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 wreg ]
-[v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 wreg ]
-<<<<<<< HEAD
-[v Send_Instruction_Data@Data Data `uc  1 p 1 4 ]
-"175
-[v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 5 ]
-"179
-} 0
-"182
-=======
-[v Send_Instruction_Data@Data Data `uc  1 p 1 6 ]
-"26
-[v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 7 ]
-"30
-} 0
-"33
->>>>>>> 4588d6f3faf62ee213d295b5cc31396724b67c33
-[v _LCD_Instruction LCD_Instruction `(v  1 e 1 0 ]
-{
-[v LCD_Instruction@Instruction Instruction `uc  1 a 1 wreg ]
-[v LCD_Instruction@Instruction Instruction `uc  1 a 1 wreg ]
-<<<<<<< HEAD
-"184
-[v LCD_Instruction@Instruction Instruction `uc  1 a 1 3 ]
-"191
-} 0
-"95
-[v _Configurations Configurations `(v  1 e 1 0 ]
-{
-"150
-} 0
-"87
-[v _Interrupt Interrupt `IIL(v  1 e 1 0 ]
-{
-"91
-} 0
-"75
-[v _Interrupt_Rx Interrupt_Rx `IIH(v  1 e 1 0 ]
-{
-"83
-} 0
-"205
-[v _Receive_Interrupt Receive_Interrupt `(v  1 e 1 0 ]
-{
-"225
-} 0
-"227
-=======
 "35
-[v LCD_Instruction@Instruction Instruction `uc  1 a 1 5 ]
-"42
+[v _main main `(v  1 e 1 0 ]
+{
+"48
 } 0
-"71 B:\MPLAB_Projects\College_Research\Platform_Project.X\main.c
+"72
 [v _Configurations Configurations `(v  1 e 1 0 ]
 {
-"133
+"134
 } 0
-"63
+"64
 [v _Interrupt Interrupt `IIL(v  1 e 1 0 ]
 {
-"67
+"68
 } 0
-"51
+"52
 [v _Interrupt_Rx Interrupt_Rx `IIH(v  1 e 1 0 ]
 {
-"59
+"60
 } 0
-"135
+"136
 [v _Receive_Interrupt Receive_Interrupt `(v  1 e 1 0 ]
 {
-"155
-} 0
 "157
->>>>>>> 4588d6f3faf62ee213d295b5cc31396724b67c33
+} 0
+"159
 [v _Moving_Platform Moving_Platform `(v  1 e 1 0 ]
 {
 [v Moving_Platform@Command Command `uc  1 a 1 wreg ]
 [v Moving_Platform@Command Command `uc  1 a 1 wreg ]
-<<<<<<< HEAD
-"229
+"161
 [v Moving_Platform@Command Command `uc  1 a 1 0 ]
-"233
-=======
-"159
-[v Moving_Platform@Command Command `uc  1 a 1 0 ]
-"163
->>>>>>> 4588d6f3faf62ee213d295b5cc31396724b67c33
+"165
 } 0

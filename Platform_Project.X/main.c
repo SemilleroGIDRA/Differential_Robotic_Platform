@@ -37,11 +37,6 @@ void main(void) {
     //Call functions. 
     Configurations();
     Init_LCD();
-<<<<<<< HEAD
-
-=======
-    //Init_Message_Platform(); 
->>>>>>> 4588d6f3faf62ee213d295b5cc31396724b67c33
 
     //Infinite Loop. 
     while (1) {
@@ -146,6 +141,7 @@ void Receive_Interrupt(void) {
 
         case 'M':
             Moving_Platform(Forward);
+            
             break;
 
         case 'A':
