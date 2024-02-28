@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "LCD_Library.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,15 +6,9 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-
-
-
-
-
-
-
-
+# 1 "LCD_Library.c" 2
+# 1 "./LCD_Library.h" 1
+# 16 "./LCD_Library.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -9640,184 +9634,21 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\xc.h" 2 3
-# 9 "main.c" 2
-
-
-# 1 "./Fuses_Configuration.h" 1
-# 11 "./Fuses_Configuration.h"
-#pragma config FOSC = INTIO67
-#pragma config PLLCFG = OFF
-#pragma config PRICLKEN = ON
-#pragma config FCMEN = OFF
-#pragma config IESO = OFF
-
-
-#pragma config PWRTEN = OFF
-#pragma config BOREN = SBORDIS
-#pragma config BORV = 190
-
-
-#pragma config WDTEN = OFF
-#pragma config WDTPS = 32768
-
-
-#pragma config CCP2MX = PORTC1
-#pragma config PBADEN = ON
-#pragma config CCP3MX = PORTE0
-#pragma config HFOFST = ON
-#pragma config T3CMX = PORTC0
-#pragma config P2BMX = PORTD2
-#pragma config MCLRE = EXTMCLR
-
-
-#pragma config STVREN = ON
-#pragma config LVP = OFF
-#pragma config XINST = OFF
-
-
-#pragma config CP0 = OFF
-#pragma config CP1 = OFF
-#pragma config CP2 = OFF
-#pragma config CP3 = OFF
-
-
-#pragma config CPB = OFF
-#pragma config CPD = OFF
-
-
-#pragma config WRT0 = OFF
-#pragma config WRT1 = OFF
-#pragma config WRT2 = OFF
-#pragma config WRT3 = OFF
-
-
-#pragma config WRTC = OFF
-#pragma config WRTB = OFF
-#pragma config WRTD = OFF
-
-
-#pragma config EBTR0 = OFF
-#pragma config EBTR1 = OFF
-#pragma config EBTR2 = OFF
-#pragma config EBTR3 = OFF
-
-
-#pragma config EBTRB = OFF
-# 11 "main.c" 2
-
-# 1 "./LCD_Library.h" 1
+# 16 "./LCD_Library.h" 2
 # 38 "./LCD_Library.h"
 void Configurations(void);
 void Init_LCD(void);
 void LCD_Instruction(unsigned char Instruction);
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
 void Send_String(unsigned char *String);
-# 12 "main.c" 2
-# 23 "main.c"
-void Configurations(void);
-void Receive_Interrupt(void);
-void Moving_Platform(unsigned char Command);
-void Init_Message_Platform(void);
-void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void);
-void __attribute__((picinterrupt(("low_priority")))) Interrupt(void);
+# 1 "LCD_Library.c" 2
 
-
-unsigned char Rx_Buffer;
-
-
-
-void main(void) {
-
-
-    Configurations();
-    Init_LCD();
-
-
-
-    while (1) {
-
-
-
-    }
-
-}
-
-
-
-void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
-
-    if (PIR1bits.RC1IF) {
-
-        Receive_Interrupt();
-
-    }
-
-}
-
-
-
-void __attribute__((picinterrupt(("low_priority")))) Interrupt(void) {
-
-
-
-}
-
-
-
-void Configurations(void) {
-
-    OSCCON = 0x72;
-
-    ANSELC = 0;
-    ANSELD = 0;
-    ANSELE = 0;
-
-    TRISCbits.RC4 = 0;
-    TRISCbits.RC5 = 0;
-    TRISD = 0;
-    TRISE = 0;
-
-
-    LATCbits.LC4 = 0;
-    LATCbits.LC5 = 0;
-    LATD = 0;
-    LATE = 0;
-
-
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-    RCONbits.IPEN = 1;
-
-    PIE1bits.RC1IE = 1;
-    PIR1bits.RC1IF = 0;
-
-
-    SPBRG = 103;
-    TRISCbits.RC6 = 1;
-    TRISCbits.RC7 = 1;
-
-
-    TXSTA1bits.TX91 = 0;
-    TXSTA1bits.TXEN1 = 1;
-    TXSTA1bits.SYNC1 = 0;
-    TXSTA1bits.BRGH1 = 1;
-
-
-    RCSTAbits.SPEN1 = 1;
-    RCSTAbits.RX91 = 0;
-    RCSTAbits.CREN1 = 1;
-
-
-    BAUDCON1bits.BRG16 = 0;
-<<<<<<< HEAD
-# 150 "main.c"
-}
 
 
 
 void Init_LCD(void) {
 
-    _delay((unsigned long)((60)*(16000000/4000.0)));
+    _delay((unsigned long)((100)*(16000000/4000.0)));
     Send_Instruction_Data(0, 0x30);
     _delay((unsigned long)((5)*(16000000/4000.0)));
     Send_Instruction_Data(0, 0x30);
@@ -9850,7 +9681,7 @@ void LCD_Instruction(unsigned char Instruction) {
     LATD = Instruction;
     _delay((unsigned long)((15)*(16000000/4000.0)));
     LATCbits.LATC5 = 0;
-    _delay((unsigned long)((10)*(16000000/4000.0)));
+    _delay((unsigned long)((15)*(16000000/4000.0)));
 
 }
 
@@ -9863,54 +9694,5 @@ void Send_String(unsigned char *String) {
         Send_Instruction_Data(1, String[i]);
 
     }
-=======
-# 127 "main.c"
-    PR2 = 0xF9;
-    CCP3CON = 0x0C;
-    CCPR3L = 0x7D;
-    T2CON = 0x02;
-    T2CONbits.TMR2ON = 1;
->>>>>>> 4588d6f3faf62ee213d295b5cc31396724b67c33
-
-}
-
-void Receive_Interrupt(void) {
-
-    Rx_Buffer = RCREG1;
-
-    switch (Rx_Buffer) {
-
-        case 'M':
-            Moving_Platform(0b10100000);
-            break;
-
-        case 'A':
-            Moving_Platform(0b01010000);
-            break;
-
-        default:
-            LATD = 0x00;
-            break;
-
-    }
-
-}
-
-void Moving_Platform(unsigned char Command) {
-
-    LATEbits.LATE0 = 1;
-    LATEbits.LATE2 = 1;
-    LATD = Command;
-
-}
-
-
-
-void Init_Message_Platform(void) {
-
-    Send_Instruction_Data(0, 0X80);
-    Send_String("Research Project");
-    Send_Instruction_Data(0, 0xC0);
-    Send_String("Robotic Platform");
 
 }
