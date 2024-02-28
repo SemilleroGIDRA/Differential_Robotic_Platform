@@ -1304,17 +1304,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 135:     T2CON = 0x00;
 [e = _T2CON -> -> 0 `i `uc ]
 "136
-[; ;main.c: 136:     CCP3CON = 0x00;
-[e = _CCP3CON -> -> 0 `i `uc ]
+[; ;main.c: 136:     CCP3CON = 0x0C;
+[e = _CCP3CON -> -> 12 `i `uc ]
 "137
-[; ;main.c: 137:     CCPR3L = 0x00;
-[e = _CCPR3L -> -> 0 `i `uc ]
+[; ;main.c: 137:     CCPR3L = 0xFA;
+[e = _CCPR3L -> -> 250 `i `uc ]
 "138
-[; ;main.c: 138:     CCP5CON = 0x00;
-[e = _CCP5CON -> -> 0 `i `uc ]
+[; ;main.c: 138:     CCP5CON = 0x0C;
+[e = _CCP5CON -> -> 12 `i `uc ]
 "139
-[; ;main.c: 139:     CCPR5L = 0x00;
-[e = _CCPR5L -> -> 0 `i `uc ]
+[; ;main.c: 139:     CCPR5L = 0xFA;
+[e = _CCPR5L -> -> 250 `i `uc ]
 "140
 [; ;main.c: 140:     T2CONbits.TMR2ON = 1;
 [e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]

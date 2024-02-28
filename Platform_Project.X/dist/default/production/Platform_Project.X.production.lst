@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
-                                                                                               Wed Feb 28 17:06:28 2024
+                                                                                               Wed Feb 28 18:30:40 2024
 
 Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
      1                           	processor	18F46K22
@@ -806,20 +806,20 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    767   0017BE  0E00               	movlw	0
    768   0017C0  6EBA               	movwf	186,c	;volatile
    769                           
-   770                           ;main.c: 136:     CCP3CON = 0x00;
-   771   0017C2  0E00               	movlw	0
+   770                           ;main.c: 136:     CCP3CON = 0x0C;
+   771   0017C2  0E0C               	movlw	12
    772   0017C4  6F5D               	movwf	93,b	;volatile
    773                           
-   774                           ;main.c: 137:     CCPR3L = 0x00;
-   775   0017C6  0E00               	movlw	0
+   774                           ;main.c: 137:     CCPR3L = 0xFA;
+   775   0017C6  0EFA               	movlw	250
    776   0017C8  6F5E               	movwf	94,b	;volatile
    777                           
-   778                           ;main.c: 138:     CCP5CON = 0x00;
-   779   0017CA  0E00               	movlw	0
+   778                           ;main.c: 138:     CCP5CON = 0x0C;
+   779   0017CA  0E0C               	movlw	12
    780   0017CC  6F54               	movwf	84,b	;volatile
    781                           
-   782                           ;main.c: 139:     CCPR5L = 0x00;
-   783   0017CE  0E00               	movlw	0
+   782                           ;main.c: 139:     CCPR5L = 0xFA;
+   783   0017CE  0EFA               	movlw	250
    784   0017D0  6F55               	movwf	85,b	;volatile
    785   0017D2                     
    786                           ; BSR set to: 15
@@ -2559,7 +2559,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.46 build 20240104201356 
-Symbol Table                                                                                   Wed Feb 28 17:06:28 2024
+Symbol Table                                                                                   Wed Feb 28 18:30:40 2024
 
                               l81 1876                                l82 1876                                l98 17D4  
                               bsr 0FE0                               l130 1852                               l133 1810  

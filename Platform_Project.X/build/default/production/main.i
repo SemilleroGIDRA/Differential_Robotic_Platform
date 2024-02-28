@@ -9835,10 +9835,10 @@ void Configurations(void) {
 # 134 "main.c"
     PR2 = 0xF9;
     T2CON = 0x00;
-    CCP3CON = 0x00;
-    CCPR3L = 0x00;
-    CCP5CON = 0x00;
-    CCPR5L = 0x00;
+    CCP3CON = 0x0C;
+    CCPR3L = 0xFA;
+    CCP5CON = 0x0C;
+    CCPR5L = 0xFA;
     T2CONbits.TMR2ON = 1;
 
 }

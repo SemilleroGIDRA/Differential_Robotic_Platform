@@ -133,10 +133,10 @@ void Configurations(void) {
     //----PWM Configurations ----
     PR2 = 0xF9; //Set period signal (1 ms) 8 bits using.
     T2CON = 0x00; //Timer 2 configuration. TMR off, prescaler 16.
-    CCP3CON = 0x00; //Duty cycle of 100%. 
-    CCPR3L = 0x00; //Send Duty cycle of 100%.
-    CCP5CON = 0x00; //Duty cycle of 100%.
-    CCPR5L = 0x00; //Send Duty cycle of 100%.      
+    CCP3CON = 0x0C; //Duty cycle of 100%. 
+    CCPR3L = 0xFA; //Send Duty cycle of 100%.
+    CCP5CON = 0x0C; //Duty cycle of 100%.
+    CCPR5L = 0xFA; //Send Duty cycle of 100%.      
     T2CONbits.TMR2ON = 1; //Turn on timer 2. 
 
 }
