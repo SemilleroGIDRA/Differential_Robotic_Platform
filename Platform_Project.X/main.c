@@ -18,18 +18,18 @@
 #define IN3 LATDbits.LD6
 #define IN4 LATDbits.LD7
 // --> Macros to control PWM
-#define Cycle_100 1023.00 //Macro to use 100% of PWM signal.
-#define Cycle_75 767.25 //Macro to use 75% of PWM signal.
-#define Cycle_50 511.5 //Macro to use 50% of PWM signal.
-#define Cycle_25 255.75 //Macro to use 25% of PWM signal.
-#define Cycle_0 0.00 //Macro to stop platform. 
+#define Duty_Cycle_100 1023.00 //Macro to use 100% of PWM signal.
+#define Duty_Cycle_75 767.25 //Macro to use 75% of PWM signal.
+#define Duty_Cycle_50 511.5 //Macro to use 50% of PWM signal.
+#define Duty_Cycle_25 255.75 //Macro to use 25% of PWM signal.
+#define Duty_Cycle_0 0.00 //Macro to stop platform. 
 
 //Prototype functions. 
 void Configurations(void); //Function to set registers.
 void Receive_Interrupt(void); //Function to EUSART module. 
 void Init_Message_Platform(void); //Function to test LCD.
-void Set_PWM_Right_Motor(float value1_pwm); //Function to set PWM of right motor.
-void Set_PWM_Left_Motor(float value2_pwm); //Function to set PWM of lef motor.
+void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor); //Function to send PWM to each motor. 
+void Manage_Motor_Direction(unsigned char in1, unsigned char in2, unsigned char in3, unsigned char in4); //Function to control polarity of the motors. 
 
 //Global variables.
 unsigned char Rx_Buffer; //Variable to read RCREG1 register. 
@@ -149,10 +149,9 @@ void Receive_Interrupt(void) {
 
         case 'M': //Test
 
-            Set_PWM_Right_Motor(800.00);
+            Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
             IN1 = 0;
             IN2 = 1;
-            Set_PWM_Left_Motor(800.00);
             IN3 = 1;
             IN4 = 0;
 
@@ -173,23 +172,25 @@ void Receive_Interrupt(void) {
 
 }
 
-//Develop to set PWM for right motor.
+//Develop function to send PWM to the motors. 
 
-void Set_PWM_Right_Motor(float value1_pwm) {
+void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
 
-    Duty_Cycle1 = (float) (value1_pwm * (1000.00 / 1023.00)); //Assign to the Duty_Cycle1 PWM signal. 
+    Duty_Cycle1 = (float) (PWM_RMotor * (1000.00 / 1023.00)); //Assign to the Duty_Cycle1 PWM signal. 
     CCPR3L = (int) Duty_Cycle1 >> 2; //Bitwise operation to send 8 of the 10 Least significant bits to  CCPR3L.
     CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4)); //Send the rest of the bits to CCP3CON. 
 
-}
-
-//Develop to set PWM for left motor.
-
-void Set_PWM_Left_Motor(float value2_pwm) {
-
-    Duty_Cycle2 = (float) (value2_pwm * (1000.00 / 1023.00)); //Assign to the Duty_Cycle2 PWM signal. 
+    Duty_Cycle2 = (float) (PWM_LMotor * (1000.00 / 1023.00)); //Assign to the Duty_Cycle2 PWM signal. 
     CCPR5L = (int) Duty_Cycle2 >> 2; //Bitwise operation to send 8 of the 10 Least significant bits to  CCPR5L.
     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4)); //Send the rest of the bits to CCP5CON. 
+
+}
+
+//Develop function to control direction 
+
+void Manage_Motor_Direction(unsigned char in1, unsigned char in2, unsigned char in3, unsigned char in4) {
+
+
 
 }
 
