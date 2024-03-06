@@ -9736,16 +9736,18 @@ void LCD_Instruction(unsigned char Instruction);
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
 void Send_String(unsigned char *String);
 # 12 "main.c" 2
-# 28 "main.c"
+# 31 "main.c"
 void Configurations(void);
-void Receive_Interrupt(void);
+void Bluetooth_Receiver(void);
 void Init_Message_Platform(void);
 void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor);
 void Manage_Motor_Direction(char in1, char in2, char in3, char in4);
 void Platform_Mode(unsigned char *Data);
+void Manual(void);
 
 
 unsigned char Rx_Buffer;
+unsigned char Mode;
 float Duty_Cycle1, Duty_Cycle2;
 
 
@@ -9759,34 +9761,13 @@ void main(void) {
 
     while (1) {
 
-        Platform_Mode(Rx_Buffer);
+
+        Bluetooth_Receiver();
 
     }
 
 }
-
-
-
-void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
-
-    if (PIR1bits.RC1IF) {
-
-        Receive_Interrupt();
-
-    }
-
-}
-
-
-
-void __attribute__((picinterrupt(("low_priority")))) Interrupt(void) {
-
-
-
-}
-
-
-
+# 80 "main.c"
 void Configurations(void) {
 
     OSCCON = 0x72;
@@ -9833,7 +9814,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 135 "main.c"
+# 137 "main.c"
     PR2 = 0xF9;
     T2CON = 0x00;
     CCP3CON = 0x0C;
@@ -9844,32 +9825,46 @@ void Configurations(void) {
 
 }
 
-void Receive_Interrupt(void) {
+void Bluetooth_Receiver(void) {
 
-    Rx_Buffer = RCREG1;
+    if (PIR1bits.RC1IF) {
 
-    switch (Rx_Buffer) {
+        Rx_Buffer = RCREG1;
 
-        case 'M':
+        switch (Rx_Buffer) {
 
-            Send_PWM_Motors(1023.00, 1023.00);
-            Manage_Motor_Direction(0, 1, 1, 0);
-            _delay((unsigned long)((5000)*(16000000/4000.0)));
+            case 'M':
 
-            break;
+                Send_Instruction_Data(0, 0X80);
+                Send_String("Manual Mode");
 
-        case 'A':
+                break;
 
-            Send_PWM_Motors(1023.00, 1023.00);
-            Manage_Motor_Direction(1, 0, 0, 1);
-            _delay((unsigned long)((5000)*(16000000/4000.0)));
+            case 'A':
 
-        default:
+                Send_Instruction_Data(0, 0xC0);
+                Send_String("Automatic Mode");
 
-            Send_PWM_Motors(0.00, 0.00);
-            Manage_Motor_Direction(1, 0, 0, 1);
+                break;
 
-            break;
+            case 'S':
+
+                Send_Instruction_Data(0, 0X94);
+                Send_String("Semi Mode");
+
+                break;
+
+            default:
+
+                Send_Instruction_Data(0, 0x01);
+                Send_Instruction_Data(0, 0X80);
+                Send_String("   Value Entered");
+                Send_Instruction_Data(0, 0xC0);
+                Send_String("   Is not Valid!");
+
+                break;
+
+        }
 
     }
 
@@ -9902,46 +9897,19 @@ void Manage_Motor_Direction(char in1, char in2, char in3, char in4) {
 
 
 
-void Platform_Mode(unsigned char *Data) {
-
-    switch (*Data) {
-
-        case 'M':
-
-
-
-            break;
-
-        case'S':
-
-
-
-            break;
-
-        case 'A':
-
-
-
-            break;
-
-        default:
-
-
-
-            break;
-
-    }
-
-}
-
-
-
-
 void Init_Message_Platform(void) {
 
     Send_Instruction_Data(0, 0X80);
     Send_String("Research Project");
     Send_Instruction_Data(0, 0xC0);
     Send_String("Robotic Platform");
+
+}
+
+
+
+void Manual(void) {
+
+
 
 }

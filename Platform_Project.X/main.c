@@ -23,17 +23,22 @@
 #define Duty_Cycle_50 511.5 //Macro to use 50% of PWM signal.
 #define Duty_Cycle_25 255.75 //Macro to use 25% of PWM signal.
 #define Duty_Cycle_0 0.00 //Macro to stop platform. 
+#define Manual_Mode 'M' //Macro to check manual mode. 
+#define Auto_Mode 'A' //Macro to check automatic mode. 
+#define Semi_Mode 'S' //Macro to check semiautomatic mode. 
 
 //Prototype functions. 
 void Configurations(void); //Function to set registers.
-void Receive_Interrupt(void); //Function to EUSART module. 
+void Bluetooth_Receiver(void); //Function to EUSART module. 
 void Init_Message_Platform(void); //Function to test LCD.
 void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor); //Function to send PWM to each motor. 
 void Manage_Motor_Direction(char in1, char in2, char in3, char in4); //Function to control polarity of the motors. 
 void Platform_Mode(unsigned char *Data); //Function to enable mode in the platform. 
+void Manual(void);
 
 //Global variables.
 unsigned char Rx_Buffer; //Variable to read RCREG1 register. 
+unsigned char Mode;
 float Duty_Cycle1, Duty_Cycle2; //Variables to save PWM from equation. 
 
 //Main function.
@@ -47,7 +52,8 @@ void main(void) {
     //Infinite Loop. 
     while (1) {
 
-        Platform_Mode(Rx_Buffer);
+        //Platform_Mode(Rx_Buffer);
+        Bluetooth_Receiver();
 
     }
 
@@ -55,23 +61,19 @@ void main(void) {
 
 //Develop interrupt high priority function.
 
-void __interrupt(high_priority) Interrupt_Rx(void) {
-
-    if (PIR1bits.RC1IF) { //Check interrupt has been activated. 
-
-        Receive_Interrupt(); //Call RX function. 
-
-    }
-
-}
-
-//Develop interrupt low priority function.
-
-void __interrupt(low_priority) Interrupt(void) {
-
-
-
-}
+//void __interrupt(high_priority) Interrupt_Rx(void) {
+//
+//
+//
+//}
+//
+////Develop interrupt low priority function.
+//
+//void __interrupt(low_priority) Interrupt(void) {
+//
+//
+//
+//}
 
 //Develop configurations function
 
@@ -142,32 +144,46 @@ void Configurations(void) {
 
 }
 
-void Receive_Interrupt(void) {
+void Bluetooth_Receiver(void) {
 
-    Rx_Buffer = RCREG1; //Assign RCREG1 buffer to clean the flag. 
+    if (PIR1bits.RC1IF) { //Check interrupt has been activated. 
 
-    switch (Rx_Buffer) {
+        Rx_Buffer = RCREG1; //Assign RCREG1 buffer to clean the flag. 
 
-        case 'M': //Test
+        switch (Rx_Buffer) {
 
-            Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
-            Manage_Motor_Direction(0, 1, 1, 0); //Backward Instruction. 
-            __delay_ms(5000);
+            case Manual_Mode: //Test
 
-            break;
+                Send_Instruction_Data(Set, ROW1);
+                Send_String("Manual Mode");
 
-        case 'A':
+                break;
 
-            Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
-            Manage_Motor_Direction(1, 0, 0, 1); //Forward Instruction. 
-            __delay_ms(5000);
+            case Auto_Mode:
 
-        default: //Stop 
+                Send_Instruction_Data(Set, ROW2);
+                Send_String("Automatic Mode");
 
-            Send_PWM_Motors(Duty_Cycle_0, Duty_Cycle_0);
-            Manage_Motor_Direction(1, 0, 0, 1); //Forward Instruction. 
+                break;
 
-            break;
+            case Semi_Mode:
+
+                Send_Instruction_Data(Set, ROW3);
+                Send_String("Semi Mode");
+
+                break;
+
+            default: //Stop 
+
+                Send_Instruction_Data(Set, CLR);
+                Send_Instruction_Data(Set, ROW1);
+                Send_String("   Value Entered");
+                Send_Instruction_Data(Set, ROW2);
+                Send_String("   Is not Valid!");
+
+                break;
+
+        }
 
     }
 
@@ -198,41 +214,6 @@ void Manage_Motor_Direction(char in1, char in2, char in3, char in4) {
 
 }
 
-//Develop function to enable mode of the platform.
-
-void Platform_Mode(unsigned char *Data) {
-
-    switch (*Data) {
-
-        case 'M':
-
-
-
-            break;
-
-        case'S':
-
-
-
-            break;
-
-        case 'A':
-
-
-
-            break;
-
-        default:
-
-
-
-            break;
-
-    }
-
-}
-
-
 //Develop message platform function
 
 void Init_Message_Platform(void) {
@@ -241,5 +222,13 @@ void Init_Message_Platform(void) {
     Send_String("Research Project");
     Send_Instruction_Data(Set, ROW2);
     Send_String("Robotic Platform");
+
+}
+
+//Develop Manual Mode of the platform.
+
+void Manual(void) {
+
+
 
 }
