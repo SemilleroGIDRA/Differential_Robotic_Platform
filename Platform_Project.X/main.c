@@ -23,6 +23,11 @@
 #define Duty_Cycle_50 511.5 //Macro to use 50% of PWM signal.
 #define Duty_Cycle_25 255.75 //Macro to use 25% of PWM signal.
 #define Duty_Cycle_0 0.00 //Macro to stop platform. 
+#define Move_Forward 'F' //Macro to move platform forward.
+#define Move_Backward 'B' //Macro to move platform backward. 
+#define Move_Right 'R' //Macro to move platform to the right.
+#define Move_Left 'L' //Macro to move platform to the left. 
+#define STOP 'T' //Macro to stop the platform movement. 
 #define Manual_Mode 'M' //Macro to check manual mode. 
 #define Auto_Mode 'A' //Macro to check automatic mode. 
 #define Semi_Mode 'S' //Macro to check semiautomatic mode. 
@@ -31,8 +36,7 @@
 void Configurations(void); //Function to set registers.
 void Bluetooth_Receiver(void); //Function to EUSART module. 
 void Init_Message_Platform(void); //Function to test LCD.
-void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor); //Function to send PWM to each motor. 
-void Manage_Motor_Direction(char in1, char in2, char in3, char in4); //Function to control polarity of the motors. 
+void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction); //Function to send PWM to each motor and manage platform direction. 
 void Platform_Mode(unsigned char *Data); //Function to enable mode in the platform. 
 void Manual(void);
 
@@ -191,8 +195,9 @@ void Bluetooth_Receiver(void) {
 
 //Develop function to send PWM to the motors. 
 
-void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
+void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction) {
 
+    //PWM configuration. 
     Duty_Cycle1 = (float) (PWM_RMotor * (1000.00 / 1023.00)); //Assign to the Duty_Cycle1 PWM signal. 
     CCPR3L = (int) Duty_Cycle1 >> 2; //Bitwise operation to send 8 of the 10 Least significant bits to  CCPR3L.
     CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4)); //Send the rest of the bits to CCP3CON. 
@@ -201,16 +206,43 @@ void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
     CCPR5L = (int) Duty_Cycle2 >> 2; //Bitwise operation to send 8 of the 10 Least significant bits to  CCPR5L.
     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4)); //Send the rest of the bits to CCP5CON. 
 
-}
+    //Check direction.
+    if (Direction == Move_Forward) {
 
-//Develop function to control direction 
+        IN1 = 1;
+        IN2 = 0;
+        IN3 = 0;
+        IN4 = 1;
 
-void Manage_Motor_Direction(char in1, char in2, char in3, char in4) {
+    } else if (Direction == Move_Backward) {
 
-    IN1 = in1;
-    IN2 = in2;
-    IN3 = in3;
-    IN4 = in4;
+        IN1 = 0;
+        IN2 = 1;
+        IN3 = 1;
+        IN4 = 0;
+
+    } else if (Direction == Move_Right) {
+
+        IN1 = 1;
+        IN2 = 0;
+        IN3 = 0;
+        IN4 = 0;
+
+    } else if (Direction == Move_Left) {
+
+        IN1 = 0;
+        IN2 = 0;
+        IN3 = 1;
+        IN4 = 0;
+
+    } else if (Direction == STOP) {
+
+        IN1 = 0;
+        IN2 = 0;
+        IN3 = 0;
+        IN4 = 0;
+
+    }
 
 }
 
@@ -229,6 +261,10 @@ void Init_Message_Platform(void) {
 
 void Manual(void) {
 
-
+    if(Rx_Buffer == 1){
+        
+        Driver_Control(Duty_Cycle_100, Duty_Cycle_100, Move_Forward);
+        
+    }
 
 }

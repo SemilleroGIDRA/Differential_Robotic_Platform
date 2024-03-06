@@ -9736,12 +9736,11 @@ void LCD_Instruction(unsigned char Instruction);
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
 void Send_String(unsigned char *String);
 # 12 "main.c" 2
-# 31 "main.c"
+# 36 "main.c"
 void Configurations(void);
 void Bluetooth_Receiver(void);
 void Init_Message_Platform(void);
-void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor);
-void Manage_Motor_Direction(char in1, char in2, char in3, char in4);
+void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction);
 void Platform_Mode(unsigned char *Data);
 void Manual(void);
 
@@ -9767,7 +9766,7 @@ void main(void) {
     }
 
 }
-# 80 "main.c"
+# 84 "main.c"
 void Configurations(void) {
 
     OSCCON = 0x72;
@@ -9814,7 +9813,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 137 "main.c"
+# 141 "main.c"
     PR2 = 0xF9;
     T2CON = 0x00;
     CCP3CON = 0x0C;
@@ -9872,7 +9871,8 @@ void Bluetooth_Receiver(void) {
 
 
 
-void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
+void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction) {
+
 
     Duty_Cycle1 = (float) (PWM_RMotor * (1000.00 / 1023.00));
     CCPR3L = (int) Duty_Cycle1 >> 2;
@@ -9882,16 +9882,43 @@ void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
     CCPR5L = (int) Duty_Cycle2 >> 2;
     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
 
-}
 
+    if (Direction == 'F') {
 
+        LATDbits.LD4 = 1;
+        LATDbits.LD5 = 0;
+        LATDbits.LD6 = 0;
+        LATDbits.LD7 = 1;
 
-void Manage_Motor_Direction(char in1, char in2, char in3, char in4) {
+    } else if (Direction == 'B') {
 
-    LATDbits.LD4 = in1;
-    LATDbits.LD5 = in2;
-    LATDbits.LD6 = in3;
-    LATDbits.LD7 = in4;
+        LATDbits.LD4 = 0;
+        LATDbits.LD5 = 1;
+        LATDbits.LD6 = 1;
+        LATDbits.LD7 = 0;
+
+    } else if (Direction == 'R') {
+
+        LATDbits.LD4 = 1;
+        LATDbits.LD5 = 0;
+        LATDbits.LD6 = 0;
+        LATDbits.LD7 = 0;
+
+    } else if (Direction == 'L') {
+
+        LATDbits.LD4 = 0;
+        LATDbits.LD5 = 0;
+        LATDbits.LD6 = 1;
+        LATDbits.LD7 = 0;
+
+    } else if (Direction == 'T') {
+
+        LATDbits.LD4 = 0;
+        LATDbits.LD5 = 0;
+        LATDbits.LD6 = 0;
+        LATDbits.LD7 = 0;
+
+    }
 
 }
 
@@ -9910,6 +9937,10 @@ void Init_Message_Platform(void) {
 
 void Manual(void) {
 
+    if(Rx_Buffer == 1){
 
+        Driver_Control(1023.00, 1023.00, 'F');
+
+    }
 
 }

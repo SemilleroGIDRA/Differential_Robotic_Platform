@@ -1,11 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
-<<<<<<< HEAD
-                                                                                               Wed Mar 06 16:06:14 2024
-=======
-                                                                                               Sat Mar 02 23:54:49 2024
->>>>>>> 94ad2eecd98a34026cf4602c862719c25166d6c9
+                                                                                               Wed Mar 06 16:42:11 2024
 
 Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
      1                           	processor	18F46K22
@@ -299,7 +295,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    281 ;;
    282 ;; *************** function _main *****************
    283 ;; Defined at:
-   284 ;;		line 46 in file "main.c"
+   284 ;;		line 50 in file "main.c"
    285 ;; Parameters:    Size  Location     Type
    286 ;;		None
    287 ;; Auto vars:     Size  Location     Type
@@ -339,16 +335,16 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    316   0012D6                     _main:
    317                           	callstack 27
    318   0012D6                     
-   319                           ;main.c: 49:     Configurations();
+   319                           ;main.c: 53:     Configurations();
    320   0012D6  ECDC  F008         	call	_Configurations	;wreg free
    321   0012DA                     
-   322                           ;main.c: 50:     Init_LCD();
+   322                           ;main.c: 54:     Init_LCD();
    323   0012DA  EC8B  F008         	call	_Init_LCD	;wreg free
-   324   0012DE                     l1010:
+   324   0012DE                     l1033:
    325                           
-   326                           ;main.c: 56:         Bluetooth_Receiver();
+   326                           ;main.c: 60:         Bluetooth_Receiver();
    327   0012DE  EC36  F008         	call	_Bluetooth_Receiver	;wreg free
-   328   0012E2  EF6F  F009         	goto	l1010
+   328   0012E2  EF6F  F009         	goto	l1033
    329   0012E6  EF00  F000         	goto	start
    330   0012EA                     __end_of_main:
    331                           	callstack 0
@@ -400,13 +396,13 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    372   00111A  0E08               	movlw	8
    373   00111C  6E0F               	movwf	??_Init_LCD^0,c
    374   00111E  0E77               	movlw	119
-   375   001120                     u117:
+   375   001120                     u137:
    376   001120  2EE8               	decfsz	wreg,f,c
-   377   001122  D7FE               	bra	u117
+   377   001122  D7FE               	bra	u137
    378   001124  2E0F               	decfsz	??_Init_LCD^0,f,c
-   379   001126  D7FC               	bra	u117
+   379   001126  D7FC               	bra	u137
    380   001128  2E10               	decfsz	(??_Init_LCD+1)^0,f,c
-   381   00112A  D7FA               	bra	u117
+   381   00112A  D7FA               	bra	u137
    382   00112C  0000               	nop	
    383   00112E                     
    384                           ;LCD_Library.c: 8:     Send_Instruction_Data(0, 0x30);
@@ -419,11 +415,11 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    391   001138  0E1A               	movlw	26
    392   00113A  6E0F               	movwf	??_Init_LCD^0,c
    393   00113C  0EF8               	movlw	248
-   394   00113E                     u127:
+   394   00113E                     u147:
    395   00113E  2EE8               	decfsz	wreg,f,c
-   396   001140  D7FE               	bra	u127
+   396   001140  D7FE               	bra	u147
    397   001142  2E0F               	decfsz	??_Init_LCD^0,f,c
-   398   001144  D7FC               	bra	u127
+   398   001144  D7FC               	bra	u147
    399   001146  D000               	nop2	
    400                           
    401                           ;LCD_Library.c: 10:     Send_Instruction_Data(0, 0x30);
@@ -436,11 +432,11 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    408   001152  0E1A               	movlw	26
    409   001154  6E0F               	movwf	??_Init_LCD^0,c
    410   001156  0EF8               	movlw	248
-   411   001158                     u137:
+   411   001158                     u157:
    412   001158  2EE8               	decfsz	wreg,f,c
-   413   00115A  D7FE               	bra	u137
+   413   00115A  D7FE               	bra	u157
    414   00115C  2E0F               	decfsz	??_Init_LCD^0,f,c
-   415   00115E  D7FC               	bra	u137
+   415   00115E  D7FC               	bra	u157
    416   001160  D000               	nop2	
    417   001162                     
    418                           ;LCD_Library.c: 12:     Send_Instruction_Data(0, 0x30);
@@ -485,13 +481,13 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    457   0011A2  0E08               	movlw	8
    458   0011A4  6E0F               	movwf	??_Init_LCD^0,c
    459   0011A6  0E77               	movlw	119
-   460   0011A8                     u147:
+   460   0011A8                     u167:
    461   0011A8  2EE8               	decfsz	wreg,f,c
-   462   0011AA  D7FE               	bra	u147
+   462   0011AA  D7FE               	bra	u167
    463   0011AC  2E0F               	decfsz	??_Init_LCD^0,f,c
-   464   0011AE  D7FC               	bra	u147
+   464   0011AE  D7FC               	bra	u167
    465   0011B0  2E10               	decfsz	(??_Init_LCD+1)^0,f,c
-   466   0011B2  D7FA               	bra	u147
+   466   0011B2  D7FA               	bra	u167
    467   0011B4  0000               	nop	
    468   0011B6  0012               	return		;funcret
    469   0011B8                     __end_of_Init_LCD:
@@ -499,7 +495,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    471                           
    472 ;; *************** function _Configurations *****************
    473 ;; Defined at:
-   474 ;;		line 80 in file "main.c"
+   474 ;;		line 84 in file "main.c"
    475 ;; Parameters:    Size  Location     Type
    476 ;;		None
    477 ;; Auto vars:     Size  Location     Type
@@ -537,145 +533,145 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    504   0011B8                     _Configurations:
    505                           	callstack 30
    506   0011B8                     
-   507                           ;main.c: 82:     OSCCON = 0x72;
+   507                           ;main.c: 86:     OSCCON = 0x72;
    508   0011B8  0E72               	movlw	114
    509   0011BA  6ED3               	movwf	211,c	;volatile
    510                           
-   511                           ;main.c: 84:     ANSELC = 0;
+   511                           ;main.c: 88:     ANSELC = 0;
    512   0011BC  0E00               	movlw	0
    513   0011BE  010F               	movlb	15	; () banked
    514   0011C0  6F3A               	movwf	58,b	;volatile
    515                           
-   516                           ;main.c: 85:     ANSELD = 0;
+   516                           ;main.c: 89:     ANSELD = 0;
    517   0011C2  0E00               	movlw	0
    518   0011C4  6F3B               	movwf	59,b	;volatile
    519                           
-   520                           ;main.c: 86:     ANSELE = 0;
+   520                           ;main.c: 90:     ANSELE = 0;
    521   0011C6  0E00               	movlw	0
    522   0011C8  6F3C               	movwf	60,b	;volatile
    523   0011CA                     
    524                           ; BSR set to: 15
-   525                           ;main.c: 89:     TRISCbits.RC4 = 0;
+   525                           ;main.c: 93:     TRISCbits.RC4 = 0;
    526   0011CA  9894               	bcf	148,4,c	;volatile
    527   0011CC                     
    528                           ; BSR set to: 15
-   529                           ;main.c: 90:     TRISCbits.RC5 = 0;
+   529                           ;main.c: 94:     TRISCbits.RC5 = 0;
    530   0011CC  9A94               	bcf	148,5,c	;volatile
    531                           
-   532                           ;main.c: 91:     TRISD = 0;
+   532                           ;main.c: 95:     TRISD = 0;
    533   0011CE  0E00               	movlw	0
    534   0011D0  6E95               	movwf	149,c	;volatile
    535                           
-   536                           ;main.c: 92:     TRISE = 0;
+   536                           ;main.c: 96:     TRISE = 0;
    537   0011D2  0E00               	movlw	0
    538   0011D4  6E96               	movwf	150,c	;volatile
    539   0011D6                     
    540                           ; BSR set to: 15
-   541                           ;main.c: 95:     LATCbits.LC4 = 0;
+   541                           ;main.c: 99:     LATCbits.LC4 = 0;
    542   0011D6  988B               	bcf	139,4,c	;volatile
    543   0011D8                     
    544                           ; BSR set to: 15
-   545                           ;main.c: 96:     LATCbits.LC5 = 0;
+   545                           ;main.c: 100:     LATCbits.LC5 = 0;
    546   0011D8  9A8B               	bcf	139,5,c	;volatile
    547                           
-   548                           ;main.c: 97:     LATD = 0;
+   548                           ;main.c: 101:     LATD = 0;
    549   0011DA  0E00               	movlw	0
    550   0011DC  6E8C               	movwf	140,c	;volatile
    551                           
-   552                           ;main.c: 98:     LATE = 0;
+   552                           ;main.c: 102:     LATE = 0;
    553   0011DE  0E00               	movlw	0
    554   0011E0  6E8D               	movwf	141,c	;volatile
    555   0011E2                     
    556                           ; BSR set to: 15
-   557                           ;main.c: 101:     INTCONbits.GIE = 1;
+   557                           ;main.c: 105:     INTCONbits.GIE = 1;
    558   0011E2  8EF2               	bsf	242,7,c	;volatile
    559   0011E4                     
    560                           ; BSR set to: 15
-   561                           ;main.c: 102:     INTCONbits.PEIE = 1;
+   561                           ;main.c: 106:     INTCONbits.PEIE = 1;
    562   0011E4  8CF2               	bsf	242,6,c	;volatile
    563   0011E6                     
    564                           ; BSR set to: 15
-   565                           ;main.c: 103:     RCONbits.IPEN = 1;
+   565                           ;main.c: 107:     RCONbits.IPEN = 1;
    566   0011E6  8ED0               	bsf	208,7,c	;volatile
    567   0011E8                     
    568                           ; BSR set to: 15
-   569                           ;main.c: 105:     PIE1bits.RC1IE = 1;
+   569                           ;main.c: 109:     PIE1bits.RC1IE = 1;
    570   0011E8  8A9D               	bsf	157,5,c	;volatile
    571   0011EA                     
    572                           ; BSR set to: 15
-   573                           ;main.c: 106:     PIR1bits.RC1IF = 0;
+   573                           ;main.c: 110:     PIR1bits.RC1IF = 0;
    574   0011EA  9A9E               	bcf	158,5,c	;volatile
    575                           
-   576                           ;main.c: 109:     SPBRG = 103;
+   576                           ;main.c: 113:     SPBRG = 103;
    577   0011EC  0E67               	movlw	103
    578   0011EE  6EAF               	movwf	175,c	;volatile
    579   0011F0                     
    580                           ; BSR set to: 15
-   581                           ;main.c: 110:     TRISCbits.RC6 = 1;
+   581                           ;main.c: 114:     TRISCbits.RC6 = 1;
    582   0011F0  8C94               	bsf	148,6,c	;volatile
    583   0011F2                     
    584                           ; BSR set to: 15
-   585                           ;main.c: 111:     TRISCbits.RC7 = 1;
+   585                           ;main.c: 115:     TRISCbits.RC7 = 1;
    586   0011F2  8E94               	bsf	148,7,c	;volatile
    587   0011F4                     
    588                           ; BSR set to: 15
-   589                           ;main.c: 114:     TXSTA1bits.TX91 = 0;
+   589                           ;main.c: 118:     TXSTA1bits.TX91 = 0;
    590   0011F4  9CAC               	bcf	172,6,c	;volatile
    591   0011F6                     
    592                           ; BSR set to: 15
-   593                           ;main.c: 115:     TXSTA1bits.TXEN1 = 1;
+   593                           ;main.c: 119:     TXSTA1bits.TXEN1 = 1;
    594   0011F6  8AAC               	bsf	172,5,c	;volatile
    595   0011F8                     
    596                           ; BSR set to: 15
-   597                           ;main.c: 116:     TXSTA1bits.SYNC1 = 0;
+   597                           ;main.c: 120:     TXSTA1bits.SYNC1 = 0;
    598   0011F8  98AC               	bcf	172,4,c	;volatile
    599   0011FA                     
    600                           ; BSR set to: 15
-   601                           ;main.c: 117:     TXSTA1bits.BRGH1 = 1;
+   601                           ;main.c: 121:     TXSTA1bits.BRGH1 = 1;
    602   0011FA  84AC               	bsf	172,2,c	;volatile
    603   0011FC                     
    604                           ; BSR set to: 15
-   605                           ;main.c: 120:     RCSTAbits.SPEN1 = 1;
+   605                           ;main.c: 124:     RCSTAbits.SPEN1 = 1;
    606   0011FC  8EAB               	bsf	171,7,c	;volatile
    607   0011FE                     
    608                           ; BSR set to: 15
-   609                           ;main.c: 121:     RCSTAbits.RX91 = 0;
+   609                           ;main.c: 125:     RCSTAbits.RX91 = 0;
    610   0011FE  9CAB               	bcf	171,6,c	;volatile
    611   001200                     
    612                           ; BSR set to: 15
-   613                           ;main.c: 122:     RCSTAbits.CREN1 = 1;
+   613                           ;main.c: 126:     RCSTAbits.CREN1 = 1;
    614   001200  88AB               	bsf	171,4,c	;volatile
    615   001202                     
    616                           ; BSR set to: 15
-   617                           ;main.c: 125:     BAUDCON1bits.BRG16 = 0;
+   617                           ;main.c: 129:     BAUDCON1bits.BRG16 = 0;
    618   001202  96B8               	bcf	184,3,c	;volatile
    619                           
-   620                           ;main.c: 137:     PR2 = 0xF9;
+   620                           ;main.c: 141:     PR2 = 0xF9;
    621   001204  0EF9               	movlw	249
    622   001206  6EBB               	movwf	187,c	;volatile
    623                           
-   624                           ;main.c: 138:     T2CON = 0x00;
+   624                           ;main.c: 142:     T2CON = 0x00;
    625   001208  0E00               	movlw	0
    626   00120A  6EBA               	movwf	186,c	;volatile
    627                           
-   628                           ;main.c: 139:     CCP3CON = 0x0C;
+   628                           ;main.c: 143:     CCP3CON = 0x0C;
    629   00120C  0E0C               	movlw	12
    630   00120E  6F5D               	movwf	93,b	;volatile
    631                           
-   632                           ;main.c: 140:     CCPR3L = 0xFA;
+   632                           ;main.c: 144:     CCPR3L = 0xFA;
    633   001210  0EFA               	movlw	250
    634   001212  6F5E               	movwf	94,b	;volatile
    635                           
-   636                           ;main.c: 141:     CCP5CON = 0x0C;
+   636                           ;main.c: 145:     CCP5CON = 0x0C;
    637   001214  0E0C               	movlw	12
    638   001216  6F54               	movwf	84,b	;volatile
    639                           
-   640                           ;main.c: 142:     CCPR5L = 0xFA;
+   640                           ;main.c: 146:     CCPR5L = 0xFA;
    641   001218  0EFA               	movlw	250
    642   00121A  6F55               	movwf	85,b	;volatile
    643   00121C                     
    644                           ; BSR set to: 15
-   645                           ;main.c: 143:     T2CONbits.TMR2ON = 1;
+   645                           ;main.c: 147:     T2CONbits.TMR2ON = 1;
    646   00121C  84BA               	bsf	186,2,c	;volatile
    647   00121E                     
    648                           ; BSR set to: 15
@@ -685,7 +681,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    652                           
    653 ;; *************** function _Bluetooth_Receiver *****************
    654 ;; Defined at:
-   655 ;;		line 147 in file "main.c"
+   655 ;;		line 151 in file "main.c"
    656 ;; Parameters:    Size  Location     Type
    657 ;;		None
    658 ;; Auto vars:     Size  Location     Type
@@ -725,97 +721,97 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    687   00106C                     _Bluetooth_Receiver:
    688                           	callstack 27
    689   00106C                     
-   690                           ;main.c: 149:     if (PIR1bits.RC1IF) {
+   690                           ;main.c: 153:     if (PIR1bits.RC1IF) {
    691   00106C  AA9E               	btfss	158,5,c	;volatile
-   692   00106E  EF3B  F008         	goto	u101
-   693   001072  EF3D  F008         	goto	u100
-   694   001076                     u101:
+   692   00106E  EF3B  F008         	goto	u121
+   693   001072  EF3D  F008         	goto	u120
+   694   001076                     u121:
    695   001076  EF8A  F008         	goto	l93
-   696   00107A                     u100:
+   696   00107A                     u120:
    697   00107A                     
-   698                           ;main.c: 151:         Rx_Buffer = RCREG1;
+   698                           ;main.c: 155:         Rx_Buffer = RCREG1;
    699   00107A  CFAE F00A          	movff	4014,_Rx_Buffer	;volatile
    700                           
-   701                           ;main.c: 153:         switch (Rx_Buffer) {
-   702   00107E  EF7B  F008         	goto	l1004
-   703   001082                     l984:
+   701                           ;main.c: 157:         switch (Rx_Buffer) {
+   702   00107E  EF7B  F008         	goto	l1027
+   703   001082                     l1007:
    704                           
-   705                           ;main.c: 157:                 Send_Instruction_Data(0, 0X80);
+   705                           ;main.c: 161:                 Send_Instruction_Data(0, 0X80);
    706   001082  0E80               	movlw	128
    707   001084  6E0D               	movwf	Send_Instruction_Data@Data^0,c
    708   001086  0E00               	movlw	0
    709   001088  EC52  F009         	call	_Send_Instruction_Data
    710   00108C                     
-   711                           ;main.c: 158:                 Send_String("Manual Mode");
+   711                           ;main.c: 162:                 Send_String("Manual Mode");
    712   00108C  0E54               	movlw	low STR_1
    713   00108E  6E0F               	movwf	Send_String@String^0,c
    714   001090  EC10  F009         	call	_Send_String	;wreg free
    715                           
-   716                           ;main.c: 160:                 break;
+   716                           ;main.c: 164:                 break;
    717   001094  EF8A  F008         	goto	l93
-   718   001098                     l988:
+   718   001098                     l1011:
    719                           
-   720                           ;main.c: 164:                 Send_Instruction_Data(0, 0xC0);
+   720                           ;main.c: 168:                 Send_Instruction_Data(0, 0xC0);
    721   001098  0EC0               	movlw	192
    722   00109A  6E0D               	movwf	Send_Instruction_Data@Data^0,c
    723   00109C  0E00               	movlw	0
    724   00109E  EC52  F009         	call	_Send_Instruction_Data
    725   0010A2                     
-   726                           ;main.c: 165:                 Send_String("Automatic Mode");
+   726                           ;main.c: 169:                 Send_String("Automatic Mode");
    727   0010A2  0E45               	movlw	low STR_2
    728   0010A4  6E0F               	movwf	Send_String@String^0,c
    729   0010A6  EC10  F009         	call	_Send_String	;wreg free
    730                           
-   731                           ;main.c: 167:                 break;
+   731                           ;main.c: 171:                 break;
    732   0010AA  EF8A  F008         	goto	l93
-   733   0010AE                     l992:
+   733   0010AE                     l1015:
    734                           
-   735                           ;main.c: 171:                 Send_Instruction_Data(0, 0X94);
+   735                           ;main.c: 175:                 Send_Instruction_Data(0, 0X94);
    736   0010AE  0E94               	movlw	148
    737   0010B0  6E0D               	movwf	Send_Instruction_Data@Data^0,c
    738   0010B2  0E00               	movlw	0
    739   0010B4  EC52  F009         	call	_Send_Instruction_Data
    740   0010B8                     
-   741                           ;main.c: 172:                 Send_String("Semi Mode");
+   741                           ;main.c: 176:                 Send_String("Semi Mode");
    742   0010B8  0E60               	movlw	low STR_3
    743   0010BA  6E0F               	movwf	Send_String@String^0,c
    744   0010BC  EC10  F009         	call	_Send_String	;wreg free
    745                           
-   746                           ;main.c: 174:                 break;
+   746                           ;main.c: 178:                 break;
    747   0010C0  EF8A  F008         	goto	l93
-   748   0010C4                     l996:
+   748   0010C4                     l1019:
    749                           
-   750                           ;main.c: 178:                 Send_Instruction_Data(0, 0x01);
+   750                           ;main.c: 182:                 Send_Instruction_Data(0, 0x01);
    751   0010C4  0E01               	movlw	1
    752   0010C6  6E0D               	movwf	Send_Instruction_Data@Data^0,c
    753   0010C8  0E00               	movlw	0
    754   0010CA  EC52  F009         	call	_Send_Instruction_Data
    755                           
-   756                           ;main.c: 179:                 Send_Instruction_Data(0, 0X80);
+   756                           ;main.c: 183:                 Send_Instruction_Data(0, 0X80);
    757   0010CE  0E80               	movlw	128
    758   0010D0  6E0D               	movwf	Send_Instruction_Data@Data^0,c
    759   0010D2  0E00               	movlw	0
    760   0010D4  EC52  F009         	call	_Send_Instruction_Data
    761   0010D8                     
-   762                           ;main.c: 180:                 Send_String("   Value Entered");
+   762                           ;main.c: 184:                 Send_String("   Value Entered");
    763   0010D8  0E12               	movlw	low STR_4
    764   0010DA  6E0F               	movwf	Send_String@String^0,c
    765   0010DC  EC10  F009         	call	_Send_String	;wreg free
    766   0010E0                     
-   767                           ;main.c: 181:                 Send_Instruction_Data(0, 0xC0);
+   767                           ;main.c: 185:                 Send_Instruction_Data(0, 0xC0);
    768   0010E0  0EC0               	movlw	192
    769   0010E2  6E0D               	movwf	Send_Instruction_Data@Data^0,c
    770   0010E4  0E00               	movlw	0
    771   0010E6  EC52  F009         	call	_Send_Instruction_Data
    772                           
-   773                           ;main.c: 182:                 Send_String("   Is not Valid!");
+   773                           ;main.c: 186:                 Send_String("   Is not Valid!");
    774   0010EA  0E01               	movlw	low STR_5
    775   0010EC  6E0F               	movwf	Send_String@String^0,c
    776   0010EE  EC10  F009         	call	_Send_String	;wreg free
    777                           
-   778                           ;main.c: 184:                 break;
+   778                           ;main.c: 188:                 break;
    779   0010F2  EF8A  F008         	goto	l93
-   780   0010F6                     l1004:
+   780   0010F6                     l1027:
    781   0010F6  500A               	movf	_Rx_Buffer^0,w,c
    782                           
    783                           ; Switch size 1, requested type "simple"
@@ -826,14 +822,14 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    788                           ;	Chosen strategy is simple_byte
    789   0010F8  0A41               	xorlw	65	; case 65
    790   0010FA  B4D8               	btfsc	status,2,c
-   791   0010FC  EF4C  F008         	goto	l988
+   791   0010FC  EF4C  F008         	goto	l1011
    792   001100  0A0C               	xorlw	12	; case 77
    793   001102  B4D8               	btfsc	status,2,c
-   794   001104  EF41  F008         	goto	l984
+   794   001104  EF41  F008         	goto	l1007
    795   001108  0A1E               	xorlw	30	; case 83
    796   00110A  B4D8               	btfsc	status,2,c
-   797   00110C  EF57  F008         	goto	l992
-   798   001110  EF62  F008         	goto	l996
+   797   00110C  EF57  F008         	goto	l1015
+   798   001110  EF62  F008         	goto	l1019
    799   001114                     l93:
    800   001114  0012               	return		;funcret
    801   001116                     __end_of_Bluetooth_Receiver:
@@ -886,8 +882,8 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    843                           ;LCD_Library.c: 48:     for (uint8_t i = 0; String[i] != '\0'; i++) {
    844   001220  0E00               	movlw	0
    845   001222  6E11               	movwf	Send_String@i^0,c
-   846   001224  EF22  F009         	goto	l956
-   847   001228                     l952:
+   846   001224  EF22  F009         	goto	l979
+   847   001228                     l975:
    848                           
    849                           ;LCD_Library.c: 50:         Send_Instruction_Data(1, String[i]);
    850   001228  500F               	movf	Send_String@String^0,w,c
@@ -909,7 +905,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    866   001242                     
    867                           ;LCD_Library.c: 52:     }
    868   001242  2A11               	incf	Send_String@i^0,f,c
-   869   001244                     l956:
+   869   001244                     l979:
    870   001244  500F               	movf	Send_String@String^0,w,c
    871   001246  2411               	addwf	Send_String@i^0,w,c
    872   001248  6E10               	movwf	??_Send_String^0,c
@@ -926,11 +922,11 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    883   001254  50F5               	movf	tablat,w,c
    884   001256  0900               	iorlw	0
    885   001258  A4D8               	btfss	status,2,c
-   886   00125A  EF31  F009         	goto	u91
-   887   00125E  EF33  F009         	goto	u90
-   888   001262                     u91:
-   889   001262  EF14  F009         	goto	l952
-   890   001266                     u90:
+   886   00125A  EF31  F009         	goto	u111
+   887   00125E  EF33  F009         	goto	u110
+   888   001262                     u111:
+   889   001262  EF14  F009         	goto	l975
+   890   001266                     u110:
    891   001266  0012               	return		;funcret
    892   001268                     __end_of_Send_String:
    893                           	callstack 0
@@ -986,12 +982,12 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    938   0012A6                     
    939                           ;LCD_Library.c: 26:     LATCbits.LATC4 = Instruction;
    940   0012A6  B00E               	btfsc	Send_Instruction_Data@Instruction^0,0,c
-   941   0012A8  D002               	bra	u85
+   941   0012A8  D002               	bra	u105
    942   0012AA  988B               	bcf	139,4,c	;volatile
-   943   0012AC  D001               	bra	u86
-   944   0012AE                     u85:
+   943   0012AC  D001               	bra	u106
+   944   0012AE                     u105:
    945   0012AE  888B               	bsf	139,4,c	;volatile
-   946   0012B0                     u86:
+   946   0012B0                     u106:
    947   0012B0                     
    948                           ;LCD_Library.c: 27:     LCD_Instruction(Data >> 4);
    949   0012B0  380D               	swapf	Send_Instruction_Data@Data^0,w,c
@@ -1056,11 +1052,11 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1003   00126C  0E4E               	movlw	78
   1004   00126E  6E0B               	movwf	??_LCD_Instruction^0,c
   1005   001270  0EEB               	movlw	235
-  1006   001272                     u157:
+  1006   001272                     u177:
   1007   001272  2EE8               	decfsz	wreg,f,c
-  1008   001274  D7FE               	bra	u157
+  1008   001274  D7FE               	bra	u177
   1009   001276  2E0B               	decfsz	??_LCD_Instruction^0,f,c
-  1010   001278  D7FC               	bra	u157
+  1010   001278  D7FC               	bra	u177
   1011   00127A  0000               	nop	
   1012   00127C                     
   1013                           ;LCD_Library.c: 37:     LATD = Instruction;
@@ -1070,11 +1066,11 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1017   001280  0E4E               	movlw	78
   1018   001282  6E0B               	movwf	??_LCD_Instruction^0,c
   1019   001284  0EEB               	movlw	235
-  1020   001286                     u167:
+  1020   001286                     u187:
   1021   001286  2EE8               	decfsz	wreg,f,c
-  1022   001288  D7FE               	bra	u167
+  1022   001288  D7FE               	bra	u187
   1023   00128A  2E0B               	decfsz	??_LCD_Instruction^0,f,c
-  1024   00128C  D7FC               	bra	u167
+  1024   00128C  D7FC               	bra	u187
   1025   00128E  0000               	nop	
   1026   001290                     
   1027                           ;LCD_Library.c: 39:     LATCbits.LATC5 = 0;
@@ -1084,11 +1080,11 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1031   001292  0E4E               	movlw	78
   1032   001294  6E0B               	movwf	??_LCD_Instruction^0,c
   1033   001296  0EEB               	movlw	235
-  1034   001298                     u177:
+  1034   001298                     u197:
   1035   001298  2EE8               	decfsz	wreg,f,c
-  1036   00129A  D7FE               	bra	u177
+  1036   00129A  D7FE               	bra	u197
   1037   00129C  2E0B               	decfsz	??_LCD_Instruction^0,f,c
-  1038   00129E  D7FC               	bra	u177
+  1038   00129E  D7FC               	bra	u197
   1039   0012A0  0000               	nop	
   1040   0012A2  0012               	return		;funcret
   1041   0012A4                     __end_of_LCD_Instruction:
@@ -1493,40 +1489,36 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.46 build 20240104201356 
-<<<<<<< HEAD
-Symbol Table                                                                                   Wed Mar 06 16:06:14 2024
-=======
-Symbol Table                                                                                   Sat Mar 02 23:54:49 2024
->>>>>>> 94ad2eecd98a34026cf4602c862719c25166d6c9
+Symbol Table                                                                                   Wed Mar 06 16:42:11 2024
 
-                              l83 121E                                l93 1114                                u90 1266  
-                              u91 1262                                u85 12AE                                u86 12B0  
-               Send_String@String 000F                               l121 12BE                               l130 1266  
-                             l124 12A2                               l118 11B6                               l810 127C  
-                             l812 1280                               l814 1290                               l806 126A  
-                             l816 1292                               l808 126C                               l840 11D8  
-                             l832 11B8                               l850 11EA                               l842 11E2  
-                             l834 11CA                               l860 11F8                               l852 11F0  
-                             l844 11E4                               l836 11CC                               l950 1220  
-                             l870 1202                               l862 11FA                               l854 11F2  
-                             l846 11E6                               l838 11D6                               l944 12A6  
-                             l952 1228                               l872 121C                               l864 11FC  
-                             l856 11F4                               l848 11E8                               l960 112E  
-                             l946 12B0                               l954 1242                               l866 11FE  
-                             l858 11F6                               l970 1176                               l962 1138  
-                             l948 12B8                               l956 1244                               l980 106C  
-                             l868 1200                               l972 1180                               l964 1152  
-                             l990 10A2                               l982 107A                               l974 118A  
-                             l966 1162                               l958 1116                               l992 10AE  
-                             l984 1082                               l976 1194                               l968 116C  
-                             l994 10B8                               l986 108C                               l978 119E  
-                             l996 10C4                               l988 1098                               l998 10D8  
-                             u100 107A                               u101 1076                               u117 1120  
-                             u127 113E                               u137 1158                               u147 11A8  
-                             u157 1272                               _PR2 0FBB                               u167 1286  
-                             u177 1298                               wreg 0FE8                        _TXSTA1bits 0FAC  
-              _Bluetooth_Receiver 106C                              l1000 10E0                              l1010 12DE  
-                            l1004 10F6                              l1006 12D6                              l1008 12DA  
+                              l83 121E                                l93 1114                 Send_String@String 000F  
+                             l131 12A2                               l125 11B6                               l128 12BE  
+                             l137 1266                               l821 1290                               l813 126A  
+                             l823 1292                               l815 126C                               l817 127C  
+                             l841 11CA                               l819 1280                               l851 11E4  
+                             l843 11CC                               l861 11F2                               l853 11E6  
+                             l845 11D6                               l871 11FC                               l863 11F4  
+                             l855 11E8                               l847 11D8                               l839 11B8  
+                             l873 11FE                               l865 11F6                               l857 11EA  
+                             l849 11E2                               l971 12B8                               l875 1200  
+                             l867 11F8                               l859 11F0                               l973 1220  
+                             l877 1202                               l869 11FA                               l981 1116  
+                             l967 12A6                               l975 1228                               l879 121C  
+                             l991 116C                               l983 112E                               l969 12B0  
+                             l977 1242                               l993 1176                               l985 1138  
+                             l979 1244                               l995 1180                               l987 1152  
+                             l997 118A                               l989 1162                               l999 1194  
+                             u110 1266                               u111 1262                               u120 107A  
+                             u105 12AE                               u121 1076                               u106 12B0  
+                             u137 1120                               u147 113E                               u157 1158  
+                             _PR2 0FBB                               u167 11A8                               u177 1272  
+                             u187 1286                               u197 1298                               wreg 0FE8  
+                      _TXSTA1bits 0FAC                _Bluetooth_Receiver 106C                              l1001 119E  
+                            l1011 1098                              l1003 106C                              l1021 10D8  
+                            l1013 10A2                              l1005 107A                              l1023 10E0  
+                            l1015 10AE                              l1007 1082                              l1031 12DA  
+                            l1017 10B8                              l1009 108C                              l1033 12DE  
+                            l1019 10C4                              l1027 10F6                              l1029 12D6  
                             STR_1 1054                              STR_2 1045                              STR_3 1060  
                             STR_4 1012                              STR_5 1001                              STR_6 1034  
                             STR_7 1023                              _LATD 0F8C                              _LATE 0F8D  
