@@ -30,6 +30,7 @@ void Receive_Interrupt(void); //Function to EUSART module.
 void Init_Message_Platform(void); //Function to test LCD.
 void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor); //Function to send PWM to each motor. 
 void Manage_Motor_Direction(char in1, char in2, char in3, char in4); //Function to control polarity of the motors. 
+void Platform_Mode(unsigned char *Data); //Function to enable mode in the platform. 
 
 //Global variables.
 unsigned char Rx_Buffer; //Variable to read RCREG1 register. 
@@ -46,7 +47,7 @@ void main(void) {
     //Infinite Loop. 
     while (1) {
 
-
+        Platform_Mode(Rx_Buffer);
 
     }
 
@@ -196,6 +197,41 @@ void Manage_Motor_Direction(char in1, char in2, char in3, char in4) {
     IN4 = in4;
 
 }
+
+//Develop function to enable mode of the platform.
+
+void Platform_Mode(unsigned char *Data) {
+
+    switch (*Data) {
+
+        case 'M':
+
+
+
+            break;
+
+        case'S':
+
+
+
+            break;
+
+        case 'A':
+
+
+
+            break;
+
+        default:
+
+
+
+            break;
+
+    }
+
+}
+
 
 //Develop message platform function
 

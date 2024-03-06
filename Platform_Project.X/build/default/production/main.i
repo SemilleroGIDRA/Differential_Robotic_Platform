@@ -9742,6 +9742,7 @@ void Receive_Interrupt(void);
 void Init_Message_Platform(void);
 void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor);
 void Manage_Motor_Direction(char in1, char in2, char in3, char in4);
+void Platform_Mode(unsigned char *Data);
 
 
 unsigned char Rx_Buffer;
@@ -9758,7 +9759,7 @@ void main(void) {
 
     while (1) {
 
-
+        Platform_Mode(Rx_Buffer);
 
     }
 
@@ -9832,7 +9833,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 134 "main.c"
+# 135 "main.c"
     PR2 = 0xF9;
     T2CON = 0x00;
     CCP3CON = 0x0C;
@@ -9898,6 +9899,41 @@ void Manage_Motor_Direction(char in1, char in2, char in3, char in4) {
     LATDbits.LD7 = in4;
 
 }
+
+
+
+void Platform_Mode(unsigned char *Data) {
+
+    switch (*Data) {
+
+        case 'M':
+
+
+
+            break;
+
+        case'S':
+
+
+
+            break;
+
+        case 'A':
+
+
+
+            break;
+
+        default:
+
+
+
+            break;
+
+    }
+
+}
+
 
 
 
