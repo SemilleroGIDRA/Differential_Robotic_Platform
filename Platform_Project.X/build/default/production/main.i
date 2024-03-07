@@ -9736,17 +9736,18 @@ void LCD_Instruction(unsigned char Instruction);
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
 void Send_String(unsigned char *String);
 # 12 "main.c" 2
-# 36 "main.c"
+# 37 "main.c"
 void Configurations(void);
 void Bluetooth_Receiver(void);
 void Init_Message_Platform(void);
 void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction);
-void Platform_Mode(unsigned char *Data);
-void Manual(void);
+void Platform_Mode(unsigned char Data);
+void Manual(unsigned char Data);
 
 
 unsigned char Rx_Buffer;
 unsigned char Mode;
+unsigned char Direction;
 float Duty_Cycle1, Duty_Cycle2;
 
 
@@ -9757,16 +9758,35 @@ void main(void) {
     Configurations();
     Init_LCD();
 
+    Driver_Control(0.00, 0.00, 'T');
+
 
     while (1) {
 
-
-        Bluetooth_Receiver();
+        Manual(Direction);
 
     }
 
 }
-# 84 "main.c"
+
+
+
+void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
+
+    Bluetooth_Receiver();
+
+}
+
+
+
+void __attribute__((picinterrupt(("low_priority")))) Interrupt(void) {
+
+
+
+}
+
+
+
 void Configurations(void) {
 
     OSCCON = 0x72;
@@ -9774,6 +9794,7 @@ void Configurations(void) {
     ANSELC = 0;
     ANSELD = 0;
     ANSELE = 0;
+
 
 
     TRISCbits.RC4 = 0;
@@ -9813,7 +9834,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 141 "main.c"
+# 145 "main.c"
     PR2 = 0xF9;
     T2CON = 0x00;
     CCP3CON = 0x0C;
@@ -9834,22 +9855,46 @@ void Bluetooth_Receiver(void) {
 
             case 'M':
 
+                Send_Instruction_Data(0, 0x01);
                 Send_Instruction_Data(0, 0X80);
                 Send_String("Manual Mode");
+                Mode = 'm';
 
                 break;
 
             case 'A':
 
+                Send_Instruction_Data(0, 0x01);
                 Send_Instruction_Data(0, 0xC0);
                 Send_String("Automatic Mode");
+                Mode = 'a';
 
                 break;
 
             case 'S':
 
+                Send_Instruction_Data(0, 0x01);
                 Send_Instruction_Data(0, 0X94);
                 Send_String("Semi Mode");
+                Mode = 's';
+
+                break;
+
+            case '1':
+
+                Direction = '1';
+
+                break;
+
+            case '2':
+
+                Direction = '2';
+
+                break;
+
+            case '3':
+
+                Direction = '3';
 
                 break;
 
@@ -9935,11 +9980,27 @@ void Init_Message_Platform(void) {
 
 
 
-void Manual(void) {
+void Manual(unsigned char Data) {
 
-    if(Rx_Buffer == 1){
+    if (Data == '1') {
 
         Driver_Control(1023.00, 1023.00, 'F');
+
+    } else if (Data == '2') {
+
+        Driver_Control(0.00, 0.00, 'T');
+
+    } else if (Data == '3') {
+
+        Driver_Control(1023.00, 1023.00, 'B');
+
+    } else if (Data == '4') {
+
+        Driver_Control(511.5, 1023.00, 'L');
+
+    } else if (Data == '5') {
+
+        Driver_Control(1023.00, 511.5, 'R');
 
     }
 

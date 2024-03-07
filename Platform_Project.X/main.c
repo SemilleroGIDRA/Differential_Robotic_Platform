@@ -32,17 +32,19 @@
 #define Auto_Mode 'A' //Macro to check automatic mode. 
 #define Semi_Mode 'S' //Macro to check semiautomatic mode. 
 
+
 //Prototype functions. 
 void Configurations(void); //Function to set registers.
 void Bluetooth_Receiver(void); //Function to EUSART module. 
 void Init_Message_Platform(void); //Function to test LCD.
 void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction); //Function to send PWM to each motor and manage platform direction. 
-void Platform_Mode(unsigned char *Data); //Function to enable mode in the platform. 
-void Manual(void);
+void Platform_Mode(unsigned char Data); //Function to enable mode in the platform. 
+void Manual(unsigned char Data);
 
 //Global variables.
 unsigned char Rx_Buffer; //Variable to read RCREG1 register. 
 unsigned char Mode;
+unsigned char Direction;
 float Duty_Cycle1, Duty_Cycle2; //Variables to save PWM from equation. 
 
 //Main function.
@@ -52,12 +54,13 @@ void main(void) {
     //Call functions. 
     Configurations();
     Init_LCD();
+    //Initialize Driver .
+    Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
 
     //Infinite Loop. 
     while (1) {
 
-        //Platform_Mode(Rx_Buffer);
-        Bluetooth_Receiver();
+        Manual(Direction);
 
     }
 
@@ -65,19 +68,19 @@ void main(void) {
 
 //Develop interrupt high priority function.
 
-//void __interrupt(high_priority) Interrupt_Rx(void) {
-//
-//
-//
-//}
-//
-////Develop interrupt low priority function.
-//
-//void __interrupt(low_priority) Interrupt(void) {
-//
-//
-//
-//}
+void __interrupt(high_priority) Interrupt_Rx(void) {
+
+    Bluetooth_Receiver();
+
+}
+
+//Develop interrupt low priority function.
+
+void __interrupt(low_priority) Interrupt(void) {
+
+
+
+}
 
 //Develop configurations function
 
@@ -88,6 +91,7 @@ void Configurations(void) {
     ANSELC = 0;
     ANSELD = 0;
     ANSELE = 0;
+
 
     //Set pins as outputs
     TRISCbits.RC4 = 0; //Pins to LCD 
@@ -156,24 +160,48 @@ void Bluetooth_Receiver(void) {
 
         switch (Rx_Buffer) {
 
-            case Manual_Mode: //Test
+            case Manual_Mode:
 
+                Send_Instruction_Data(Set, CLR);
                 Send_Instruction_Data(Set, ROW1);
                 Send_String("Manual Mode");
+                Mode = 'm';
 
                 break;
 
             case Auto_Mode:
 
+                Send_Instruction_Data(Set, CLR);
                 Send_Instruction_Data(Set, ROW2);
                 Send_String("Automatic Mode");
+                Mode = 'a';
 
                 break;
 
             case Semi_Mode:
 
+                Send_Instruction_Data(Set, CLR);
                 Send_Instruction_Data(Set, ROW3);
                 Send_String("Semi Mode");
+                Mode = 's';
+
+                break;
+
+            case '1':
+
+                Direction = '1';
+
+                break;
+
+            case '2':
+
+                Direction = '2';
+
+                break;
+
+            case '3':
+
+                Direction = '3';
 
                 break;
 
@@ -259,12 +287,28 @@ void Init_Message_Platform(void) {
 
 //Develop Manual Mode of the platform.
 
-void Manual(void) {
+void Manual(unsigned char Data) {
 
-    if(Rx_Buffer == 1){
-        
+    if (Data == '1') {
+
         Driver_Control(Duty_Cycle_100, Duty_Cycle_100, Move_Forward);
-        
+
+    } else if (Data == '2') {
+
+        Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
+
+    } else if (Data == '3') {
+
+        Driver_Control(Duty_Cycle_100, Duty_Cycle_100, Move_Backward);
+
+    } else if (Data == '4') {
+
+        Driver_Control(Duty_Cycle_50, Duty_Cycle_100, Move_Left);
+
+    } else if (Data == '5') {
+
+        Driver_Control(Duty_Cycle_100, Duty_Cycle_50, Move_Right);
+
     }
 
 }
