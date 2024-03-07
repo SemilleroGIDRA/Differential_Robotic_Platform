@@ -23,7 +23,7 @@
 #define Duty_Cycle_50 511.5 //Macro to use 50% of PWM signal.
 #define Duty_Cycle_25 255.75 //Macro to use 25% of PWM signal.
 #define Duty_Cycle_0 0.00 //Macro to stop platform. 
-<<<<<<< HEAD
+
 //#define Move_Forward 'F' //Macro to move platform forward.
 //#define Move_Backward 'B' //Macro to move platform backward. 
 //#define Move_Right 'R' //Macro to move platform to the right.
@@ -32,7 +32,7 @@
 //#define Manual_Mode 'M' //Macro to check manual mode. 
 //#define Auto_Mode 'A' //Macro to check automatic mode. 
 //#define Semi_Mode 'S' //Macro to check semiautomatic mode. 
-=======
+
 #define Move_Forward 'F' //Macro to move platform forward.
 #define Move_Backward 'B' //Macro to move platform backward. 
 #define Move_Right 'R' //Macro to move platform to the right.
@@ -42,7 +42,7 @@
 #define Auto_Mode 'A' //Macro to check automatic mode. 
 #define Semi_Mode 'S' //Macro to check semiautomatic mode. 
 
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
+
 
 //Prototype functions. 
 void Configurations(void); //Function to set registers.
@@ -65,14 +65,14 @@ void main(void) {
     //Call functions. 
     Configurations();
     Init_LCD();
-<<<<<<< HEAD
+
     //Initialize the driver. 
     //    Send_PWM_Motors(Duty_Cycle_0, Duty_Cycle_0);
     //    Manage_Motor_Direction(0, 0, 0, 0);
-=======
+
     //Initialize Driver .
     Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
+
 
     //Infinite Loop. 
     while (1) {
@@ -169,8 +169,7 @@ void Configurations(void) {
 
 }
 
-<<<<<<< HEAD
-=======
+
 void Bluetooth_Receiver(void) {
 
     if (PIR1bits.RC1IF) { //Check interrupt has been activated. 
@@ -240,7 +239,7 @@ void Bluetooth_Receiver(void) {
 
 }
 
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
+
 //Develop function to send PWM to the motors. 
 
 void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction) {

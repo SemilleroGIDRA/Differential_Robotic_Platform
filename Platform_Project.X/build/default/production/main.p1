@@ -1,48 +1,22 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-<<<<<<< HEAD
-"36 main.c
-[; ;main.c: 36: void Configurations(void);
-=======
-"37 main.c
-[; ;main.c: 37: void Configurations(void);
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
+"48 main.c
+[; ;main.c: 48: void Configurations(void);
 [v _Configurations `(v ~T0 @X0 0 ef ]
 "39 ./LCD_Library.h
 [; ;./LCD_Library.h: 39: void Init_LCD(void);
 [v _Init_LCD `(v ~T0 @X0 0 ef ]
-"40 main.c
-[; ;main.c: 40: void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction);
+"51 main.c
+[; ;main.c: 51: void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction);
 [v _Driver_Control `(v ~T0 @X0 0 ef3`f`f`uc ]
-"42
-[; ;main.c: 42: void Manual(unsigned char Data);
+"53
+[; ;main.c: 53: void Manual(unsigned char Data);
 [v _Manual `(v ~T0 @X0 0 ef1`uc ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt high_priority ]
-<<<<<<< HEAD
-"9497 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9497:     struct {
-[s S441 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S441 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
-"9506
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9506:     struct {
-[s S442 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S442 . . SSPIF TXIF RCIF ]
-"9496
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9496: typedef union {
-[u S440 `S441 1 `S442 1 ]
-[n S440 . . . ]
-"9513
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9513: extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
-[v _PIR1bits `VS440 ~T0 @X0 0 e@3998 ]
-"37 main.c
-[; ;main.c: 37: void Receive_Interrupt(void);
-[v _Receive_Interrupt `(v ~T0 @X0 0 ef ]
-=======
-"38
-[; ;main.c: 38: void Bluetooth_Receiver(void);
+"49
+[; ;main.c: 49: void Bluetooth_Receiver(void);
 [v _Bluetooth_Receiver `(v ~T0 @X0 0 ef ]
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
 [t T2 __interrupt low_priority ]
 "16046 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16046: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
@@ -303,9 +277,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "13253
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13253: extern volatile T2CONbits_t T2CONbits __attribute__((address(0xFBA)));
 [v _T2CONbits `VS626 ~T0 @X0 0 e@4026 ]
-<<<<<<< HEAD
-"7902
-=======
 "11288
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11288: extern volatile unsigned char RCREG1 __attribute__((address(0xFAE)));
 [v _RCREG1 `Vuc ~T0 @X0 0 e@4014 ]
@@ -316,7 +287,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./LCD_Library.h: 42: void Send_String(unsigned char *String);
 [v _Send_String `(v ~T0 @X0 0 ef1`*uc ]
 "7902 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7902:     struct {
 [s S389 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S389 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
@@ -331,18 +301,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7923
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7923: extern volatile LATDbits_t LATDbits __attribute__((address(0xF8C)));
 [v _LATDbits `VS388 ~T0 @X0 0 e@3980 ]
-<<<<<<< HEAD
-"11288
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11288: extern volatile unsigned char RCREG1 __attribute__((address(0xFAE)));
-[v _RCREG1 `Vuc ~T0 @X0 0 e@4014 ]
-"41 ./LCD_Library.h
-[; ;./LCD_Library.h: 41: void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
-[v _Send_Instruction_Data `(v ~T0 @X0 0 ef2`uc`uc ]
-"42
-[; ;./LCD_Library.h: 42: void Send_String(unsigned char *String);
-[v _Send_String `(v ~T0 @X0 0 ef1`*uc ]
-=======
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
+"327 main.c
+[; ;main.c: 327:         Send_PWM_Motors(1023.00, 1023.00);
+[v _Send_PWM_Motors `(i ~T0 @X0 0 e? ]
+"328
+[; ;main.c: 328:         Manage_Motor_Direction(0, 1, 1, 0);
+[v _Manage_Motor_Direction `(i ~T0 @X0 0 e? ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -1178,402 +1142,313 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3  =  OFF       ]
 "68
 [p x EBTRB  =  OFF       ]
-<<<<<<< HEAD
-"43 main.c
-[; ;main.c: 43: unsigned char Rx_Buffer;
+"56 main.c
+[; ;main.c: 56: unsigned char Rx_Buffer;
 [v _Rx_Buffer `uc ~T0 @X0 1 e ]
-"44
-[; ;main.c: 44: float Duty_Cycle1, Duty_Cycle2;
-[v _Duty_Cycle1 `f ~T0 @X0 1 e ]
-[v _Duty_Cycle2 `f ~T0 @X0 1 e ]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"48
-[; ;main.c: 48: void main(void) {
-=======
-"45 main.c
-[; ;main.c: 45: unsigned char Rx_Buffer;
-[v _Rx_Buffer `uc ~T0 @X0 1 e ]
-"46
-[; ;main.c: 46: unsigned char Mode;
+"57
+[; ;main.c: 57: unsigned char Mode;
 [v _Mode `uc ~T0 @X0 1 e ]
-"47
-[; ;main.c: 47: unsigned char Direction;
+"58
+[; ;main.c: 58: unsigned char Direction;
 [v _Direction `uc ~T0 @X0 1 e ]
-"48
-[; ;main.c: 48: float Duty_Cycle1, Duty_Cycle2;
+"59
+[; ;main.c: 59: float Duty_Cycle1, Duty_Cycle2;
 [v _Duty_Cycle1 `f ~T0 @X0 1 e ]
 [v _Duty_Cycle2 `f ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"52
-[; ;main.c: 52: void main(void) {
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
+"63
+[; ;main.c: 63: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-<<<<<<< HEAD
-"51
-[; ;main.c: 51:     Configurations();
+"66
+[; ;main.c: 66:     Configurations();
 [e ( _Configurations ..  ]
-"52
-[; ;main.c: 52:     Init_LCD();
+"67
+[; ;main.c: 67:     Init_LCD();
 [e ( _Init_LCD ..  ]
-"58
-[; ;main.c: 58:     while (1) {
-[e :U 856 ]
-{
-"62
-[; ;main.c: 62:     }
-=======
-"55
-[; ;main.c: 55:     Configurations();
-[e ( _Configurations ..  ]
-"56
-[; ;main.c: 56:     Init_LCD();
-[e ( _Init_LCD ..  ]
-"58
-[; ;main.c: 58:     Driver_Control(0.00, 0.00, 'T');
+"74
+[; ;main.c: 74:     Driver_Control(0.00, 0.00, 'T');
 [e ( _Driver_Control (3 , , -> .0.00 `f -> .0.00 `f -> -> 84 `ui `uc ]
-"61
-[; ;main.c: 61:     while (1) {
+"78
+[; ;main.c: 78:     while (1) {
 [e :U 856 ]
 {
-"63
-[; ;main.c: 63:         Manual(Direction);
+"80
+[; ;main.c: 80:         Manual(Direction);
 [e ( _Manual (1 _Direction ]
-"65
-[; ;main.c: 65:     }
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
+"82
+[; ;main.c: 82:     }
 }
 [e :U 855 ]
 [e $U 856  ]
 [e :U 857 ]
-<<<<<<< HEAD
-"64
-[; ;main.c: 64: }
+"84
+[; ;main.c: 84: }
 [e :UE 854 ]
 }
 [v $root$_Interrupt_Rx `(v ~T0 @X0 0 e ]
-"68
-[; ;main.c: 68: void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
-=======
-"67
-[; ;main.c: 67: }
-[e :UE 854 ]
-}
-[v $root$_Interrupt_Rx `(v ~T0 @X0 0 e ]
-"71
-[; ;main.c: 71: void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
+"88
+[; ;main.c: 88: void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
 [v _Interrupt_Rx `(v ~T1 @X0 1 ef ]
 {
 [e :U _Interrupt_Rx ]
 [f ]
-<<<<<<< HEAD
-"70
-[; ;main.c: 70:     if (PIR1bits.RC1IF) {
-[e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 859  ]
-{
-"72
-[; ;main.c: 72:         Receive_Interrupt();
-[e ( _Receive_Interrupt ..  ]
-"74
-[; ;main.c: 74:     }
-}
-[e :U 859 ]
-"76
-[; ;main.c: 76: }
-[e :UE 858 ]
-}
-[v $root$_Interrupt `(v ~T0 @X0 0 e ]
-"80
-[; ;main.c: 80: void __attribute__((picinterrupt(("low_priority")))) Interrupt(void) {
-=======
-"73
-[; ;main.c: 73:     Bluetooth_Receiver();
+"90
+[; ;main.c: 90:     Bluetooth_Receiver();
 [e ( _Bluetooth_Receiver ..  ]
-"75
-[; ;main.c: 75: }
+"92
+[; ;main.c: 92: }
 [e :UE 858 ]
 }
 [v $root$_Interrupt `(v ~T0 @X0 0 e ]
-"79
-[; ;main.c: 79: void __attribute__((picinterrupt(("low_priority")))) Interrupt(void) {
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
+"96
+[; ;main.c: 96: void __attribute__((picinterrupt(("low_priority")))) Interrupt(void) {
 [v _Interrupt `(v ~T2 @X0 1 ef ]
 {
 [e :U _Interrupt ]
 [f ]
-<<<<<<< HEAD
-"84
-[; ;main.c: 84: }
-[e :UE 860 ]
-}
-"88
-[; ;main.c: 88: void Configurations(void) {
-=======
-"83
-[; ;main.c: 83: }
+"100
+[; ;main.c: 100: }
 [e :UE 859 ]
 }
-"87
-[; ;main.c: 87: void Configurations(void) {
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
+"104
+[; ;main.c: 104: void Configurations(void) {
 [v _Configurations `(v ~T0 @X0 1 ef ]
 {
 [e :U _Configurations ]
 [f ]
-<<<<<<< HEAD
-"90
-[; ;main.c: 90:     OSCCON = 0x72;
-[e = _OSCCON -> -> 114 `i `uc ]
-"92
-[; ;main.c: 92:     ANSELC = 0;
-[e = _ANSELC -> -> 0 `i `uc ]
-"93
-[; ;main.c: 93:     ANSELD = 0;
-[e = _ANSELD -> -> 0 `i `uc ]
-"94
-[; ;main.c: 94:     ANSELE = 0;
-=======
-"89
-[; ;main.c: 89:     OSCCON = 0x72;
-[e = _OSCCON -> -> 114 `i `uc ]
-"91
-[; ;main.c: 91:     ANSELC = 0;
-[e = _ANSELC -> -> 0 `i `uc ]
-"92
-[; ;main.c: 92:     ANSELD = 0;
-[e = _ANSELD -> -> 0 `i `uc ]
-"93
-[; ;main.c: 93:     ANSELE = 0;
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
-[e = _ANSELE -> -> 0 `i `uc ]
-"97
-[; ;main.c: 97:     TRISCbits.RC4 = 0;
-[e = . . _TRISCbits 1 4 -> -> 0 `i `uc ]
-"98
-[; ;main.c: 98:     TRISCbits.RC5 = 0;
-[e = . . _TRISCbits 1 5 -> -> 0 `i `uc ]
-"99
-[; ;main.c: 99:     TRISD = 0;
-[e = _TRISD -> -> 0 `i `uc ]
-"100
-[; ;main.c: 100:     TRISE = 0;
-[e = _TRISE -> -> 0 `i `uc ]
-"103
-[; ;main.c: 103:     LATCbits.LC4 = 0;
-[e = . . _LATCbits 1 4 -> -> 0 `i `uc ]
-"104
-[; ;main.c: 104:     LATCbits.LC5 = 0;
-[e = . . _LATCbits 1 5 -> -> 0 `i `uc ]
-"105
-[; ;main.c: 105:     LATD = 0;
-[e = _LATD -> -> 0 `i `uc ]
 "106
-[; ;main.c: 106:     LATE = 0;
-[e = _LATE -> -> 0 `i `uc ]
+[; ;main.c: 106:     OSCCON = 0x72;
+[e = _OSCCON -> -> 114 `i `uc ]
+"108
+[; ;main.c: 108:     ANSELC = 0;
+[e = _ANSELC -> -> 0 `i `uc ]
 "109
-[; ;main.c: 109:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;main.c: 109:     ANSELD = 0;
+[e = _ANSELD -> -> 0 `i `uc ]
 "110
-[; ;main.c: 110:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"111
-[; ;main.c: 111:     RCONbits.IPEN = 1;
-[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
-"113
-[; ;main.c: 113:     PIE1bits.RC1IE = 1;
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+[; ;main.c: 110:     ANSELE = 0;
+[e = _ANSELE -> -> 0 `i `uc ]
 "114
-[; ;main.c: 114:     PIR1bits.RC1IF = 0;
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 114:     TRISCbits.RC4 = 0;
+[e = . . _TRISCbits 1 4 -> -> 0 `i `uc ]
+"115
+[; ;main.c: 115:     TRISCbits.RC5 = 0;
+[e = . . _TRISCbits 1 5 -> -> 0 `i `uc ]
+"116
+[; ;main.c: 116:     TRISD = 0;
+[e = _TRISD -> -> 0 `i `uc ]
 "117
-[; ;main.c: 117:     SPBRG = 103;
-[e = _SPBRG -> -> 103 `i `uc ]
-"118
-[; ;main.c: 118:     TRISCbits.RC6 = 1;
-[e = . . _TRISCbits 1 6 -> -> 1 `i `uc ]
-"119
-[; ;main.c: 119:     TRISCbits.RC7 = 1;
-[e = . . _TRISCbits 1 7 -> -> 1 `i `uc ]
+[; ;main.c: 117:     TRISE = 0;
+[e = _TRISE -> -> 0 `i `uc ]
+"120
+[; ;main.c: 120:     LATCbits.LC4 = 0;
+[e = . . _LATCbits 1 4 -> -> 0 `i `uc ]
+"121
+[; ;main.c: 121:     LATCbits.LC5 = 0;
+[e = . . _LATCbits 1 5 -> -> 0 `i `uc ]
 "122
-[; ;main.c: 122:     TXSTA1bits.TX91 = 0;
-[e = . . _TXSTA1bits 1 6 -> -> 0 `i `uc ]
+[; ;main.c: 122:     LATD = 0;
+[e = _LATD -> -> 0 `i `uc ]
 "123
-[; ;main.c: 123:     TXSTA1bits.TXEN1 = 1;
-[e = . . _TXSTA1bits 1 5 -> -> 1 `i `uc ]
-"124
-[; ;main.c: 124:     TXSTA1bits.SYNC1 = 0;
-[e = . . _TXSTA1bits 1 4 -> -> 0 `i `uc ]
-"125
-[; ;main.c: 125:     TXSTA1bits.BRGH1 = 1;
-[e = . . _TXSTA1bits 1 2 -> -> 1 `i `uc ]
+[; ;main.c: 123:     LATE = 0;
+[e = _LATE -> -> 0 `i `uc ]
+"126
+[; ;main.c: 126:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"127
+[; ;main.c: 127:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
 "128
-[; ;main.c: 128:     RCSTAbits.SPEN1 = 1;
-[e = . . _RCSTAbits 2 7 -> -> 1 `i `uc ]
-"129
-[; ;main.c: 129:     RCSTAbits.RX91 = 0;
-[e = . . _RCSTAbits 2 6 -> -> 0 `i `uc ]
+[; ;main.c: 128:     RCONbits.IPEN = 1;
+[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
 "130
-[; ;main.c: 130:     RCSTAbits.CREN1 = 1;
-[e = . . _RCSTAbits 2 4 -> -> 1 `i `uc ]
-"133
-[; ;main.c: 133:     BAUDCON1bits.BRG16 = 0;
-[e = . . _BAUDCON1bits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 130:     PIE1bits.RC1IE = 1;
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"131
+[; ;main.c: 131:     PIR1bits.RC1IF = 0;
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+"134
+[; ;main.c: 134:     SPBRG = 103;
+[e = _SPBRG -> -> 103 `i `uc ]
+"135
+[; ;main.c: 135:     TRISCbits.RC6 = 1;
+[e = . . _TRISCbits 1 6 -> -> 1 `i `uc ]
+"136
+[; ;main.c: 136:     TRISCbits.RC7 = 1;
+[e = . . _TRISCbits 1 7 -> -> 1 `i `uc ]
+"139
+[; ;main.c: 139:     TXSTA1bits.TX91 = 0;
+[e = . . _TXSTA1bits 1 6 -> -> 0 `i `uc ]
+"140
+[; ;main.c: 140:     TXSTA1bits.TXEN1 = 1;
+[e = . . _TXSTA1bits 1 5 -> -> 1 `i `uc ]
+"141
+[; ;main.c: 141:     TXSTA1bits.SYNC1 = 0;
+[e = . . _TXSTA1bits 1 4 -> -> 0 `i `uc ]
+"142
+[; ;main.c: 142:     TXSTA1bits.BRGH1 = 1;
+[e = . . _TXSTA1bits 1 2 -> -> 1 `i `uc ]
 "145
-[; ;main.c: 145:     PR2 = 0xF9;
-[e = _PR2 -> -> 249 `i `uc ]
+[; ;main.c: 145:     RCSTAbits.SPEN1 = 1;
+[e = . . _RCSTAbits 2 7 -> -> 1 `i `uc ]
 "146
-[; ;main.c: 146:     T2CON = 0x00;
-[e = _T2CON -> -> 0 `i `uc ]
+[; ;main.c: 146:     RCSTAbits.RX91 = 0;
+[e = . . _RCSTAbits 2 6 -> -> 0 `i `uc ]
 "147
-[; ;main.c: 147:     CCP3CON = 0x0C;
-[e = _CCP3CON -> -> 12 `i `uc ]
-"148
-[; ;main.c: 148:     CCPR3L = 0xFA;
-[e = _CCPR3L -> -> 250 `i `uc ]
-"149
-[; ;main.c: 149:     CCP5CON = 0x0C;
-[e = _CCP5CON -> -> 12 `i `uc ]
+[; ;main.c: 147:     RCSTAbits.CREN1 = 1;
+[e = . . _RCSTAbits 2 4 -> -> 1 `i `uc ]
 "150
-[; ;main.c: 150:     CCPR5L = 0xFA;
+[; ;main.c: 150:     BAUDCON1bits.BRG16 = 0;
+[e = . . _BAUDCON1bits 0 3 -> -> 0 `i `uc ]
+"162
+[; ;main.c: 162:     PR2 = 0xF9;
+[e = _PR2 -> -> 249 `i `uc ]
+"163
+[; ;main.c: 163:     T2CON = 0x00;
+[e = _T2CON -> -> 0 `i `uc ]
+"164
+[; ;main.c: 164:     CCP3CON = 0x0C;
+[e = _CCP3CON -> -> 12 `i `uc ]
+"165
+[; ;main.c: 165:     CCPR3L = 0xFA;
+[e = _CCPR3L -> -> 250 `i `uc ]
+"166
+[; ;main.c: 166:     CCP5CON = 0x0C;
+[e = _CCP5CON -> -> 12 `i `uc ]
+"167
+[; ;main.c: 167:     CCPR5L = 0xFA;
 [e = _CCPR5L -> -> 250 `i `uc ]
-"151
-[; ;main.c: 151:     T2CONbits.TMR2ON = 1;
+"168
+[; ;main.c: 168:     T2CONbits.TMR2ON = 1;
 [e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
-"153
-[; ;main.c: 153: }
-<<<<<<< HEAD
-[e :UE 861 ]
-}
-"157
-[; ;main.c: 157: void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
-[v _Send_PWM_Motors `(v ~T0 @X0 1 ef2`f`f ]
-=======
+"170
+[; ;main.c: 170: }
 [e :UE 860 ]
 }
-"155
-[; ;main.c: 155: void Bluetooth_Receiver(void) {
+"173
+[; ;main.c: 173: void Bluetooth_Receiver(void) {
 [v _Bluetooth_Receiver `(v ~T0 @X0 1 ef ]
 {
 [e :U _Bluetooth_Receiver ]
 [f ]
-"157
-[; ;main.c: 157:     if (PIR1bits.RC1IF) {
+"175
+[; ;main.c: 175:     if (PIR1bits.RC1IF) {
 [e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 862  ]
 {
-"159
-[; ;main.c: 159:         Rx_Buffer = RCREG1;
+"177
+[; ;main.c: 177:         Rx_Buffer = RCREG1;
 [e = _Rx_Buffer _RCREG1 ]
-"161
-[; ;main.c: 161:         switch (Rx_Buffer) {
+"179
+[; ;main.c: 179:         switch (Rx_Buffer) {
 [e $U 864  ]
 {
-"163
-[; ;main.c: 163:             case 'M':
-[e :U 865 ]
-"165
-[; ;main.c: 165:                 Send_Instruction_Data(0, 0x01);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
-"166
-[; ;main.c: 166:                 Send_Instruction_Data(0, 0X80);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
-"167
-[; ;main.c: 167:                 Send_String("Manual Mode");
-[e ( _Send_String (1 :s 1C ]
-"168
-[; ;main.c: 168:                 Mode = 'm';
-[e = _Mode -> -> 109 `ui `uc ]
-"170
-[; ;main.c: 170:                 break;
-[e $U 863  ]
-"172
-[; ;main.c: 172:             case 'A':
-[e :U 866 ]
-"174
-[; ;main.c: 174:                 Send_Instruction_Data(0, 0x01);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
-"175
-[; ;main.c: 175:                 Send_Instruction_Data(0, 0xC0);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
-"176
-[; ;main.c: 176:                 Send_String("Automatic Mode");
-[e ( _Send_String (1 :s 2C ]
-"177
-[; ;main.c: 177:                 Mode = 'a';
-[e = _Mode -> -> 97 `ui `uc ]
-"179
-[; ;main.c: 179:                 break;
-[e $U 863  ]
 "181
-[; ;main.c: 181:             case 'S':
-[e :U 867 ]
+[; ;main.c: 181:             case 'M':
+[e :U 865 ]
 "183
 [; ;main.c: 183:                 Send_Instruction_Data(0, 0x01);
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "184
-[; ;main.c: 184:                 Send_Instruction_Data(0, 0X94);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 148 `i `uc ]
+[; ;main.c: 184:                 Send_Instruction_Data(0, 0X80);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
 "185
-[; ;main.c: 185:                 Send_String("Semi Mode");
-[e ( _Send_String (1 :s 3C ]
+[; ;main.c: 185:                 Send_String("Manual Mode");
+[e ( _Send_String (1 :s 1C ]
 "186
-[; ;main.c: 186:                 Mode = 's';
-[e = _Mode -> -> 115 `ui `uc ]
+[; ;main.c: 186:                 Mode = 'm';
+[e = _Mode -> -> 109 `ui `uc ]
 "188
 [; ;main.c: 188:                 break;
 [e $U 863  ]
 "190
-[; ;main.c: 190:             case '1':
-[e :U 868 ]
+[; ;main.c: 190:             case 'A':
+[e :U 866 ]
 "192
-[; ;main.c: 192:                 Direction = '1';
-[e = _Direction -> -> 49 `ui `uc ]
+[; ;main.c: 192:                 Send_Instruction_Data(0, 0x01);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"193
+[; ;main.c: 193:                 Send_Instruction_Data(0, 0xC0);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
 "194
-[; ;main.c: 194:                 break;
+[; ;main.c: 194:                 Send_String("Automatic Mode");
+[e ( _Send_String (1 :s 2C ]
+"195
+[; ;main.c: 195:                 Mode = 'a';
+[e = _Mode -> -> 97 `ui `uc ]
+"197
+[; ;main.c: 197:                 break;
 [e $U 863  ]
-"196
-[; ;main.c: 196:             case '2':
-[e :U 869 ]
-"198
-[; ;main.c: 198:                 Direction = '2';
-[e = _Direction -> -> 50 `ui `uc ]
-"200
-[; ;main.c: 200:                 break;
-[e $U 863  ]
+"199
+[; ;main.c: 199:             case 'S':
+[e :U 867 ]
+"201
+[; ;main.c: 201:                 Send_Instruction_Data(0, 0x01);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "202
-[; ;main.c: 202:             case '3':
-[e :U 870 ]
+[; ;main.c: 202:                 Send_Instruction_Data(0, 0X94);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 148 `i `uc ]
+"203
+[; ;main.c: 203:                 Send_String("Semi Mode");
+[e ( _Send_String (1 :s 3C ]
 "204
-[; ;main.c: 204:                 Direction = '3';
-[e = _Direction -> -> 51 `ui `uc ]
+[; ;main.c: 204:                 Mode = 's';
+[e = _Mode -> -> 115 `ui `uc ]
 "206
 [; ;main.c: 206:                 break;
 [e $U 863  ]
 "208
-[; ;main.c: 208:             default:
-[e :U 871 ]
+[; ;main.c: 208:             case '1':
+[e :U 868 ]
 "210
-[; ;main.c: 210:                 Send_Instruction_Data(0, 0x01);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
-"211
-[; ;main.c: 211:                 Send_Instruction_Data(0, 0X80);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
+[; ;main.c: 210:                 Direction = '1';
+[e = _Direction -> -> 49 `ui `uc ]
 "212
-[; ;main.c: 212:                 Send_String("   Value Entered");
-[e ( _Send_String (1 :s 4C ]
-"213
-[; ;main.c: 213:                 Send_Instruction_Data(0, 0xC0);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
-"214
-[; ;main.c: 214:                 Send_String("   Is not Valid!");
-[e ( _Send_String (1 :s 5C ]
-"216
-[; ;main.c: 216:                 break;
+[; ;main.c: 212:                 break;
 [e $U 863  ]
+"214
+[; ;main.c: 214:             case '2':
+[e :U 869 ]
+"216
+[; ;main.c: 216:                 Direction = '2';
+[e = _Direction -> -> 50 `ui `uc ]
 "218
-[; ;main.c: 218:         }
+[; ;main.c: 218:                 break;
+[e $U 863  ]
+"220
+[; ;main.c: 220:             case '3':
+[e :U 870 ]
+"222
+[; ;main.c: 222:                 Direction = '3';
+[e = _Direction -> -> 51 `ui `uc ]
+"224
+[; ;main.c: 224:                 break;
+[e $U 863  ]
+"226
+[; ;main.c: 226:             default:
+[e :U 871 ]
+"228
+[; ;main.c: 228:                 Send_Instruction_Data(0, 0x01);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"229
+[; ;main.c: 229:                 Send_Instruction_Data(0, 0X80);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
+"230
+[; ;main.c: 230:                 Send_String("   Value Entered");
+[e ( _Send_String (1 :s 4C ]
+"231
+[; ;main.c: 231:                 Send_Instruction_Data(0, 0xC0);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
+"232
+[; ;main.c: 232:                 Send_String("   Is not Valid!");
+[e ( _Send_String (1 :s 5C ]
+"234
+[; ;main.c: 234:                 break;
+[e $U 863  ]
+"236
+[; ;main.c: 236:         }
 }
 [e $U 863  ]
 [e :U 864 ]
@@ -1585,359 +1460,287 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 51 `ui `i 870
  871 ]
 [e :U 863 ]
-"220
-[; ;main.c: 220:     }
+"238
+[; ;main.c: 238:     }
 }
 [e :U 862 ]
-"222
-[; ;main.c: 222: }
+"240
+[; ;main.c: 240: }
 [e :UE 861 ]
 }
-"226
-[; ;main.c: 226: void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction) {
+"245
+[; ;main.c: 245: void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction) {
 [v _Driver_Control `(v ~T0 @X0 1 ef3`f`f`uc ]
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
 {
 [e :U _Driver_Control ]
 [v _PWM_RMotor `f ~T0 @X0 1 r1 ]
 [v _PWM_LMotor `f ~T0 @X0 1 r2 ]
 [v _Direction `uc ~T0 @X0 1 r3 ]
 [f ]
-<<<<<<< HEAD
-"159
-[; ;main.c: 159:     Duty_Cycle1 = (float) (PWM_RMotor * (1000.00 / 1023.00));
+"248
+[; ;main.c: 248:     Duty_Cycle1 = (float) (PWM_RMotor * (1000.00 / 1023.00));
 [e = _Duty_Cycle1 -> * -> _PWM_RMotor `d / .1000.00 .1023.00 `f ]
-"160
-[; ;main.c: 160:     CCPR3L = (int) Duty_Cycle1 >> 2;
+"249
+[; ;main.c: 249:     CCPR3L = (int) Duty_Cycle1 >> 2;
 [e = _CCPR3L -> >> -> _Duty_Cycle1 `i -> 2 `i `uc ]
-"161
-[; ;main.c: 161:     CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4));
+"250
+[; ;main.c: 250:     CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4));
 [e = _CCP3CON -> | & -> _CCP3CON `i -> 15 `i << & -> _Duty_Cycle1 `i -> 3 `i -> 4 `i `uc ]
-"163
-[; ;main.c: 163:     Duty_Cycle2 = (float) (PWM_LMotor * (1000.00 / 1023.00));
+"252
+[; ;main.c: 252:     Duty_Cycle2 = (float) (PWM_LMotor * (1000.00 / 1023.00));
 [e = _Duty_Cycle2 -> * -> _PWM_LMotor `d / .1000.00 .1023.00 `f ]
-"164
-[; ;main.c: 164:     CCPR5L = (int) Duty_Cycle2 >> 2;
+"253
+[; ;main.c: 253:     CCPR5L = (int) Duty_Cycle2 >> 2;
 [e = _CCPR5L -> >> -> _Duty_Cycle2 `i -> 2 `i `uc ]
-"165
-[; ;main.c: 165:     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
+"254
+[; ;main.c: 254:     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
 [e = _CCP5CON -> | & -> _CCP3CON `i -> 15 `i << & -> _Duty_Cycle2 `i -> 3 `i -> 4 `i `uc ]
-"167
-[; ;main.c: 167: }
-[e :UE 862 ]
-}
-"171
-[; ;main.c: 171: void Manage_Motor_Direction(char in1, char in2, char in3, char in4) {
-[v _Manage_Motor_Direction `(v ~T0 @X0 1 ef4`uc`uc`uc`uc ]
-{
-[e :U _Manage_Motor_Direction ]
-[v _in1 `uc ~T0 @X0 1 r1 ]
-[v _in2 `uc ~T0 @X0 1 r2 ]
-[v _in3 `uc ~T0 @X0 1 r3 ]
-[v _in4 `uc ~T0 @X0 1 r4 ]
-[f ]
-"173
-[; ;main.c: 173:     LATDbits.LD4 = in1;
-[e = . . _LATDbits 1 4 -> _in1 `uc ]
-"174
-[; ;main.c: 174:     LATDbits.LD5 = in2;
-[e = . . _LATDbits 1 5 -> _in2 `uc ]
-"175
-[; ;main.c: 175:     LATDbits.LD6 = in3;
-[e = . . _LATDbits 1 6 -> _in3 `uc ]
-"176
-[; ;main.c: 176:     LATDbits.LD7 = in4;
-[e = . . _LATDbits 1 7 -> _in4 `uc ]
-"178
-[; ;main.c: 178: }
-[e :UE 863 ]
-}
-"180
-[; ;main.c: 180: void Receive_Interrupt(void) {
-[v _Receive_Interrupt `(v ~T0 @X0 1 ef ]
-{
-[e :U _Receive_Interrupt ]
-[f ]
-"182
-[; ;main.c: 182:     Rx_Buffer = RCREG1;
-[e = _Rx_Buffer _RCREG1 ]
-"209
-[; ;main.c: 209:     if (Rx_Buffer == 'M') {
-[e $ ! == -> _Rx_Buffer `ui -> 77 `ui 865  ]
-{
-"211
-[; ;main.c: 211:         Send_PWM_Motors(1023.00, 1023.00);
-[e ( _Send_PWM_Motors (2 , -> .1023.00 `f -> .1023.00 `f ]
-"212
-[; ;main.c: 212:         Manage_Motor_Direction(0, 1, 1, 0);
-[e ( _Manage_Motor_Direction (4 , , , -> -> 0 `i `uc -> -> 1 `i `uc -> -> 1 `i `uc -> -> 0 `i `uc ]
-"215
-[; ;main.c: 215:     } else if (Rx_Buffer == 'A') {
-}
-[e $U 866  ]
-[e :U 865 ]
-[e $ ! == -> _Rx_Buffer `ui -> 65 `ui 867  ]
-{
-"217
-[; ;main.c: 217:         Send_PWM_Motors(1023.00, 1023.00);
-[e ( _Send_PWM_Motors (2 , -> .1023.00 `f -> .1023.00 `f ]
-"218
-[; ;main.c: 218:         Manage_Motor_Direction(1, 0, 0, 1);
-[e ( _Manage_Motor_Direction (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 1 `i `uc ]
-"220
-[; ;main.c: 220:     } else if (Rx_Buffer == 'S') {
-}
-[e $U 868  ]
-[e :U 867 ]
-[e $ ! == -> _Rx_Buffer `ui -> 83 `ui 869  ]
-{
-"222
-[; ;main.c: 222:         Send_PWM_Motors(0.00, 0.00);
-[e ( _Send_PWM_Motors (2 , -> .0.00 `f -> .0.00 `f ]
-"223
-[; ;main.c: 223:         Manage_Motor_Direction(0, 0, 0, 0);
-[e ( _Manage_Motor_Direction (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc ]
-"225
-[; ;main.c: 225:     }
-}
-[e :U 869 ]
-[e :U 868 ]
-[e :U 866 ]
-"227
-[; ;main.c: 227: }
-[e :UE 864 ]
-}
-"231
-[; ;main.c: 231: void Init_Message_Platform(void) {
-=======
-"229
-[; ;main.c: 229:     Duty_Cycle1 = (float) (PWM_RMotor * (1000.00 / 1023.00));
-[e = _Duty_Cycle1 -> * -> _PWM_RMotor `d / .1000.00 .1023.00 `f ]
-"230
-[; ;main.c: 230:     CCPR3L = (int) Duty_Cycle1 >> 2;
-[e = _CCPR3L -> >> -> _Duty_Cycle1 `i -> 2 `i `uc ]
-"231
-[; ;main.c: 231:     CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4));
-[e = _CCP3CON -> | & -> _CCP3CON `i -> 15 `i << & -> _Duty_Cycle1 `i -> 3 `i -> 4 `i `uc ]
-"233
-[; ;main.c: 233:     Duty_Cycle2 = (float) (PWM_LMotor * (1000.00 / 1023.00));
-[e = _Duty_Cycle2 -> * -> _PWM_LMotor `d / .1000.00 .1023.00 `f ]
-"234
-[; ;main.c: 234:     CCPR5L = (int) Duty_Cycle2 >> 2;
-[e = _CCPR5L -> >> -> _Duty_Cycle2 `i -> 2 `i `uc ]
-"235
-[; ;main.c: 235:     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
-[e = _CCP5CON -> | & -> _CCP3CON `i -> 15 `i << & -> _Duty_Cycle2 `i -> 3 `i -> 4 `i `uc ]
-"238
-[; ;main.c: 238:     if (Direction == 'F') {
+"257
+[; ;main.c: 257:     if (Direction == 'F') {
 [e $ ! == -> _Direction `ui -> 70 `ui 873  ]
 {
-"240
-[; ;main.c: 240:         LATDbits.LD4 = 1;
+"259
+[; ;main.c: 259:         LATDbits.LD4 = 1;
 [e = . . _LATDbits 1 4 -> -> 1 `i `uc ]
-"241
-[; ;main.c: 241:         LATDbits.LD5 = 0;
+"260
+[; ;main.c: 260:         LATDbits.LD5 = 0;
 [e = . . _LATDbits 1 5 -> -> 0 `i `uc ]
-"242
-[; ;main.c: 242:         LATDbits.LD6 = 0;
+"261
+[; ;main.c: 261:         LATDbits.LD6 = 0;
 [e = . . _LATDbits 1 6 -> -> 0 `i `uc ]
-"243
-[; ;main.c: 243:         LATDbits.LD7 = 1;
+"262
+[; ;main.c: 262:         LATDbits.LD7 = 1;
 [e = . . _LATDbits 1 7 -> -> 1 `i `uc ]
-"245
-[; ;main.c: 245:     } else if (Direction == 'B') {
+"264
+[; ;main.c: 264:     } else if (Direction == 'B') {
 }
 [e $U 874  ]
 [e :U 873 ]
 [e $ ! == -> _Direction `ui -> 66 `ui 875  ]
 {
-"247
-[; ;main.c: 247:         LATDbits.LD4 = 0;
+"266
+[; ;main.c: 266:         LATDbits.LD4 = 0;
 [e = . . _LATDbits 1 4 -> -> 0 `i `uc ]
-"248
-[; ;main.c: 248:         LATDbits.LD5 = 1;
+"267
+[; ;main.c: 267:         LATDbits.LD5 = 1;
 [e = . . _LATDbits 1 5 -> -> 1 `i `uc ]
-"249
-[; ;main.c: 249:         LATDbits.LD6 = 1;
+"268
+[; ;main.c: 268:         LATDbits.LD6 = 1;
 [e = . . _LATDbits 1 6 -> -> 1 `i `uc ]
-"250
-[; ;main.c: 250:         LATDbits.LD7 = 0;
+"269
+[; ;main.c: 269:         LATDbits.LD7 = 0;
 [e = . . _LATDbits 1 7 -> -> 0 `i `uc ]
-"252
-[; ;main.c: 252:     } else if (Direction == 'R') {
+"271
+[; ;main.c: 271:     } else if (Direction == 'R') {
 }
 [e $U 876  ]
 [e :U 875 ]
 [e $ ! == -> _Direction `ui -> 82 `ui 877  ]
 {
-"254
-[; ;main.c: 254:         LATDbits.LD4 = 1;
+"273
+[; ;main.c: 273:         LATDbits.LD4 = 1;
 [e = . . _LATDbits 1 4 -> -> 1 `i `uc ]
-"255
-[; ;main.c: 255:         LATDbits.LD5 = 0;
+"274
+[; ;main.c: 274:         LATDbits.LD5 = 0;
 [e = . . _LATDbits 1 5 -> -> 0 `i `uc ]
-"256
-[; ;main.c: 256:         LATDbits.LD6 = 0;
+"275
+[; ;main.c: 275:         LATDbits.LD6 = 0;
 [e = . . _LATDbits 1 6 -> -> 0 `i `uc ]
-"257
-[; ;main.c: 257:         LATDbits.LD7 = 0;
+"276
+[; ;main.c: 276:         LATDbits.LD7 = 0;
 [e = . . _LATDbits 1 7 -> -> 0 `i `uc ]
-"259
-[; ;main.c: 259:     } else if (Direction == 'L') {
+"278
+[; ;main.c: 278:     } else if (Direction == 'L') {
 }
 [e $U 878  ]
 [e :U 877 ]
 [e $ ! == -> _Direction `ui -> 76 `ui 879  ]
 {
-"261
-[; ;main.c: 261:         LATDbits.LD4 = 0;
+"280
+[; ;main.c: 280:         LATDbits.LD4 = 0;
 [e = . . _LATDbits 1 4 -> -> 0 `i `uc ]
-"262
-[; ;main.c: 262:         LATDbits.LD5 = 0;
+"281
+[; ;main.c: 281:         LATDbits.LD5 = 0;
 [e = . . _LATDbits 1 5 -> -> 0 `i `uc ]
-"263
-[; ;main.c: 263:         LATDbits.LD6 = 1;
+"282
+[; ;main.c: 282:         LATDbits.LD6 = 1;
 [e = . . _LATDbits 1 6 -> -> 1 `i `uc ]
-"264
-[; ;main.c: 264:         LATDbits.LD7 = 0;
+"283
+[; ;main.c: 283:         LATDbits.LD7 = 0;
 [e = . . _LATDbits 1 7 -> -> 0 `i `uc ]
-"266
-[; ;main.c: 266:     } else if (Direction == 'T') {
+"285
+[; ;main.c: 285:     } else if (Direction == 'T') {
 }
 [e $U 880  ]
 [e :U 879 ]
 [e $ ! == -> _Direction `ui -> 84 `ui 881  ]
 {
-"268
-[; ;main.c: 268:         LATDbits.LD4 = 0;
+"287
+[; ;main.c: 287:         LATDbits.LD4 = 0;
 [e = . . _LATDbits 1 4 -> -> 0 `i `uc ]
-"269
-[; ;main.c: 269:         LATDbits.LD5 = 0;
+"288
+[; ;main.c: 288:         LATDbits.LD5 = 0;
 [e = . . _LATDbits 1 5 -> -> 0 `i `uc ]
-"270
-[; ;main.c: 270:         LATDbits.LD6 = 0;
+"289
+[; ;main.c: 289:         LATDbits.LD6 = 0;
 [e = . . _LATDbits 1 6 -> -> 0 `i `uc ]
-"271
-[; ;main.c: 271:         LATDbits.LD7 = 0;
+"290
+[; ;main.c: 290:         LATDbits.LD7 = 0;
 [e = . . _LATDbits 1 7 -> -> 0 `i `uc ]
-"273
-[; ;main.c: 273:     }
+"292
+[; ;main.c: 292:     }
 }
 [e :U 881 ]
 [e :U 880 ]
 [e :U 878 ]
 [e :U 876 ]
 [e :U 874 ]
-"275
-[; ;main.c: 275: }
+"294
+[; ;main.c: 294: }
 [e :UE 872 ]
 }
-"279
-[; ;main.c: 279: void Init_Message_Platform(void) {
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
+"296
+[; ;main.c: 296: void Receive_Interrupt(void) {
+[v _Receive_Interrupt `(v ~T0 @X0 1 ef ]
+{
+[e :U _Receive_Interrupt ]
+[f ]
+"298
+[; ;main.c: 298:     Rx_Buffer = RCREG1;
+[e = _Rx_Buffer _RCREG1 ]
+"325
+[; ;main.c: 325:     if (Rx_Buffer == 'M') {
+[e $ ! == -> _Rx_Buffer `ui -> 77 `ui 883  ]
+{
+"327
+[; ;main.c: 327:         Send_PWM_Motors(1023.00, 1023.00);
+[e ( _Send_PWM_Motors , .1023.00 .1023.00 ]
+"328
+[; ;main.c: 328:         Manage_Motor_Direction(0, 1, 1, 0);
+[e ( _Manage_Motor_Direction , , , -> 0 `i -> 1 `i -> 1 `i -> 0 `i ]
+"331
+[; ;main.c: 331:     } else if (Rx_Buffer == 'A') {
+}
+[e $U 884  ]
+[e :U 883 ]
+[e $ ! == -> _Rx_Buffer `ui -> 65 `ui 885  ]
+{
+"333
+[; ;main.c: 333:         Send_PWM_Motors(1023.00, 1023.00);
+[e ( _Send_PWM_Motors , .1023.00 .1023.00 ]
+"334
+[; ;main.c: 334:         Manage_Motor_Direction(1, 0, 0, 1);
+[e ( _Manage_Motor_Direction , , , -> 1 `i -> 0 `i -> 0 `i -> 1 `i ]
+"336
+[; ;main.c: 336:     } else if (Rx_Buffer == 'S') {
+}
+[e $U 886  ]
+[e :U 885 ]
+[e $ ! == -> _Rx_Buffer `ui -> 83 `ui 887  ]
+{
+"338
+[; ;main.c: 338:         Send_PWM_Motors(0.00, 0.00);
+[e ( _Send_PWM_Motors , .0.00 .0.00 ]
+"339
+[; ;main.c: 339:         Manage_Motor_Direction(0, 0, 0, 0);
+[e ( _Manage_Motor_Direction , , , -> 0 `i -> 0 `i -> 0 `i -> 0 `i ]
+"341
+[; ;main.c: 341:     }
+}
+[e :U 887 ]
+[e :U 886 ]
+[e :U 884 ]
+"343
+[; ;main.c: 343: }
+[e :UE 882 ]
+}
+"347
+[; ;main.c: 347: void Init_Message_Platform(void) {
 [v _Init_Message_Platform `(v ~T0 @X0 1 ef ]
 {
 [e :U _Init_Message_Platform ]
 [f ]
-<<<<<<< HEAD
-"233
-[; ;main.c: 233:     Send_Instruction_Data(0, 0X80);
+"349
+[; ;main.c: 349:     Send_Instruction_Data(0, 0X80);
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
-"234
-[; ;main.c: 234:     Send_String("Research Project");
-[e ( _Send_String (1 :s 1C ]
-"235
-[; ;main.c: 235:     Send_Instruction_Data(0, 0xC0);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
-"236
-[; ;main.c: 236:     Send_String("Robotic Platform");
-[e ( _Send_String (1 :s 2C ]
-"238
-[; ;main.c: 238: }
-[e :UE 870 ]
-=======
-"281
-[; ;main.c: 281:     Send_Instruction_Data(0, 0X80);
-[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
-"282
-[; ;main.c: 282:     Send_String("Research Project");
+"350
+[; ;main.c: 350:     Send_String("Research Project");
 [e ( _Send_String (1 :s 6C ]
-"283
-[; ;main.c: 283:     Send_Instruction_Data(0, 0xC0);
+"351
+[; ;main.c: 351:     Send_Instruction_Data(0, 0xC0);
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
-"284
-[; ;main.c: 284:     Send_String("Robotic Platform");
+"352
+[; ;main.c: 352:     Send_String("Robotic Platform");
 [e ( _Send_String (1 :s 7C ]
-"286
-[; ;main.c: 286: }
-[e :UE 882 ]
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
+"354
+[; ;main.c: 354: }
+[e :UE 888 ]
 }
-"290
-[; ;main.c: 290: void Manual(unsigned char Data) {
+"358
+[; ;main.c: 358: void Manual(unsigned char Data) {
 [v _Manual `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _Manual ]
 [v _Data `uc ~T0 @X0 1 r1 ]
 [f ]
-"292
-[; ;main.c: 292:     if (Data == '1') {
-[e $ ! == -> _Data `ui -> 49 `ui 884  ]
+"360
+[; ;main.c: 360:     if (Data == '1') {
+[e $ ! == -> _Data `ui -> 49 `ui 890  ]
 {
-"294
-[; ;main.c: 294:         Driver_Control(1023.00, 1023.00, 'F');
+"362
+[; ;main.c: 362:         Driver_Control(1023.00, 1023.00, 'F');
 [e ( _Driver_Control (3 , , -> .1023.00 `f -> .1023.00 `f -> -> 70 `ui `uc ]
-"296
-[; ;main.c: 296:     } else if (Data == '2') {
-}
-[e $U 885  ]
-[e :U 884 ]
-[e $ ! == -> _Data `ui -> 50 `ui 886  ]
-{
-"298
-[; ;main.c: 298:         Driver_Control(0.00, 0.00, 'T');
-[e ( _Driver_Control (3 , , -> .0.00 `f -> .0.00 `f -> -> 84 `ui `uc ]
-"300
-[; ;main.c: 300:     } else if (Data == '3') {
-}
-[e $U 887  ]
-[e :U 886 ]
-[e $ ! == -> _Data `ui -> 51 `ui 888  ]
-{
-"302
-[; ;main.c: 302:         Driver_Control(1023.00, 1023.00, 'B');
-[e ( _Driver_Control (3 , , -> .1023.00 `f -> .1023.00 `f -> -> 66 `ui `uc ]
-"304
-[; ;main.c: 304:     } else if (Data == '4') {
-}
-[e $U 889  ]
-[e :U 888 ]
-[e $ ! == -> _Data `ui -> 52 `ui 890  ]
-{
-"306
-[; ;main.c: 306:         Driver_Control(511.5, 1023.00, 'L');
-[e ( _Driver_Control (3 , , -> .511.5 `f -> .1023.00 `f -> -> 76 `ui `uc ]
-"308
-[; ;main.c: 308:     } else if (Data == '5') {
+"364
+[; ;main.c: 364:     } else if (Data == '2') {
 }
 [e $U 891  ]
 [e :U 890 ]
-[e $ ! == -> _Data `ui -> 53 `ui 892  ]
+[e $ ! == -> _Data `ui -> 50 `ui 892  ]
 {
-"310
-[; ;main.c: 310:         Driver_Control(1023.00, 511.5, 'R');
-[e ( _Driver_Control (3 , , -> .1023.00 `f -> .511.5 `f -> -> 82 `ui `uc ]
-"312
-[; ;main.c: 312:     }
+"366
+[; ;main.c: 366:         Driver_Control(0.00, 0.00, 'T');
+[e ( _Driver_Control (3 , , -> .0.00 `f -> .0.00 `f -> -> 84 `ui `uc ]
+"368
+[; ;main.c: 368:     } else if (Data == '3') {
 }
+[e $U 893  ]
 [e :U 892 ]
+[e $ ! == -> _Data `ui -> 51 `ui 894  ]
+{
+"370
+[; ;main.c: 370:         Driver_Control(1023.00, 1023.00, 'B');
+[e ( _Driver_Control (3 , , -> .1023.00 `f -> .1023.00 `f -> -> 66 `ui `uc ]
+"372
+[; ;main.c: 372:     } else if (Data == '4') {
+}
+[e $U 895  ]
+[e :U 894 ]
+[e $ ! == -> _Data `ui -> 52 `ui 896  ]
+{
+"374
+[; ;main.c: 374:         Driver_Control(511.5, 1023.00, 'L');
+[e ( _Driver_Control (3 , , -> .511.5 `f -> .1023.00 `f -> -> 76 `ui `uc ]
+"376
+[; ;main.c: 376:     } else if (Data == '5') {
+}
+[e $U 897  ]
+[e :U 896 ]
+[e $ ! == -> _Data `ui -> 53 `ui 898  ]
+{
+"378
+[; ;main.c: 378:         Driver_Control(1023.00, 511.5, 'R');
+[e ( _Driver_Control (3 , , -> .1023.00 `f -> .511.5 `f -> -> 82 `ui `uc ]
+"380
+[; ;main.c: 380:     }
+}
+[e :U 898 ]
+[e :U 897 ]
+[e :U 895 ]
+[e :U 893 ]
 [e :U 891 ]
-[e :U 889 ]
-[e :U 887 ]
-[e :U 885 ]
-"314
-[; ;main.c: 314: }
-[e :UE 883 ]
+"382
+[; ;main.c: 382: }
+[e :UE 889 ]
 }
 [a 6C 82 101 115 101 97 114 99 104 32 80 114 111 106 101 99 116 0 ]
 [a 7C 82 111 98 111 116 105 99 32 80 108 97 116 102 111 114 109 0 ]

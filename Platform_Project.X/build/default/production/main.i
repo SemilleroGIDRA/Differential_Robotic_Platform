@@ -9736,11 +9736,7 @@ void LCD_Instruction(unsigned char Instruction);
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
 void Send_String(unsigned char *String);
 # 12 "main.c" 2
-<<<<<<< HEAD
-# 36 "main.c"
-=======
-# 37 "main.c"
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
+# 48 "main.c"
 void Configurations(void);
 void Bluetooth_Receiver(void);
 void Init_Message_Platform(void);
@@ -9762,9 +9758,12 @@ void main(void) {
     Configurations();
     Init_LCD();
 
+
+
+
+
+
     Driver_Control(0.00, 0.00, 'T');
-
-
 
 
 
@@ -9841,7 +9840,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 145 "main.c"
+# 162 "main.c"
     PR2 = 0xF9;
     T2CON = 0x00;
     CCP3CON = 0x0C;
@@ -9852,8 +9851,7 @@ void Configurations(void) {
 
 }
 
-<<<<<<< HEAD
-=======
+
 void Bluetooth_Receiver(void) {
 
     if (PIR1bits.RC1IF) {
@@ -9923,7 +9921,7 @@ void Bluetooth_Receiver(void) {
 
 }
 
->>>>>>> d6b2c7b27e028faa8643e95d107bd8dbc15949d9
+
 
 
 void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction) {
@@ -9980,7 +9978,7 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
 void Receive_Interrupt(void) {
 
     Rx_Buffer = RCREG1;
-# 209 "main.c"
+# 325 "main.c"
     if (Rx_Buffer == 'M') {
 
         Send_PWM_Motors(1023.00, 1023.00);
