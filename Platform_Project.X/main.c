@@ -23,6 +23,14 @@
 #define Duty_Cycle_50 511.5 //Macro to use 50% of PWM signal.
 #define Duty_Cycle_25 255.75 //Macro to use 25% of PWM signal.
 #define Duty_Cycle_0 0.00 //Macro to stop platform. 
+//#define Move_Forward 'F' //Macro to move platform forward.
+//#define Move_Backward 'B' //Macro to move platform backward. 
+//#define Move_Right 'R' //Macro to move platform to the right.
+//#define Move_Left 'L' //Macro to move platform to the left. 
+//#define STOP 'T' //Macro to stop the platform movement. 
+//#define Manual_Mode 'M' //Macro to check manual mode. 
+//#define Auto_Mode 'A' //Macro to check automatic mode. 
+//#define Semi_Mode 'S' //Macro to check semiautomatic mode. 
 
 //Prototype functions. 
 void Configurations(void); //Function to set registers.
@@ -42,6 +50,9 @@ void main(void) {
     //Call functions. 
     Configurations();
     Init_LCD();
+    //Initialize the driver. 
+    //    Send_PWM_Motors(Duty_Cycle_0, Duty_Cycle_0);
+    //    Manage_Motor_Direction(0, 0, 0, 0);
 
     //Infinite Loop. 
     while (1) {
@@ -141,37 +152,6 @@ void Configurations(void) {
 
 }
 
-void Receive_Interrupt(void) {
-
-    Rx_Buffer = RCREG1; //Assign RCREG1 buffer to clean the flag. 
-
-    switch (Rx_Buffer) {
-
-        case 'M': //Test
-
-            Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
-            Manage_Motor_Direction(0, 1, 1, 0); //Backward Instruction. 
-            __delay_ms(5000);
-
-            break;
-
-        case 'A':
-
-            Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
-            Manage_Motor_Direction(1, 0, 0, 1); //Forward Instruction. 
-            __delay_ms(5000);
-
-        default: //Stop 
-
-            Send_PWM_Motors(Duty_Cycle_0, Duty_Cycle_0);
-            Manage_Motor_Direction(1, 0, 0, 1); //Forward Instruction. 
-
-            break;
-
-    }
-
-}
-
 //Develop function to send PWM to the motors. 
 
 void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
@@ -194,6 +174,55 @@ void Manage_Motor_Direction(char in1, char in2, char in3, char in4) {
     IN2 = in2;
     IN3 = in3;
     IN4 = in4;
+
+}
+
+void Receive_Interrupt(void) {
+
+    Rx_Buffer = RCREG1; //Assign RCREG1 buffer to clean the flag. 
+
+    //    switch (Rx_Buffer) {
+    //
+    //        case 'M': //Test
+    //
+    //            Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
+    //            Manage_Motor_Direction(0, 1, 1, 0); //Backward Instruction. 
+    //            __delay_ms(2000);
+    //
+    //            break;
+    //
+    //        case 'A':
+    //
+    //            Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
+    //            Manage_Motor_Direction(1, 0, 0, 1); //Forward Instruction. 
+    //            __delay_ms(2000);
+    //
+    //        default: //Stop 
+    //
+    //            Send_PWM_Motors(Duty_Cycle_0, Duty_Cycle_0);
+    //            Manage_Motor_Direction(1, 0, 0, 1); //Forward Instruction. 
+    //
+    //            break;
+    //
+    //    }
+
+    if (Rx_Buffer == 'M') {
+
+        Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
+        Manage_Motor_Direction(0, 1, 1, 0); //Backward Instruction. 
+        //__delay_ms(2000);
+
+    } else if (Rx_Buffer == 'A') {
+
+        Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
+        Manage_Motor_Direction(1, 0, 0, 1); //Backward Instruction. 
+
+    } else if (Rx_Buffer == 'S') {
+
+        Send_PWM_Motors(Duty_Cycle_0, Duty_Cycle_0);
+        Manage_Motor_Direction(0, 0, 0, 0); //Backward Instruction. 
+
+    }
 
 }
 

@@ -1,7 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"28 main.c
-[; ;main.c: 28: void Configurations(void);
+"36 main.c
+[; ;main.c: 36: void Configurations(void);
 [v _Configurations `(v ~T0 @X0 0 ef ]
 "39 ./LCD_Library.h
 [; ;./LCD_Library.h: 39: void Init_LCD(void);
@@ -23,8 +23,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "9513
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9513: extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
 [v _PIR1bits `VS440 ~T0 @X0 0 e@3998 ]
-"29 main.c
-[; ;main.c: 29: void Receive_Interrupt(void);
+"37 main.c
+[; ;main.c: 37: void Receive_Interrupt(void);
 [v _Receive_Interrupt `(v ~T0 @X0 0 ef ]
 [t T2 __interrupt low_priority ]
 "16046 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
@@ -271,20 +271,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "13253
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13253: extern volatile T2CONbits_t T2CONbits __attribute__((address(0xFBA)));
 [v _T2CONbits `VS626 ~T0 @X0 0 e@4026 ]
-"11288
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11288: extern volatile unsigned char RCREG1 __attribute__((address(0xFAE)));
-[v _RCREG1 `Vuc ~T0 @X0 0 e@4014 ]
-"31 main.c
-[; ;main.c: 31: void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor);
-[v _Send_PWM_Motors `(v ~T0 @X0 0 ef2`f`f ]
-"32
-[; ;main.c: 32: void Manage_Motor_Direction(char in1, char in2, char in3, char in4);
-[v _Manage_Motor_Direction `(v ~T0 @X0 0 ef4`uc`uc`uc`uc ]
-[v F205 `(v ~T0 @X0 1 tf1`ul ]
-"20 C:\Program Files\Microchip\xc8\v2.46\pic\include\builtins.h
-[v __delay `JF205 ~T0 @X0 0 e ]
-[p i __delay ]
-"7902 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
+"7902
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7902:     struct {
 [s S389 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S389 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
@@ -299,6 +286,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7923
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7923: extern volatile LATDbits_t LATDbits __attribute__((address(0xF8C)));
 [v _LATDbits `VS388 ~T0 @X0 0 e@3980 ]
+"11288
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11288: extern volatile unsigned char RCREG1 __attribute__((address(0xFAE)));
+[v _RCREG1 `Vuc ~T0 @X0 0 e@4014 ]
 "41 ./LCD_Library.h
 [; ;./LCD_Library.h: 41: void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
 [v _Send_Instruction_Data `(v ~T0 @X0 0 ef2`uc`uc ]
@@ -1140,285 +1130,220 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3  =  OFF       ]
 "68
 [p x EBTRB  =  OFF       ]
-"35 main.c
-[; ;main.c: 35: unsigned char Rx_Buffer;
+"43 main.c
+[; ;main.c: 43: unsigned char Rx_Buffer;
 [v _Rx_Buffer `uc ~T0 @X0 1 e ]
-"36
-[; ;main.c: 36: float Duty_Cycle1, Duty_Cycle2;
+"44
+[; ;main.c: 44: float Duty_Cycle1, Duty_Cycle2;
 [v _Duty_Cycle1 `f ~T0 @X0 1 e ]
 [v _Duty_Cycle2 `f ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"40
-[; ;main.c: 40: void main(void) {
+"48
+[; ;main.c: 48: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"43
-[; ;main.c: 43:     Configurations();
+"51
+[; ;main.c: 51:     Configurations();
 [e ( _Configurations ..  ]
-"44
-[; ;main.c: 44:     Init_LCD();
+"52
+[; ;main.c: 52:     Init_LCD();
 [e ( _Init_LCD ..  ]
-"47
-[; ;main.c: 47:     while (1) {
+"58
+[; ;main.c: 58:     while (1) {
 [e :U 856 ]
 {
-"51
-[; ;main.c: 51:     }
+"62
+[; ;main.c: 62:     }
 }
 [e :U 855 ]
 [e $U 856  ]
 [e :U 857 ]
-"53
-[; ;main.c: 53: }
+"64
+[; ;main.c: 64: }
 [e :UE 854 ]
 }
 [v $root$_Interrupt_Rx `(v ~T0 @X0 0 e ]
-"57
-[; ;main.c: 57: void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
+"68
+[; ;main.c: 68: void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
 [v _Interrupt_Rx `(v ~T1 @X0 1 ef ]
 {
 [e :U _Interrupt_Rx ]
 [f ]
-"59
-[; ;main.c: 59:     if (PIR1bits.RC1IF) {
+"70
+[; ;main.c: 70:     if (PIR1bits.RC1IF) {
 [e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 859  ]
 {
-"61
-[; ;main.c: 61:         Receive_Interrupt();
+"72
+[; ;main.c: 72:         Receive_Interrupt();
 [e ( _Receive_Interrupt ..  ]
-"63
-[; ;main.c: 63:     }
+"74
+[; ;main.c: 74:     }
 }
 [e :U 859 ]
-"65
-[; ;main.c: 65: }
+"76
+[; ;main.c: 76: }
 [e :UE 858 ]
 }
 [v $root$_Interrupt `(v ~T0 @X0 0 e ]
-"69
-[; ;main.c: 69: void __attribute__((picinterrupt(("low_priority")))) Interrupt(void) {
+"80
+[; ;main.c: 80: void __attribute__((picinterrupt(("low_priority")))) Interrupt(void) {
 [v _Interrupt `(v ~T2 @X0 1 ef ]
 {
 [e :U _Interrupt ]
 [f ]
-"73
-[; ;main.c: 73: }
+"84
+[; ;main.c: 84: }
 [e :UE 860 ]
 }
-"77
-[; ;main.c: 77: void Configurations(void) {
+"88
+[; ;main.c: 88: void Configurations(void) {
 [v _Configurations `(v ~T0 @X0 1 ef ]
 {
 [e :U _Configurations ]
 [f ]
-"79
-[; ;main.c: 79:     OSCCON = 0x72;
+"90
+[; ;main.c: 90:     OSCCON = 0x72;
 [e = _OSCCON -> -> 114 `i `uc ]
-"81
-[; ;main.c: 81:     ANSELC = 0;
-[e = _ANSELC -> -> 0 `i `uc ]
-"82
-[; ;main.c: 82:     ANSELD = 0;
-[e = _ANSELD -> -> 0 `i `uc ]
-"83
-[; ;main.c: 83:     ANSELE = 0;
-[e = _ANSELE -> -> 0 `i `uc ]
-"86
-[; ;main.c: 86:     TRISCbits.RC4 = 0;
-[e = . . _TRISCbits 1 4 -> -> 0 `i `uc ]
-"87
-[; ;main.c: 87:     TRISCbits.RC5 = 0;
-[e = . . _TRISCbits 1 5 -> -> 0 `i `uc ]
-"88
-[; ;main.c: 88:     TRISD = 0;
-[e = _TRISD -> -> 0 `i `uc ]
-"89
-[; ;main.c: 89:     TRISE = 0;
-[e = _TRISE -> -> 0 `i `uc ]
 "92
-[; ;main.c: 92:     LATCbits.LC4 = 0;
-[e = . . _LATCbits 1 4 -> -> 0 `i `uc ]
+[; ;main.c: 92:     ANSELC = 0;
+[e = _ANSELC -> -> 0 `i `uc ]
 "93
-[; ;main.c: 93:     LATCbits.LC5 = 0;
-[e = . . _LATCbits 1 5 -> -> 0 `i `uc ]
+[; ;main.c: 93:     ANSELD = 0;
+[e = _ANSELD -> -> 0 `i `uc ]
 "94
-[; ;main.c: 94:     LATD = 0;
-[e = _LATD -> -> 0 `i `uc ]
-"95
-[; ;main.c: 95:     LATE = 0;
-[e = _LATE -> -> 0 `i `uc ]
+[; ;main.c: 94:     ANSELE = 0;
+[e = _ANSELE -> -> 0 `i `uc ]
+"97
+[; ;main.c: 97:     TRISCbits.RC4 = 0;
+[e = . . _TRISCbits 1 4 -> -> 0 `i `uc ]
 "98
-[; ;main.c: 98:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;main.c: 98:     TRISCbits.RC5 = 0;
+[e = . . _TRISCbits 1 5 -> -> 0 `i `uc ]
 "99
-[; ;main.c: 99:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+[; ;main.c: 99:     TRISD = 0;
+[e = _TRISD -> -> 0 `i `uc ]
 "100
-[; ;main.c: 100:     RCONbits.IPEN = 1;
-[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
-"102
-[; ;main.c: 102:     PIE1bits.RC1IE = 1;
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+[; ;main.c: 100:     TRISE = 0;
+[e = _TRISE -> -> 0 `i `uc ]
 "103
-[; ;main.c: 103:     PIR1bits.RC1IF = 0;
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 103:     LATCbits.LC4 = 0;
+[e = . . _LATCbits 1 4 -> -> 0 `i `uc ]
+"104
+[; ;main.c: 104:     LATCbits.LC5 = 0;
+[e = . . _LATCbits 1 5 -> -> 0 `i `uc ]
+"105
+[; ;main.c: 105:     LATD = 0;
+[e = _LATD -> -> 0 `i `uc ]
 "106
-[; ;main.c: 106:     SPBRG = 103;
-[e = _SPBRG -> -> 103 `i `uc ]
-"107
-[; ;main.c: 107:     TRISCbits.RC6 = 1;
-[e = . . _TRISCbits 1 6 -> -> 1 `i `uc ]
-"108
-[; ;main.c: 108:     TRISCbits.RC7 = 1;
-[e = . . _TRISCbits 1 7 -> -> 1 `i `uc ]
+[; ;main.c: 106:     LATE = 0;
+[e = _LATE -> -> 0 `i `uc ]
+"109
+[; ;main.c: 109:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"110
+[; ;main.c: 110:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
 "111
-[; ;main.c: 111:     TXSTA1bits.TX91 = 0;
-[e = . . _TXSTA1bits 1 6 -> -> 0 `i `uc ]
-"112
-[; ;main.c: 112:     TXSTA1bits.TXEN1 = 1;
-[e = . . _TXSTA1bits 1 5 -> -> 1 `i `uc ]
+[; ;main.c: 111:     RCONbits.IPEN = 1;
+[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
 "113
-[; ;main.c: 113:     TXSTA1bits.SYNC1 = 0;
-[e = . . _TXSTA1bits 1 4 -> -> 0 `i `uc ]
+[; ;main.c: 113:     PIE1bits.RC1IE = 1;
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
 "114
-[; ;main.c: 114:     TXSTA1bits.BRGH1 = 1;
-[e = . . _TXSTA1bits 1 2 -> -> 1 `i `uc ]
+[; ;main.c: 114:     PIR1bits.RC1IF = 0;
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
 "117
-[; ;main.c: 117:     RCSTAbits.SPEN1 = 1;
-[e = . . _RCSTAbits 2 7 -> -> 1 `i `uc ]
+[; ;main.c: 117:     SPBRG = 103;
+[e = _SPBRG -> -> 103 `i `uc ]
 "118
-[; ;main.c: 118:     RCSTAbits.RX91 = 0;
-[e = . . _RCSTAbits 2 6 -> -> 0 `i `uc ]
+[; ;main.c: 118:     TRISCbits.RC6 = 1;
+[e = . . _TRISCbits 1 6 -> -> 1 `i `uc ]
 "119
-[; ;main.c: 119:     RCSTAbits.CREN1 = 1;
-[e = . . _RCSTAbits 2 4 -> -> 1 `i `uc ]
+[; ;main.c: 119:     TRISCbits.RC7 = 1;
+[e = . . _TRISCbits 1 7 -> -> 1 `i `uc ]
 "122
-[; ;main.c: 122:     BAUDCON1bits.BRG16 = 0;
+[; ;main.c: 122:     TXSTA1bits.TX91 = 0;
+[e = . . _TXSTA1bits 1 6 -> -> 0 `i `uc ]
+"123
+[; ;main.c: 123:     TXSTA1bits.TXEN1 = 1;
+[e = . . _TXSTA1bits 1 5 -> -> 1 `i `uc ]
+"124
+[; ;main.c: 124:     TXSTA1bits.SYNC1 = 0;
+[e = . . _TXSTA1bits 1 4 -> -> 0 `i `uc ]
+"125
+[; ;main.c: 125:     TXSTA1bits.BRGH1 = 1;
+[e = . . _TXSTA1bits 1 2 -> -> 1 `i `uc ]
+"128
+[; ;main.c: 128:     RCSTAbits.SPEN1 = 1;
+[e = . . _RCSTAbits 2 7 -> -> 1 `i `uc ]
+"129
+[; ;main.c: 129:     RCSTAbits.RX91 = 0;
+[e = . . _RCSTAbits 2 6 -> -> 0 `i `uc ]
+"130
+[; ;main.c: 130:     RCSTAbits.CREN1 = 1;
+[e = . . _RCSTAbits 2 4 -> -> 1 `i `uc ]
+"133
+[; ;main.c: 133:     BAUDCON1bits.BRG16 = 0;
 [e = . . _BAUDCON1bits 0 3 -> -> 0 `i `uc ]
-"134
-[; ;main.c: 134:     PR2 = 0xF9;
+"145
+[; ;main.c: 145:     PR2 = 0xF9;
 [e = _PR2 -> -> 249 `i `uc ]
-"135
-[; ;main.c: 135:     T2CON = 0x00;
+"146
+[; ;main.c: 146:     T2CON = 0x00;
 [e = _T2CON -> -> 0 `i `uc ]
-"136
-[; ;main.c: 136:     CCP3CON = 0x0C;
+"147
+[; ;main.c: 147:     CCP3CON = 0x0C;
 [e = _CCP3CON -> -> 12 `i `uc ]
-"137
-[; ;main.c: 137:     CCPR3L = 0xFA;
+"148
+[; ;main.c: 148:     CCPR3L = 0xFA;
 [e = _CCPR3L -> -> 250 `i `uc ]
-"138
-[; ;main.c: 138:     CCP5CON = 0x0C;
+"149
+[; ;main.c: 149:     CCP5CON = 0x0C;
 [e = _CCP5CON -> -> 12 `i `uc ]
-"139
-[; ;main.c: 139:     CCPR5L = 0xFA;
+"150
+[; ;main.c: 150:     CCPR5L = 0xFA;
 [e = _CCPR5L -> -> 250 `i `uc ]
-"140
-[; ;main.c: 140:     T2CONbits.TMR2ON = 1;
+"151
+[; ;main.c: 151:     T2CONbits.TMR2ON = 1;
 [e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
-"142
-[; ;main.c: 142: }
+"153
+[; ;main.c: 153: }
 [e :UE 861 ]
 }
-"144
-[; ;main.c: 144: void Receive_Interrupt(void) {
-[v _Receive_Interrupt `(v ~T0 @X0 1 ef ]
-{
-[e :U _Receive_Interrupt ]
-[f ]
-"146
-[; ;main.c: 146:     Rx_Buffer = RCREG1;
-[e = _Rx_Buffer _RCREG1 ]
-"148
-[; ;main.c: 148:     switch (Rx_Buffer) {
-[e $U 864  ]
-{
-"150
-[; ;main.c: 150:         case 'M':
-[e :U 865 ]
-"152
-[; ;main.c: 152:             Send_PWM_Motors(1023.00, 1023.00);
-[e ( _Send_PWM_Motors (2 , -> .1023.00 `f -> .1023.00 `f ]
-"153
-[; ;main.c: 153:             Manage_Motor_Direction(0, 1, 1, 0);
-[e ( _Manage_Motor_Direction (4 , , , -> -> 0 `i `uc -> -> 1 `i `uc -> -> 1 `i `uc -> -> 0 `i `uc ]
-"154
-[; ;main.c: 154:             _delay((unsigned long)((5000)*(16000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"156
-[; ;main.c: 156:             break;
-[e $U 863  ]
-"158
-[; ;main.c: 158:         case 'A':
-[e :U 866 ]
-"160
-[; ;main.c: 160:             Send_PWM_Motors(1023.00, 1023.00);
-[e ( _Send_PWM_Motors (2 , -> .1023.00 `f -> .1023.00 `f ]
-"161
-[; ;main.c: 161:             Manage_Motor_Direction(1, 0, 0, 1);
-[e ( _Manage_Motor_Direction (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 1 `i `uc ]
-"162
-[; ;main.c: 162:             _delay((unsigned long)((5000)*(16000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"164
-[; ;main.c: 164:         default:
-[e :U 867 ]
-"166
-[; ;main.c: 166:             Send_PWM_Motors(0.00, 0.00);
-[e ( _Send_PWM_Motors (2 , -> .0.00 `f -> .0.00 `f ]
-"167
-[; ;main.c: 167:             Manage_Motor_Direction(1, 0, 0, 1);
-[e ( _Manage_Motor_Direction (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 1 `i `uc ]
-"169
-[; ;main.c: 169:             break;
-[e $U 863  ]
-"171
-[; ;main.c: 171:     }
-}
-[e $U 863  ]
-[e :U 864 ]
-[e [\ _Rx_Buffer , $ -> -> 77 `ui `i 865
- , $ -> -> 65 `ui `i 866
- 867 ]
-[e :U 863 ]
-"173
-[; ;main.c: 173: }
-[e :UE 862 ]
-}
-"177
-[; ;main.c: 177: void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
+"157
+[; ;main.c: 157: void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
 [v _Send_PWM_Motors `(v ~T0 @X0 1 ef2`f`f ]
 {
 [e :U _Send_PWM_Motors ]
 [v _PWM_RMotor `f ~T0 @X0 1 r1 ]
 [v _PWM_LMotor `f ~T0 @X0 1 r2 ]
 [f ]
-"179
-[; ;main.c: 179:     Duty_Cycle1 = (float) (PWM_RMotor * (1000.00 / 1023.00));
+"159
+[; ;main.c: 159:     Duty_Cycle1 = (float) (PWM_RMotor * (1000.00 / 1023.00));
 [e = _Duty_Cycle1 -> * -> _PWM_RMotor `d / .1000.00 .1023.00 `f ]
-"180
-[; ;main.c: 180:     CCPR3L = (int) Duty_Cycle1 >> 2;
+"160
+[; ;main.c: 160:     CCPR3L = (int) Duty_Cycle1 >> 2;
 [e = _CCPR3L -> >> -> _Duty_Cycle1 `i -> 2 `i `uc ]
-"181
-[; ;main.c: 181:     CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4));
+"161
+[; ;main.c: 161:     CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4));
 [e = _CCP3CON -> | & -> _CCP3CON `i -> 15 `i << & -> _Duty_Cycle1 `i -> 3 `i -> 4 `i `uc ]
-"183
-[; ;main.c: 183:     Duty_Cycle2 = (float) (PWM_LMotor * (1000.00 / 1023.00));
+"163
+[; ;main.c: 163:     Duty_Cycle2 = (float) (PWM_LMotor * (1000.00 / 1023.00));
 [e = _Duty_Cycle2 -> * -> _PWM_LMotor `d / .1000.00 .1023.00 `f ]
-"184
-[; ;main.c: 184:     CCPR5L = (int) Duty_Cycle2 >> 2;
+"164
+[; ;main.c: 164:     CCPR5L = (int) Duty_Cycle2 >> 2;
 [e = _CCPR5L -> >> -> _Duty_Cycle2 `i -> 2 `i `uc ]
-"185
-[; ;main.c: 185:     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
+"165
+[; ;main.c: 165:     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
 [e = _CCP5CON -> | & -> _CCP3CON `i -> 15 `i << & -> _Duty_Cycle2 `i -> 3 `i -> 4 `i `uc ]
-"187
-[; ;main.c: 187: }
-[e :UE 868 ]
+"167
+[; ;main.c: 167: }
+[e :UE 862 ]
 }
-"191
-[; ;main.c: 191: void Manage_Motor_Direction(char in1, char in2, char in3, char in4) {
+"171
+[; ;main.c: 171: void Manage_Motor_Direction(char in1, char in2, char in3, char in4) {
 [v _Manage_Motor_Direction `(v ~T0 @X0 1 ef4`uc`uc`uc`uc ]
 {
 [e :U _Manage_Motor_Direction ]
@@ -1427,42 +1352,97 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _in3 `uc ~T0 @X0 1 r3 ]
 [v _in4 `uc ~T0 @X0 1 r4 ]
 [f ]
-"193
-[; ;main.c: 193:     LATDbits.LD4 = in1;
+"173
+[; ;main.c: 173:     LATDbits.LD4 = in1;
 [e = . . _LATDbits 1 4 -> _in1 `uc ]
-"194
-[; ;main.c: 194:     LATDbits.LD5 = in2;
+"174
+[; ;main.c: 174:     LATDbits.LD5 = in2;
 [e = . . _LATDbits 1 5 -> _in2 `uc ]
-"195
-[; ;main.c: 195:     LATDbits.LD6 = in3;
+"175
+[; ;main.c: 175:     LATDbits.LD6 = in3;
 [e = . . _LATDbits 1 6 -> _in3 `uc ]
-"196
-[; ;main.c: 196:     LATDbits.LD7 = in4;
+"176
+[; ;main.c: 176:     LATDbits.LD7 = in4;
 [e = . . _LATDbits 1 7 -> _in4 `uc ]
-"198
-[; ;main.c: 198: }
-[e :UE 869 ]
+"178
+[; ;main.c: 178: }
+[e :UE 863 ]
 }
-"202
-[; ;main.c: 202: void Init_Message_Platform(void) {
+"180
+[; ;main.c: 180: void Receive_Interrupt(void) {
+[v _Receive_Interrupt `(v ~T0 @X0 1 ef ]
+{
+[e :U _Receive_Interrupt ]
+[f ]
+"182
+[; ;main.c: 182:     Rx_Buffer = RCREG1;
+[e = _Rx_Buffer _RCREG1 ]
+"209
+[; ;main.c: 209:     if (Rx_Buffer == 'M') {
+[e $ ! == -> _Rx_Buffer `ui -> 77 `ui 865  ]
+{
+"211
+[; ;main.c: 211:         Send_PWM_Motors(1023.00, 1023.00);
+[e ( _Send_PWM_Motors (2 , -> .1023.00 `f -> .1023.00 `f ]
+"212
+[; ;main.c: 212:         Manage_Motor_Direction(0, 1, 1, 0);
+[e ( _Manage_Motor_Direction (4 , , , -> -> 0 `i `uc -> -> 1 `i `uc -> -> 1 `i `uc -> -> 0 `i `uc ]
+"215
+[; ;main.c: 215:     } else if (Rx_Buffer == 'A') {
+}
+[e $U 866  ]
+[e :U 865 ]
+[e $ ! == -> _Rx_Buffer `ui -> 65 `ui 867  ]
+{
+"217
+[; ;main.c: 217:         Send_PWM_Motors(1023.00, 1023.00);
+[e ( _Send_PWM_Motors (2 , -> .1023.00 `f -> .1023.00 `f ]
+"218
+[; ;main.c: 218:         Manage_Motor_Direction(1, 0, 0, 1);
+[e ( _Manage_Motor_Direction (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 1 `i `uc ]
+"220
+[; ;main.c: 220:     } else if (Rx_Buffer == 'S') {
+}
+[e $U 868  ]
+[e :U 867 ]
+[e $ ! == -> _Rx_Buffer `ui -> 83 `ui 869  ]
+{
+"222
+[; ;main.c: 222:         Send_PWM_Motors(0.00, 0.00);
+[e ( _Send_PWM_Motors (2 , -> .0.00 `f -> .0.00 `f ]
+"223
+[; ;main.c: 223:         Manage_Motor_Direction(0, 0, 0, 0);
+[e ( _Manage_Motor_Direction (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc ]
+"225
+[; ;main.c: 225:     }
+}
+[e :U 869 ]
+[e :U 868 ]
+[e :U 866 ]
+"227
+[; ;main.c: 227: }
+[e :UE 864 ]
+}
+"231
+[; ;main.c: 231: void Init_Message_Platform(void) {
 [v _Init_Message_Platform `(v ~T0 @X0 1 ef ]
 {
 [e :U _Init_Message_Platform ]
 [f ]
-"204
-[; ;main.c: 204:     Send_Instruction_Data(0, 0X80);
+"233
+[; ;main.c: 233:     Send_Instruction_Data(0, 0X80);
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
-"205
-[; ;main.c: 205:     Send_String("Research Project");
+"234
+[; ;main.c: 234:     Send_String("Research Project");
 [e ( _Send_String (1 :s 1C ]
-"206
-[; ;main.c: 206:     Send_Instruction_Data(0, 0xC0);
+"235
+[; ;main.c: 235:     Send_Instruction_Data(0, 0xC0);
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
-"207
-[; ;main.c: 207:     Send_String("Robotic Platform");
+"236
+[; ;main.c: 236:     Send_String("Robotic Platform");
 [e ( _Send_String (1 :s 2C ]
-"209
-[; ;main.c: 209: }
+"238
+[; ;main.c: 238: }
 [e :UE 870 ]
 }
 [a 1C 82 101 115 101 97 114 99 104 32 80 114 111 106 101 99 116 0 ]

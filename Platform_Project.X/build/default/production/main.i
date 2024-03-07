@@ -9736,7 +9736,7 @@ void LCD_Instruction(unsigned char Instruction);
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
 void Send_String(unsigned char *String);
 # 12 "main.c" 2
-# 28 "main.c"
+# 36 "main.c"
 void Configurations(void);
 void Receive_Interrupt(void);
 void Init_Message_Platform(void);
@@ -9754,6 +9754,9 @@ void main(void) {
 
     Configurations();
     Init_LCD();
+
+
+
 
 
     while (1) {
@@ -9832,7 +9835,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 134 "main.c"
+# 145 "main.c"
     PR2 = 0xF9;
     T2CON = 0x00;
     CCP3CON = 0x0C;
@@ -9840,37 +9843,6 @@ void Configurations(void) {
     CCP5CON = 0x0C;
     CCPR5L = 0xFA;
     T2CONbits.TMR2ON = 1;
-
-}
-
-void Receive_Interrupt(void) {
-
-    Rx_Buffer = RCREG1;
-
-    switch (Rx_Buffer) {
-
-        case 'M':
-
-            Send_PWM_Motors(1023.00, 1023.00);
-            Manage_Motor_Direction(0, 1, 1, 0);
-            _delay((unsigned long)((5000)*(16000000/4000.0)));
-
-            break;
-
-        case 'A':
-
-            Send_PWM_Motors(1023.00, 1023.00);
-            Manage_Motor_Direction(1, 0, 0, 1);
-            _delay((unsigned long)((5000)*(16000000/4000.0)));
-
-        default:
-
-            Send_PWM_Motors(0.00, 0.00);
-            Manage_Motor_Direction(1, 0, 0, 1);
-
-            break;
-
-    }
 
 }
 
@@ -9896,6 +9868,30 @@ void Manage_Motor_Direction(char in1, char in2, char in3, char in4) {
     LATDbits.LD5 = in2;
     LATDbits.LD6 = in3;
     LATDbits.LD7 = in4;
+
+}
+
+void Receive_Interrupt(void) {
+
+    Rx_Buffer = RCREG1;
+# 209 "main.c"
+    if (Rx_Buffer == 'M') {
+
+        Send_PWM_Motors(1023.00, 1023.00);
+        Manage_Motor_Direction(0, 1, 1, 0);
+
+
+    } else if (Rx_Buffer == 'A') {
+
+        Send_PWM_Motors(1023.00, 1023.00);
+        Manage_Motor_Direction(1, 0, 0, 1);
+
+    } else if (Rx_Buffer == 'S') {
+
+        Send_PWM_Motors(0.00, 0.00);
+        Manage_Motor_Direction(0, 0, 0, 0);
+
+    }
 
 }
 

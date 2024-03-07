@@ -37,20 +37,20 @@
 [v _LCD_Instruction LCD_Instruction `(v  1 e 1 0 ]
 "46
 [v _Send_String Send_String `(v  1 e 1 0 ]
-"40 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
+"48 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"57
+"68
 [v _Interrupt_Rx Interrupt_Rx `IIH(v  1 e 1 0 ]
-"69
+"80
 [v _Interrupt Interrupt `IIL(v  1 e 1 0 ]
-"77
+"88
 [v _Configurations Configurations `(v  1 e 1 0 ]
-"144
-[v _Receive_Interrupt Receive_Interrupt `(v  1 e 1 0 ]
-"177
+"157
 [v _Send_PWM_Motors Send_PWM_Motors `(v  1 e 1 0 ]
-"191
+"171
 [v _Manage_Motor_Direction Manage_Motor_Direction `(v  1 e 1 0 ]
+"180
+[v _Receive_Interrupt Receive_Interrupt `(v  1 e 1 0 ]
 "147 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [v _ANSELC ANSELC `VEuc  1 e 1 @3898 ]
 "198
@@ -88,7 +88,7 @@
 [v _LATCbits LATCbits `VES130  1 e 1 @3979 ]
 "7896
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
-[s S558 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S537 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -98,7 +98,7 @@
 `uc 1 LATD7 1 0 :1:7 
 ]
 "7923
-[s S567 . 1 `uc 1 LD0 1 0 :1:0 
+[s S546 . 1 `uc 1 LD0 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
 `uc 1 LD2 1 0 :1:2 
 `uc 1 LD3 1 0 :1:3 
@@ -107,8 +107,8 @@
 `uc 1 LD6 1 0 :1:6 
 `uc 1 LD7 1 0 :1:7 
 ]
-[u S576 . 1 `S558 1 . 1 0 `S567 1 . 1 0 ]
-[v _LATDbits LATDbits `VES576  1 e 1 @3980 ]
+[u S555 . 1 `S537 1 . 1 0 `S546 1 . 1 0 ]
+[v _LATDbits LATDbits `VES555  1 e 1 @3980 ]
 "8008
 [v _LATE LATE `VEuc  1 e 1 @3981 ]
 [s S70 . 1 `uc 1 TRISC0 1 0 :1:0 
@@ -349,15 +349,15 @@
 ]
 [u S176 . 1 `S154 1 . 1 0 `S163 1 . 1 0 `S172 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES176  1 e 1 @4082 ]
-"35 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
+"43 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
 [v _Rx_Buffer Rx_Buffer `uc  1 e 1 0 ]
-"36
+"44
 [v _Duty_Cycle1 Duty_Cycle1 `f  1 e 4 0 ]
 [v _Duty_Cycle2 Duty_Cycle2 `f  1 e 4 0 ]
-"40
+"48
 [v _main main `(v  1 e 1 0 ]
 {
-"53
+"64
 } 0
 "5 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\LCD_Library.c
 [v _Init_LCD Init_LCD `(v  1 e 1 0 ]
@@ -369,9 +369,9 @@
 {
 [v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 wreg ]
 [v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 wreg ]
-[v Send_Instruction_Data@Data Data `uc  1 p 1 40 ]
+[v Send_Instruction_Data@Data Data `uc  1 p 1 38 ]
 "26
-[v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 41 ]
+[v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 39 ]
 "30
 } 0
 "33
@@ -380,35 +380,35 @@
 [v LCD_Instruction@Instruction Instruction `uc  1 a 1 wreg ]
 [v LCD_Instruction@Instruction Instruction `uc  1 a 1 wreg ]
 "35
-[v LCD_Instruction@Instruction Instruction `uc  1 a 1 39 ]
+[v LCD_Instruction@Instruction Instruction `uc  1 a 1 37 ]
 "42
 } 0
-"77 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
+"88 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
 [v _Configurations Configurations `(v  1 e 1 0 ]
 {
-"142
+"153
 } 0
-"69
+"80
 [v _Interrupt Interrupt `IIL(v  1 e 1 0 ]
 {
-"73
+"84
 } 0
-"57
+"68
 [v _Interrupt_Rx Interrupt_Rx `IIH(v  1 e 1 0 ]
 {
-"65
+"76
 } 0
-"144
+"180
 [v _Receive_Interrupt Receive_Interrupt `(v  1 e 1 0 ]
 {
-"173
+"227
 } 0
-"177
+"157
 [v _Send_PWM_Motors Send_PWM_Motors `(v  1 e 1 0 ]
 {
 [v Send_PWM_Motors@PWM_RMotor PWM_RMotor `f  1 p 4 25 ]
 [v Send_PWM_Motors@PWM_LMotor PWM_LMotor `f  1 p 4 29 ]
-"187
+"167
 } 0
 "43 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
@@ -423,17 +423,17 @@
 "8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1071 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1057 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1076 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1079 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1071 1 fAsBytes 4 0 `S1076 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1079  1 a 4 19 ]
+[s S1062 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1065 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1057 1 fAsBytes 4 0 `S1062 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1065  1 a 4 19 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 13 ]
-[s S1147 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1133 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1150 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1147 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1150  1 a 2 23 ]
+[u S1136 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1133 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1136  1 a 2 23 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 18 ]
 "11
@@ -445,7 +445,7 @@
 [v ___flmul@a a `d  1 p 4 4 ]
 "205
 } 0
-"191 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
+"171 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
 [v _Manage_Motor_Direction Manage_Motor_Direction `(v  1 e 1 0 ]
 {
 [v Manage_Motor_Direction@in1 in1 `uc  1 a 1 wreg ]
@@ -453,7 +453,7 @@
 [v Manage_Motor_Direction@in2 in2 `uc  1 p 1 0 ]
 [v Manage_Motor_Direction@in3 in3 `uc  1 p 1 1 ]
 [v Manage_Motor_Direction@in4 in4 `uc  1 p 1 2 ]
-"193
+"173
 [v Manage_Motor_Direction@in1 in1 `uc  1 a 1 3 ]
-"198
+"178
 } 0
