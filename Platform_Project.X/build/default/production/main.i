@@ -9736,9 +9736,9 @@ void LCD_Instruction(unsigned char Instruction);
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
 void Send_String(unsigned char *String);
 # 12 "main.c" 2
-# 28 "main.c"
+# 36 "main.c"
 void Configurations(void);
-void Receive_Interrupt(void);
+void Bluetooth_Interrupt(void);
 void Init_Message_Platform(void);
 void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor);
 void Manage_Motor_Direction(char in1, char in2, char in3, char in4);
@@ -9768,11 +9768,7 @@ void main(void) {
 
 void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
 
-    if (PIR1bits.RC1IF) {
-
-        Receive_Interrupt();
-
-    }
+    Bluetooth_Interrupt();
 
 }
 
@@ -9832,7 +9828,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 134 "main.c"
+# 138 "main.c"
     PR2 = 0xF9;
     T2CON = 0x00;
     CCP3CON = 0x0C;
@@ -9843,36 +9839,34 @@ void Configurations(void) {
 
 }
 
-void Receive_Interrupt(void) {
+void Bluetooth_Interrupt(void) {
 
-    Rx_Buffer = RCREG1;
+    if (PIR1bits.RC1IF) {
 
-    switch (Rx_Buffer) {
+        Rx_Buffer = RCREG1;
 
-        case 'M':
+        if (Rx_Buffer == 'M') {
+
+            Send_PWM_Motors(1023.00, 1023.00);
+            Manage_Motor_Direction(1, 0, 0, 1);
+
+        } else if (Rx_Buffer == 'A') {
 
             Send_PWM_Motors(1023.00, 1023.00);
             Manage_Motor_Direction(0, 1, 1, 0);
-            _delay((unsigned long)((5000)*(16000000/4000.0)));
 
-            break;
-
-        case 'A':
-
-            Send_PWM_Motors(1023.00, 1023.00);
-            Manage_Motor_Direction(1, 0, 0, 1);
-            _delay((unsigned long)((5000)*(16000000/4000.0)));
-
-        default:
+        } else if (Rx_Buffer == 'T') {
 
             Send_PWM_Motors(0.00, 0.00);
-            Manage_Motor_Direction(1, 0, 0, 1);
+            Manage_Motor_Direction(0, 0, 0, 0);
 
-            break;
+        }
 
     }
 
 }
+
+
 
 
 
