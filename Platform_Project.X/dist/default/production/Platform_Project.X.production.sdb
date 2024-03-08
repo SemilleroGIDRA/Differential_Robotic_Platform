@@ -39,37 +39,20 @@
 [v i2_LCD_Instruction LCD_Instruction `(v  1 e 1 0 ]
 "46
 [v _Send_String Send_String `(v  1 e 1 0 ]
-<<<<<<< HEAD
-"48 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
+"51 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"65
+"72
 [v _Interrupt_Rx Interrupt_Rx `IIH(v  1 e 1 0 ]
-"73
+"80
 [v _Interrupt Interrupt `IIL(v  1 e 1 0 ]
-"81
-[v _Configurations Configurations `(v  1 e 1 0 ]
-"148
-[v _Bluetooth_Interrupt Bluetooth_Interrupt `(v  1 e 1 0 ]
-"179
-[v _Send_PWM_Motors Send_PWM_Motors `(v  1 e 1 0 ]
-"193
-[v _Manage_Motor_Direction Manage_Motor_Direction `(v  1 e 1 0 ]
-=======
-"63 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
-[v _main main `(v  1 e 1 0 ]
 "88
-[v _Interrupt_Rx Interrupt_Rx `IIH(v  1 e 1 0 ]
-"96
-[v _Interrupt Interrupt `IIL(v  1 e 1 0 ]
-"104
 [v _Configurations Configurations `(v  1 e 1 0 ]
-"173
+"156
 [v _Bluetooth_Receiver Bluetooth_Receiver `(v  1 e 1 0 ]
-"245
+"227
 [v _Driver_Control Driver_Control `(v  1 e 1 0 ]
-"358
+"291
 [v _Manual Manual `(v  1 e 1 0 ]
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
 "147 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [v _ANSELC ANSELC `VEuc  1 e 1 @3898 ]
 "198
@@ -84,11 +67,7 @@
 [v _CCP3CON CCP3CON `VEuc  1 e 1 @3933 ]
 "2635
 [v _CCPR3L CCPR3L `VEuc  1 e 1 @3934 ]
-<<<<<<< HEAD
-[s S82 . 1 `uc 1 LATC0 1 0 :1:0 
-=======
-[s S94 . 1 `uc 1 LATC0 1 0 :1:0 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+[s S87 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -98,11 +77,7 @@
 `uc 1 LATC7 1 0 :1:7 
 ]
 "7811
-<<<<<<< HEAD
-[s S91 . 1 `uc 1 LC0 1 0 :1:0 
-=======
-[s S103 . 1 `uc 1 LC0 1 0 :1:0 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+[s S96 . 1 `uc 1 LC0 1 0 :1:0 
 `uc 1 LC1 1 0 :1:1 
 `uc 1 LC2 1 0 :1:2 
 `uc 1 LC3 1 0 :1:3 
@@ -111,19 +86,11 @@
 `uc 1 LC6 1 0 :1:6 
 `uc 1 LC7 1 0 :1:7 
 ]
-<<<<<<< HEAD
-[u S100 . 1 `S82 1 . 1 0 `S91 1 . 1 0 ]
-[v _LATCbits LATCbits `VES100  1 e 1 @3979 ]
+[u S105 . 1 `S87 1 . 1 0 `S96 1 . 1 0 ]
+[v _LATCbits LATCbits `VES105  1 e 1 @3979 ]
 "7896
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
-[s S552 . 1 `uc 1 LATD0 1 0 :1:0 
-=======
-[u S112 . 1 `S94 1 . 1 0 `S103 1 . 1 0 ]
-[v _LATCbits LATCbits `VES112  1 e 1 @3979 ]
-"7896
-[v _LATD LATD `VEuc  1 e 1 @3980 ]
-[s S561 . 1 `uc 1 LATD0 1 0 :1:0 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+[s S554 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -133,11 +100,7 @@
 `uc 1 LATD7 1 0 :1:7 
 ]
 "7923
-<<<<<<< HEAD
-[s S561 . 1 `uc 1 LD0 1 0 :1:0 
-=======
-[s S570 . 1 `uc 1 LD0 1 0 :1:0 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+[s S563 . 1 `uc 1 LD0 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
 `uc 1 LD2 1 0 :1:2 
 `uc 1 LD3 1 0 :1:3 
@@ -146,19 +109,11 @@
 `uc 1 LD6 1 0 :1:6 
 `uc 1 LD7 1 0 :1:7 
 ]
-<<<<<<< HEAD
-[u S570 . 1 `S552 1 . 1 0 `S561 1 . 1 0 ]
-[v _LATDbits LATDbits `VES570  1 e 1 @3980 ]
+[u S572 . 1 `S554 1 . 1 0 `S563 1 . 1 0 ]
+[v _LATDbits LATDbits `VES572  1 e 1 @3980 ]
 "8008
 [v _LATE LATE `VEuc  1 e 1 @3981 ]
-[s S40 . 1 `uc 1 TRISC0 1 0 :1:0 
-=======
-[u S579 . 1 `S561 1 . 1 0 `S570 1 . 1 0 ]
-[v _LATDbits LATDbits `VES579  1 e 1 @3980 ]
-"8008
-[v _LATE LATE `VEuc  1 e 1 @3981 ]
-[s S52 . 1 `uc 1 TRISC0 1 0 :1:0 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+[s S45 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -168,11 +123,7 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "8536
-<<<<<<< HEAD
-[s S49 . 1 `uc 1 RC0 1 0 :1:0 
-=======
-[s S61 . 1 `uc 1 RC0 1 0 :1:0 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+[s S54 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -181,22 +132,13 @@
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-<<<<<<< HEAD
-[u S58 . 1 `S40 1 . 1 0 `S49 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES58  1 e 1 @3988 ]
-=======
-[u S70 . 1 `S52 1 . 1 0 `S61 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES70  1 e 1 @3988 ]
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+[u S63 . 1 `S45 1 . 1 0 `S54 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES63  1 e 1 @3988 ]
 "8726
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "8948
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
-<<<<<<< HEAD
-[s S240 . 1 `uc 1 TMR1IE 1 0 :1:0 
-=======
-[s S252 . 1 `uc 1 TMR1IE 1 0 :1:0 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+[s S245 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSP1IE 1 0 :1:3 
@@ -205,24 +147,14 @@
 `uc 1 ADIE 1 0 :1:6 
 ]
 "9436
-<<<<<<< HEAD
-[s S248 . 1 `uc 1 . 1 0 :3:0 
-=======
-[s S260 . 1 `uc 1 . 1 0 :3:0 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+[s S253 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 SSPIE 1 0 :1:3 
 `uc 1 TXIE 1 0 :1:4 
 `uc 1 RCIE 1 0 :1:5 
 ]
-<<<<<<< HEAD
-[u S253 . 1 `S240 1 . 1 0 `S248 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES253  1 e 1 @3997 ]
-[s S270 . 1 `uc 1 TMR1IF 1 0 :1:0 
-=======
-[u S265 . 1 `S252 1 . 1 0 `S260 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES265  1 e 1 @3997 ]
-[s S282 . 1 `uc 1 TMR1IF 1 0 :1:0 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+[u S258 . 1 `S245 1 . 1 0 `S253 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES258  1 e 1 @3997 ]
+[s S275 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSP1IF 1 0 :1:3 
@@ -231,24 +163,14 @@
 `uc 1 ADIF 1 0 :1:6 
 ]
 "9513
-<<<<<<< HEAD
-[s S278 . 1 `uc 1 . 1 0 :3:0 
-=======
-[s S290 . 1 `uc 1 . 1 0 :3:0 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+[s S283 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 SSPIF 1 0 :1:3 
 `uc 1 TXIF 1 0 :1:4 
 `uc 1 RCIF 1 0 :1:5 
 ]
-<<<<<<< HEAD
-[u S283 . 1 `S270 1 . 1 0 `S278 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES283  1 e 1 @3998 ]
-[s S350 . 1 `uc 1 RX9D 1 0 :1:0 
-=======
-[u S295 . 1 `S282 1 . 1 0 `S290 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES295  1 e 1 @3998 ]
-[s S362 . 1 `uc 1 RX9D 1 0 :1:0 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+[u S288 . 1 `S275 1 . 1 0 `S283 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES288  1 e 1 @3998 ]
+[s S355 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -258,10 +180,10 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "10579
-[s S371 . 1 `uc 1 . 1 0 :3:0 
+[s S364 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 ADEN 1 0 :1:3 
 ]
-[s S374 . 1 `uc 1 RX9D1 1 0 :1:0 
+[s S367 . 1 `uc 1 RX9D1 1 0 :1:0 
 `uc 1 OERR1 1 0 :1:1 
 `uc 1 FERR1 1 0 :1:2 
 `uc 1 ADDEN1 1 0 :1:3 
@@ -270,19 +192,19 @@
 `uc 1 RX91 1 0 :1:6 
 `uc 1 SPEN1 1 0 :1:7 
 ]
-[s S383 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S376 . 1 `uc 1 RCD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[s S387 . 1 `uc 1 . 1 0 :6:0 
+[s S380 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S390 . 1 `uc 1 . 1 0 :5:0 
+[s S383 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 SRENA 1 0 :1:5 
 ]
-[u S393 . 1 `S362 1 . 1 0 `S371 1 . 1 0 `S374 1 . 1 0 `S383 1 . 1 0 `S387 1 . 1 0 `S390 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES393  1 e 1 @4011 ]
-[s S313 . 1 `uc 1 TX9D 1 0 :1:0 
+[u S386 . 1 `S355 1 . 1 0 `S364 1 . 1 0 `S367 1 . 1 0 `S376 1 . 1 0 `S380 1 . 1 0 `S383 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES386  1 e 1 @4011 ]
+[s S306 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -292,7 +214,7 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "10876
-[s S322 . 1 `uc 1 TX9D1 1 0 :1:0 
+[s S315 . 1 `uc 1 TX9D1 1 0 :1:0 
 `uc 1 TRMT1 1 0 :1:1 
 `uc 1 BRGH1 1 0 :1:2 
 `uc 1 SENDB1 1 0 :1:3 
@@ -301,17 +223,17 @@
 `uc 1 TX91 1 0 :1:6 
 `uc 1 CSRC1 1 0 :1:7 
 ]
-[s S331 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S324 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[u S335 . 1 `S313 1 . 1 0 `S322 1 . 1 0 `S331 1 . 1 0 ]
-[v _TXSTA1bits TXSTA1bits `VES335  1 e 1 @4012 ]
+[u S328 . 1 `S306 1 . 1 0 `S315 1 . 1 0 `S324 1 . 1 0 ]
+[v _TXSTA1bits TXSTA1bits `VES328  1 e 1 @4012 ]
 "11288
 [v _RCREG1 RCREG1 `VEuc  1 e 1 @4014 ]
 "11371
 [v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
-[s S432 . 1 `uc 1 ABDEN 1 0 :1:0 
+[s S425 . 1 `uc 1 ABDEN 1 0 :1:0 
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG16 1 0 :1:3 
@@ -321,10 +243,10 @@
 `uc 1 ABDOVF 1 0 :1:7 
 ]
 "12472
-[s S441 . 1 `uc 1 . 1 0 :4:0 
+[s S434 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 SCKP 1 0 :1:4 
 ]
-[s S444 . 1 `uc 1 ABDEN1 1 0 :1:0 
+[s S437 . 1 `uc 1 ABDEN1 1 0 :1:0 
 `uc 1 WUE1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG161 1 0 :1:3 
@@ -333,32 +255,32 @@
 `uc 1 RCIDL1 1 0 :1:6 
 `uc 1 ABDOVF1 1 0 :1:7 
 ]
-[s S453 . 1 `uc 1 . 1 0 :4:0 
+[s S446 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TXCKP 1 0 :1:4 
 `uc 1 RXDTP 1 0 :1:5 
 `uc 1 RCMT 1 0 :1:6 
 ]
-[s S458 . 1 `uc 1 . 1 0 :4:0 
+[s S451 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TXCKP1 1 0 :1:4 
 `uc 1 RXDTP1 1 0 :1:5 
 `uc 1 RCMT1 1 0 :1:6 
 ]
-[s S463 . 1 `uc 1 . 1 0 :5:0 
+[s S456 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 RXCKP 1 0 :1:5 
 ]
-[s S466 . 1 `uc 1 . 1 0 :1:0 
+[s S459 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 W4E 1 0 :1:1 
 ]
-[u S469 . 1 `S432 1 . 1 0 `S441 1 . 1 0 `S444 1 . 1 0 `S453 1 . 1 0 `S458 1 . 1 0 `S463 1 . 1 0 `S466 1 . 1 0 ]
-[v _BAUDCON1bits BAUDCON1bits `VES469  1 e 1 @4024 ]
+[u S462 . 1 `S425 1 . 1 0 `S434 1 . 1 0 `S437 1 . 1 0 `S446 1 . 1 0 `S451 1 . 1 0 `S456 1 . 1 0 `S459 1 . 1 0 ]
+[v _BAUDCON1bits BAUDCON1bits `VES462  1 e 1 @4024 ]
 "13232
 [v _T2CON T2CON `VEuc  1 e 1 @4026 ]
-[s S521 . 1 `uc 1 T2CKPS 1 0 :2:0 
+[s S514 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 T2OUTPS 1 0 :4:3 
 ]
 "13253
-[s S525 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+[s S518 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -366,45 +288,26 @@
 `uc 1 T2OUTPS2 1 0 :1:5 
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
-[u S533 . 1 `S521 1 . 1 0 `S525 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES533  1 e 1 @4026 ]
+[u S526 . 1 `S514 1 . 1 0 `S518 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES526  1 e 1 @4026 ]
 "13303
 [v _PR2 PR2 `VEuc  1 e 1 @4027 ]
-<<<<<<< HEAD
-[s S173 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+[s S178 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
 "15871
-[s S175 . 1 `uc 1 . 1 0 :1:0 
+[s S180 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_POR 1 0 :1:1 
 ]
-[s S178 . 1 `uc 1 . 1 0 :2:0 
+[s S183 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_PD 1 0 :1:2 
 ]
-[s S181 . 1 `uc 1 . 1 0 :3:0 
+[s S186 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_TO 1 0 :1:3 
 ]
-[s S184 . 1 `uc 1 . 1 0 :4:0 
+[s S189 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 NOT_RI 1 0 :1:4 
 ]
-[s S187 . 1 `uc 1 nBOR 1 0 :1:0 
-=======
-[s S185 . 1 `uc 1 NOT_BOR 1 0 :1:0 
-]
-"15871
-[s S187 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 NOT_POR 1 0 :1:1 
-]
-[s S190 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 NOT_PD 1 0 :1:2 
-]
-[s S193 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 NOT_TO 1 0 :1:3 
-]
-[s S196 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 NOT_RI 1 0 :1:4 
-]
-[s S199 . 1 `uc 1 nBOR 1 0 :1:0 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+[s S192 . 1 `uc 1 nBOR 1 0 :1:0 
 `uc 1 nPOR 1 0 :1:1 
 `uc 1 nPD 1 0 :1:2 
 `uc 1 nTO 1 0 :1:3 
@@ -413,29 +316,17 @@
 `uc 1 SBOREN 1 0 :1:6 
 `uc 1 IPEN 1 0 :1:7 
 ]
-<<<<<<< HEAD
-[s S196 . 1 `uc 1 BOR 1 0 :1:0 
-=======
-[s S208 . 1 `uc 1 BOR 1 0 :1:0 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+[s S201 . 1 `uc 1 BOR 1 0 :1:0 
 `uc 1 POR 1 0 :1:1 
 `uc 1 PD 1 0 :1:2 
 `uc 1 TO 1 0 :1:3 
 `uc 1 RI 1 0 :1:4 
 ]
-<<<<<<< HEAD
-[u S202 . 1 `S173 1 . 1 0 `S175 1 . 1 0 `S178 1 . 1 0 `S181 1 . 1 0 `S184 1 . 1 0 `S187 1 . 1 0 `S196 1 . 1 0 ]
-[v _RCONbits RCONbits `VES202  1 e 1 @4048 ]
+[u S207 . 1 `S178 1 . 1 0 `S180 1 . 1 0 `S183 1 . 1 0 `S186 1 . 1 0 `S189 1 . 1 0 `S192 1 . 1 0 `S201 1 . 1 0 ]
+[v _RCONbits RCONbits `VES207  1 e 1 @4048 ]
 "16046
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-[s S124 . 1 `uc 1 RBIF 1 0 :1:0 
-=======
-[u S214 . 1 `S185 1 . 1 0 `S187 1 . 1 0 `S190 1 . 1 0 `S193 1 . 1 0 `S196 1 . 1 0 `S199 1 . 1 0 `S208 1 . 1 0 ]
-[v _RCONbits RCONbits `VES214  1 e 1 @4048 ]
-"16046
-[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-[s S136 . 1 `uc 1 RBIF 1 0 :1:0 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+[s S129 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -445,11 +336,7 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "16958
-<<<<<<< HEAD
-[s S133 . 1 `uc 1 . 1 0 :1:0 
-=======
-[s S145 . 1 `uc 1 . 1 0 :1:0 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+[s S138 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -458,59 +345,42 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-<<<<<<< HEAD
-[s S142 . 1 `uc 1 . 1 0 :6:0 
+[s S147 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S146 . 1 `S124 1 . 1 0 `S133 1 . 1 0 `S142 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES146  1 e 1 @4082 ]
-"43 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
+[u S151 . 1 `S129 1 . 1 0 `S138 1 . 1 0 `S147 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES151  1 e 1 @4082 ]
+"44 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
 [v _Rx_Buffer Rx_Buffer `uc  1 e 1 0 ]
-"44
-[v _Duty_Cycle1 Duty_Cycle1 `f  1 e 4 0 ]
-[v _Duty_Cycle2 Duty_Cycle2 `f  1 e 4 0 ]
-"48
-[v _main main `(v  1 e 1 0 ]
-{
-"61
-=======
-[s S154 . 1 `uc 1 . 1 0 :6:0 
-`uc 1 GIEL 1 0 :1:6 
-`uc 1 GIEH 1 0 :1:7 
-]
-[u S158 . 1 `S136 1 . 1 0 `S145 1 . 1 0 `S154 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES158  1 e 1 @4082 ]
-"56 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
-[v _Rx_Buffer Rx_Buffer `uc  1 e 1 0 ]
-"57
+"45
 [v _Mode Mode `uc  1 e 1 0 ]
-"58
+"46
 [v _Direction Direction `uc  1 e 1 0 ]
-"59
+"47
 [v _Duty_Cycle1 Duty_Cycle1 `f  1 e 4 0 ]
 [v _Duty_Cycle2 Duty_Cycle2 `f  1 e 4 0 ]
-"63
+"51
 [v _main main `(v  1 e 1 0 ]
 {
-"84
+"68
 } 0
-"358
+"291
 [v _Manual Manual `(v  1 e 1 0 ]
 {
 [v Manual@Data Data `uc  1 a 1 wreg ]
 [v Manual@Data Data `uc  1 a 1 wreg ]
-"360
+"293
 [v Manual@Data Data `uc  1 a 1 46 ]
-"382
+"315
 } 0
-"245
+"227
 [v _Driver_Control Driver_Control `(v  1 e 1 0 ]
 {
 [v Driver_Control@PWM_RMotor PWM_RMotor `f  1 p 4 37 ]
 [v Driver_Control@PWM_LMotor PWM_LMotor `f  1 p 4 41 ]
 [v Driver_Control@Direction Direction `uc  1 p 1 45 ]
-"294
+"276
 } 0
 "43 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
@@ -525,17 +395,17 @@
 "8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1081 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1066 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1086 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1089 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1081 1 fAsBytes 4 0 `S1086 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1089  1 a 4 31 ]
+[s S1071 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1074 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1066 1 fAsBytes 4 0 `S1071 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1074  1 a 4 31 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 25 ]
-[s S1157 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1142 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1160 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1157 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1160  1 a 2 35 ]
+[u S1145 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1142 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1145  1 a 2 35 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 30 ]
 "11
@@ -546,7 +416,6 @@
 [v ___flmul@b b `d  1 p 4 12 ]
 [v ___flmul@a a `d  1 p 4 16 ]
 "205
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
 } 0
 "5 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\LCD_Library.c
 [v _Init_LCD Init_LCD `(v  1 e 1 0 ]
@@ -558,15 +427,9 @@
 {
 [v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 wreg ]
 [v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 wreg ]
-<<<<<<< HEAD
-[v Send_Instruction_Data@Data Data `uc  1 p 1 38 ]
-"26
-[v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 39 ]
-=======
 [v Send_Instruction_Data@Data Data `uc  1 p 1 14 ]
 "26
 [v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 15 ]
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
 "30
 } 0
 "33
@@ -575,60 +438,28 @@
 [v LCD_Instruction@Instruction Instruction `uc  1 a 1 wreg ]
 [v LCD_Instruction@Instruction Instruction `uc  1 a 1 wreg ]
 "35
-<<<<<<< HEAD
-[v LCD_Instruction@Instruction Instruction `uc  1 a 1 37 ]
-"42
-} 0
-"81 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
-[v _Configurations Configurations `(v  1 e 1 0 ]
-{
-"146
-} 0
-"73
-[v _Interrupt Interrupt `IIL(v  1 e 1 0 ]
-{
-"77
-} 0
-"65
-[v _Interrupt_Rx Interrupt_Rx `IIH(v  1 e 1 0 ]
-{
-"69
-} 0
-"148
-[v _Bluetooth_Interrupt Bluetooth_Interrupt `(v  1 e 1 0 ]
-{
-"173
-} 0
-"179
-[v _Send_PWM_Motors Send_PWM_Motors `(v  1 e 1 0 ]
-{
-[v Send_PWM_Motors@PWM_RMotor PWM_RMotor `f  1 p 4 25 ]
-[v Send_PWM_Motors@PWM_LMotor PWM_LMotor `f  1 p 4 29 ]
-"189
-=======
 [v LCD_Instruction@Instruction Instruction `uc  1 a 1 13 ]
 "42
 } 0
-"104 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
+"88 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
 [v _Configurations Configurations `(v  1 e 1 0 ]
 {
-"170
+"154
 } 0
-"96
+"80
 [v _Interrupt Interrupt `IIL(v  1 e 1 0 ]
 {
-"100
+"84
 } 0
-"88
+"72
 [v _Interrupt_Rx Interrupt_Rx `IIH(v  1 e 1 0 ]
 {
-"92
+"76
 } 0
-"173
+"156
 [v _Bluetooth_Receiver Bluetooth_Receiver `(v  1 e 1 0 ]
 {
-"240
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+"223
 } 0
 "46 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\LCD_Library.c
 [v _Send_String Send_String `(v  1 e 1 0 ]
@@ -642,41 +473,6 @@
 "24
 [v i2_Send_Instruction_Data Send_Instruction_Data `(v  1 e 1 0 ]
 {
-<<<<<<< HEAD
-[s S1069 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
-"13
-[s S1074 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1077 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1069 1 fAsBytes 4 0 `S1074 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1077  1 a 4 19 ]
-"12
-[v ___flmul@grs grs `ul  1 a 4 13 ]
-[s S1145 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
-"14
-[u S1148 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1145 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1148  1 a 2 23 ]
-"10
-[v ___flmul@bexp bexp `uc  1 a 1 18 ]
-"11
-[v ___flmul@aexp aexp `uc  1 a 1 17 ]
-"9
-[v ___flmul@sign sign `uc  1 a 1 12 ]
-"8
-[v ___flmul@b b `d  1 p 4 0 ]
-[v ___flmul@a a `d  1 p 4 4 ]
-"205
-} 0
-"193 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
-[v _Manage_Motor_Direction Manage_Motor_Direction `(v  1 e 1 0 ]
-{
-[v Manage_Motor_Direction@in1 in1 `uc  1 a 1 wreg ]
-[v Manage_Motor_Direction@in1 in1 `uc  1 a 1 wreg ]
-[v Manage_Motor_Direction@in2 in2 `uc  1 p 1 0 ]
-[v Manage_Motor_Direction@in3 in3 `uc  1 p 1 1 ]
-[v Manage_Motor_Direction@in4 in4 `uc  1 p 1 2 ]
-"195
-[v Manage_Motor_Direction@in1 in1 `uc  1 a 1 3 ]
-"200
-=======
 [v i2Send_Instruction_Data@Instruction Instruction `uc  1 a 1 wreg ]
 [v i2Send_Instruction_Data@Instruction Instruction `uc  1 a 1 wreg ]
 [v i2Send_Instruction_Data@Data Data `uc  1 p 1 2 ]
@@ -692,5 +488,4 @@
 "35
 [v i2LCD_Instruction@Instruction Instruction `uc  1 a 1 1 ]
 "42
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
 } 0

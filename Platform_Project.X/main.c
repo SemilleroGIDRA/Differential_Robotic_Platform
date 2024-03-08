@@ -32,33 +32,9 @@
 #define Move_Left 'L' //Macro to move platform to the left. 
 #define STOP 'T' //Macro to stop platform. 
 
-//#define Move_Forward 'F' //Macro to move platform forward.
-//#define Move_Backward 'B' //Macro to move platform backward. 
-//#define Move_Right 'R' //Macro to move platform to the right.
-//#define Move_Left 'L' //Macro to move platform to the left. 
-//#define STOP 'T' //Macro to stop the platform movement. 
-//#define Manual_Mode 'M' //Macro to check manual mode. 
-//#define Auto_Mode 'A' //Macro to check automatic mode. 
-//#define Semi_Mode 'S' //Macro to check semiautomatic mode. 
-
-#define Move_Forward 'F' //Macro to move platform forward.
-#define Move_Backward 'B' //Macro to move platform backward. 
-#define Move_Right 'R' //Macro to move platform to the right.
-#define Move_Left 'L' //Macro to move platform to the left. 
-#define STOP 'T' //Macro to stop the platform movement. 
-#define Manual_Mode 'M' //Macro to check manual mode. 
-#define Auto_Mode 'A' //Macro to check automatic mode. 
-#define Semi_Mode 'S' //Macro to check semiautomatic mode. 
-
-
-
 //Prototype functions. 
 void Configurations(void); //Function to set registers.
-<<<<<<< HEAD
-void Bluetooth_Interrupt(void); //Function to EUSART module. 
-=======
 void Bluetooth_Receiver(void); //Function to EUSART module. 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
 void Init_Message_Platform(void); //Function to test LCD.
 void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction); //Function to send PWM to each motor and manage platform direction. 
 void Platform_Mode(unsigned char Data); //Function to enable mode in the platform. 
@@ -78,12 +54,8 @@ void main(void) {
     Configurations();
     Init_LCD();
 
-    //Initialize the driver. 
-    //    Send_PWM_Motors(Duty_Cycle_0, Duty_Cycle_0);
-    //    Manage_Motor_Direction(0, 0, 0, 0);
-
     //Initialize Driver .
-    Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
+    //Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
 
 
     //Infinite Loop. 
@@ -99,11 +71,7 @@ void main(void) {
 
 void __interrupt(high_priority) Interrupt_Rx(void) {
 
-<<<<<<< HEAD
-    Bluetooth_Interrupt();
-=======
     Bluetooth_Receiver();
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
 
 }
 
@@ -185,30 +153,6 @@ void Configurations(void) {
 
 }
 
-<<<<<<< HEAD
-void Bluetooth_Interrupt(void) {
-
-    if (PIR1bits.RC1IF) { //Check interrupt has been activated. 
-
-        Rx_Buffer = RCREG1; //Assign RCREG1 buffer to clean the flag. 
-
-        if (Rx_Buffer == Manual_Mode) {
-
-            Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
-            Manage_Motor_Direction(1, 0, 0, 1); //Forward Instruction. 
-
-        } else if (Rx_Buffer == Auto_Mode) {
-
-            Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
-            Manage_Motor_Direction(0, 1, 1, 0); //Forward Instruction.
-
-        } else if (Rx_Buffer == STOP) {
-
-            Send_PWM_Motors(Duty_Cycle_0, Duty_Cycle_0);
-            Manage_Motor_Direction(0, 0, 0, 0); //Forward Instruction.
-
-=======
-
 void Bluetooth_Receiver(void) {
 
     if (PIR1bits.RC1IF) { //Check interrupt has been activated. 
@@ -272,18 +216,12 @@ void Bluetooth_Receiver(void) {
 
                 break;
 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
         }
 
     }
 
 }
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
 //Develop function to send PWM to the motors. 
 
 void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction) {
@@ -332,55 +270,6 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
         IN2 = 0;
         IN3 = 0;
         IN4 = 0;
-
-    }
-
-}
-
-void Receive_Interrupt(void) {
-
-    Rx_Buffer = RCREG1; //Assign RCREG1 buffer to clean the flag. 
-
-    //    switch (Rx_Buffer) {
-    //
-    //        case 'M': //Test
-    //
-    //            Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
-    //            Manage_Motor_Direction(0, 1, 1, 0); //Backward Instruction. 
-    //            __delay_ms(2000);
-    //
-    //            break;
-    //
-    //        case 'A':
-    //
-    //            Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
-    //            Manage_Motor_Direction(1, 0, 0, 1); //Forward Instruction. 
-    //            __delay_ms(2000);
-    //
-    //        default: //Stop 
-    //
-    //            Send_PWM_Motors(Duty_Cycle_0, Duty_Cycle_0);
-    //            Manage_Motor_Direction(1, 0, 0, 1); //Forward Instruction. 
-    //
-    //            break;
-    //
-    //    }
-
-    if (Rx_Buffer == 'M') {
-
-        Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
-        Manage_Motor_Direction(0, 1, 1, 0); //Backward Instruction. 
-        //__delay_ms(2000);
-
-    } else if (Rx_Buffer == 'A') {
-
-        Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
-        Manage_Motor_Direction(1, 0, 0, 1); //Backward Instruction. 
-
-    } else if (Rx_Buffer == 'S') {
-
-        Send_PWM_Motors(Duty_Cycle_0, Duty_Cycle_0);
-        Manage_Motor_Direction(0, 0, 0, 0); //Backward Instruction. 
 
     }
 
