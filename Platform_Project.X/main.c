@@ -149,12 +149,21 @@ void Configurations(void) {
 
 }
 
-
 void Bluetooth_Receiver(void) {
 
     if (PIR1bits.RC1IF) { //Check interrupt has been activated. 
 
         Rx_Buffer = RCREG1; //Assign RCREG1 buffer to clean the flag. 
+        //
+        //        if (Rx_Buffer == Manual_Mode) {
+        //
+        //            Send_Instruction_Data(Set, CLR);
+        //            Send_Instruction_Data(Set, ROW1);
+        //            Send_String("Manual Mode");
+        //            //Mode = 'm';
+        //            //Manual(Rx_Buffer);
+        //
+        //        }
 
         switch (Rx_Buffer) {
 
@@ -200,6 +209,18 @@ void Bluetooth_Receiver(void) {
             case '3':
 
                 Direction = '3';
+
+                break;
+
+            case '4':
+
+                Direction = '4';
+
+                break;
+
+            case '5':
+
+                Direction = '5';
 
                 break;
 
@@ -273,30 +294,6 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
 
 }
 
-void Receive_Interrupt(void) {
-
-    Rx_Buffer = RCREG1; //Assign RCREG1 buffer to clean the flag. 
-
-    if (Rx_Buffer == 'M') {
-
-        Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
-        Manage_Motor_Direction(0, 1, 1, 0); //Backward Instruction. 
-        //__delay_ms(2000);
-
-    } else if (Rx_Buffer == 'A') {
-
-        Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
-        Manage_Motor_Direction(1, 0, 0, 1); //Backward Instruction. 
-
-    } else if (Rx_Buffer == 'S') {
-
-        Send_PWM_Motors(Duty_Cycle_0, Duty_Cycle_0);
-        Manage_Motor_Direction(0, 0, 0, 0); //Backward Instruction. 
-
-    }
-
-}
-
 //Develop message platform function
 
 void Init_Message_Platform(void) {
@@ -311,6 +308,10 @@ void Init_Message_Platform(void) {
 //Develop Manual Mode of the platform.
 
 void Manual(unsigned char Data) {
+
+    //Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
+
+
 
     if (Data == '1') {
 

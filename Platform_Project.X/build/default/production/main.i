@@ -9843,13 +9843,12 @@ void Configurations(void) {
 
 }
 
-
 void Bluetooth_Receiver(void) {
 
     if (PIR1bits.RC1IF) {
 
         Rx_Buffer = RCREG1;
-
+# 168 "main.c"
         switch (Rx_Buffer) {
 
             case 'M':
@@ -9894,6 +9893,18 @@ void Bluetooth_Receiver(void) {
             case '3':
 
                 Direction = '3';
+
+                break;
+
+            case '4':
+
+                Direction = '4';
+
+                break;
+
+            case '5':
+
+                Direction = '5';
 
                 break;
 
@@ -9967,30 +9978,6 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
 
 }
 
-void Receive_Interrupt(void) {
-
-    Rx_Buffer = RCREG1;
-
-    if (Rx_Buffer == 'M') {
-
-        Send_PWM_Motors(1023.00, 1023.00);
-        Manage_Motor_Direction(0, 1, 1, 0);
-
-
-    } else if (Rx_Buffer == 'A') {
-
-        Send_PWM_Motors(1023.00, 1023.00);
-        Manage_Motor_Direction(1, 0, 0, 1);
-
-    } else if (Rx_Buffer == 'S') {
-
-        Send_PWM_Motors(0.00, 0.00);
-        Manage_Motor_Direction(0, 0, 0, 0);
-
-    }
-
-}
-
 
 
 void Init_Message_Platform(void) {
@@ -10005,6 +9992,10 @@ void Init_Message_Platform(void) {
 
 
 void Manual(unsigned char Data) {
+
+
+
+
 
     if (Data == '1') {
 

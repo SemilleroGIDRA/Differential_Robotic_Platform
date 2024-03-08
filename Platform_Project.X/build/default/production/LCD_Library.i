@@ -9692,7 +9692,7 @@ void Send_Instruction_Data(unsigned char Instruction, unsigned char Data) {
 
     LATCbits.LATC4 = Instruction;
     LCD_Instruction(Data >> 4);
-    LCD_Instruction(Data);
+    LCD_Instruction(Data & 0x0F);
 
 }
 
