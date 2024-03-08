@@ -54,18 +54,6 @@ void main(void) {
     Configurations();
     Init_LCD();
 
-    //Initialize Driver .
-    //Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
-
-    //Initialize the driver. 
-    //    Send_PWM_Motors(Duty_Cycle_0, Duty_Cycle_0);
-    //    Manage_Motor_Direction(0, 0, 0, 0);
-
-    //Initialize Driver .
-    Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
-
-
-
     //Infinite Loop. 
     while (1) {
 
@@ -288,31 +276,6 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
 void Receive_Interrupt(void) {
 
     Rx_Buffer = RCREG1; //Assign RCREG1 buffer to clean the flag. 
-
-    //    switch (Rx_Buffer) {
-    //
-    //        case 'M': //Test
-    //
-    //            Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
-    //            Manage_Motor_Direction(0, 1, 1, 0); //Backward Instruction. 
-    //            __delay_ms(2000);
-    //
-    //            break;
-    //
-    //        case 'A':
-    //
-    //            Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
-    //            Manage_Motor_Direction(1, 0, 0, 1); //Forward Instruction. 
-    //            __delay_ms(2000);
-    //
-    //        default: //Stop 
-    //
-    //            Send_PWM_Motors(Duty_Cycle_0, Duty_Cycle_0);
-    //            Manage_Motor_Direction(1, 0, 0, 1); //Forward Instruction. 
-    //
-    //            break;
-    //
-    //    }
 
     if (Rx_Buffer == 'M') {
 

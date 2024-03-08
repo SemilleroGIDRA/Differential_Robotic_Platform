@@ -9757,10 +9757,6 @@ void main(void) {
 
     Configurations();
     Init_LCD();
-# 65 "main.c"
-    Driver_Control(0.00, 0.00, 'T');
-
-
 
 
     while (1) {
@@ -9836,7 +9832,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 154 "main.c"
+# 142 "main.c"
     PR2 = 0xF9;
     T2CON = 0x00;
     CCP3CON = 0x0C;
@@ -9974,7 +9970,7 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
 void Receive_Interrupt(void) {
 
     Rx_Buffer = RCREG1;
-# 317 "main.c"
+
     if (Rx_Buffer == 'M') {
 
         Send_PWM_Motors(1023.00, 1023.00);
