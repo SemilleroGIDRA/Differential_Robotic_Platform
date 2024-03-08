@@ -1,11 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
-<<<<<<< HEAD
- C:\Users\aleja\AppData\Local\Temp\xcCsb6g.2\driver_tmp_3.o
-=======
- C:\Users\aleja\AppData\Local\Temp\xcAsgqc.\driver_tmp_3.o
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+ C:\Users\aleja\AppData\Local\Temp\xcBs36o.1\driver_tmp_3.o
  -Odist/default/production\Platform_Project.X.production.hex
  -logfile=dist/default/production\Platform_Project.X.production.hxl
  -addressing=1
@@ -13,40 +9,23 @@
 
 ### Memory Usage ###
  Input file ranges:
-<<<<<<< HEAD
-  0h - 3h		(C:\Users\aleja\AppData\Local\Temp\xcCsb6g.2\driver_tmp_3.o)
-  8h - Dh		(C:\Users\aleja\AppData\Local\Temp\xcCsb6g.2\driver_tmp_3.o)
-  18h - 29h		(C:\Users\aleja\AppData\Local\Temp\xcCsb6g.2\driver_tmp_3.o)
-  1000h - 106Ah		(C:\Users\aleja\AppData\Local\Temp\xcCsb6g.2\driver_tmp_3.o)
-  106Ch - 1BCFh		(C:\Users\aleja\AppData\Local\Temp\xcCsb6g.2\driver_tmp_3.o)
-  300000h - 30000Dh		(C:\Users\aleja\AppData\Local\Temp\xcCsb6g.2\driver_tmp_3.o)
-=======
-  0h - 3h		(C:\Users\aleja\AppData\Local\Temp\xcAsgqc.\driver_tmp_3.o)
-  8h - Dh		(C:\Users\aleja\AppData\Local\Temp\xcAsgqc.\driver_tmp_3.o)
-  18h - 29h		(C:\Users\aleja\AppData\Local\Temp\xcAsgqc.\driver_tmp_3.o)
-  1000h - 106Ah		(C:\Users\aleja\AppData\Local\Temp\xcAsgqc.\driver_tmp_3.o)
-  106Ch - 1BF7h		(C:\Users\aleja\AppData\Local\Temp\xcAsgqc.\driver_tmp_3.o)
-  300000h - 30000Dh		(C:\Users\aleja\AppData\Local\Temp\xcAsgqc.\driver_tmp_3.o)
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+  0h - 3h		(C:\Users\aleja\AppData\Local\Temp\xcBs36o.1\driver_tmp_3.o)
+  8h - Dh		(C:\Users\aleja\AppData\Local\Temp\xcBs36o.1\driver_tmp_3.o)
+  18h - 29h		(C:\Users\aleja\AppData\Local\Temp\xcBs36o.1\driver_tmp_3.o)
+  1000h - 106Ah		(C:\Users\aleja\AppData\Local\Temp\xcBs36o.1\driver_tmp_3.o)
+  106Ch - 1BF7h		(C:\Users\aleja\AppData\Local\Temp\xcBs36o.1\driver_tmp_3.o)
+  300000h - 30000Dh		(C:\Users\aleja\AppData\Local\Temp\xcBs36o.1\driver_tmp_3.o)
  Unused ranges:
   4h - 7h
   Eh - 17h
   2Ah - FFFh
   106Bh - 106Bh
-<<<<<<< HEAD
-  1BD0h - 2FFFFFh
-=======
   1BF8h - 2FFFFFh
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-<<<<<<< HEAD
-  H1 = Input file             (C:\Users\aleja\AppData\Local\Temp\xcCsb6g.2\driver_tmp_3.o)
-=======
-  H1 = Input file             (C:\Users\aleja\AppData\Local\Temp\xcAsgqc.\driver_tmp_3.o)
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+  H1 = Input file             (C:\Users\aleja\AppData\Local\Temp\xcBs36o.1\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -243,12 +222,9 @@
 00001BA0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001BB0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001BC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-<<<<<<< HEAD
-=======
 00001BD0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001BE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001BF0 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 00300010 | --

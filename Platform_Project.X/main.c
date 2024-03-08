@@ -32,26 +32,6 @@
 #define Move_Left 'L' //Macro to move platform to the left. 
 #define STOP 'T' //Macro to stop platform. 
 
-//#define Move_Forward 'F' //Macro to move platform forward.
-//#define Move_Backward 'B' //Macro to move platform backward. 
-//#define Move_Right 'R' //Macro to move platform to the right.
-//#define Move_Left 'L' //Macro to move platform to the left. 
-//#define STOP 'T' //Macro to stop the platform movement. 
-//#define Manual_Mode 'M' //Macro to check manual mode. 
-//#define Auto_Mode 'A' //Macro to check automatic mode. 
-//#define Semi_Mode 'S' //Macro to check semiautomatic mode. 
-
-#define Move_Forward 'F' //Macro to move platform forward.
-#define Move_Backward 'B' //Macro to move platform backward. 
-#define Move_Right 'R' //Macro to move platform to the right.
-#define Move_Left 'L' //Macro to move platform to the left. 
-#define STOP 'T' //Macro to stop the platform movement. 
-#define Manual_Mode 'M' //Macro to check manual mode. 
-#define Auto_Mode 'A' //Macro to check automatic mode. 
-#define Semi_Mode 'S' //Macro to check semiautomatic mode. 
-
-
-
 //Prototype functions. 
 void Configurations(void); //Function to set registers.
 void Bluetooth_Receiver(void); //Function to EUSART module. 
@@ -74,17 +54,16 @@ void main(void) {
     Configurations();
     Init_LCD();
 
-<<<<<<< HEAD
     //Initialize Driver .
     //Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
-=======
+
     //Initialize the driver. 
     //    Send_PWM_Motors(Duty_Cycle_0, Duty_Cycle_0);
     //    Manage_Motor_Direction(0, 0, 0, 0);
 
     //Initialize Driver .
     Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
+
 
 
     //Infinite Loop. 
@@ -182,34 +161,6 @@ void Configurations(void) {
 
 }
 
-<<<<<<< HEAD
-void Bluetooth_Receiver(void) {
-
-    if (PIR1bits.RC1IF) { //Check interrupt has been activated. 
-
-        Rx_Buffer = RCREG1; //Assign RCREG1 buffer to clean the flag. 
-
-        switch (Rx_Buffer) {
-
-            case Manual_Mode:
-
-                Send_Instruction_Data(Set, CLR);
-                Send_Instruction_Data(Set, ROW1);
-                Send_String("Manual Mode");
-                Mode = 'm';
-
-                break;
-
-            case Auto_Mode:
-
-                Send_Instruction_Data(Set, CLR);
-                Send_Instruction_Data(Set, ROW2);
-                Send_String("Automatic Mode");
-                Mode = 'a';
-
-                break;
-
-=======
 
 void Bluetooth_Receiver(void) {
 
@@ -237,7 +188,6 @@ void Bluetooth_Receiver(void) {
 
                 break;
 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
             case Semi_Mode:
 
                 Send_Instruction_Data(Set, CLR);
@@ -297,41 +247,6 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
 
     //Check direction.
     if (Direction == Move_Forward) {
-<<<<<<< HEAD
-
-        IN1 = 1;
-        IN2 = 0;
-        IN3 = 0;
-        IN4 = 1;
-
-    } else if (Direction == Move_Backward) {
-
-        IN1 = 0;
-        IN2 = 1;
-        IN3 = 1;
-        IN4 = 0;
-
-    } else if (Direction == Move_Right) {
-
-        IN1 = 1;
-        IN2 = 0;
-        IN3 = 0;
-        IN4 = 0;
-
-    } else if (Direction == Move_Left) {
-
-        IN1 = 0;
-        IN2 = 0;
-        IN3 = 1;
-        IN4 = 0;
-
-    } else if (Direction == STOP) {
-
-        IN1 = 0;
-        IN2 = 0;
-        IN3 = 0;
-        IN4 = 0;
-=======
 
         IN1 = 1;
         IN2 = 0;
@@ -414,7 +329,6 @@ void Receive_Interrupt(void) {
 
         Send_PWM_Motors(Duty_Cycle_0, Duty_Cycle_0);
         Manage_Motor_Direction(0, 0, 0, 0); //Backward Instruction. 
->>>>>>> 4768563ecfbfd60f7dee651b7287e2c86d6a2416
 
     }
 
