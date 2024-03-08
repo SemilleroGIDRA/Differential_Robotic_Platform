@@ -25,7 +25,7 @@ void Send_Instruction_Data(unsigned char Instruction, unsigned char Data) {
 
     RS = Instruction; //Enable or disabled the register select to write data, or send instruction set.
     LCD_Instruction(Data >> 4); //Send first the most significant bits
-    LCD_Instruction(Data); //Send the least significant bits. 
+    LCD_Instruction(Data & 0x0F); //Send the least significant bits and clean. 
 
 }
 //Develop LCD instruction.
