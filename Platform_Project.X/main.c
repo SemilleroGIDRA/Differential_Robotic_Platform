@@ -31,6 +31,7 @@
 #define Move_Right 'R' //Macro to move platform to the right.
 #define Move_Left 'L' //Macro to move platform to the left. 
 #define STOP 'T' //Macro to stop platform. 
+#define Exit_Mode 'e' //Macro to exit from the mode.
 
 //Prototype functions. 
 void Configurations(void); //Function to set registers.
@@ -42,8 +43,8 @@ void Manual(unsigned char Data);
 
 //Global variables.
 unsigned char Rx_Buffer; //Variable to read RCREG1 register. 
-unsigned char Mode;
-unsigned char Direction;
+unsigned char Mode = 'i';
+unsigned char Manual_Direction;
 float Duty_Cycle1, Duty_Cycle2; //Variables to save PWM from equation. 
 
 //Main function.
@@ -57,7 +58,11 @@ void main(void) {
     //Infinite Loop. 
     while (1) {
 
-        Manual(Direction);
+        if (Mode == 'm') {
+
+            Manual(Manual_Direction);
+
+        }
 
     }
 
@@ -153,92 +158,135 @@ void Bluetooth_Receiver(void) {
 
     if (PIR1bits.RC1IF) { //Check interrupt has been activated. 
 
-        Rx_Buffer = RCREG1; //Assign RCREG1 buffer to clean the flag. 
-        //
-        //        if (Rx_Buffer == Manual_Mode) {
-        //
-        //            Send_Instruction_Data(Set, CLR);
-        //            Send_Instruction_Data(Set, ROW1);
-        //            Send_String("Manual Mode");
-        //            //Mode = 'm';
-        //            //Manual(Rx_Buffer);
-        //
-        //        }
+        Rx_Buffer = RCREG1; //Assign RCREG1 buffer to clean the flag.
 
-        switch (Rx_Buffer) {
+        if (Rx_Buffer == Manual_Mode) {
 
-            case Manual_Mode:
+            Send_Instruction_Data(Set, CLR);
+            Send_Instruction_Data(Set, ROW1);
+            Send_String("Manual Mode");
+            Mode = 'm';
 
-                Send_Instruction_Data(Set, CLR);
-                Send_Instruction_Data(Set, ROW1);
-                Send_String("Manual Mode");
-                Mode = 'm';
+        } else if (Rx_Buffer == Auto_Mode) {
 
-                break;
+            Send_Instruction_Data(Set, CLR);
+            Send_Instruction_Data(Set, ROW2);
+            Send_String("Automatic Mode");
+            Mode = 'a';
 
-            case Auto_Mode:
+        } else if (Rx_Buffer == Semi_Mode) {
 
-                Send_Instruction_Data(Set, CLR);
-                Send_Instruction_Data(Set, ROW2);
-                Send_String("Automatic Mode");
-                Mode = 'a';
+            Send_Instruction_Data(Set, CLR);
+            Send_Instruction_Data(Set, ROW3);
+            Send_String("Semi Mode");
+            Mode = 's';
 
-                break;
+        } else if (Rx_Buffer == '1') {
 
-            case Semi_Mode:
+            Manual_Direction = '1';
 
-                Send_Instruction_Data(Set, CLR);
-                Send_Instruction_Data(Set, ROW3);
-                Send_String("Semi Mode");
-                Mode = 's';
+        } else if (Rx_Buffer == '2') {
 
-                break;
+            Manual_Direction = '2';
 
-            case '1':
+        }else if (Rx_Buffer == '3') {
 
-                Direction = '1';
+            Manual_Direction = '3';
 
-                break;
+        }else if (Rx_Buffer == '4') {
 
-            case '2':
+            Manual_Direction = '4';
 
-                Direction = '2';
+        }else if (Rx_Buffer == '5') {
 
-                break;
+            Manual_Direction = '5';
 
-            case '3':
+        }else if (Rx_Buffer == 'E') {
 
-                Direction = '3';
-
-                break;
-
-            case '4':
-
-                Direction = '4';
-
-                break;
-
-            case '5':
-
-                Direction = '5';
-
-                break;
-
-            default: //Stop 
-
-                Send_Instruction_Data(Set, CLR);
-                Send_Instruction_Data(Set, ROW1);
-                Send_String("   Value Entered");
-                Send_Instruction_Data(Set, ROW2);
-                Send_String("   Is not Valid!");
-
-                break;
+            Manual_Direction = 'e';
 
         }
 
-    }
+        //        switch (Rx_Buffer) {
+        //
+        //            case Manual_Mode:
+        //
+        //                Send_Instruction_Data(Set, CLR);
+        //                Send_Instruction_Data(Set, ROW1);
+        //                Send_String("Manual Mode");
+        //                Mode = 'm';
+        //
+        //                break;
+        //
+        //            case Auto_Mode:
+        //
+        //                Send_Instruction_Data(Set, CLR);
+        //                Send_Instruction_Data(Set, ROW2);
+        //                Send_String("Automatic Mode");
+        //                Mode = 'a';
+        //
+        //                break;
+        //
+        //            case Semi_Mode:
+        //
+        //                Send_Instruction_Data(Set, CLR);
+        //                Send_Instruction_Data(Set, ROW3);
+        //                Send_String("Semi Mode");
+        //                Mode = 's';
+        //
+        //                break;
+        //
+        //            case '1':
+        //
+        //                Manual_Direction = '1';
+        //
+        //                break;
+        //
+        //            case '2':
+        //
+        //                Manual_Direction = '2';
+        //
+        //                break;
+        //
+        //            case '3':
+        //
+        //                Manual_Direction = '3';
+        //
+        //                break;
+        //
+        //            case '4':
+        //
+        //                Manual_Direction = '4';
+        //
+        //                break;
+        //
+        //            case '5':
+        //
+        //                Manual_Direction = '5';
+        //
+        //                break;
+        //
+        //            case 'E':
+        //
+        //                Manual_Direction = 'e';
+        //
+        //                break;
+        //
+        //            default: //Stop 
+        //
+        //                Send_Instruction_Data(Set, CLR);
+        //                Send_Instruction_Data(Set, ROW1);
+        //                Send_String("   Value Entered");
+        //                Send_Instruction_Data(Set, ROW2);
+        //                Send_String("   Is not Valid!");
+        //
+        //                break;
+        //
+        //        }
 
+    }
 }
+
 
 
 //Develop function to send PWM to the motors. 
@@ -309,10 +357,6 @@ void Init_Message_Platform(void) {
 
 void Manual(unsigned char Data) {
 
-    //Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
-
-
-
     if (Data == '1') {
 
         Driver_Control(Duty_Cycle_100, Duty_Cycle_100, Move_Forward);
@@ -333,6 +377,11 @@ void Manual(unsigned char Data) {
 
         Driver_Control(Duty_Cycle_100, Duty_Cycle_50, Move_Right);
 
+    } else if (Data == 'e') {
+
+        Mode = 'i';
+
     }
 
 }
+
