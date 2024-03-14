@@ -1,31 +1,19 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"28 main.c
-[; ;main.c: 28: void Configurations(void);
+"37 main.c
+[; ;main.c: 37: void Configurations(void);
 [v _Configurations `(v ~T0 @X0 0 ef ]
 "39 ./LCD_Library.h
 [; ;./LCD_Library.h: 39: void Init_LCD(void);
 [v _Init_LCD `(v ~T0 @X0 0 ef ]
+"41 main.c
+[; ;main.c: 41: void Platform_Mode(unsigned char Data);
+[v _Platform_Mode `(v ~T0 @X0 0 ef1`uc ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt high_priority ]
-"9497 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9497:     struct {
-[s S441 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S441 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
-"9506
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9506:     struct {
-[s S442 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S442 . . SSPIF TXIF RCIF ]
-"9496
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9496: typedef union {
-[u S440 `S441 1 `S442 1 ]
-[n S440 . . . ]
-"9513
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9513: extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
-[v _PIR1bits `VS440 ~T0 @X0 0 e@3998 ]
-"29 main.c
-[; ;main.c: 29: void Receive_Interrupt(void);
-[v _Receive_Interrupt `(v ~T0 @X0 0 ef ]
+"38
+[; ;main.c: 38: void Bluetooth_Receiver(void);
+[v _Bluetooth_Receiver `(v ~T0 @X0 0 ef ]
 [t T2 __interrupt low_priority ]
 "16046 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16046: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
@@ -150,6 +138,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "9436
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9436: extern volatile PIE1bits_t PIE1bits __attribute__((address(0xF9D)));
 [v _PIE1bits `VS437 ~T0 @X0 0 e@3997 ]
+"9497
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9497:     struct {
+[s S441 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S441 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
+"9506
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9506:     struct {
+[s S442 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S442 . . SSPIF TXIF RCIF ]
+"9496
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9496: typedef union {
+[u S440 `S441 1 `S442 1 ]
+[n S440 . . . ]
+"9513
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9513: extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
+[v _PIR1bits `VS440 ~T0 @X0 0 e@3998 ]
 "11371
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11371: extern volatile unsigned char SPBRG __attribute__((address(0xFAF)));
 [v _SPBRG `Vuc ~T0 @X0 0 e@4015 ]
@@ -274,16 +277,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11288
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11288: extern volatile unsigned char RCREG1 __attribute__((address(0xFAE)));
 [v _RCREG1 `Vuc ~T0 @X0 0 e@4014 ]
-"31 main.c
-[; ;main.c: 31: void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor);
-[v _Send_PWM_Motors `(v ~T0 @X0 0 ef2`f`f ]
-"32
-[; ;main.c: 32: void Manage_Motor_Direction(char in1, char in2, char in3, char in4);
-[v _Manage_Motor_Direction `(v ~T0 @X0 0 ef4`uc`uc`uc`uc ]
-[v F205 `(v ~T0 @X0 1 tf1`ul ]
-"20 C:\Program Files\Microchip\xc8\v2.46\pic\include\builtins.h
-[v __delay `JF205 ~T0 @X0 0 e ]
-[p i __delay ]
+"41 ./LCD_Library.h
+[; ;./LCD_Library.h: 41: void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
+[v _Send_Instruction_Data `(v ~T0 @X0 0 ef2`uc`uc ]
+"42
+[; ;./LCD_Library.h: 42: void Send_String(unsigned char *String);
+[v _Send_String `(v ~T0 @X0 0 ef1`*uc ]
 "7902 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7902:     struct {
 [s S389 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -299,12 +298,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7923
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7923: extern volatile LATDbits_t LATDbits __attribute__((address(0xF8C)));
 [v _LATDbits `VS388 ~T0 @X0 0 e@3980 ]
-"41 ./LCD_Library.h
-[; ;./LCD_Library.h: 41: void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
-[v _Send_Instruction_Data `(v ~T0 @X0 0 ef2`uc`uc ]
-"42
-[; ;./LCD_Library.h: 42: void Send_String(unsigned char *String);
-[v _Send_String `(v ~T0 @X0 0 ef1`*uc ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -1140,330 +1133,593 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3  =  OFF       ]
 "68
 [p x EBTRB  =  OFF       ]
-"35 main.c
-[; ;main.c: 35: unsigned char Rx_Buffer;
+"47 main.c
+[; ;main.c: 47: unsigned char Rx_Buffer;
 [v _Rx_Buffer `uc ~T0 @X0 1 e ]
-"36
-[; ;main.c: 36: float Duty_Cycle1, Duty_Cycle2;
+"48
+[; ;main.c: 48: unsigned char Platform_Status = 'i';
+[v _Platform_Status `uc ~T0 @X0 1 e ]
+[i _Platform_Status
+-> -> 105 `ui `uc
+]
+"49
+[; ;main.c: 49: unsigned char Manual_Direction;
+[v _Manual_Direction `uc ~T0 @X0 1 e ]
+"50
+[; ;main.c: 50: float Duty_Cycle1, Duty_Cycle2;
 [v _Duty_Cycle1 `f ~T0 @X0 1 e ]
 [v _Duty_Cycle2 `f ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"40
-[; ;main.c: 40: void main(void) {
+"54
+[; ;main.c: 54: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"43
-[; ;main.c: 43:     Configurations();
+"57
+[; ;main.c: 57:     Configurations();
 [e ( _Configurations ..  ]
-"44
-[; ;main.c: 44:     Init_LCD();
+"58
+[; ;main.c: 58:     Init_LCD();
 [e ( _Init_LCD ..  ]
-"47
-[; ;main.c: 47:     while (1) {
+"61
+[; ;main.c: 61:     while (1) {
 [e :U 856 ]
 {
-"51
-[; ;main.c: 51:     }
+"63
+[; ;main.c: 63:         Platform_Mode(Platform_Status);
+[e ( _Platform_Mode (1 _Platform_Status ]
+"65
+[; ;main.c: 65:     }
 }
 [e :U 855 ]
 [e $U 856  ]
 [e :U 857 ]
-"53
-[; ;main.c: 53: }
+"67
+[; ;main.c: 67: }
 [e :UE 854 ]
 }
 [v $root$_Interrupt_Rx `(v ~T0 @X0 0 e ]
-"57
-[; ;main.c: 57: void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
+"71
+[; ;main.c: 71: void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
 [v _Interrupt_Rx `(v ~T1 @X0 1 ef ]
 {
 [e :U _Interrupt_Rx ]
 [f ]
-"59
-[; ;main.c: 59:     if (PIR1bits.RC1IF) {
-[e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 859  ]
-{
-"61
-[; ;main.c: 61:         Receive_Interrupt();
-[e ( _Receive_Interrupt ..  ]
-"63
-[; ;main.c: 63:     }
-}
-[e :U 859 ]
-"65
-[; ;main.c: 65: }
+"73
+[; ;main.c: 73:     Bluetooth_Receiver();
+[e ( _Bluetooth_Receiver ..  ]
+"75
+[; ;main.c: 75: }
 [e :UE 858 ]
 }
 [v $root$_Interrupt `(v ~T0 @X0 0 e ]
-"69
-[; ;main.c: 69: void __attribute__((picinterrupt(("low_priority")))) Interrupt(void) {
+"79
+[; ;main.c: 79: void __attribute__((picinterrupt(("low_priority")))) Interrupt(void) {
 [v _Interrupt `(v ~T2 @X0 1 ef ]
 {
 [e :U _Interrupt ]
 [f ]
-"73
-[; ;main.c: 73: }
-[e :UE 860 ]
+"83
+[; ;main.c: 83: }
+[e :UE 859 ]
 }
-"77
-[; ;main.c: 77: void Configurations(void) {
+"87
+[; ;main.c: 87: void Configurations(void) {
 [v _Configurations `(v ~T0 @X0 1 ef ]
 {
 [e :U _Configurations ]
 [f ]
-"79
-[; ;main.c: 79:     OSCCON = 0x72;
-[e = _OSCCON -> -> 114 `i `uc ]
-"81
-[; ;main.c: 81:     ANSELC = 0;
-[e = _ANSELC -> -> 0 `i `uc ]
-"82
-[; ;main.c: 82:     ANSELD = 0;
-[e = _ANSELD -> -> 0 `i `uc ]
-"83
-[; ;main.c: 83:     ANSELE = 0;
-[e = _ANSELE -> -> 0 `i `uc ]
-"86
-[; ;main.c: 86:     TRISCbits.RC4 = 0;
-[e = . . _TRISCbits 1 4 -> -> 0 `i `uc ]
-"87
-[; ;main.c: 87:     TRISCbits.RC5 = 0;
-[e = . . _TRISCbits 1 5 -> -> 0 `i `uc ]
-"88
-[; ;main.c: 88:     TRISD = 0;
-[e = _TRISD -> -> 0 `i `uc ]
 "89
-[; ;main.c: 89:     TRISE = 0;
-[e = _TRISE -> -> 0 `i `uc ]
+[; ;main.c: 89:     OSCCON = 0x72;
+[e = _OSCCON -> -> 114 `i `uc ]
+"91
+[; ;main.c: 91:     ANSELC = 0;
+[e = _ANSELC -> -> 0 `i `uc ]
 "92
-[; ;main.c: 92:     LATCbits.LC4 = 0;
-[e = . . _LATCbits 1 4 -> -> 0 `i `uc ]
+[; ;main.c: 92:     ANSELD = 0;
+[e = _ANSELD -> -> 0 `i `uc ]
 "93
-[; ;main.c: 93:     LATCbits.LC5 = 0;
-[e = . . _LATCbits 1 5 -> -> 0 `i `uc ]
-"94
-[; ;main.c: 94:     LATD = 0;
-[e = _LATD -> -> 0 `i `uc ]
-"95
-[; ;main.c: 95:     LATE = 0;
-[e = _LATE -> -> 0 `i `uc ]
+[; ;main.c: 93:     ANSELE = 0;
+[e = _ANSELE -> -> 0 `i `uc ]
+"97
+[; ;main.c: 97:     TRISCbits.RC4 = 0;
+[e = . . _TRISCbits 1 4 -> -> 0 `i `uc ]
 "98
-[; ;main.c: 98:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;main.c: 98:     TRISCbits.RC5 = 0;
+[e = . . _TRISCbits 1 5 -> -> 0 `i `uc ]
 "99
-[; ;main.c: 99:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+[; ;main.c: 99:     TRISD = 0;
+[e = _TRISD -> -> 0 `i `uc ]
 "100
-[; ;main.c: 100:     RCONbits.IPEN = 1;
-[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
-"102
-[; ;main.c: 102:     PIE1bits.RC1IE = 1;
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+[; ;main.c: 100:     TRISE = 0;
+[e = _TRISE -> -> 0 `i `uc ]
 "103
-[; ;main.c: 103:     PIR1bits.RC1IF = 0;
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 103:     LATCbits.LC4 = 0;
+[e = . . _LATCbits 1 4 -> -> 0 `i `uc ]
+"104
+[; ;main.c: 104:     LATCbits.LC5 = 0;
+[e = . . _LATCbits 1 5 -> -> 0 `i `uc ]
+"105
+[; ;main.c: 105:     LATD = 0;
+[e = _LATD -> -> 0 `i `uc ]
 "106
-[; ;main.c: 106:     SPBRG = 103;
-[e = _SPBRG -> -> 103 `i `uc ]
-"107
-[; ;main.c: 107:     TRISCbits.RC6 = 1;
-[e = . . _TRISCbits 1 6 -> -> 1 `i `uc ]
-"108
-[; ;main.c: 108:     TRISCbits.RC7 = 1;
-[e = . . _TRISCbits 1 7 -> -> 1 `i `uc ]
+[; ;main.c: 106:     LATE = 0;
+[e = _LATE -> -> 0 `i `uc ]
+"109
+[; ;main.c: 109:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"110
+[; ;main.c: 110:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
 "111
-[; ;main.c: 111:     TXSTA1bits.TX91 = 0;
-[e = . . _TXSTA1bits 1 6 -> -> 0 `i `uc ]
-"112
-[; ;main.c: 112:     TXSTA1bits.TXEN1 = 1;
-[e = . . _TXSTA1bits 1 5 -> -> 1 `i `uc ]
+[; ;main.c: 111:     RCONbits.IPEN = 1;
+[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
 "113
-[; ;main.c: 113:     TXSTA1bits.SYNC1 = 0;
-[e = . . _TXSTA1bits 1 4 -> -> 0 `i `uc ]
+[; ;main.c: 113:     PIE1bits.RC1IE = 1;
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
 "114
-[; ;main.c: 114:     TXSTA1bits.BRGH1 = 1;
-[e = . . _TXSTA1bits 1 2 -> -> 1 `i `uc ]
+[; ;main.c: 114:     PIR1bits.RC1IF = 0;
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
 "117
-[; ;main.c: 117:     RCSTAbits.SPEN1 = 1;
-[e = . . _RCSTAbits 2 7 -> -> 1 `i `uc ]
+[; ;main.c: 117:     SPBRG = 103;
+[e = _SPBRG -> -> 103 `i `uc ]
 "118
-[; ;main.c: 118:     RCSTAbits.RX91 = 0;
-[e = . . _RCSTAbits 2 6 -> -> 0 `i `uc ]
+[; ;main.c: 118:     TRISCbits.RC6 = 1;
+[e = . . _TRISCbits 1 6 -> -> 1 `i `uc ]
 "119
-[; ;main.c: 119:     RCSTAbits.CREN1 = 1;
-[e = . . _RCSTAbits 2 4 -> -> 1 `i `uc ]
+[; ;main.c: 119:     TRISCbits.RC7 = 1;
+[e = . . _TRISCbits 1 7 -> -> 1 `i `uc ]
 "122
-[; ;main.c: 122:     BAUDCON1bits.BRG16 = 0;
+[; ;main.c: 122:     TXSTA1bits.TX91 = 0;
+[e = . . _TXSTA1bits 1 6 -> -> 0 `i `uc ]
+"123
+[; ;main.c: 123:     TXSTA1bits.TXEN1 = 1;
+[e = . . _TXSTA1bits 1 5 -> -> 1 `i `uc ]
+"124
+[; ;main.c: 124:     TXSTA1bits.SYNC1 = 0;
+[e = . . _TXSTA1bits 1 4 -> -> 0 `i `uc ]
+"125
+[; ;main.c: 125:     TXSTA1bits.BRGH1 = 1;
+[e = . . _TXSTA1bits 1 2 -> -> 1 `i `uc ]
+"128
+[; ;main.c: 128:     RCSTAbits.SPEN1 = 1;
+[e = . . _RCSTAbits 2 7 -> -> 1 `i `uc ]
+"129
+[; ;main.c: 129:     RCSTAbits.RX91 = 0;
+[e = . . _RCSTAbits 2 6 -> -> 0 `i `uc ]
+"130
+[; ;main.c: 130:     RCSTAbits.CREN1 = 1;
+[e = . . _RCSTAbits 2 4 -> -> 1 `i `uc ]
+"133
+[; ;main.c: 133:     BAUDCON1bits.BRG16 = 0;
 [e = . . _BAUDCON1bits 0 3 -> -> 0 `i `uc ]
-"134
-[; ;main.c: 134:     PR2 = 0xF9;
+"145
+[; ;main.c: 145:     PR2 = 0xF9;
 [e = _PR2 -> -> 249 `i `uc ]
-"135
-[; ;main.c: 135:     T2CON = 0x00;
+"146
+[; ;main.c: 146:     T2CON = 0x00;
 [e = _T2CON -> -> 0 `i `uc ]
-"136
-[; ;main.c: 136:     CCP3CON = 0x0C;
+"147
+[; ;main.c: 147:     CCP3CON = 0x0C;
 [e = _CCP3CON -> -> 12 `i `uc ]
-"137
-[; ;main.c: 137:     CCPR3L = 0xFA;
+"148
+[; ;main.c: 148:     CCPR3L = 0xFA;
 [e = _CCPR3L -> -> 250 `i `uc ]
-"138
-[; ;main.c: 138:     CCP5CON = 0x0C;
+"149
+[; ;main.c: 149:     CCP5CON = 0x0C;
 [e = _CCP5CON -> -> 12 `i `uc ]
-"139
-[; ;main.c: 139:     CCPR5L = 0xFA;
+"150
+[; ;main.c: 150:     CCPR5L = 0xFA;
 [e = _CCPR5L -> -> 250 `i `uc ]
-"140
-[; ;main.c: 140:     T2CONbits.TMR2ON = 1;
+"151
+[; ;main.c: 151:     T2CONbits.TMR2ON = 1;
 [e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
-"142
-[; ;main.c: 142: }
+"153
+[; ;main.c: 153: }
+[e :UE 860 ]
+}
+"155
+[; ;main.c: 155: void Bluetooth_Receiver(void) {
+[v _Bluetooth_Receiver `(v ~T0 @X0 1 ef ]
+{
+[e :U _Bluetooth_Receiver ]
+[f ]
+"157
+[; ;main.c: 157:     if (PIR1bits.RC1IF) {
+[e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 862  ]
+{
+"159
+[; ;main.c: 159:         Rx_Buffer = RCREG1;
+[e = _Rx_Buffer _RCREG1 ]
+"161
+[; ;main.c: 161:         if (Rx_Buffer == 'M') {
+[e $ ! == -> _Rx_Buffer `ui -> 77 `ui 863  ]
+{
+"163
+[; ;main.c: 163:             Send_Instruction_Data(0, 0x01);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"164
+[; ;main.c: 164:             Send_Instruction_Data(0, 0X80);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
+"165
+[; ;main.c: 165:             Send_String("   Manual Mode");
+[e ( _Send_String (1 :s 1C ]
+"166
+[; ;main.c: 166:             Platform_Status = 'M';
+[e = _Platform_Status -> -> 77 `ui `uc ]
+"168
+[; ;main.c: 168:         } else if (Rx_Buffer == 'A') {
+}
+[e $U 864  ]
+[e :U 863 ]
+[e $ ! == -> _Rx_Buffer `ui -> 65 `ui 865  ]
+{
+"170
+[; ;main.c: 170:             Send_Instruction_Data(0, 0x01);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"171
+[; ;main.c: 171:             Send_Instruction_Data(0, 0xC0);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
+"172
+[; ;main.c: 172:             Send_String("Automatic Mode");
+[e ( _Send_String (1 :s 2C ]
+"173
+[; ;main.c: 173:             Platform_Status = 'A';
+[e = _Platform_Status -> -> 65 `ui `uc ]
+"175
+[; ;main.c: 175:         } else if (Rx_Buffer == 'S') {
+}
+[e $U 866  ]
+[e :U 865 ]
+[e $ ! == -> _Rx_Buffer `ui -> 83 `ui 867  ]
+{
+"177
+[; ;main.c: 177:             Send_Instruction_Data(0, 0x01);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"178
+[; ;main.c: 178:             Send_Instruction_Data(0, 0X94);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 148 `i `uc ]
+"179
+[; ;main.c: 179:             Send_String("Semi Mode");
+[e ( _Send_String (1 :s 3C ]
+"180
+[; ;main.c: 180:             Platform_Status = 'S';
+[e = _Platform_Status -> -> 83 `ui `uc ]
+"182
+[; ;main.c: 182:         } else if (Rx_Buffer == 'F') {
+}
+[e $U 868  ]
+[e :U 867 ]
+[e $ ! == -> _Rx_Buffer `ui -> 70 `ui 869  ]
+{
+"184
+[; ;main.c: 184:             Manual_Direction = 'F';
+[e = _Manual_Direction -> -> 70 `ui `uc ]
+"186
+[; ;main.c: 186:         } else if (Rx_Buffer == 'B') {
+}
+[e $U 870  ]
+[e :U 869 ]
+[e $ ! == -> _Rx_Buffer `ui -> 66 `ui 871  ]
+{
+"188
+[; ;main.c: 188:             Manual_Direction = 'B';
+[e = _Manual_Direction -> -> 66 `ui `uc ]
+"190
+[; ;main.c: 190:         } else if (Rx_Buffer == 'T') {
+}
+[e $U 872  ]
+[e :U 871 ]
+[e $ ! == -> _Rx_Buffer `ui -> 84 `ui 873  ]
+{
+"192
+[; ;main.c: 192:             Manual_Direction = 'T';
+[e = _Manual_Direction -> -> 84 `ui `uc ]
+"194
+[; ;main.c: 194:         } else if (Rx_Buffer == 'R') {
+}
+[e $U 874  ]
+[e :U 873 ]
+[e $ ! == -> _Rx_Buffer `ui -> 82 `ui 875  ]
+{
+"196
+[; ;main.c: 196:             Manual_Direction = 'R';
+[e = _Manual_Direction -> -> 82 `ui `uc ]
+"198
+[; ;main.c: 198:         } else if (Rx_Buffer == 'L') {
+}
+[e $U 876  ]
+[e :U 875 ]
+[e $ ! == -> _Rx_Buffer `ui -> 76 `ui 877  ]
+{
+"200
+[; ;main.c: 200:             Manual_Direction = 'L';
+[e = _Manual_Direction -> -> 76 `ui `uc ]
+"202
+[; ;main.c: 202:         } else if (Rx_Buffer == 'E') {
+}
+[e $U 878  ]
+[e :U 877 ]
+[e $ ! == -> _Rx_Buffer `ui -> 69 `ui 879  ]
+{
+"204
+[; ;main.c: 204:             Manual_Direction = 'e';
+[e = _Manual_Direction -> -> 101 `ui `uc ]
+"206
+[; ;main.c: 206:         }
+}
+[e :U 879 ]
+[e :U 878 ]
+[e :U 876 ]
+[e :U 874 ]
+[e :U 872 ]
+[e :U 870 ]
+[e :U 868 ]
+[e :U 866 ]
+[e :U 864 ]
+"208
+[; ;main.c: 208:     }
+}
+[e :U 862 ]
+"209
+[; ;main.c: 209: }
 [e :UE 861 ]
 }
-"144
-[; ;main.c: 144: void Receive_Interrupt(void) {
-[v _Receive_Interrupt `(v ~T0 @X0 1 ef ]
+"215
+[; ;main.c: 215: void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction) {
+[v _Driver_Control `(v ~T0 @X0 1 ef3`f`f`uc ]
 {
-[e :U _Receive_Interrupt ]
-[f ]
-"146
-[; ;main.c: 146:     Rx_Buffer = RCREG1;
-[e = _Rx_Buffer _RCREG1 ]
-"148
-[; ;main.c: 148:     switch (Rx_Buffer) {
-[e $U 864  ]
-{
-"150
-[; ;main.c: 150:         case 'M':
-[e :U 865 ]
-"152
-[; ;main.c: 152:             Send_PWM_Motors(1023.00, 1023.00);
-[e ( _Send_PWM_Motors (2 , -> .1023.00 `f -> .1023.00 `f ]
-"153
-[; ;main.c: 153:             Manage_Motor_Direction(0, 1, 1, 0);
-[e ( _Manage_Motor_Direction (4 , , , -> -> 0 `i `uc -> -> 1 `i `uc -> -> 1 `i `uc -> -> 0 `i `uc ]
-"154
-[; ;main.c: 154:             _delay((unsigned long)((5000)*(16000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"156
-[; ;main.c: 156:             break;
-[e $U 863  ]
-"158
-[; ;main.c: 158:         case 'A':
-[e :U 866 ]
-"160
-[; ;main.c: 160:             Send_PWM_Motors(1023.00, 1023.00);
-[e ( _Send_PWM_Motors (2 , -> .1023.00 `f -> .1023.00 `f ]
-"161
-[; ;main.c: 161:             Manage_Motor_Direction(1, 0, 0, 1);
-[e ( _Manage_Motor_Direction (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 1 `i `uc ]
-"162
-[; ;main.c: 162:             _delay((unsigned long)((5000)*(16000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"164
-[; ;main.c: 164:         default:
-[e :U 867 ]
-"166
-[; ;main.c: 166:             Send_PWM_Motors(0.00, 0.00);
-[e ( _Send_PWM_Motors (2 , -> .0.00 `f -> .0.00 `f ]
-"167
-[; ;main.c: 167:             Manage_Motor_Direction(1, 0, 0, 1);
-[e ( _Manage_Motor_Direction (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 1 `i `uc ]
-"169
-[; ;main.c: 169:             break;
-[e $U 863  ]
-"171
-[; ;main.c: 171:     }
-}
-[e $U 863  ]
-[e :U 864 ]
-[e [\ _Rx_Buffer , $ -> -> 77 `ui `i 865
- , $ -> -> 65 `ui `i 866
- 867 ]
-[e :U 863 ]
-"173
-[; ;main.c: 173: }
-[e :UE 862 ]
-}
-"177
-[; ;main.c: 177: void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
-[v _Send_PWM_Motors `(v ~T0 @X0 1 ef2`f`f ]
-{
-[e :U _Send_PWM_Motors ]
+[e :U _Driver_Control ]
 [v _PWM_RMotor `f ~T0 @X0 1 r1 ]
 [v _PWM_LMotor `f ~T0 @X0 1 r2 ]
+[v _Direction `uc ~T0 @X0 1 r3 ]
 [f ]
-"179
-[; ;main.c: 179:     Duty_Cycle1 = (float) (PWM_RMotor * (1000.00 / 1023.00));
+"218
+[; ;main.c: 218:     Duty_Cycle1 = (float) (PWM_RMotor * (1000.00 / 1023.00));
 [e = _Duty_Cycle1 -> * -> _PWM_RMotor `d / .1000.00 .1023.00 `f ]
-"180
-[; ;main.c: 180:     CCPR3L = (int) Duty_Cycle1 >> 2;
+"219
+[; ;main.c: 219:     CCPR3L = (int) Duty_Cycle1 >> 2;
 [e = _CCPR3L -> >> -> _Duty_Cycle1 `i -> 2 `i `uc ]
-"181
-[; ;main.c: 181:     CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4));
+"220
+[; ;main.c: 220:     CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4));
 [e = _CCP3CON -> | & -> _CCP3CON `i -> 15 `i << & -> _Duty_Cycle1 `i -> 3 `i -> 4 `i `uc ]
-"183
-[; ;main.c: 183:     Duty_Cycle2 = (float) (PWM_LMotor * (1000.00 / 1023.00));
+"222
+[; ;main.c: 222:     Duty_Cycle2 = (float) (PWM_LMotor * (1000.00 / 1023.00));
 [e = _Duty_Cycle2 -> * -> _PWM_LMotor `d / .1000.00 .1023.00 `f ]
-"184
-[; ;main.c: 184:     CCPR5L = (int) Duty_Cycle2 >> 2;
+"223
+[; ;main.c: 223:     CCPR5L = (int) Duty_Cycle2 >> 2;
 [e = _CCPR5L -> >> -> _Duty_Cycle2 `i -> 2 `i `uc ]
-"185
-[; ;main.c: 185:     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
+"224
+[; ;main.c: 224:     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
 [e = _CCP5CON -> | & -> _CCP3CON `i -> 15 `i << & -> _Duty_Cycle2 `i -> 3 `i -> 4 `i `uc ]
-"187
-[; ;main.c: 187: }
-[e :UE 868 ]
-}
-"191
-[; ;main.c: 191: void Manage_Motor_Direction(char in1, char in2, char in3, char in4) {
-[v _Manage_Motor_Direction `(v ~T0 @X0 1 ef4`uc`uc`uc`uc ]
+"227
+[; ;main.c: 227:     if (Direction == 'F') {
+[e $ ! == -> _Direction `ui -> 70 `ui 881  ]
 {
-[e :U _Manage_Motor_Direction ]
-[v _in1 `uc ~T0 @X0 1 r1 ]
-[v _in2 `uc ~T0 @X0 1 r2 ]
-[v _in3 `uc ~T0 @X0 1 r3 ]
-[v _in4 `uc ~T0 @X0 1 r4 ]
-[f ]
-"193
-[; ;main.c: 193:     LATDbits.LD4 = in1;
-[e = . . _LATDbits 1 4 -> _in1 `uc ]
-"194
-[; ;main.c: 194:     LATDbits.LD5 = in2;
-[e = . . _LATDbits 1 5 -> _in2 `uc ]
-"195
-[; ;main.c: 195:     LATDbits.LD6 = in3;
-[e = . . _LATDbits 1 6 -> _in3 `uc ]
-"196
-[; ;main.c: 196:     LATDbits.LD7 = in4;
-[e = . . _LATDbits 1 7 -> _in4 `uc ]
-"198
-[; ;main.c: 198: }
-[e :UE 869 ]
+"230
+[; ;main.c: 230:         LATDbits.LD4 = 1;
+[e = . . _LATDbits 1 4 -> -> 1 `i `uc ]
+"231
+[; ;main.c: 231:         LATDbits.LD5 = 0;
+[e = . . _LATDbits 1 5 -> -> 0 `i `uc ]
+"232
+[; ;main.c: 232:         LATDbits.LD6 = 0;
+[e = . . _LATDbits 1 6 -> -> 0 `i `uc ]
+"233
+[; ;main.c: 233:         LATDbits.LD7 = 1;
+[e = . . _LATDbits 1 7 -> -> 1 `i `uc ]
+"235
+[; ;main.c: 235:     } else if (Direction == 'B') {
 }
-"202
-[; ;main.c: 202: void Init_Message_Platform(void) {
+[e $U 882  ]
+[e :U 881 ]
+[e $ ! == -> _Direction `ui -> 66 `ui 883  ]
+{
+"237
+[; ;main.c: 237:         LATDbits.LD4 = 0;
+[e = . . _LATDbits 1 4 -> -> 0 `i `uc ]
+"238
+[; ;main.c: 238:         LATDbits.LD5 = 1;
+[e = . . _LATDbits 1 5 -> -> 1 `i `uc ]
+"239
+[; ;main.c: 239:         LATDbits.LD6 = 1;
+[e = . . _LATDbits 1 6 -> -> 1 `i `uc ]
+"240
+[; ;main.c: 240:         LATDbits.LD7 = 0;
+[e = . . _LATDbits 1 7 -> -> 0 `i `uc ]
+"242
+[; ;main.c: 242:     } else if (Direction == 'R') {
+}
+[e $U 884  ]
+[e :U 883 ]
+[e $ ! == -> _Direction `ui -> 82 `ui 885  ]
+{
+"244
+[; ;main.c: 244:         LATDbits.LD4 = 0;
+[e = . . _LATDbits 1 4 -> -> 0 `i `uc ]
+"245
+[; ;main.c: 245:         LATDbits.LD5 = 1;
+[e = . . _LATDbits 1 5 -> -> 1 `i `uc ]
+"246
+[; ;main.c: 246:         LATDbits.LD6 = 0;
+[e = . . _LATDbits 1 6 -> -> 0 `i `uc ]
+"247
+[; ;main.c: 247:         LATDbits.LD7 = 0;
+[e = . . _LATDbits 1 7 -> -> 0 `i `uc ]
+"249
+[; ;main.c: 249:     } else if (Direction == 'L') {
+}
+[e $U 886  ]
+[e :U 885 ]
+[e $ ! == -> _Direction `ui -> 76 `ui 887  ]
+{
+"251
+[; ;main.c: 251:         LATDbits.LD4 = 0;
+[e = . . _LATDbits 1 4 -> -> 0 `i `uc ]
+"252
+[; ;main.c: 252:         LATDbits.LD5 = 0;
+[e = . . _LATDbits 1 5 -> -> 0 `i `uc ]
+"253
+[; ;main.c: 253:         LATDbits.LD6 = 1;
+[e = . . _LATDbits 1 6 -> -> 1 `i `uc ]
+"254
+[; ;main.c: 254:         LATDbits.LD7 = 0;
+[e = . . _LATDbits 1 7 -> -> 0 `i `uc ]
+"256
+[; ;main.c: 256:     } else if (Direction == 'T') {
+}
+[e $U 888  ]
+[e :U 887 ]
+[e $ ! == -> _Direction `ui -> 84 `ui 889  ]
+{
+"258
+[; ;main.c: 258:         LATDbits.LD4 = 0;
+[e = . . _LATDbits 1 4 -> -> 0 `i `uc ]
+"259
+[; ;main.c: 259:         LATDbits.LD5 = 0;
+[e = . . _LATDbits 1 5 -> -> 0 `i `uc ]
+"260
+[; ;main.c: 260:         LATDbits.LD6 = 0;
+[e = . . _LATDbits 1 6 -> -> 0 `i `uc ]
+"261
+[; ;main.c: 261:         LATDbits.LD7 = 0;
+[e = . . _LATDbits 1 7 -> -> 0 `i `uc ]
+"263
+[; ;main.c: 263:     }
+}
+[e :U 889 ]
+[e :U 888 ]
+[e :U 886 ]
+[e :U 884 ]
+[e :U 882 ]
+"265
+[; ;main.c: 265: }
+[e :UE 880 ]
+}
+"269
+[; ;main.c: 269: void Init_Message_Platform(void) {
 [v _Init_Message_Platform `(v ~T0 @X0 1 ef ]
 {
 [e :U _Init_Message_Platform ]
 [f ]
-"204
-[; ;main.c: 204:     Send_Instruction_Data(0, 0X80);
+"271
+[; ;main.c: 271:     Send_Instruction_Data(0, 0X80);
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
-"205
-[; ;main.c: 205:     Send_String("Research Project");
-[e ( _Send_String (1 :s 1C ]
-"206
-[; ;main.c: 206:     Send_Instruction_Data(0, 0xC0);
+"272
+[; ;main.c: 272:     Send_String("Research Project");
+[e ( _Send_String (1 :s 4C ]
+"273
+[; ;main.c: 273:     Send_Instruction_Data(0, 0xC0);
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
-"207
-[; ;main.c: 207:     Send_String("Robotic Platform");
-[e ( _Send_String (1 :s 2C ]
-"209
-[; ;main.c: 209: }
-[e :UE 870 ]
+"274
+[; ;main.c: 274:     Send_String("Robotic Platform");
+[e ( _Send_String (1 :s 5C ]
+"276
+[; ;main.c: 276: }
+[e :UE 890 ]
 }
-[a 1C 82 101 115 101 97 114 99 104 32 80 114 111 106 101 99 116 0 ]
-[a 2C 82 111 98 111 116 105 99 32 80 108 97 116 102 111 114 109 0 ]
+"280
+[; ;main.c: 280: void Manual(unsigned char Data) {
+[v _Manual `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _Manual ]
+[v _Data `uc ~T0 @X0 1 r1 ]
+[f ]
+"283
+[; ;main.c: 283:     if (Data == 'F') {
+[e $ ! == -> _Data `ui -> 70 `ui 892  ]
+{
+"285
+[; ;main.c: 285:         Driver_Control(1023.00, 1023.00, 'F');
+[e ( _Driver_Control (3 , , -> .1023.00 `f -> .1023.00 `f -> -> 70 `ui `uc ]
+"287
+[; ;main.c: 287:     } else if (Data == 'B') {
+}
+[e $U 893  ]
+[e :U 892 ]
+[e $ ! == -> _Data `ui -> 66 `ui 894  ]
+{
+"289
+[; ;main.c: 289:         Driver_Control(1023.00, 1023.00, 'B');
+[e ( _Driver_Control (3 , , -> .1023.00 `f -> .1023.00 `f -> -> 66 `ui `uc ]
+"291
+[; ;main.c: 291:     } else if (Data == 'T') {
+}
+[e $U 895  ]
+[e :U 894 ]
+[e $ ! == -> _Data `ui -> 84 `ui 896  ]
+{
+"293
+[; ;main.c: 293:         Driver_Control(0.00, 0.00, 'T');
+[e ( _Driver_Control (3 , , -> .0.00 `f -> .0.00 `f -> -> 84 `ui `uc ]
+"295
+[; ;main.c: 295:     } else if (Data == 'R') {
+}
+[e $U 897  ]
+[e :U 896 ]
+[e $ ! == -> _Data `ui -> 82 `ui 898  ]
+{
+"297
+[; ;main.c: 297:         Driver_Control(511.5, 1023.00, 'L');
+[e ( _Driver_Control (3 , , -> .511.5 `f -> .1023.00 `f -> -> 76 `ui `uc ]
+"299
+[; ;main.c: 299:     } else if (Data == 'L') {
+}
+[e $U 899  ]
+[e :U 898 ]
+[e $ ! == -> _Data `ui -> 76 `ui 900  ]
+{
+"301
+[; ;main.c: 301:         Driver_Control(1023.00, 511.5, 'R');
+[e ( _Driver_Control (3 , , -> .1023.00 `f -> .511.5 `f -> -> 82 `ui `uc ]
+"303
+[; ;main.c: 303:     } else if (Data == 'e') {
+}
+[e $U 901  ]
+[e :U 900 ]
+[e $ ! == -> _Data `ui -> 101 `ui 902  ]
+{
+"305
+[; ;main.c: 305:         Platform_Status = 'i';
+[e = _Platform_Status -> -> 105 `ui `uc ]
+"307
+[; ;main.c: 307:     }
+}
+[e :U 902 ]
+[e :U 901 ]
+[e :U 899 ]
+[e :U 897 ]
+[e :U 895 ]
+[e :U 893 ]
+"309
+[; ;main.c: 309: }
+[e :UE 891 ]
+}
+"313
+[; ;main.c: 313: void Platform_Mode(unsigned char Data) {
+[v _Platform_Mode `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _Platform_Mode ]
+[v _Data `uc ~T0 @X0 1 r1 ]
+[f ]
+"315
+[; ;main.c: 315:     if (Data == 'M') {
+[e $ ! == -> _Data `ui -> 77 `ui 904  ]
+{
+"317
+[; ;main.c: 317:         Manual(Manual_Direction);
+[e ( _Manual (1 _Manual_Direction ]
+"319
+[; ;main.c: 319:     }
+}
+[e :U 904 ]
+"321
+[; ;main.c: 321: }
+[e :UE 903 ]
+}
+[a 4C 82 101 115 101 97 114 99 104 32 80 114 111 106 101 99 116 0 ]
+[a 5C 82 111 98 111 116 105 99 32 80 108 97 116 102 111 114 109 0 ]
+[a 1C 32 32 32 77 97 110 117 97 108 32 77 111 100 101 0 ]
+[a 3C 83 101 109 105 32 77 111 100 101 0 ]
+[a 2C 65 117 116 111 109 97 116 105 99 32 77 111 100 101 0 ]

@@ -847,8 +847,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LCD_Library.c: 27:     LCD_Instruction(Data >> 4);
 [e ( _LCD_Instruction (1 -> >> -> _Data `i -> 4 `i `uc ]
 "28
-[; ;LCD_Library.c: 28:     LCD_Instruction(Data);
-[e ( _LCD_Instruction (1 _Data ]
+[; ;LCD_Library.c: 28:     LCD_Instruction(Data & 0x0F);
+[e ( _LCD_Instruction (1 -> & -> _Data `i -> 15 `i `uc ]
 "30
 [; ;LCD_Library.c: 30: }
 [e :UE 855 ]

@@ -9736,15 +9736,20 @@ void LCD_Instruction(unsigned char Instruction);
 void Send_Instruction_Data(unsigned char Instruction, unsigned char Data);
 void Send_String(unsigned char *String);
 # 12 "main.c" 2
-# 28 "main.c"
+# 37 "main.c"
 void Configurations(void);
-void Receive_Interrupt(void);
+void Bluetooth_Receiver(void);
 void Init_Message_Platform(void);
-void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor);
-void Manage_Motor_Direction(char in1, char in2, char in3, char in4);
+void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction);
+void Platform_Mode(unsigned char Data);
+void Manual(unsigned char Data);
+void Automatic(void);
+void Semi_Automatic(void);
 
 
 unsigned char Rx_Buffer;
+unsigned char Platform_Status = 'i';
+unsigned char Manual_Direction;
 float Duty_Cycle1, Duty_Cycle2;
 
 
@@ -9758,7 +9763,7 @@ void main(void) {
 
     while (1) {
 
-
+        Platform_Mode(Platform_Status);
 
     }
 
@@ -9768,11 +9773,7 @@ void main(void) {
 
 void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
 
-    if (PIR1bits.RC1IF) {
-
-        Receive_Interrupt();
-
-    }
+    Bluetooth_Receiver();
 
 }
 
@@ -9793,6 +9794,7 @@ void Configurations(void) {
     ANSELC = 0;
     ANSELD = 0;
     ANSELE = 0;
+
 
 
     TRISCbits.RC4 = 0;
@@ -9832,7 +9834,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 134 "main.c"
+# 145 "main.c"
     PR2 = 0xF9;
     T2CON = 0x00;
     CCP3CON = 0x0C;
@@ -9843,40 +9845,68 @@ void Configurations(void) {
 
 }
 
-void Receive_Interrupt(void) {
+void Bluetooth_Receiver(void) {
 
-    Rx_Buffer = RCREG1;
+    if (PIR1bits.RC1IF) {
 
-    switch (Rx_Buffer) {
+        Rx_Buffer = RCREG1;
 
-        case 'M':
+        if (Rx_Buffer == 'M') {
 
-            Send_PWM_Motors(1023.00, 1023.00);
-            Manage_Motor_Direction(0, 1, 1, 0);
-            _delay((unsigned long)((5000)*(16000000/4000.0)));
+            Send_Instruction_Data(0, 0x01);
+            Send_Instruction_Data(0, 0X80);
+            Send_String("   Manual Mode");
+            Platform_Status = 'M';
 
-            break;
+        } else if (Rx_Buffer == 'A') {
 
-        case 'A':
+            Send_Instruction_Data(0, 0x01);
+            Send_Instruction_Data(0, 0xC0);
+            Send_String("Automatic Mode");
+            Platform_Status = 'A';
 
-            Send_PWM_Motors(1023.00, 1023.00);
-            Manage_Motor_Direction(1, 0, 0, 1);
-            _delay((unsigned long)((5000)*(16000000/4000.0)));
+        } else if (Rx_Buffer == 'S') {
 
-        default:
+            Send_Instruction_Data(0, 0x01);
+            Send_Instruction_Data(0, 0X94);
+            Send_String("Semi Mode");
+            Platform_Status = 'S';
 
-            Send_PWM_Motors(0.00, 0.00);
-            Manage_Motor_Direction(1, 0, 0, 1);
+        } else if (Rx_Buffer == 'F') {
 
-            break;
+            Manual_Direction = 'F';
+
+        } else if (Rx_Buffer == 'B') {
+
+            Manual_Direction = 'B';
+
+        } else if (Rx_Buffer == 'T') {
+
+            Manual_Direction = 'T';
+
+        } else if (Rx_Buffer == 'R') {
+
+            Manual_Direction = 'R';
+
+        } else if (Rx_Buffer == 'L') {
+
+            Manual_Direction = 'L';
+
+        } else if (Rx_Buffer == 'E') {
+
+            Manual_Direction = 'e';
+
+        }
 
     }
-
 }
 
 
 
-void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
+
+
+void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction) {
+
 
     Duty_Cycle1 = (float) (PWM_RMotor * (1000.00 / 1023.00));
     CCPR3L = (int) Duty_Cycle1 >> 2;
@@ -9886,16 +9916,44 @@ void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
     CCPR5L = (int) Duty_Cycle2 >> 2;
     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
 
-}
+
+    if (Direction == 'F') {
 
 
+        LATDbits.LD4 = 1;
+        LATDbits.LD5 = 0;
+        LATDbits.LD6 = 0;
+        LATDbits.LD7 = 1;
 
-void Manage_Motor_Direction(char in1, char in2, char in3, char in4) {
+    } else if (Direction == 'B') {
 
-    LATDbits.LD4 = in1;
-    LATDbits.LD5 = in2;
-    LATDbits.LD6 = in3;
-    LATDbits.LD7 = in4;
+        LATDbits.LD4 = 0;
+        LATDbits.LD5 = 1;
+        LATDbits.LD6 = 1;
+        LATDbits.LD7 = 0;
+
+    } else if (Direction == 'R') {
+
+        LATDbits.LD4 = 0;
+        LATDbits.LD5 = 1;
+        LATDbits.LD6 = 0;
+        LATDbits.LD7 = 0;
+
+    } else if (Direction == 'L') {
+
+        LATDbits.LD4 = 0;
+        LATDbits.LD5 = 0;
+        LATDbits.LD6 = 1;
+        LATDbits.LD7 = 0;
+
+    } else if (Direction == 'T') {
+
+        LATDbits.LD4 = 0;
+        LATDbits.LD5 = 0;
+        LATDbits.LD6 = 0;
+        LATDbits.LD7 = 0;
+
+    }
 
 }
 
@@ -9907,5 +9965,50 @@ void Init_Message_Platform(void) {
     Send_String("Research Project");
     Send_Instruction_Data(0, 0xC0);
     Send_String("Robotic Platform");
+
+}
+
+
+
+void Manual(unsigned char Data) {
+
+
+    if (Data == 'F') {
+
+        Driver_Control(1023.00, 1023.00, 'F');
+
+    } else if (Data == 'B') {
+
+        Driver_Control(1023.00, 1023.00, 'B');
+
+    } else if (Data == 'T') {
+
+        Driver_Control(0.00, 0.00, 'T');
+
+    } else if (Data == 'R') {
+
+        Driver_Control(511.5, 1023.00, 'L');
+
+    } else if (Data == 'L') {
+
+        Driver_Control(1023.00, 511.5, 'R');
+
+    } else if (Data == 'e') {
+
+        Platform_Status = 'i';
+
+    }
+
+}
+
+
+
+void Platform_Mode(unsigned char Data) {
+
+    if (Data == 'M') {
+
+        Manual(Manual_Direction);
+
+    }
 
 }

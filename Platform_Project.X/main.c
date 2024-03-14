@@ -12,27 +12,41 @@
 #include "LCD_Library.h"
 
 //Driver LN298 commands to move platform.
-//--> Macros to control motors
+// ---- Macros to control motors
 #define IN1 LATDbits.LD4 
 #define IN2 LATDbits.LD5
 #define IN3 LATDbits.LD6
 #define IN4 LATDbits.LD7
-// --> Macros to control PWM
+// ---- Macros to control PWM
 #define Duty_Cycle_100 1023.00 //Macro to use 100% of PWM signal.
 #define Duty_Cycle_75 767.25 //Macro to use 75% of PWM signal.
 #define Duty_Cycle_50 511.5 //Macro to use 50% of PWM signal.
 #define Duty_Cycle_25 255.75 //Macro to use 25% of PWM signal.
 #define Duty_Cycle_0 0.00 //Macro to stop platform. 
+#define Manual_Mode 'M' //Macro to check manual mode. 
+#define Auto_Mode 'A' //Macro to check automatic mode. 
+#define Semi_Mode 'S' //Macro to check semiautomatic mode. 
+#define Move_Forward 'F' //Macro to move platform forward.
+#define Move_Backward 'B' //Macro to move platform backward. 
+#define Move_Right 'R' //Macro to move platform to the right.
+#define Move_Left 'L' //Macro to move platform to the left. 
+#define STOP 'T' //Macro to stop platform. 
+#define Exit_Mode 'e' //Macro to exit from the mode.
 
 //Prototype functions. 
 void Configurations(void); //Function to set registers.
-void Receive_Interrupt(void); //Function to EUSART module. 
+void Bluetooth_Receiver(void); //Function to EUSART module. 
 void Init_Message_Platform(void); //Function to test LCD.
-void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor); //Function to send PWM to each motor. 
-void Manage_Motor_Direction(char in1, char in2, char in3, char in4); //Function to control polarity of the motors. 
+void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction); //Function to send PWM to each motor and manage platform direction. 
+void Platform_Mode(unsigned char Data); //Function to enable mode in the platform. 
+void Manual(unsigned char Data); //Function to use manual mode. 
+void Automatic(void); //Function to use automatic mode. 
+void Semi_Automatic(void); //Function to use semiautomatic. 
 
 //Global variables.
 unsigned char Rx_Buffer; //Variable to read RCREG1 register. 
+unsigned char Platform_Status = 'i'; //Variable to detect what is the current state of the platform and assign the initial value. 
+unsigned char Manual_Direction;
 float Duty_Cycle1, Duty_Cycle2; //Variables to save PWM from equation. 
 
 //Main function.
@@ -46,7 +60,7 @@ void main(void) {
     //Infinite Loop. 
     while (1) {
 
-
+        Platform_Mode(Platform_Status); //Call function to check the platform status. 
 
     }
 
@@ -56,11 +70,7 @@ void main(void) {
 
 void __interrupt(high_priority) Interrupt_Rx(void) {
 
-    if (PIR1bits.RC1IF) { //Check interrupt has been activated. 
-
-        Receive_Interrupt(); //Call RX function. 
-
-    }
+    Bluetooth_Receiver();
 
 }
 
@@ -81,6 +91,7 @@ void Configurations(void) {
     ANSELC = 0;
     ANSELD = 0;
     ANSELE = 0;
+
 
     //Set pins as outputs
     TRISCbits.RC4 = 0; //Pins to LCD 
@@ -141,41 +152,69 @@ void Configurations(void) {
 
 }
 
-void Receive_Interrupt(void) {
+void Bluetooth_Receiver(void) {
 
-    Rx_Buffer = RCREG1; //Assign RCREG1 buffer to clean the flag. 
+    if (PIR1bits.RC1IF) { //Check interrupt has been activated. 
 
-    switch (Rx_Buffer) {
+        Rx_Buffer = RCREG1; //Assign RCREG1 buffer to clean the flag.
 
-        case 'M': //Test
+        if (Rx_Buffer == Manual_Mode) {
 
-            Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
-            Manage_Motor_Direction(0, 1, 1, 0); //Backward Instruction. 
-            __delay_ms(5000);
+            Send_Instruction_Data(Set, CLR);
+            Send_Instruction_Data(Set, ROW1);
+            Send_String("   Manual Mode");
+            Platform_Status = Manual_Mode;
 
-            break;
+        } else if (Rx_Buffer == Auto_Mode) {
 
-        case 'A':
+            Send_Instruction_Data(Set, CLR);
+            Send_Instruction_Data(Set, ROW2);
+            Send_String("Automatic Mode");
+            Platform_Status = Auto_Mode;
 
-            Send_PWM_Motors(Duty_Cycle_100, Duty_Cycle_100);
-            Manage_Motor_Direction(1, 0, 0, 1); //Forward Instruction. 
-            __delay_ms(5000);
+        } else if (Rx_Buffer == Semi_Mode) {
 
-        default: //Stop 
+            Send_Instruction_Data(Set, CLR);
+            Send_Instruction_Data(Set, ROW3);
+            Send_String("Semi Mode");
+            Platform_Status = Semi_Mode;
 
-            Send_PWM_Motors(Duty_Cycle_0, Duty_Cycle_0);
-            Manage_Motor_Direction(1, 0, 0, 1); //Forward Instruction. 
+        } else if (Rx_Buffer == Move_Forward) {
 
-            break;
+            Manual_Direction = Move_Forward;
+
+        } else if (Rx_Buffer == Move_Backward) {
+
+            Manual_Direction = Move_Backward;
+
+        } else if (Rx_Buffer == STOP) {
+
+            Manual_Direction = STOP;
+
+        } else if (Rx_Buffer == Move_Right) {
+
+            Manual_Direction = Move_Right;
+
+        } else if (Rx_Buffer == Move_Left) {
+
+            Manual_Direction = Move_Left;
+
+        } else if (Rx_Buffer == 'E') {
+
+            Manual_Direction = 'e';
+
+        }
 
     }
-
 }
+
+
 
 //Develop function to send PWM to the motors. 
 
-void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
+void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction) {
 
+    //PWM configuration. 
     Duty_Cycle1 = (float) (PWM_RMotor * (1000.00 / 1023.00)); //Assign to the Duty_Cycle1 PWM signal. 
     CCPR3L = (int) Duty_Cycle1 >> 2; //Bitwise operation to send 8 of the 10 Least significant bits to  CCPR3L.
     CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4)); //Send the rest of the bits to CCP3CON. 
@@ -184,16 +223,44 @@ void Send_PWM_Motors(float PWM_RMotor, float PWM_LMotor) {
     CCPR5L = (int) Duty_Cycle2 >> 2; //Bitwise operation to send 8 of the 10 Least significant bits to  CCPR5L.
     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4)); //Send the rest of the bits to CCP5CON. 
 
-}
+    //Check direction.
+    if (Direction == Move_Forward) {
 
-//Develop function to control direction 
+        //Enable motor controller direction. 
+        IN1 = 1;
+        IN2 = 0;
+        IN3 = 0;
+        IN4 = 1;
 
-void Manage_Motor_Direction(char in1, char in2, char in3, char in4) {
+    } else if (Direction == Move_Backward) {
 
-    IN1 = in1;
-    IN2 = in2;
-    IN3 = in3;
-    IN4 = in4;
+        IN1 = 0;
+        IN2 = 1;
+        IN3 = 1;
+        IN4 = 0;
+
+    } else if (Direction == Move_Right) {
+
+        IN1 = 0;
+        IN2 = 1;
+        IN3 = 0;
+        IN4 = 0;
+
+    } else if (Direction == Move_Left) {
+
+        IN1 = 0;
+        IN2 = 0;
+        IN3 = 1;
+        IN4 = 0;
+
+    } else if (Direction == STOP) {
+
+        IN1 = 0;
+        IN2 = 0;
+        IN3 = 0;
+        IN4 = 0;
+
+    }
 
 }
 
@@ -205,5 +272,50 @@ void Init_Message_Platform(void) {
     Send_String("Research Project");
     Send_Instruction_Data(Set, ROW2);
     Send_String("Robotic Platform");
+
+}
+
+//Develop Manual Mode of the platform.
+
+void Manual(unsigned char Data) {
+
+    //Check conditions. 
+    if (Data == Move_Forward) {
+
+        Driver_Control(Duty_Cycle_100, Duty_Cycle_100, Move_Forward);
+
+    } else if (Data == Move_Backward) {
+
+        Driver_Control(Duty_Cycle_100, Duty_Cycle_100, Move_Backward);
+
+    } else if (Data == STOP) {
+
+        Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
+
+    } else if (Data == Move_Right) {
+
+        Driver_Control(Duty_Cycle_50, Duty_Cycle_100, Move_Left);
+
+    } else if (Data == Move_Left) {
+
+        Driver_Control(Duty_Cycle_100, Duty_Cycle_50, Move_Right);
+
+    } else if (Data == 'e') {
+
+        Platform_Status = 'i';
+
+    }
+
+}
+
+//Develop function to test state of the platform.
+
+void Platform_Mode(unsigned char Data) {
+
+    if (Data == Manual_Mode) {
+
+        Manual(Manual_Direction);
+
+    }
 
 }
