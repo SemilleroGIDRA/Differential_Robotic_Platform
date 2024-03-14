@@ -9743,10 +9743,12 @@ void Init_Message_Platform(void);
 void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction);
 void Platform_Mode(unsigned char Data);
 void Manual(unsigned char Data);
+void Automatic(void);
+void Semi_Automatic(void);
 
 
 unsigned char Rx_Buffer;
-unsigned char Mode = 'i';
+unsigned char Platform_Status = 'i';
 unsigned char Manual_Direction;
 float Duty_Cycle1, Duty_Cycle2;
 
@@ -9761,11 +9763,7 @@ void main(void) {
 
     while (1) {
 
-        if (Mode == 'm') {
-
-            Manual(Manual_Direction);
-
-        }
+        Platform_Mode(Platform_Status);
 
     }
 
@@ -9836,7 +9834,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 147 "main.c"
+# 145 "main.c"
     PR2 = 0xF9;
     T2CON = 0x00;
     CCP3CON = 0x0C;
@@ -9857,49 +9855,49 @@ void Bluetooth_Receiver(void) {
 
             Send_Instruction_Data(0, 0x01);
             Send_Instruction_Data(0, 0X80);
-            Send_String("Manual Mode");
-            Mode = 'm';
+            Send_String("   Manual Mode");
+            Platform_Status = 'M';
 
         } else if (Rx_Buffer == 'A') {
 
             Send_Instruction_Data(0, 0x01);
             Send_Instruction_Data(0, 0xC0);
             Send_String("Automatic Mode");
-            Mode = 'a';
+            Platform_Status = 'A';
 
         } else if (Rx_Buffer == 'S') {
 
             Send_Instruction_Data(0, 0x01);
             Send_Instruction_Data(0, 0X94);
             Send_String("Semi Mode");
-            Mode = 's';
+            Platform_Status = 'S';
 
-        } else if (Rx_Buffer == '1') {
+        } else if (Rx_Buffer == 'F') {
 
-            Manual_Direction = '1';
+            Manual_Direction = 'F';
 
-        } else if (Rx_Buffer == '2') {
+        } else if (Rx_Buffer == 'B') {
 
-            Manual_Direction = '2';
+            Manual_Direction = 'B';
 
-        }else if (Rx_Buffer == '3') {
+        } else if (Rx_Buffer == 'T') {
 
-            Manual_Direction = '3';
+            Manual_Direction = 'T';
 
-        }else if (Rx_Buffer == '4') {
+        } else if (Rx_Buffer == 'R') {
 
-            Manual_Direction = '4';
+            Manual_Direction = 'R';
 
-        }else if (Rx_Buffer == '5') {
+        } else if (Rx_Buffer == 'L') {
 
-            Manual_Direction = '5';
+            Manual_Direction = 'L';
 
-        }else if (Rx_Buffer == 'E') {
+        } else if (Rx_Buffer == 'E') {
 
             Manual_Direction = 'e';
 
         }
-# 287 "main.c"
+
     }
 }
 
@@ -9921,6 +9919,7 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
 
     if (Direction == 'F') {
 
+
         LATDbits.LD4 = 1;
         LATDbits.LD5 = 0;
         LATDbits.LD6 = 0;
@@ -9935,8 +9934,8 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
 
     } else if (Direction == 'R') {
 
-        LATDbits.LD4 = 1;
-        LATDbits.LD5 = 0;
+        LATDbits.LD4 = 0;
+        LATDbits.LD5 = 1;
         LATDbits.LD6 = 0;
         LATDbits.LD7 = 0;
 
@@ -9973,29 +9972,42 @@ void Init_Message_Platform(void) {
 
 void Manual(unsigned char Data) {
 
-    if (Data == '1') {
+
+    if (Data == 'F') {
 
         Driver_Control(1023.00, 1023.00, 'F');
 
-    } else if (Data == '2') {
-
-        Driver_Control(0.00, 0.00, 'T');
-
-    } else if (Data == '3') {
+    } else if (Data == 'B') {
 
         Driver_Control(1023.00, 1023.00, 'B');
 
-    } else if (Data == '4') {
+    } else if (Data == 'T') {
+
+        Driver_Control(0.00, 0.00, 'T');
+
+    } else if (Data == 'R') {
 
         Driver_Control(511.5, 1023.00, 'L');
 
-    } else if (Data == '5') {
+    } else if (Data == 'L') {
 
         Driver_Control(1023.00, 511.5, 'R');
 
     } else if (Data == 'e') {
 
-        Mode = 'i';
+        Platform_Status = 'i';
+
+    }
+
+}
+
+
+
+void Platform_Mode(unsigned char Data) {
+
+    if (Data == 'M') {
+
+        Manual(Manual_Direction);
 
     }
 

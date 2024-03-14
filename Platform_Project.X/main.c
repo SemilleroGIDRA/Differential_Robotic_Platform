@@ -12,12 +12,12 @@
 #include "LCD_Library.h"
 
 //Driver LN298 commands to move platform.
-//--> Macros to control motors
+// ---- Macros to control motors
 #define IN1 LATDbits.LD4 
 #define IN2 LATDbits.LD5
 #define IN3 LATDbits.LD6
 #define IN4 LATDbits.LD7
-// --> Macros to control PWM
+// ---- Macros to control PWM
 #define Duty_Cycle_100 1023.00 //Macro to use 100% of PWM signal.
 #define Duty_Cycle_75 767.25 //Macro to use 75% of PWM signal.
 #define Duty_Cycle_50 511.5 //Macro to use 50% of PWM signal.
@@ -39,11 +39,13 @@ void Bluetooth_Receiver(void); //Function to EUSART module.
 void Init_Message_Platform(void); //Function to test LCD.
 void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction); //Function to send PWM to each motor and manage platform direction. 
 void Platform_Mode(unsigned char Data); //Function to enable mode in the platform. 
-void Manual(unsigned char Data);
+void Manual(unsigned char Data); //Function to use manual mode. 
+void Automatic(void); //Function to use automatic mode. 
+void Semi_Automatic(void); //Function to use semiautomatic. 
 
 //Global variables.
 unsigned char Rx_Buffer; //Variable to read RCREG1 register. 
-unsigned char Mode = 'i';
+unsigned char Platform_Status = 'i'; //Variable to detect what is the current state of the platform and assign the initial value. 
 unsigned char Manual_Direction;
 float Duty_Cycle1, Duty_Cycle2; //Variables to save PWM from equation. 
 
@@ -58,11 +60,7 @@ void main(void) {
     //Infinite Loop. 
     while (1) {
 
-        if (Mode == 'm') {
-
-            Manual(Manual_Direction);
-
-        }
+        Platform_Mode(Platform_Status); //Call function to check the platform status. 
 
     }
 
@@ -164,125 +162,48 @@ void Bluetooth_Receiver(void) {
 
             Send_Instruction_Data(Set, CLR);
             Send_Instruction_Data(Set, ROW1);
-            Send_String("Manual Mode");
-            Mode = 'm';
+            Send_String("   Manual Mode");
+            Platform_Status = Manual_Mode;
 
         } else if (Rx_Buffer == Auto_Mode) {
 
             Send_Instruction_Data(Set, CLR);
             Send_Instruction_Data(Set, ROW2);
             Send_String("Automatic Mode");
-            Mode = 'a';
+            Platform_Status = Auto_Mode;
 
         } else if (Rx_Buffer == Semi_Mode) {
 
             Send_Instruction_Data(Set, CLR);
             Send_Instruction_Data(Set, ROW3);
             Send_String("Semi Mode");
-            Mode = 's';
+            Platform_Status = Semi_Mode;
 
-        } else if (Rx_Buffer == '1') {
+        } else if (Rx_Buffer == Move_Forward) {
 
-            Manual_Direction = '1';
+            Manual_Direction = Move_Forward;
 
-        } else if (Rx_Buffer == '2') {
+        } else if (Rx_Buffer == Move_Backward) {
 
-            Manual_Direction = '2';
+            Manual_Direction = Move_Backward;
 
-        }else if (Rx_Buffer == '3') {
+        } else if (Rx_Buffer == STOP) {
 
-            Manual_Direction = '3';
+            Manual_Direction = STOP;
 
-        }else if (Rx_Buffer == '4') {
+        } else if (Rx_Buffer == Move_Right) {
 
-            Manual_Direction = '4';
+            Manual_Direction = Move_Right;
 
-        }else if (Rx_Buffer == '5') {
+        } else if (Rx_Buffer == Move_Left) {
 
-            Manual_Direction = '5';
+            Manual_Direction = Move_Left;
 
-        }else if (Rx_Buffer == 'E') {
+        } else if (Rx_Buffer == 'E') {
 
             Manual_Direction = 'e';
 
         }
-
-        //        switch (Rx_Buffer) {
-        //
-        //            case Manual_Mode:
-        //
-        //                Send_Instruction_Data(Set, CLR);
-        //                Send_Instruction_Data(Set, ROW1);
-        //                Send_String("Manual Mode");
-        //                Mode = 'm';
-        //
-        //                break;
-        //
-        //            case Auto_Mode:
-        //
-        //                Send_Instruction_Data(Set, CLR);
-        //                Send_Instruction_Data(Set, ROW2);
-        //                Send_String("Automatic Mode");
-        //                Mode = 'a';
-        //
-        //                break;
-        //
-        //            case Semi_Mode:
-        //
-        //                Send_Instruction_Data(Set, CLR);
-        //                Send_Instruction_Data(Set, ROW3);
-        //                Send_String("Semi Mode");
-        //                Mode = 's';
-        //
-        //                break;
-        //
-        //            case '1':
-        //
-        //                Manual_Direction = '1';
-        //
-        //                break;
-        //
-        //            case '2':
-        //
-        //                Manual_Direction = '2';
-        //
-        //                break;
-        //
-        //            case '3':
-        //
-        //                Manual_Direction = '3';
-        //
-        //                break;
-        //
-        //            case '4':
-        //
-        //                Manual_Direction = '4';
-        //
-        //                break;
-        //
-        //            case '5':
-        //
-        //                Manual_Direction = '5';
-        //
-        //                break;
-        //
-        //            case 'E':
-        //
-        //                Manual_Direction = 'e';
-        //
-        //                break;
-        //
-        //            default: //Stop 
-        //
-        //                Send_Instruction_Data(Set, CLR);
-        //                Send_Instruction_Data(Set, ROW1);
-        //                Send_String("   Value Entered");
-        //                Send_Instruction_Data(Set, ROW2);
-        //                Send_String("   Is not Valid!");
-        //
-        //                break;
-        //
-        //        }
 
     }
 }
@@ -305,6 +226,7 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
     //Check direction.
     if (Direction == Move_Forward) {
 
+        //Enable motor controller direction. 
         IN1 = 1;
         IN2 = 0;
         IN3 = 0;
@@ -319,8 +241,8 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
 
     } else if (Direction == Move_Right) {
 
-        IN1 = 1;
-        IN2 = 0;
+        IN1 = 0;
+        IN2 = 1;
         IN3 = 0;
         IN4 = 0;
 
@@ -357,31 +279,43 @@ void Init_Message_Platform(void) {
 
 void Manual(unsigned char Data) {
 
-    if (Data == '1') {
+    //Check conditions. 
+    if (Data == Move_Forward) {
 
         Driver_Control(Duty_Cycle_100, Duty_Cycle_100, Move_Forward);
 
-    } else if (Data == '2') {
-
-        Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
-
-    } else if (Data == '3') {
+    } else if (Data == Move_Backward) {
 
         Driver_Control(Duty_Cycle_100, Duty_Cycle_100, Move_Backward);
 
-    } else if (Data == '4') {
+    } else if (Data == STOP) {
+
+        Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
+
+    } else if (Data == Move_Right) {
 
         Driver_Control(Duty_Cycle_50, Duty_Cycle_100, Move_Left);
 
-    } else if (Data == '5') {
+    } else if (Data == Move_Left) {
 
         Driver_Control(Duty_Cycle_100, Duty_Cycle_50, Move_Right);
 
     } else if (Data == 'e') {
 
-        Mode = 'i';
+        Platform_Status = 'i';
 
     }
 
 }
 
+//Develop function to test state of the platform.
+
+void Platform_Mode(unsigned char Data) {
+
+    if (Data == Manual_Mode) {
+
+        Manual(Manual_Direction);
+
+    }
+
+}
