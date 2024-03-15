@@ -66,22 +66,6 @@ void main(void) {
 
 }
 
-//Develop interrupt high priority function.
-
-void __interrupt(high_priority) Interrupt_Rx(void) {
-
-    Bluetooth_Receiver();
-
-}
-
-//Develop interrupt low priority function.
-
-void __interrupt(low_priority) Interrupt(void) {
-
-
-
-}
-
 //Develop configurations function
 
 void Configurations(void) {
@@ -152,6 +136,22 @@ void Configurations(void) {
 
 }
 
+//Develop interrupt high priority function.
+
+void __interrupt(high_priority) Interrupt_Rx(void) {
+
+    Bluetooth_Receiver();
+
+}
+
+//Develop interrupt low priority function.
+
+void __interrupt(low_priority) Interrupt(void) {
+
+
+
+}
+
 //Reception data interrupt function.
 
 void Bluetooth_Receiver(void) {
@@ -174,6 +174,7 @@ void Bluetooth_Receiver(void) {
             Send_Instruction_Data(Set, CLR);
             Send_Instruction_Data(Set, ROW2);
             Send_String("Automatic Mode");
+            Manual_Direction = '0';
             Platform_Status = Auto_Mode;
 
         } else if (Rx_Buffer == Semi_Mode) {
@@ -181,6 +182,7 @@ void Bluetooth_Receiver(void) {
             Send_Instruction_Data(Set, CLR);
             Send_Instruction_Data(Set, ROW3);
             Send_String("Semi Mode");
+            Manual_Direction = '0';
             Platform_Status = Semi_Mode;
 
         } else if (Rx_Buffer == Move_Forward) {
@@ -212,7 +214,25 @@ void Bluetooth_Receiver(void) {
     }
 }
 
+//Develop function to test state of the platform.
 
+void Platform_Mode(unsigned char Data) {
+
+    if (Data == Manual_Mode) {
+
+        Manual(Manual_Direction);
+
+    } else if (Data == Semi_Mode) {
+
+        Semi_Automatic(); 
+
+    } else if (Data == Auto_Mode) {
+
+        Automatic(); 
+
+    }
+
+}
 
 //Develop function to send PWM to the motors. 
 
@@ -268,17 +288,6 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
 
 }
 
-//Develop message platform function
-
-void Init_Message_Platform(void) {
-
-    Send_Instruction_Data(Set, ROW1);
-    Send_String("Research Project");
-    Send_Instruction_Data(Set, ROW2);
-    Send_String("Robotic Platform");
-
-}
-
 //Develop Manual Mode of the platform.
 
 void Manual(unsigned char Data) {
@@ -328,22 +337,14 @@ void Semi_Automatic(void) {
 
 }
 
-//Develop function to test state of the platform.
 
-void Platform_Mode(unsigned char Data) {
+//Develop message platform function
 
-    if (Data == Manual_Mode) {
+void Init_Message_Platform(void) {
 
-        Manual(Manual_Direction);
-
-    } else if (Data == Semi_Mode) {
-
-        Semi_Automatic(); 
-
-    } else if (Data == Auto_Mode) {
-
-        Automatic(); 
-
-    }
+    Send_Instruction_Data(Set, ROW1);
+    Send_String("Research Project");
+    Send_Instruction_Data(Set, ROW2);
+    Send_String("Robotic Platform");
 
 }

@@ -9771,22 +9771,6 @@ void main(void) {
 
 
 
-void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
-
-    Bluetooth_Receiver();
-
-}
-
-
-
-void __attribute__((picinterrupt(("low_priority")))) Interrupt(void) {
-
-
-
-}
-
-
-
 void Configurations(void) {
 
     OSCCON = 0x72;
@@ -9834,7 +9818,7 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
-# 145 "main.c"
+# 129 "main.c"
     PR2 = 0xF9;
     T2CON = 0x00;
     CCP3CON = 0x0C;
@@ -9842,6 +9826,22 @@ void Configurations(void) {
     CCP5CON = 0x0C;
     CCPR5L = 0xFA;
     T2CONbits.TMR2ON = 1;
+
+}
+
+
+
+void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
+
+    Bluetooth_Receiver();
+
+}
+
+
+
+void __attribute__((picinterrupt(("low_priority")))) Interrupt(void) {
+
+
 
 }
 
@@ -9867,6 +9867,7 @@ void Bluetooth_Receiver(void) {
             Send_Instruction_Data(0, 0x01);
             Send_Instruction_Data(0, 0xC0);
             Send_String("Automatic Mode");
+            Manual_Direction = '0';
             Platform_Status = 'A';
 
         } else if (Rx_Buffer == 'S') {
@@ -9874,6 +9875,7 @@ void Bluetooth_Receiver(void) {
             Send_Instruction_Data(0, 0x01);
             Send_Instruction_Data(0, 0X94);
             Send_String("Semi Mode");
+            Manual_Direction = '0';
             Platform_Status = 'S';
 
         } else if (Rx_Buffer == 'F') {
@@ -9906,6 +9908,24 @@ void Bluetooth_Receiver(void) {
 }
 
 
+
+void Platform_Mode(unsigned char Data) {
+
+    if (Data == 'M') {
+
+        Manual(Manual_Direction);
+
+    } else if (Data == 'S') {
+
+        Semi_Automatic();
+
+    } else if (Data == 'A') {
+
+        Automatic();
+
+    }
+
+}
 
 
 
@@ -9963,17 +9983,6 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
 
 
 
-void Init_Message_Platform(void) {
-
-    Send_Instruction_Data(0, 0X80);
-    Send_String("Research Project");
-    Send_Instruction_Data(0, 0xC0);
-    Send_String("Robotic Platform");
-
-}
-
-
-
 void Manual(unsigned char Data) {
 
 
@@ -10023,20 +10032,12 @@ void Semi_Automatic(void) {
 
 
 
-void Platform_Mode(unsigned char Data) {
 
-    if (Data == 'M') {
+void Init_Message_Platform(void) {
 
-        Manual(Manual_Direction);
-
-    } else if (Data == 'S') {
-
-        Semi_Automatic();
-
-    } else if (Data == 'A') {
-
-        Automatic();
-
-    }
+    Send_Instruction_Data(0, 0X80);
+    Send_String("Research Project");
+    Send_Instruction_Data(0, 0xC0);
+    Send_String("Robotic Platform");
 
 }
