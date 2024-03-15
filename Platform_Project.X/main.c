@@ -18,10 +18,10 @@
 #define IN3 LATDbits.LD6
 #define IN4 LATDbits.LD7
 // ---- Macros to control PWM
-#define Duty_Cycle_100 1023.00 //Macro to use 100% of PWM signal.
-#define Duty_Cycle_75 767.25 //Macro to use 75% of PWM signal.
+#define Duty_Cycle_100 1023.0 //Macro to use 100% of PWM signal.
+#define Duty_Cycle_75 767.2 //Macro to use 75% of PWM signal.
 #define Duty_Cycle_50 511.5 //Macro to use 50% of PWM signal.
-#define Duty_Cycle_25 255.75 //Macro to use 25% of PWM signal.
+#define Duty_Cycle_25 255.7 //Macro to use 25% of PWM signal.
 #define Duty_Cycle_0 0.00 //Macro to stop platform. 
 #define Manual_Mode 'M' //Macro to check manual mode. 
 #define Auto_Mode 'A' //Macro to check automatic mode. 
@@ -152,6 +152,8 @@ void Configurations(void) {
 
 }
 
+//Reception data interrupt function.
+
 void Bluetooth_Receiver(void) {
 
     if (PIR1bits.RC1IF) { //Check interrupt has been activated. 
@@ -163,7 +165,9 @@ void Bluetooth_Receiver(void) {
             Send_Instruction_Data(Set, CLR);
             Send_Instruction_Data(Set, ROW1);
             Send_String("   Manual Mode");
+            Manual_Direction = '0';
             Platform_Status = Manual_Mode;
+
 
         } else if (Rx_Buffer == Auto_Mode) {
 
@@ -215,11 +219,11 @@ void Bluetooth_Receiver(void) {
 void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction) {
 
     //PWM configuration. 
-    Duty_Cycle1 = (float) (PWM_RMotor * (1000.00 / 1023.00)); //Assign to the Duty_Cycle1 PWM signal. 
+    Duty_Cycle1 = (float) (PWM_RMotor * (1000.0 / 1023.0)); //Assign to the Duty_Cycle1 PWM signal. 
     CCPR3L = (int) Duty_Cycle1 >> 2; //Bitwise operation to send 8 of the 10 Least significant bits to  CCPR3L.
     CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4)); //Send the rest of the bits to CCP3CON. 
 
-    Duty_Cycle2 = (float) (PWM_LMotor * (1000.00 / 1023.00)); //Assign to the Duty_Cycle2 PWM signal. 
+    Duty_Cycle2 = (float) (PWM_LMotor * (1000.0 / 1023.0)); //Assign to the Duty_Cycle2 PWM signal. 
     CCPR5L = (int) Duty_Cycle2 >> 2; //Bitwise operation to send 8 of the 10 Least significant bits to  CCPR5L.
     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4)); //Send the rest of the bits to CCP5CON. 
 
@@ -243,13 +247,13 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
 
         IN1 = 0;
         IN2 = 1;
-        IN3 = 0;
+        IN3 = 1;
         IN4 = 0;
 
     } else if (Direction == Move_Left) {
 
         IN1 = 0;
-        IN2 = 0;
+        IN2 = 1;
         IN3 = 1;
         IN4 = 0;
 
@@ -294,17 +298,33 @@ void Manual(unsigned char Data) {
 
     } else if (Data == Move_Right) {
 
-        Driver_Control(Duty_Cycle_50, Duty_Cycle_100, Move_Left);
+        Driver_Control(Duty_Cycle_25, Duty_Cycle_100, Move_Left);
 
     } else if (Data == Move_Left) {
 
-        Driver_Control(Duty_Cycle_100, Duty_Cycle_50, Move_Right);
+        Driver_Control(Duty_Cycle_100, Duty_Cycle_25, Move_Right);
 
     } else if (Data == 'e') {
 
         Platform_Status = 'i';
 
     }
+
+}
+
+//Develop Automatic Mode of the platform. 
+
+void Automatic(void) {
+
+
+
+}
+
+//Develop Semi-Automatic Mode of the platform. 
+
+void Semi_Automatic(void) {
+
+
 
 }
 
@@ -315,6 +335,14 @@ void Platform_Mode(unsigned char Data) {
     if (Data == Manual_Mode) {
 
         Manual(Manual_Direction);
+
+    } else if (Data == Semi_Mode) {
+
+        Semi_Automatic(); 
+
+    } else if (Data == Auto_Mode) {
+
+        Automatic(); 
 
     }
 
