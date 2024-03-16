@@ -9,12 +9,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "41 main.c
 [; ;main.c: 41: void Platform_Mode(unsigned char Data);
 [v _Platform_Mode `(v ~T0 @X0 0 ef1`uc ]
+<<<<<<< HEAD
 [t ~ __interrupt . k ]
 [t T1 __interrupt high_priority ]
 "38
 [; ;main.c: 38: void Bluetooth_Receiver(void);
 [v _Bluetooth_Receiver `(v ~T0 @X0 0 ef ]
 [t T2 __interrupt low_priority ]
+=======
+>>>>>>> College_Research/main
 "16046 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16046: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
 [v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
@@ -274,7 +277,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "13253
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13253: extern volatile T2CONbits_t T2CONbits __attribute__((address(0xFBA)));
 [v _T2CONbits `VS626 ~T0 @X0 0 e@4026 ]
-"11288
+[t ~ __interrupt . k ]
+[t T1 __interrupt high_priority ]
+"38 main.c
+[; ;main.c: 38: void Bluetooth_Receiver(void);
+[v _Bluetooth_Receiver `(v ~T0 @X0 0 ef ]
+[t T2 __interrupt low_priority ]
+"11288 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11288: extern volatile unsigned char RCREG1 __attribute__((address(0xFAE)));
 [v _RCREG1 `Vuc ~T0 @X0 0 e@4014 ]
 "41 ./LCD_Library.h
@@ -283,6 +292,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "42
 [; ;./LCD_Library.h: 42: void Send_String(unsigned char *String);
 [v _Send_String `(v ~T0 @X0 0 ef1`*uc ]
+<<<<<<< HEAD
+=======
+"42 main.c
+[; ;main.c: 42: void Manual(unsigned char Data);
+[v _Manual `(v ~T0 @X0 0 ef1`uc ]
+"44
+[; ;main.c: 44: void Semi_Automatic(void);
+[v _Semi_Automatic `(v ~T0 @X0 0 ef ]
+"43
+[; ;main.c: 43: void Automatic(void);
+[v _Automatic `(v ~T0 @X0 0 ef ]
+>>>>>>> College_Research/main
 "7902 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7902:     struct {
 [s S389 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -1179,6 +1200,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 67: }
 [e :UE 854 ]
 }
+<<<<<<< HEAD
 [v $root$_Interrupt_Rx `(v ~T0 @X0 0 e ]
 "71
 [; ;main.c: 71: void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
@@ -1206,10 +1228,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "87
 [; ;main.c: 87: void Configurations(void) {
+=======
+"71
+[; ;main.c: 71: void Configurations(void) {
+>>>>>>> College_Research/main
 [v _Configurations `(v ~T0 @X0 1 ef ]
 {
 [e :U _Configurations ]
 [f ]
+<<<<<<< HEAD
 "89
 [; ;main.c: 89:     OSCCON = 0x72;
 [e = _OSCCON -> -> 114 `i `uc ]
@@ -1315,16 +1342,154 @@ Version 4.0 HI-TECH Software Intermediate Code
 "151
 [; ;main.c: 151:     T2CONbits.TMR2ON = 1;
 [e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
+=======
+"73
+[; ;main.c: 73:     OSCCON = 0x72;
+[e = _OSCCON -> -> 114 `i `uc ]
+"75
+[; ;main.c: 75:     ANSELC = 0;
+[e = _ANSELC -> -> 0 `i `uc ]
+"76
+[; ;main.c: 76:     ANSELD = 0;
+[e = _ANSELD -> -> 0 `i `uc ]
+"77
+[; ;main.c: 77:     ANSELE = 0;
+[e = _ANSELE -> -> 0 `i `uc ]
+"81
+[; ;main.c: 81:     TRISCbits.RC4 = 0;
+[e = . . _TRISCbits 1 4 -> -> 0 `i `uc ]
+"82
+[; ;main.c: 82:     TRISCbits.RC5 = 0;
+[e = . . _TRISCbits 1 5 -> -> 0 `i `uc ]
+"83
+[; ;main.c: 83:     TRISD = 0;
+[e = _TRISD -> -> 0 `i `uc ]
+"84
+[; ;main.c: 84:     TRISE = 0;
+[e = _TRISE -> -> 0 `i `uc ]
+"87
+[; ;main.c: 87:     LATCbits.LC4 = 0;
+[e = . . _LATCbits 1 4 -> -> 0 `i `uc ]
+"88
+[; ;main.c: 88:     LATCbits.LC5 = 0;
+[e = . . _LATCbits 1 5 -> -> 0 `i `uc ]
+"89
+[; ;main.c: 89:     LATD = 0;
+[e = _LATD -> -> 0 `i `uc ]
+"90
+[; ;main.c: 90:     LATE = 0;
+[e = _LATE -> -> 0 `i `uc ]
+"93
+[; ;main.c: 93:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"94
+[; ;main.c: 94:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+"95
+[; ;main.c: 95:     RCONbits.IPEN = 1;
+[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
+"97
+[; ;main.c: 97:     PIE1bits.RC1IE = 1;
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"98
+[; ;main.c: 98:     PIR1bits.RC1IF = 0;
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+"101
+[; ;main.c: 101:     SPBRG = 103;
+[e = _SPBRG -> -> 103 `i `uc ]
+"102
+[; ;main.c: 102:     TRISCbits.RC6 = 1;
+[e = . . _TRISCbits 1 6 -> -> 1 `i `uc ]
+"103
+[; ;main.c: 103:     TRISCbits.RC7 = 1;
+[e = . . _TRISCbits 1 7 -> -> 1 `i `uc ]
+"106
+[; ;main.c: 106:     TXSTA1bits.TX91 = 0;
+[e = . . _TXSTA1bits 1 6 -> -> 0 `i `uc ]
+"107
+[; ;main.c: 107:     TXSTA1bits.TXEN1 = 1;
+[e = . . _TXSTA1bits 1 5 -> -> 1 `i `uc ]
+"108
+[; ;main.c: 108:     TXSTA1bits.SYNC1 = 0;
+[e = . . _TXSTA1bits 1 4 -> -> 0 `i `uc ]
+"109
+[; ;main.c: 109:     TXSTA1bits.BRGH1 = 1;
+[e = . . _TXSTA1bits 1 2 -> -> 1 `i `uc ]
+"112
+[; ;main.c: 112:     RCSTAbits.SPEN1 = 1;
+[e = . . _RCSTAbits 2 7 -> -> 1 `i `uc ]
+"113
+[; ;main.c: 113:     RCSTAbits.RX91 = 0;
+[e = . . _RCSTAbits 2 6 -> -> 0 `i `uc ]
+"114
+[; ;main.c: 114:     RCSTAbits.CREN1 = 1;
+[e = . . _RCSTAbits 2 4 -> -> 1 `i `uc ]
+"117
+[; ;main.c: 117:     BAUDCON1bits.BRG16 = 0;
+[e = . . _BAUDCON1bits 0 3 -> -> 0 `i `uc ]
+"129
+[; ;main.c: 129:     PR2 = 0xF9;
+[e = _PR2 -> -> 249 `i `uc ]
+"130
+[; ;main.c: 130:     T2CON = 0x00;
+[e = _T2CON -> -> 0 `i `uc ]
+"131
+[; ;main.c: 131:     CCP3CON = 0x0C;
+[e = _CCP3CON -> -> 12 `i `uc ]
+"132
+[; ;main.c: 132:     CCPR3L = 0xFA;
+[e = _CCPR3L -> -> 250 `i `uc ]
+"133
+[; ;main.c: 133:     CCP5CON = 0x0C;
+[e = _CCP5CON -> -> 12 `i `uc ]
+"134
+[; ;main.c: 134:     CCPR5L = 0xFA;
+[e = _CCPR5L -> -> 250 `i `uc ]
+"135
+[; ;main.c: 135:     T2CONbits.TMR2ON = 1;
+[e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
+"137
+[; ;main.c: 137: }
+[e :UE 858 ]
+}
+[v $root$_Interrupt_Rx `(v ~T0 @X0 0 e ]
+"141
+[; ;main.c: 141: void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
+[v _Interrupt_Rx `(v ~T1 @X0 1 ef ]
+{
+[e :U _Interrupt_Rx ]
+[f ]
+"143
+[; ;main.c: 143:     Bluetooth_Receiver();
+[e ( _Bluetooth_Receiver ..  ]
+"145
+[; ;main.c: 145: }
+[e :UE 859 ]
+}
+[v $root$_Interrupt `(v ~T0 @X0 0 e ]
+"149
+[; ;main.c: 149: void __attribute__((picinterrupt(("low_priority")))) Interrupt(void) {
+[v _Interrupt `(v ~T2 @X0 1 ef ]
+{
+[e :U _Interrupt ]
+[f ]
+>>>>>>> College_Research/main
 "153
 [; ;main.c: 153: }
 [e :UE 860 ]
 }
+<<<<<<< HEAD
 "155
 [; ;main.c: 155: void Bluetooth_Receiver(void) {
+=======
+"157
+[; ;main.c: 157: void Bluetooth_Receiver(void) {
+>>>>>>> College_Research/main
 [v _Bluetooth_Receiver `(v ~T0 @X0 1 ef ]
 {
 [e :U _Bluetooth_Receiver ]
 [f ]
+<<<<<<< HEAD
 "157
 [; ;main.c: 157:     if (PIR1bits.RC1IF) {
 [e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 862  ]
@@ -1350,11 +1515,42 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _Platform_Status -> -> 77 `ui `uc ]
 "168
 [; ;main.c: 168:         } else if (Rx_Buffer == 'A') {
+=======
+"159
+[; ;main.c: 159:     if (PIR1bits.RC1IF) {
+[e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 862  ]
+{
+"161
+[; ;main.c: 161:         Rx_Buffer = RCREG1;
+[e = _Rx_Buffer _RCREG1 ]
+"163
+[; ;main.c: 163:         if (Rx_Buffer == 'M') {
+[e $ ! == -> _Rx_Buffer `ui -> 77 `ui 863  ]
+{
+"165
+[; ;main.c: 165:             Send_Instruction_Data(0, 0x01);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"166
+[; ;main.c: 166:             Send_Instruction_Data(0, 0X80);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
+"167
+[; ;main.c: 167:             Send_String("   Manual Mode");
+[e ( _Send_String (1 :s 1C ]
+"168
+[; ;main.c: 168:             Manual_Direction = '0';
+[e = _Manual_Direction -> -> 48 `ui `uc ]
+"169
+[; ;main.c: 169:             Platform_Status = 'M';
+[e = _Platform_Status -> -> 77 `ui `uc ]
+"172
+[; ;main.c: 172:         } else if (Rx_Buffer == 'A') {
+>>>>>>> College_Research/main
 }
 [e $U 864  ]
 [e :U 863 ]
 [e $ ! == -> _Rx_Buffer `ui -> 65 `ui 865  ]
 {
+<<<<<<< HEAD
 "170
 [; ;main.c: 170:             Send_Instruction_Data(0, 0x01);
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
@@ -1369,11 +1565,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _Platform_Status -> -> 65 `ui `uc ]
 "175
 [; ;main.c: 175:         } else if (Rx_Buffer == 'S') {
+=======
+"174
+[; ;main.c: 174:             Send_Instruction_Data(0, 0x01);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"175
+[; ;main.c: 175:             Send_Instruction_Data(0, 0xC0);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
+"176
+[; ;main.c: 176:             Send_String("Automatic Mode");
+[e ( _Send_String (1 :s 2C ]
+"177
+[; ;main.c: 177:             Manual_Direction = '0';
+[e = _Manual_Direction -> -> 48 `ui `uc ]
+"178
+[; ;main.c: 178:             Platform_Status = 'A';
+[e = _Platform_Status -> -> 65 `ui `uc ]
+"180
+[; ;main.c: 180:         } else if (Rx_Buffer == 'S') {
+>>>>>>> College_Research/main
 }
 [e $U 866  ]
 [e :U 865 ]
 [e $ ! == -> _Rx_Buffer `ui -> 83 `ui 867  ]
 {
+<<<<<<< HEAD
 "177
 [; ;main.c: 177:             Send_Instruction_Data(0, 0x01);
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
@@ -1388,66 +1604,133 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _Platform_Status -> -> 83 `ui `uc ]
 "182
 [; ;main.c: 182:         } else if (Rx_Buffer == 'F') {
+=======
+"182
+[; ;main.c: 182:             Send_Instruction_Data(0, 0x01);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"183
+[; ;main.c: 183:             Send_Instruction_Data(0, 0X94);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 148 `i `uc ]
+"184
+[; ;main.c: 184:             Send_String("Semi Mode");
+[e ( _Send_String (1 :s 3C ]
+"185
+[; ;main.c: 185:             Manual_Direction = '0';
+[e = _Manual_Direction -> -> 48 `ui `uc ]
+"186
+[; ;main.c: 186:             Platform_Status = 'S';
+[e = _Platform_Status -> -> 83 `ui `uc ]
+"188
+[; ;main.c: 188:         } else if (Rx_Buffer == 'F') {
+>>>>>>> College_Research/main
 }
 [e $U 868  ]
 [e :U 867 ]
 [e $ ! == -> _Rx_Buffer `ui -> 70 `ui 869  ]
 {
+<<<<<<< HEAD
 "184
 [; ;main.c: 184:             Manual_Direction = 'F';
 [e = _Manual_Direction -> -> 70 `ui `uc ]
 "186
 [; ;main.c: 186:         } else if (Rx_Buffer == 'B') {
+=======
+"190
+[; ;main.c: 190:             Manual_Direction = 'F';
+[e = _Manual_Direction -> -> 70 `ui `uc ]
+"192
+[; ;main.c: 192:         } else if (Rx_Buffer == 'B') {
+>>>>>>> College_Research/main
 }
 [e $U 870  ]
 [e :U 869 ]
 [e $ ! == -> _Rx_Buffer `ui -> 66 `ui 871  ]
 {
+<<<<<<< HEAD
 "188
 [; ;main.c: 188:             Manual_Direction = 'B';
 [e = _Manual_Direction -> -> 66 `ui `uc ]
 "190
 [; ;main.c: 190:         } else if (Rx_Buffer == 'T') {
+=======
+"194
+[; ;main.c: 194:             Manual_Direction = 'B';
+[e = _Manual_Direction -> -> 66 `ui `uc ]
+"196
+[; ;main.c: 196:         } else if (Rx_Buffer == 'T') {
+>>>>>>> College_Research/main
 }
 [e $U 872  ]
 [e :U 871 ]
 [e $ ! == -> _Rx_Buffer `ui -> 84 `ui 873  ]
 {
+<<<<<<< HEAD
 "192
 [; ;main.c: 192:             Manual_Direction = 'T';
 [e = _Manual_Direction -> -> 84 `ui `uc ]
 "194
 [; ;main.c: 194:         } else if (Rx_Buffer == 'R') {
+=======
+"198
+[; ;main.c: 198:             Manual_Direction = 'T';
+[e = _Manual_Direction -> -> 84 `ui `uc ]
+"200
+[; ;main.c: 200:         } else if (Rx_Buffer == 'R') {
+>>>>>>> College_Research/main
 }
 [e $U 874  ]
 [e :U 873 ]
 [e $ ! == -> _Rx_Buffer `ui -> 82 `ui 875  ]
 {
+<<<<<<< HEAD
 "196
 [; ;main.c: 196:             Manual_Direction = 'R';
 [e = _Manual_Direction -> -> 82 `ui `uc ]
 "198
 [; ;main.c: 198:         } else if (Rx_Buffer == 'L') {
+=======
+"202
+[; ;main.c: 202:             Manual_Direction = 'R';
+[e = _Manual_Direction -> -> 82 `ui `uc ]
+"204
+[; ;main.c: 204:         } else if (Rx_Buffer == 'L') {
+>>>>>>> College_Research/main
 }
 [e $U 876  ]
 [e :U 875 ]
 [e $ ! == -> _Rx_Buffer `ui -> 76 `ui 877  ]
 {
+<<<<<<< HEAD
 "200
 [; ;main.c: 200:             Manual_Direction = 'L';
 [e = _Manual_Direction -> -> 76 `ui `uc ]
 "202
 [; ;main.c: 202:         } else if (Rx_Buffer == 'E') {
+=======
+"206
+[; ;main.c: 206:             Manual_Direction = 'L';
+[e = _Manual_Direction -> -> 76 `ui `uc ]
+"208
+[; ;main.c: 208:         } else if (Rx_Buffer == 'E') {
+>>>>>>> College_Research/main
 }
 [e $U 878  ]
 [e :U 877 ]
 [e $ ! == -> _Rx_Buffer `ui -> 69 `ui 879  ]
 {
+<<<<<<< HEAD
 "204
 [; ;main.c: 204:             Manual_Direction = 'e';
 [e = _Manual_Direction -> -> 101 `ui `uc ]
 "206
 [; ;main.c: 206:         }
+=======
+"210
+[; ;main.c: 210:             Manual_Direction = 'e';
+[e = _Manual_Direction -> -> 101 `ui `uc ]
+"212
+[; ;main.c: 212:         }
+>>>>>>> College_Research/main
 }
 [e :U 879 ]
 [e :U 878 ]
@@ -1458,6 +1741,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 868 ]
 [e :U 866 ]
 [e :U 864 ]
+<<<<<<< HEAD
 "208
 [; ;main.c: 208:     }
 }
@@ -1470,11 +1754,70 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 215: void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction) {
 [v _Driver_Control `(v ~T0 @X0 1 ef3`f`f`uc ]
 {
+=======
+"214
+[; ;main.c: 214:     }
+}
+[e :U 862 ]
+"215
+[; ;main.c: 215: }
+[e :UE 861 ]
+}
+"219
+[; ;main.c: 219: void Platform_Mode(unsigned char Data) {
+[v _Platform_Mode `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _Platform_Mode ]
+[v _Data `uc ~T0 @X0 1 r1 ]
+[f ]
+"221
+[; ;main.c: 221:     if (Data == 'M') {
+[e $ ! == -> _Data `ui -> 77 `ui 881  ]
+{
+"223
+[; ;main.c: 223:         Manual(Manual_Direction);
+[e ( _Manual (1 _Manual_Direction ]
+"225
+[; ;main.c: 225:     } else if (Data == 'S') {
+}
+[e $U 882  ]
+[e :U 881 ]
+[e $ ! == -> _Data `ui -> 83 `ui 883  ]
+{
+"227
+[; ;main.c: 227:         Semi_Automatic();
+[e ( _Semi_Automatic ..  ]
+"229
+[; ;main.c: 229:     } else if (Data == 'A') {
+}
+[e $U 884  ]
+[e :U 883 ]
+[e $ ! == -> _Data `ui -> 65 `ui 885  ]
+{
+"231
+[; ;main.c: 231:         Automatic();
+[e ( _Automatic ..  ]
+"233
+[; ;main.c: 233:     }
+}
+[e :U 885 ]
+[e :U 884 ]
+[e :U 882 ]
+"235
+[; ;main.c: 235: }
+[e :UE 880 ]
+}
+"239
+[; ;main.c: 239: void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction) {
+[v _Driver_Control `(v ~T0 @X0 1 ef3`f`f`uc ]
+{
+>>>>>>> College_Research/main
 [e :U _Driver_Control ]
 [v _PWM_RMotor `f ~T0 @X0 1 r1 ]
 [v _PWM_LMotor `f ~T0 @X0 1 r2 ]
 [v _Direction `uc ~T0 @X0 1 r3 ]
 [f ]
+<<<<<<< HEAD
 "218
 [; ;main.c: 218:     Duty_Cycle1 = (float) (PWM_RMotor * (1000.00 / 1023.00));
 [e = _Duty_Cycle1 -> * -> _PWM_RMotor `d / .1000.00 .1023.00 `f ]
@@ -1599,10 +1942,234 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "269
 [; ;main.c: 269: void Init_Message_Platform(void) {
+=======
+"242
+[; ;main.c: 242:     Duty_Cycle1 = (float) PWM_RMotor * (1000.0 / 1023.0);
+[e = _Duty_Cycle1 -> * -> _PWM_RMotor `d / .1000.0 .1023.0 `f ]
+"243
+[; ;main.c: 243:     CCPR3L = (int) Duty_Cycle1 >> 2;
+[e = _CCPR3L -> >> -> _Duty_Cycle1 `i -> 2 `i `uc ]
+"244
+[; ;main.c: 244:     CCP3CON = (CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4);
+[e = _CCP3CON -> | & -> _CCP3CON `i -> 15 `i << & -> _Duty_Cycle1 `i -> 3 `i -> 4 `i `uc ]
+"246
+[; ;main.c: 246:     Duty_Cycle2 = (float) PWM_LMotor * (1000.0 / 1023.0);
+[e = _Duty_Cycle2 -> * -> _PWM_LMotor `d / .1000.0 .1023.0 `f ]
+"247
+[; ;main.c: 247:     CCPR5L = (int) Duty_Cycle2 >> 2;
+[e = _CCPR5L -> >> -> _Duty_Cycle2 `i -> 2 `i `uc ]
+"248
+[; ;main.c: 248:     CCP5CON = (CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4);
+[e = _CCP5CON -> | & -> _CCP3CON `i -> 15 `i << & -> _Duty_Cycle2 `i -> 3 `i -> 4 `i `uc ]
+"251
+[; ;main.c: 251:     if (Direction == 'F') {
+[e $ ! == -> _Direction `ui -> 70 `ui 887  ]
+{
+"254
+[; ;main.c: 254:         LATDbits.LD4 = 1;
+[e = . . _LATDbits 1 4 -> -> 1 `i `uc ]
+"255
+[; ;main.c: 255:         LATDbits.LD5 = 0;
+[e = . . _LATDbits 1 5 -> -> 0 `i `uc ]
+"256
+[; ;main.c: 256:         LATDbits.LD6 = 0;
+[e = . . _LATDbits 1 6 -> -> 0 `i `uc ]
+"257
+[; ;main.c: 257:         LATDbits.LD7 = 1;
+[e = . . _LATDbits 1 7 -> -> 1 `i `uc ]
+"259
+[; ;main.c: 259:     } else if (Direction == 'B') {
+}
+[e $U 888  ]
+[e :U 887 ]
+[e $ ! == -> _Direction `ui -> 66 `ui 889  ]
+{
+"261
+[; ;main.c: 261:         LATDbits.LD4 = 0;
+[e = . . _LATDbits 1 4 -> -> 0 `i `uc ]
+"262
+[; ;main.c: 262:         LATDbits.LD5 = 1;
+[e = . . _LATDbits 1 5 -> -> 1 `i `uc ]
+"263
+[; ;main.c: 263:         LATDbits.LD6 = 1;
+[e = . . _LATDbits 1 6 -> -> 1 `i `uc ]
+"264
+[; ;main.c: 264:         LATDbits.LD7 = 0;
+[e = . . _LATDbits 1 7 -> -> 0 `i `uc ]
+"266
+[; ;main.c: 266:     } else if (Direction == 'R') {
+}
+[e $U 890  ]
+[e :U 889 ]
+[e $ ! == -> _Direction `ui -> 82 `ui 891  ]
+{
+"268
+[; ;main.c: 268:         LATDbits.LD4 = 1;
+[e = . . _LATDbits 1 4 -> -> 1 `i `uc ]
+"269
+[; ;main.c: 269:         LATDbits.LD5 = 0;
+[e = . . _LATDbits 1 5 -> -> 0 `i `uc ]
+"270
+[; ;main.c: 270:         LATDbits.LD6 = 0;
+[e = . . _LATDbits 1 6 -> -> 0 `i `uc ]
+"271
+[; ;main.c: 271:         LATDbits.LD7 = 1;
+[e = . . _LATDbits 1 7 -> -> 1 `i `uc ]
+"273
+[; ;main.c: 273:     } else if (Direction == 'L') {
+}
+[e $U 892  ]
+[e :U 891 ]
+[e $ ! == -> _Direction `ui -> 76 `ui 893  ]
+{
+"275
+[; ;main.c: 275:         LATDbits.LD4 = 1;
+[e = . . _LATDbits 1 4 -> -> 1 `i `uc ]
+"276
+[; ;main.c: 276:         LATDbits.LD5 = 0;
+[e = . . _LATDbits 1 5 -> -> 0 `i `uc ]
+"277
+[; ;main.c: 277:         LATDbits.LD6 = 0;
+[e = . . _LATDbits 1 6 -> -> 0 `i `uc ]
+"278
+[; ;main.c: 278:         LATDbits.LD7 = 1;
+[e = . . _LATDbits 1 7 -> -> 1 `i `uc ]
+"280
+[; ;main.c: 280:     } else if (Direction == 'T') {
+}
+[e $U 894  ]
+[e :U 893 ]
+[e $ ! == -> _Direction `ui -> 84 `ui 895  ]
+{
+"282
+[; ;main.c: 282:         LATDbits.LD4 = 0;
+[e = . . _LATDbits 1 4 -> -> 0 `i `uc ]
+"283
+[; ;main.c: 283:         LATDbits.LD5 = 0;
+[e = . . _LATDbits 1 5 -> -> 0 `i `uc ]
+"284
+[; ;main.c: 284:         LATDbits.LD6 = 0;
+[e = . . _LATDbits 1 6 -> -> 0 `i `uc ]
+"285
+[; ;main.c: 285:         LATDbits.LD7 = 0;
+[e = . . _LATDbits 1 7 -> -> 0 `i `uc ]
+"287
+[; ;main.c: 287:     }
+}
+[e :U 895 ]
+[e :U 894 ]
+[e :U 892 ]
+[e :U 890 ]
+[e :U 888 ]
+"289
+[; ;main.c: 289: }
+[e :UE 886 ]
+}
+"293
+[; ;main.c: 293: void Manual(unsigned char Data) {
+[v _Manual `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _Manual ]
+[v _Data `uc ~T0 @X0 1 r1 ]
+[f ]
+"296
+[; ;main.c: 296:     if (Data == 'F') {
+[e $ ! == -> _Data `ui -> 70 `ui 897  ]
+{
+"298
+[; ;main.c: 298:         Driver_Control(1023.0, 1023.0, 'F');
+[e ( _Driver_Control (3 , , -> .1023.0 `f -> .1023.0 `f -> -> 70 `ui `uc ]
+"300
+[; ;main.c: 300:     } else if (Data == 'B') {
+}
+[e $U 898  ]
+[e :U 897 ]
+[e $ ! == -> _Data `ui -> 66 `ui 899  ]
+{
+"302
+[; ;main.c: 302:         Driver_Control(1023.0, 1023.0, 'B');
+[e ( _Driver_Control (3 , , -> .1023.0 `f -> .1023.0 `f -> -> 66 `ui `uc ]
+"304
+[; ;main.c: 304:     } else if (Data == 'T') {
+}
+[e $U 900  ]
+[e :U 899 ]
+[e $ ! == -> _Data `ui -> 84 `ui 901  ]
+{
+"306
+[; ;main.c: 306:         Driver_Control(0.00, 0.00, 'T');
+[e ( _Driver_Control (3 , , -> .0.00 `f -> .0.00 `f -> -> 84 `ui `uc ]
+"308
+[; ;main.c: 308:     } else if (Data == 'R') {
+}
+[e $U 902  ]
+[e :U 901 ]
+[e $ ! == -> _Data `ui -> 82 `ui 903  ]
+{
+"310
+[; ;main.c: 310:         Driver_Control(767.2, 1023.0, 'R');
+[e ( _Driver_Control (3 , , -> .767.2 `f -> .1023.0 `f -> -> 82 `ui `uc ]
+"312
+[; ;main.c: 312:     } else if (Data == 'L') {
+}
+[e $U 904  ]
+[e :U 903 ]
+[e $ ! == -> _Data `ui -> 76 `ui 905  ]
+{
+"314
+[; ;main.c: 314:         Driver_Control(1023.0, 767.2, 'L');
+[e ( _Driver_Control (3 , , -> .1023.0 `f -> .767.2 `f -> -> 76 `ui `uc ]
+"316
+[; ;main.c: 316:     } else if (Data == 'e') {
+}
+[e $U 906  ]
+[e :U 905 ]
+[e $ ! == -> _Data `ui -> 101 `ui 907  ]
+{
+"318
+[; ;main.c: 318:         Platform_Status = 'i';
+[e = _Platform_Status -> -> 105 `ui `uc ]
+"320
+[; ;main.c: 320:     }
+}
+[e :U 907 ]
+[e :U 906 ]
+[e :U 904 ]
+[e :U 902 ]
+[e :U 900 ]
+[e :U 898 ]
+"322
+[; ;main.c: 322: }
+[e :UE 896 ]
+}
+"326
+[; ;main.c: 326: void Automatic(void) {
+[v _Automatic `(v ~T0 @X0 1 ef ]
+{
+[e :U _Automatic ]
+[f ]
+"330
+[; ;main.c: 330: }
+[e :UE 908 ]
+}
+"334
+[; ;main.c: 334: void Semi_Automatic(void) {
+[v _Semi_Automatic `(v ~T0 @X0 1 ef ]
+{
+[e :U _Semi_Automatic ]
+[f ]
+"338
+[; ;main.c: 338: }
+[e :UE 909 ]
+}
+"343
+[; ;main.c: 343: void Init_Message_Platform(void) {
+>>>>>>> College_Research/main
 [v _Init_Message_Platform `(v ~T0 @X0 1 ef ]
 {
 [e :U _Init_Message_Platform ]
 [f ]
+<<<<<<< HEAD
 "271
 [; ;main.c: 271:     Send_Instruction_Data(0, 0X80);
 [e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
@@ -1718,6 +2285,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 321: }
 [e :UE 903 ]
 }
+=======
+"345
+[; ;main.c: 345:     Send_Instruction_Data(0, 0X80);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 128 `i `uc ]
+"346
+[; ;main.c: 346:     Send_String("Research Project");
+[e ( _Send_String (1 :s 4C ]
+"347
+[; ;main.c: 347:     Send_Instruction_Data(0, 0xC0);
+[e ( _Send_Instruction_Data (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
+"348
+[; ;main.c: 348:     Send_String("Robotic Platform");
+[e ( _Send_String (1 :s 5C ]
+"350
+[; ;main.c: 350: }
+[e :UE 910 ]
+}
+>>>>>>> College_Research/main
 [a 4C 82 101 115 101 97 114 99 104 32 80 114 111 106 101 99 116 0 ]
 [a 5C 82 111 98 111 116 105 99 32 80 108 97 116 102 111 114 109 0 ]
 [a 1C 32 32 32 77 97 110 117 97 108 32 77 111 100 101 0 ]

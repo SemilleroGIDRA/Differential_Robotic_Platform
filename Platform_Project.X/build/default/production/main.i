@@ -9771,6 +9771,7 @@ void main(void) {
 
 
 
+<<<<<<< HEAD
 void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
 
     Bluetooth_Receiver();
@@ -9787,6 +9788,8 @@ void __attribute__((picinterrupt(("low_priority")))) Interrupt(void) {
 
 
 
+=======
+>>>>>>> College_Research/main
 void Configurations(void) {
 
     OSCCON = 0x72;
@@ -9834,7 +9837,11 @@ void Configurations(void) {
 
 
     BAUDCON1bits.BRG16 = 0;
+<<<<<<< HEAD
 # 145 "main.c"
+=======
+# 129 "main.c"
+>>>>>>> College_Research/main
     PR2 = 0xF9;
     T2CON = 0x00;
     CCP3CON = 0x0C;
@@ -9845,6 +9852,7 @@ void Configurations(void) {
 
 }
 
+<<<<<<< HEAD
 void Bluetooth_Receiver(void) {
 
     if (PIR1bits.RC1IF) {
@@ -9874,6 +9882,59 @@ void Bluetooth_Receiver(void) {
 
         } else if (Rx_Buffer == 'F') {
 
+=======
+
+
+void __attribute__((picinterrupt(("high_priority")))) Interrupt_Rx(void) {
+
+    Bluetooth_Receiver();
+
+}
+
+
+
+void __attribute__((picinterrupt(("low_priority")))) Interrupt(void) {
+
+
+
+}
+
+
+
+void Bluetooth_Receiver(void) {
+
+    if (PIR1bits.RC1IF) {
+
+        Rx_Buffer = RCREG1;
+
+        if (Rx_Buffer == 'M') {
+
+            Send_Instruction_Data(0, 0x01);
+            Send_Instruction_Data(0, 0X80);
+            Send_String("   Manual Mode");
+            Manual_Direction = '0';
+            Platform_Status = 'M';
+
+
+        } else if (Rx_Buffer == 'A') {
+
+            Send_Instruction_Data(0, 0x01);
+            Send_Instruction_Data(0, 0xC0);
+            Send_String("Automatic Mode");
+            Manual_Direction = '0';
+            Platform_Status = 'A';
+
+        } else if (Rx_Buffer == 'S') {
+
+            Send_Instruction_Data(0, 0x01);
+            Send_Instruction_Data(0, 0X94);
+            Send_String("Semi Mode");
+            Manual_Direction = '0';
+            Platform_Status = 'S';
+
+        } else if (Rx_Buffer == 'F') {
+
+>>>>>>> College_Research/main
             Manual_Direction = 'F';
 
         } else if (Rx_Buffer == 'B') {
@@ -9897,24 +9958,51 @@ void Bluetooth_Receiver(void) {
             Manual_Direction = 'e';
 
         }
+<<<<<<< HEAD
+=======
 
     }
 }
 
 
 
+void Platform_Mode(unsigned char Data) {
+
+    if (Data == 'M') {
+
+        Manual(Manual_Direction);
+
+    } else if (Data == 'S') {
+
+        Semi_Automatic();
+
+    } else if (Data == 'A') {
+
+        Automatic();
+>>>>>>> College_Research/main
+
+    }
+}
+
+
+
+<<<<<<< HEAD
 
 
 void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction) {
 
+=======
+void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction) {
+>>>>>>> College_Research/main
 
-    Duty_Cycle1 = (float) (PWM_RMotor * (1000.00 / 1023.00));
+
+    Duty_Cycle1 = (float) PWM_RMotor * (1000.0 / 1023.0);
     CCPR3L = (int) Duty_Cycle1 >> 2;
-    CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4));
+    CCP3CON = (CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4);
 
-    Duty_Cycle2 = (float) (PWM_LMotor * (1000.00 / 1023.00));
+    Duty_Cycle2 = (float) PWM_LMotor * (1000.0 / 1023.0);
     CCPR5L = (int) Duty_Cycle2 >> 2;
-    CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
+    CCP5CON = (CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4);
 
 
     if (Direction == 'F') {
@@ -9925,6 +10013,46 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
         LATDbits.LD6 = 0;
         LATDbits.LD7 = 1;
 
+    } else if (Direction == 'B') {
+
+        LATDbits.LD4 = 0;
+        LATDbits.LD5 = 1;
+        LATDbits.LD6 = 1;
+        LATDbits.LD7 = 0;
+
+    } else if (Direction == 'R') {
+
+        LATDbits.LD4 = 1;
+        LATDbits.LD5 = 0;
+        LATDbits.LD6 = 0;
+        LATDbits.LD7 = 1;
+
+    } else if (Direction == 'L') {
+
+        LATDbits.LD4 = 1;
+        LATDbits.LD5 = 0;
+        LATDbits.LD6 = 0;
+        LATDbits.LD7 = 1;
+
+    } else if (Direction == 'T') {
+
+        LATDbits.LD4 = 0;
+        LATDbits.LD5 = 0;
+        LATDbits.LD6 = 0;
+        LATDbits.LD7 = 0;
+
+    }
+
+
+    if (Direction == 'F') {
+
+
+        LATDbits.LD4 = 1;
+        LATDbits.LD5 = 0;
+        LATDbits.LD6 = 0;
+        LATDbits.LD7 = 1;
+
+<<<<<<< HEAD
     } else if (Direction == 'B') {
 
         LATDbits.LD4 = 0;
@@ -9952,10 +10080,55 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
         LATDbits.LD5 = 0;
         LATDbits.LD6 = 0;
         LATDbits.LD7 = 0;
+=======
+void Manual(unsigned char Data) {
+
+
+    if (Data == 'F') {
+
+        Driver_Control(1023.0, 1023.0, 'F');
+
+    } else if (Data == 'B') {
+
+        Driver_Control(1023.0, 1023.0, 'B');
+
+    } else if (Data == 'T') {
+
+        Driver_Control(0.00, 0.00, 'T');
+
+    } else if (Data == 'R') {
+
+        Driver_Control(767.2, 1023.0, 'R');
+
+    } else if (Data == 'L') {
+
+        Driver_Control(1023.0, 767.2, 'L');
+
+    } else if (Data == 'e') {
+
+        Platform_Status = 'i';
+>>>>>>> College_Research/main
 
     }
 
 }
+
+
+
+void Automatic(void) {
+
+
+
+}
+
+
+
+void Semi_Automatic(void) {
+
+
+
+}
+
 
 
 
