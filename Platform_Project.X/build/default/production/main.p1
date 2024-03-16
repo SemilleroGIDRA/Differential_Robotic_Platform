@@ -1538,22 +1538,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _Direction `uc ~T0 @X0 1 r3 ]
 [f ]
 "242
-[; ;main.c: 242:     Duty_Cycle1 = (float) (PWM_RMotor * (1000.0 / 1023.0));
+[; ;main.c: 242:     Duty_Cycle1 = (float) PWM_RMotor * (1000.0 / 1023.0);
 [e = _Duty_Cycle1 -> * -> _PWM_RMotor `d / .1000.0 .1023.0 `f ]
 "243
 [; ;main.c: 243:     CCPR3L = (int) Duty_Cycle1 >> 2;
 [e = _CCPR3L -> >> -> _Duty_Cycle1 `i -> 2 `i `uc ]
 "244
-[; ;main.c: 244:     CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4));
+[; ;main.c: 244:     CCP3CON = (CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4);
 [e = _CCP3CON -> | & -> _CCP3CON `i -> 15 `i << & -> _Duty_Cycle1 `i -> 3 `i -> 4 `i `uc ]
 "246
-[; ;main.c: 246:     Duty_Cycle2 = (float) (PWM_LMotor * (1000.0 / 1023.0));
+[; ;main.c: 246:     Duty_Cycle2 = (float) PWM_LMotor * (1000.0 / 1023.0);
 [e = _Duty_Cycle2 -> * -> _PWM_LMotor `d / .1000.0 .1023.0 `f ]
 "247
 [; ;main.c: 247:     CCPR5L = (int) Duty_Cycle2 >> 2;
 [e = _CCPR5L -> >> -> _Duty_Cycle2 `i -> 2 `i `uc ]
 "248
-[; ;main.c: 248:     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
+[; ;main.c: 248:     CCP5CON = (CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4);
 [e = _CCP5CON -> | & -> _CCP3CON `i -> 15 `i << & -> _Duty_Cycle2 `i -> 3 `i -> 4 `i `uc ]
 "251
 [; ;main.c: 251:     if (Direction == 'F') {
@@ -1598,17 +1598,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> _Direction `ui -> 82 `ui 891  ]
 {
 "268
-[; ;main.c: 268:         LATDbits.LD4 = 0;
-[e = . . _LATDbits 1 4 -> -> 0 `i `uc ]
+[; ;main.c: 268:         LATDbits.LD4 = 1;
+[e = . . _LATDbits 1 4 -> -> 1 `i `uc ]
 "269
-[; ;main.c: 269:         LATDbits.LD5 = 1;
-[e = . . _LATDbits 1 5 -> -> 1 `i `uc ]
+[; ;main.c: 269:         LATDbits.LD5 = 0;
+[e = . . _LATDbits 1 5 -> -> 0 `i `uc ]
 "270
-[; ;main.c: 270:         LATDbits.LD6 = 1;
-[e = . . _LATDbits 1 6 -> -> 1 `i `uc ]
+[; ;main.c: 270:         LATDbits.LD6 = 0;
+[e = . . _LATDbits 1 6 -> -> 0 `i `uc ]
 "271
-[; ;main.c: 271:         LATDbits.LD7 = 0;
-[e = . . _LATDbits 1 7 -> -> 0 `i `uc ]
+[; ;main.c: 271:         LATDbits.LD7 = 1;
+[e = . . _LATDbits 1 7 -> -> 1 `i `uc ]
 "273
 [; ;main.c: 273:     } else if (Direction == 'L') {
 }
@@ -1617,17 +1617,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> _Direction `ui -> 76 `ui 893  ]
 {
 "275
-[; ;main.c: 275:         LATDbits.LD4 = 0;
-[e = . . _LATDbits 1 4 -> -> 0 `i `uc ]
+[; ;main.c: 275:         LATDbits.LD4 = 1;
+[e = . . _LATDbits 1 4 -> -> 1 `i `uc ]
 "276
-[; ;main.c: 276:         LATDbits.LD5 = 1;
-[e = . . _LATDbits 1 5 -> -> 1 `i `uc ]
+[; ;main.c: 276:         LATDbits.LD5 = 0;
+[e = . . _LATDbits 1 5 -> -> 0 `i `uc ]
 "277
-[; ;main.c: 277:         LATDbits.LD6 = 1;
-[e = . . _LATDbits 1 6 -> -> 1 `i `uc ]
+[; ;main.c: 277:         LATDbits.LD6 = 0;
+[e = . . _LATDbits 1 6 -> -> 0 `i `uc ]
 "278
-[; ;main.c: 278:         LATDbits.LD7 = 0;
-[e = . . _LATDbits 1 7 -> -> 0 `i `uc ]
+[; ;main.c: 278:         LATDbits.LD7 = 1;
+[e = . . _LATDbits 1 7 -> -> 1 `i `uc ]
 "280
 [; ;main.c: 280:     } else if (Direction == 'T') {
 }
@@ -1701,8 +1701,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> _Data `ui -> 82 `ui 903  ]
 {
 "310
-[; ;main.c: 310:         Driver_Control(255.7, 1023.0, 'L');
-[e ( _Driver_Control (3 , , -> .255.7 `f -> .1023.0 `f -> -> 76 `ui `uc ]
+[; ;main.c: 310:         Driver_Control(767.2, 1023.0, 'R');
+[e ( _Driver_Control (3 , , -> .767.2 `f -> .1023.0 `f -> -> 82 `ui `uc ]
 "312
 [; ;main.c: 312:     } else if (Data == 'L') {
 }
@@ -1711,8 +1711,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> _Data `ui -> 76 `ui 905  ]
 {
 "314
-[; ;main.c: 314:         Driver_Control(1023.0, 255.7, 'R');
-[e ( _Driver_Control (3 , , -> .1023.0 `f -> .255.7 `f -> -> 82 `ui `uc ]
+[; ;main.c: 314:         Driver_Control(1023.0, 767.2, 'L');
+[e ( _Driver_Control (3 , , -> .1023.0 `f -> .767.2 `f -> -> 76 `ui `uc ]
 "316
 [; ;main.c: 316:     } else if (Data == 'e') {
 }

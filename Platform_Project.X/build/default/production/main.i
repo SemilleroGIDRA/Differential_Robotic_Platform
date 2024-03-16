@@ -9932,13 +9932,13 @@ void Platform_Mode(unsigned char Data) {
 void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction) {
 
 
-    Duty_Cycle1 = (float) (PWM_RMotor * (1000.0 / 1023.0));
+    Duty_Cycle1 = (float) PWM_RMotor * (1000.0 / 1023.0);
     CCPR3L = (int) Duty_Cycle1 >> 2;
-    CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4));
+    CCP3CON = (CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4);
 
-    Duty_Cycle2 = (float) (PWM_LMotor * (1000.0 / 1023.0));
+    Duty_Cycle2 = (float) PWM_LMotor * (1000.0 / 1023.0);
     CCPR5L = (int) Duty_Cycle2 >> 2;
-    CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
+    CCP5CON = (CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4);
 
 
     if (Direction == 'F') {
@@ -9958,17 +9958,17 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
 
     } else if (Direction == 'R') {
 
-        LATDbits.LD4 = 0;
-        LATDbits.LD5 = 1;
-        LATDbits.LD6 = 1;
-        LATDbits.LD7 = 0;
+        LATDbits.LD4 = 1;
+        LATDbits.LD5 = 0;
+        LATDbits.LD6 = 0;
+        LATDbits.LD7 = 1;
 
     } else if (Direction == 'L') {
 
-        LATDbits.LD4 = 0;
-        LATDbits.LD5 = 1;
-        LATDbits.LD6 = 1;
-        LATDbits.LD7 = 0;
+        LATDbits.LD4 = 1;
+        LATDbits.LD5 = 0;
+        LATDbits.LD6 = 0;
+        LATDbits.LD7 = 1;
 
     } else if (Direction == 'T') {
 
@@ -10000,11 +10000,11 @@ void Manual(unsigned char Data) {
 
     } else if (Data == 'R') {
 
-        Driver_Control(255.7, 1023.0, 'L');
+        Driver_Control(767.2, 1023.0, 'R');
 
     } else if (Data == 'L') {
 
-        Driver_Control(1023.0, 255.7, 'R');
+        Driver_Control(1023.0, 767.2, 'L');
 
     } else if (Data == 'e') {
 

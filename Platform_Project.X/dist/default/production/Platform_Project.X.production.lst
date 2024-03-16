@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
-                                                                                               Fri Mar 15 18:00:11 2024
+                                                                                               Sat Mar 16 00:36:51 2024
 
 Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
      1                           	processor	18F46K22
@@ -761,14 +761,14 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    727   00183A  EF35  F00C         	goto	l1540
    728   00183E                     u910:
    729   00183E                     
-   730                           ;main.c: 310:         Driver_Control(255.7, 1023.0, 'L');
-   731   00183E  0E33               	movlw	51
+   730                           ;main.c: 310:         Driver_Control(767.2, 1023.0, 'R');
+   731   00183E  0ECD               	movlw	205
    732   001840  6E26               	movwf	Driver_Control@PWM_RMotor^0,c
-   733   001842  0EB3               	movlw	179
+   733   001842  0ECC               	movlw	204
    734   001844  6E27               	movwf	(Driver_Control@PWM_RMotor+1)^0,c
-   735   001846  0E7F               	movlw	127
+   735   001846  0E3F               	movlw	63
    736   001848  6E28               	movwf	(Driver_Control@PWM_RMotor+2)^0,c
-   737   00184A  0E43               	movlw	67
+   737   00184A  0E44               	movlw	68
    738   00184C  6E29               	movwf	(Driver_Control@PWM_RMotor+3)^0,c
    739   00184E  0E00               	movlw	0
    740   001850  6E2A               	movwf	Driver_Control@PWM_LMotor^0,c
@@ -778,7 +778,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    744   001858  6E2C               	movwf	(Driver_Control@PWM_LMotor+2)^0,c
    745   00185A  0E44               	movlw	68
    746   00185C  6E2D               	movwf	(Driver_Control@PWM_LMotor+3)^0,c
-   747   00185E  0E4C               	movlw	76
+   747   00185E  0E52               	movlw	82
    748   001860  6E2E               	movwf	Driver_Control@Direction^0,c
    749   001862  EC3B  F00A         	call	_Driver_Control	;wreg free
    750                           
@@ -794,7 +794,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    760   001878  EF54  F00C         	goto	l1544
    761   00187C                     u920:
    762   00187C                     
-   763                           ;main.c: 314:         Driver_Control(1023.0, 255.7, 'R');
+   763                           ;main.c: 314:         Driver_Control(1023.0, 767.2, 'L');
    764   00187C  0E00               	movlw	0
    765   00187E  6E26               	movwf	Driver_Control@PWM_RMotor^0,c
    766   001880  0EC0               	movlw	192
@@ -803,15 +803,15 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    769   001886  6E28               	movwf	(Driver_Control@PWM_RMotor+2)^0,c
    770   001888  0E44               	movlw	68
    771   00188A  6E29               	movwf	(Driver_Control@PWM_RMotor+3)^0,c
-   772   00188C  0E33               	movlw	51
+   772   00188C  0ECD               	movlw	205
    773   00188E  6E2A               	movwf	Driver_Control@PWM_LMotor^0,c
-   774   001890  0EB3               	movlw	179
+   774   001890  0ECC               	movlw	204
    775   001892  6E2B               	movwf	(Driver_Control@PWM_LMotor+1)^0,c
-   776   001894  0E7F               	movlw	127
+   776   001894  0E3F               	movlw	63
    777   001896  6E2C               	movwf	(Driver_Control@PWM_LMotor+2)^0,c
-   778   001898  0E43               	movlw	67
+   778   001898  0E44               	movlw	68
    779   00189A  6E2D               	movwf	(Driver_Control@PWM_LMotor+3)^0,c
-   780   00189C  0E52               	movlw	82
+   780   00189C  0E4C               	movlw	76
    781   00189E  6E2E               	movwf	Driver_Control@Direction^0,c
    782   0018A0  EC3B  F00A         	call	_Driver_Control	;wreg free
    783                           
@@ -881,7 +881,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    842   001476                     _Driver_Control:
    843                           	callstack 21
    844   001476                     
-   845                           ;main.c: 242:     Duty_Cycle1 = (float) (PWM_RMotor * (1000.0 / 1023.0));
+   845                           ;main.c: 242:     Duty_Cycle1 = (float) PWM_RMotor * (1000.0 / 1023.0);
    846   001476  C026  F00D         	movff	Driver_Control@PWM_RMotor,___flmul@b
    847   00147A  C027  F00E         	movff	Driver_Control@PWM_RMotor+1,___flmul@b+1
    848   00147E  C028  F00F         	movff	Driver_Control@PWM_RMotor+2,___flmul@b+2
@@ -917,7 +917,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    878   0014CE  6F5E               	movwf	94,b	;volatile
    879   0014D0                     
    880                           ; BSR set to: 15
-   881                           ;main.c: 244:     CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4));
+   881                           ;main.c: 244:     CCP3CON = (CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4);
    882   0014D0  C035  F00D         	movff	_Duty_Cycle1,___fltol@f1
    883   0014D4  C036  F00E         	movff	_Duty_Cycle1+1,___fltol@f1+1
    884   0014D8  C037  F00F         	movff	_Duty_Cycle1+2,___fltol@f1+2
@@ -934,7 +934,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    895   0014F4  100D               	iorwf	?___fltol^0,w,c
    896   0014F6  6F5D               	movwf	93,b	;volatile
    897                           
-   898                           ;main.c: 246:     Duty_Cycle2 = (float) (PWM_LMotor * (1000.0 / 1023.0));
+   898                           ;main.c: 246:     Duty_Cycle2 = (float) PWM_LMotor * (1000.0 / 1023.0);
    899   0014F8  C02A  F00D         	movff	Driver_Control@PWM_LMotor,___flmul@b
    900   0014FC  C02B  F00E         	movff	Driver_Control@PWM_LMotor+1,___flmul@b+1
    901   001500  C02C  F00F         	movff	Driver_Control@PWM_LMotor+2,___flmul@b+2
@@ -970,7 +970,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    931   001550  6F55               	movwf	85,b	;volatile
    932   001552                     
    933                           ; BSR set to: 15
-   934                           ;main.c: 248:     CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4));
+   934                           ;main.c: 248:     CCP5CON = (CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4);
    935   001552  C031  F00D         	movff	_Duty_Cycle2,___fltol@f1
    936   001556  C032  F00E         	movff	_Duty_Cycle2+1,___fltol@f1+1
    937   00155A  C033  F00F         	movff	_Duty_Cycle2+2,___fltol@f1+2
@@ -1053,17 +1053,17 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1014   0015C8                     u820:
   1015   0015C8                     
   1016                           ; BSR set to: 15
-  1017                           ;main.c: 268:         LATDbits.LD4 = 0;
-  1018   0015C8  988C               	bcf	140,4,c	;volatile
+  1017                           ;main.c: 268:         LATDbits.LD4 = 1;
+  1018   0015C8  888C               	bsf	140,4,c	;volatile
   1019                           
-  1020                           ;main.c: 269:         LATDbits.LD5 = 1;
-  1021   0015CA  8A8C               	bsf	140,5,c	;volatile
+  1020                           ;main.c: 269:         LATDbits.LD5 = 0;
+  1021   0015CA  9A8C               	bcf	140,5,c	;volatile
   1022                           
-  1023                           ;main.c: 270:         LATDbits.LD6 = 1;
-  1024   0015CC  8C8C               	bsf	140,6,c	;volatile
+  1023                           ;main.c: 270:         LATDbits.LD6 = 0;
+  1024   0015CC  9C8C               	bcf	140,6,c	;volatile
   1025                           
-  1026                           ;main.c: 271:         LATDbits.LD7 = 0;
-  1027   0015CE  9E8C               	bcf	140,7,c	;volatile
+  1026                           ;main.c: 271:         LATDbits.LD7 = 1;
+  1027   0015CE  8E8C               	bsf	140,7,c	;volatile
   1028                           
   1029                           ;main.c: 273:     } else if (Direction == 'L') {
   1030   0015D0  EF08  F00B         	goto	l144
@@ -1080,17 +1080,17 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
   1041   0015E6                     u830:
   1042   0015E6                     
   1043                           ; BSR set to: 15
-  1044                           ;main.c: 275:         LATDbits.LD4 = 0;
-  1045   0015E6  988C               	bcf	140,4,c	;volatile
+  1044                           ;main.c: 275:         LATDbits.LD4 = 1;
+  1045   0015E6  888C               	bsf	140,4,c	;volatile
   1046                           
-  1047                           ;main.c: 276:         LATDbits.LD5 = 1;
-  1048   0015E8  8A8C               	bsf	140,5,c	;volatile
+  1047                           ;main.c: 276:         LATDbits.LD5 = 0;
+  1048   0015E8  9A8C               	bcf	140,5,c	;volatile
   1049                           
-  1050                           ;main.c: 277:         LATDbits.LD6 = 1;
-  1051   0015EA  8C8C               	bsf	140,6,c	;volatile
+  1050                           ;main.c: 277:         LATDbits.LD6 = 0;
+  1051   0015EA  9C8C               	bcf	140,6,c	;volatile
   1052                           
-  1053                           ;main.c: 278:         LATDbits.LD7 = 0;
-  1054   0015EC  9E8C               	bcf	140,7,c	;volatile
+  1053                           ;main.c: 278:         LATDbits.LD7 = 1;
+  1054   0015EC  8E8C               	bsf	140,7,c	;volatile
   1055                           
   1056                           ;main.c: 280:     } else if (Direction == 'T') {
   1057   0015EE  EF08  F00B         	goto	l144
@@ -3593,7 +3593,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.46 build 20240104201356 
-Symbol Table                                                                                   Fri Mar 15 18:00:11 2024
+Symbol Table                                                                                   Sat Mar 16 00:36:51 2024
 
                                 l93 1AD2                   Send_String@String 0005  
                                 bsr 0FE0                                 l132 1B22  

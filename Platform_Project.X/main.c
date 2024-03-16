@@ -224,11 +224,11 @@ void Platform_Mode(unsigned char Data) {
 
     } else if (Data == Semi_Mode) {
 
-        Semi_Automatic(); 
+        Semi_Automatic();
 
     } else if (Data == Auto_Mode) {
 
-        Automatic(); 
+        Automatic();
 
     }
 
@@ -239,13 +239,13 @@ void Platform_Mode(unsigned char Data) {
 void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction) {
 
     //PWM configuration. 
-    Duty_Cycle1 = (float) (PWM_RMotor * (1000.0 / 1023.0)); //Assign to the Duty_Cycle1 PWM signal. 
+    Duty_Cycle1 = (float) PWM_RMotor * (1000.0 / 1023.0); //Assign to the Duty_Cycle1 PWM signal. 
     CCPR3L = (int) Duty_Cycle1 >> 2; //Bitwise operation to send 8 of the 10 Least significant bits to  CCPR3L.
-    CCP3CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4)); //Send the rest of the bits to CCP3CON. 
+    CCP3CON = (CCP3CON & 0x0F) | (((int) Duty_Cycle1 & 0x03) << 4); //Send the rest of the bits to CCP3CON. 
 
-    Duty_Cycle2 = (float) (PWM_LMotor * (1000.0 / 1023.0)); //Assign to the Duty_Cycle2 PWM signal. 
+    Duty_Cycle2 = (float) PWM_LMotor * (1000.0 / 1023.0); //Assign to the Duty_Cycle2 PWM signal. 
     CCPR5L = (int) Duty_Cycle2 >> 2; //Bitwise operation to send 8 of the 10 Least significant bits to  CCPR5L.
-    CCP5CON = ((CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4)); //Send the rest of the bits to CCP5CON. 
+    CCP5CON = (CCP3CON & 0x0F) | (((int) Duty_Cycle2 & 0x03) << 4); //Send the rest of the bits to CCP5CON. 
 
     //Check direction.
     if (Direction == Move_Forward) {
@@ -265,17 +265,17 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
 
     } else if (Direction == Move_Right) {
 
-        IN1 = 0;
-        IN2 = 1;
-        IN3 = 1;
-        IN4 = 0;
+        IN1 = 1;
+        IN2 = 0;
+        IN3 = 0;
+        IN4 = 1;
 
     } else if (Direction == Move_Left) {
 
-        IN1 = 0;
-        IN2 = 1;
-        IN3 = 1;
-        IN4 = 0;
+        IN1 = 1;
+        IN2 = 0;
+        IN3 = 0;
+        IN4 = 1;
 
     } else if (Direction == STOP) {
 
@@ -307,11 +307,11 @@ void Manual(unsigned char Data) {
 
     } else if (Data == Move_Right) {
 
-        Driver_Control(Duty_Cycle_25, Duty_Cycle_100, Move_Left);
+        Driver_Control(Duty_Cycle_75, Duty_Cycle_100, Move_Right);
 
     } else if (Data == Move_Left) {
 
-        Driver_Control(Duty_Cycle_100, Duty_Cycle_25, Move_Right);
+        Driver_Control(Duty_Cycle_100, Duty_Cycle_75, Move_Left);
 
     } else if (Data == 'e') {
 
