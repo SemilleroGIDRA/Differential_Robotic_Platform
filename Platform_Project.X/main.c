@@ -60,7 +60,7 @@ void main(void) {
     //Infinite Loop. 
     while (1) {
 
-        Platform_Mode(Platform_Status); //Call function to check the platform status. 
+        //Platform_Mode(Platform_Status); //Call function to check the platform status. 
 
     }
 
@@ -162,6 +162,7 @@ void Bluetooth_Receiver(void) {
 
         if (Rx_Buffer == Manual_Mode) {
 
+            //Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP); //Initialize platform. 
             Send_Instruction_Data(Set, CLR);
             Send_Instruction_Data(Set, ROW1);
             Send_String("   Manual Mode");
@@ -171,6 +172,7 @@ void Bluetooth_Receiver(void) {
 
         } else if (Rx_Buffer == Auto_Mode) {
 
+            //Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP); //Initialize platform. 
             Send_Instruction_Data(Set, CLR);
             Send_Instruction_Data(Set, ROW2);
             Send_String("Automatic Mode");
@@ -179,35 +181,36 @@ void Bluetooth_Receiver(void) {
 
         } else if (Rx_Buffer == Semi_Mode) {
 
+            //Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP); //Initialize platform. 
             Send_Instruction_Data(Set, CLR);
             Send_Instruction_Data(Set, ROW3);
             Send_String("Semi Mode");
             Manual_Direction = '0';
             Platform_Status = Semi_Mode;
 
-        } else if (Rx_Buffer == Move_Forward) {
+        } else if (Rx_Buffer == Move_Forward && Platform_Status == Manual_Mode) {
 
-            Manual_Direction = Move_Forward;
+            //Manual_Direction = Move_Forward;
+            Driver_Control(Duty_Cycle_100, Duty_Cycle_100, Move_Forward);
 
-        } else if (Rx_Buffer == Move_Backward) {
+        } else if (Rx_Buffer == Move_Backward && Platform_Status == Manual_Mode) {
 
-            Manual_Direction = Move_Backward;
+            //Manual_Direction = Move_Backward;
+            Driver_Control(Duty_Cycle_100, Duty_Cycle_100, Move_Backward);
 
-        } else if (Rx_Buffer == STOP) {
+        } else if (Rx_Buffer == STOP && Platform_Status == Manual_Mode) {
 
-            Manual_Direction = STOP;
+            //Manual_Direction = STOP;
+            Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
 
-        } else if (Rx_Buffer == Move_Right) {
+
+        } else if (Rx_Buffer == Move_Right && Platform_Status == Manual_Mode) {
 
             Manual_Direction = Move_Right;
 
-        } else if (Rx_Buffer == Move_Left) {
+        } else if (Rx_Buffer == Move_Left && Platform_Status == Manual_Mode) {
 
             Manual_Direction = Move_Left;
-
-        } else if (Rx_Buffer == 'E') {
-
-            Manual_Direction = 'e';
 
         }
 
@@ -307,7 +310,7 @@ void Manual(unsigned char Data) {
 
     } else if (Data == Move_Right) {
 
-        Driver_Control(Duty_Cycle_75, Duty_Cycle_100, Move_Right);
+        Driver_Control(Duty_Cycle_50, Duty_Cycle_100, Move_Right);
 
     } else if (Data == Move_Left) {
 

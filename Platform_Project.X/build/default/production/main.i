@@ -9763,7 +9763,7 @@ void main(void) {
 
     while (1) {
 
-        Platform_Mode(Platform_Status);
+
 
     }
 
@@ -9855,6 +9855,7 @@ void Bluetooth_Receiver(void) {
 
         if (Rx_Buffer == 'M') {
 
+
             Send_Instruction_Data(0, 0x01);
             Send_Instruction_Data(0, 0X80);
             Send_String("   Manual Mode");
@@ -9864,6 +9865,7 @@ void Bluetooth_Receiver(void) {
 
         } else if (Rx_Buffer == 'A') {
 
+
             Send_Instruction_Data(0, 0x01);
             Send_Instruction_Data(0, 0xC0);
             Send_String("Automatic Mode");
@@ -9872,35 +9874,36 @@ void Bluetooth_Receiver(void) {
 
         } else if (Rx_Buffer == 'S') {
 
+
             Send_Instruction_Data(0, 0x01);
             Send_Instruction_Data(0, 0X94);
             Send_String("Semi Mode");
             Manual_Direction = '0';
             Platform_Status = 'S';
 
-        } else if (Rx_Buffer == 'F') {
+        } else if (Rx_Buffer == 'F' && Platform_Status == 'M') {
 
-            Manual_Direction = 'F';
 
-        } else if (Rx_Buffer == 'B') {
+            Driver_Control(1023.0, 1023.0, 'F');
 
-            Manual_Direction = 'B';
+        } else if (Rx_Buffer == 'B' && Platform_Status == 'M') {
 
-        } else if (Rx_Buffer == 'T') {
 
-            Manual_Direction = 'T';
+            Driver_Control(1023.0, 1023.0, 'B');
 
-        } else if (Rx_Buffer == 'R') {
+        } else if (Rx_Buffer == 'T' && Platform_Status == 'M') {
+
+
+            Driver_Control(0.00, 0.00, 'T');
+
+
+        } else if (Rx_Buffer == 'R' && Platform_Status == 'M') {
 
             Manual_Direction = 'R';
 
-        } else if (Rx_Buffer == 'L') {
+        } else if (Rx_Buffer == 'L' && Platform_Status == 'M') {
 
             Manual_Direction = 'L';
-
-        } else if (Rx_Buffer == 'E') {
-
-            Manual_Direction = 'e';
 
         }
 
@@ -10000,7 +10003,7 @@ void Manual(unsigned char Data) {
 
     } else if (Data == 'R') {
 
-        Driver_Control(767.2, 1023.0, 'R');
+        Driver_Control(511.5, 1023.0, 'R');
 
     } else if (Data == 'L') {
 
