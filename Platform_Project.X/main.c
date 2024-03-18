@@ -188,29 +188,9 @@ void Bluetooth_Receiver(void) {
             Manual_Direction = '0';
             Platform_Status = Semi_Mode;
 
-        } else if (Rx_Buffer == Move_Forward && Platform_Status == Manual_Mode) {
+        } else {
 
-            //Manual_Direction = Move_Forward;
-            Driver_Control(Duty_Cycle_100, Duty_Cycle_100, Move_Forward);
-
-        } else if (Rx_Buffer == Move_Backward && Platform_Status == Manual_Mode) {
-
-            //Manual_Direction = Move_Backward;
-            Driver_Control(Duty_Cycle_100, Duty_Cycle_100, Move_Backward);
-
-        } else if (Rx_Buffer == STOP && Platform_Status == Manual_Mode) {
-
-            //Manual_Direction = STOP;
-            Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
-
-
-        } else if (Rx_Buffer == Move_Right && Platform_Status == Manual_Mode) {
-
-            Manual_Direction = Move_Right;
-
-        } else if (Rx_Buffer == Move_Left && Platform_Status == Manual_Mode) {
-
-            Manual_Direction = Move_Left;
+            Manual(Rx_Buffer);
 
         }
 
@@ -296,23 +276,23 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
 void Manual(unsigned char Data) {
 
     //Check conditions. 
-    if (Data == Move_Forward) {
+    if (Data == Move_Forward && Platform_Status == Manual_Mode) {
 
         Driver_Control(Duty_Cycle_100, Duty_Cycle_100, Move_Forward);
 
-    } else if (Data == Move_Backward) {
+    } else if (Data == Move_Backward && Platform_Status == Manual_Mode) {
 
         Driver_Control(Duty_Cycle_100, Duty_Cycle_100, Move_Backward);
 
-    } else if (Data == STOP) {
+    } else if (Data == STOP && Platform_Status == Manual_Mode) {
 
         Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
 
-    } else if (Data == Move_Right) {
+    } else if (Data == Move_Right && Platform_Status == Manual_Mode) {
 
-        Driver_Control(Duty_Cycle_50, Duty_Cycle_100, Move_Right);
+        Driver_Control(Duty_Cycle_75, Duty_Cycle_100, Move_Right);
 
-    } else if (Data == Move_Left) {
+    } else if (Data == Move_Left && Platform_Status == Manual_Mode) {
 
         Driver_Control(Duty_Cycle_100, Duty_Cycle_75, Move_Left);
 

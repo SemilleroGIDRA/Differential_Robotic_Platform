@@ -9881,29 +9881,9 @@ void Bluetooth_Receiver(void) {
             Manual_Direction = '0';
             Platform_Status = 'S';
 
-        } else if (Rx_Buffer == 'F' && Platform_Status == 'M') {
+        } else {
 
-
-            Driver_Control(1023.0, 1023.0, 'F');
-
-        } else if (Rx_Buffer == 'B' && Platform_Status == 'M') {
-
-
-            Driver_Control(1023.0, 1023.0, 'B');
-
-        } else if (Rx_Buffer == 'T' && Platform_Status == 'M') {
-
-
-            Driver_Control(0.00, 0.00, 'T');
-
-
-        } else if (Rx_Buffer == 'R' && Platform_Status == 'M') {
-
-            Manual_Direction = 'R';
-
-        } else if (Rx_Buffer == 'L' && Platform_Status == 'M') {
-
-            Manual_Direction = 'L';
+            Manual(Rx_Buffer);
 
         }
 
@@ -9989,23 +9969,23 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
 void Manual(unsigned char Data) {
 
 
-    if (Data == 'F') {
+    if (Data == 'F' && Platform_Status == 'M') {
 
         Driver_Control(1023.0, 1023.0, 'F');
 
-    } else if (Data == 'B') {
+    } else if (Data == 'B' && Platform_Status == 'M') {
 
         Driver_Control(1023.0, 1023.0, 'B');
 
-    } else if (Data == 'T') {
+    } else if (Data == 'T' && Platform_Status == 'M') {
 
         Driver_Control(0.00, 0.00, 'T');
 
-    } else if (Data == 'R') {
+    } else if (Data == 'R' && Platform_Status == 'M') {
 
-        Driver_Control(511.5, 1023.0, 'R');
+        Driver_Control(767.2, 1023.0, 'R');
 
-    } else if (Data == 'L') {
+    } else if (Data == 'L' && Platform_Status == 'M') {
 
         Driver_Control(1023.0, 767.2, 'L');
 

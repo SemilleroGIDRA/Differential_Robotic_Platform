@@ -49,13 +49,13 @@
 [v _Interrupt Interrupt `IIL(v  1 e 1 0 ]
 "157
 [v _Bluetooth_Receiver Bluetooth_Receiver `(v  1 e 1 0 ]
-"242
+"222
 [v _Driver_Control Driver_Control `(v  1 e 1 0 ]
-"296
+"276
 [v _Manual Manual `(v  1 e 1 0 ]
-"329
+"309
 [v _Automatic Automatic `(v  1 e 1 0 ]
-"337
+"317
 [v _Semi_Automatic Semi_Automatic `(v  1 e 1 0 ]
 "147 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [v _ANSELC ANSELC `VEuc  1 e 1 @3898 ]
@@ -94,7 +94,7 @@
 [v _LATCbits LATCbits `VES96  1 e 1 @3979 ]
 "7896
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
-[s S569 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S562 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -104,7 +104,7 @@
 `uc 1 LATD7 1 0 :1:7 
 ]
 "7923
-[s S578 . 1 `uc 1 LD0 1 0 :1:0 
+[s S571 . 1 `uc 1 LD0 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
 `uc 1 LD2 1 0 :1:2 
 `uc 1 LD3 1 0 :1:3 
@@ -113,8 +113,8 @@
 `uc 1 LD6 1 0 :1:6 
 `uc 1 LD7 1 0 :1:7 
 ]
-[u S587 . 1 `S569 1 . 1 0 `S578 1 . 1 0 ]
-[v _LATDbits LATDbits `VES587  1 e 1 @3980 ]
+[u S580 . 1 `S562 1 . 1 0 `S571 1 . 1 0 ]
+[v _LATDbits LATDbits `VES580  1 e 1 @3980 ]
 "8008
 [v _LATE LATE `VEuc  1 e 1 @3981 ]
 [s S36 . 1 `uc 1 TRISC0 1 0 :1:0 
@@ -379,9 +379,9 @@
 {
 [v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 wreg ]
 [v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 wreg ]
-[v Send_Instruction_Data@Data Data `uc  1 p 1 1 ]
+[v Send_Instruction_Data@Data Data `uc  1 p 1 2 ]
 "26
-[v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 2 ]
+[v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 3 ]
 "30
 } 0
 "33
@@ -390,7 +390,7 @@
 [v LCD_Instruction@Instruction Instruction `uc  1 a 1 wreg ]
 [v LCD_Instruction@Instruction Instruction `uc  1 a 1 wreg ]
 "35
-[v LCD_Instruction@Instruction Instruction `uc  1 a 1 0 ]
+[v LCD_Instruction@Instruction Instruction `uc  1 a 1 1 ]
 "42
 } 0
 "71 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
@@ -411,7 +411,7 @@
 "157
 [v _Bluetooth_Receiver Bluetooth_Receiver `(v  1 e 1 0 ]
 {
-"218
+"198
 } 0
 "46 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\LCD_Library.c
 [v _Send_String Send_String `(v  1 e 1 0 ]
@@ -441,13 +441,22 @@
 [v i2LCD_Instruction@Instruction Instruction `uc  1 a 1 1 ]
 "42
 } 0
-"242 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
+"276 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
+[v _Manual Manual `(v  1 e 1 0 ]
+{
+[v Manual@Data Data `uc  1 a 1 wreg ]
+[v Manual@Data Data `uc  1 a 1 wreg ]
+"279
+[v Manual@Data Data `uc  1 a 1 34 ]
+"305
+} 0
+"222
 [v _Driver_Control Driver_Control `(v  1 e 1 0 ]
 {
 [v Driver_Control@PWM_RMotor PWM_RMotor `f  1 p 4 25 ]
 [v Driver_Control@PWM_LMotor PWM_LMotor `f  1 p 4 29 ]
 [v Driver_Control@Direction Direction `uc  1 p 1 33 ]
-"292
+"272
 } 0
 "43 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
@@ -462,17 +471,17 @@
 "8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1082 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1076 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1087 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1090 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1082 1 fAsBytes 4 0 `S1087 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1090  1 a 4 19 ]
+[s S1081 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1084 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1076 1 fAsBytes 4 0 `S1081 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1084  1 a 4 19 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 13 ]
-[s S1158 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1152 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1161 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1158 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1161  1 a 2 23 ]
+[u S1155 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1152 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1155  1 a 2 23 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 18 ]
 "11
