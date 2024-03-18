@@ -65,7 +65,7 @@ void main(void) {
     //Infinite Loop. 
     while (1) {
 
-        Platform_Mode(Platform_Status); //Call function to check the platform status. 
+        //Platform_Mode(Platform_Status); //Call function to check the platform status. 
 
     }
 
@@ -217,6 +217,7 @@ void Bluetooth_Receiver(void) {
 
         if (Rx_Buffer == Manual_Mode) {
 
+            //Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP); //Initialize platform. 
             Send_Instruction_Data(Set, CLR);
             Send_Instruction_Data(Set, ROW1);
             Send_String("   Manual Mode");
@@ -226,6 +227,7 @@ void Bluetooth_Receiver(void) {
 
         } else if (Rx_Buffer == Auto_Mode) {
 
+            //Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP); //Initialize platform. 
             Send_Instruction_Data(Set, CLR);
             Send_Instruction_Data(Set, ROW2);
             Send_String("Automatic Mode");
@@ -234,14 +236,16 @@ void Bluetooth_Receiver(void) {
 
         } else if (Rx_Buffer == Semi_Mode) {
 
+            //Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP); //Initialize platform. 
             Send_Instruction_Data(Set, CLR);
             Send_Instruction_Data(Set, ROW3);
             Send_String("Semi Mode");
             Manual_Direction = '0';
             Platform_Status = Semi_Mode;
 
-        } else if (Rx_Buffer == Move_Forward) {
+        } else {
 
+<<<<<<< HEAD
 >>>>>>> College_Research/main
             Manual_Direction = Move_Forward;
 
@@ -264,6 +268,9 @@ void Bluetooth_Receiver(void) {
         } else if (Rx_Buffer == 'E') {
 
             Manual_Direction = 'e';
+=======
+            Manual(Rx_Buffer);
+>>>>>>> College_Research/main
 
         }
 <<<<<<< HEAD
@@ -393,23 +400,23 @@ void Driver_Control(float PWM_RMotor, float PWM_LMotor, unsigned char Direction)
 void Manual(unsigned char Data) {
 
     //Check conditions. 
-    if (Data == Move_Forward) {
+    if (Data == Move_Forward && Platform_Status == Manual_Mode) {
 
         Driver_Control(Duty_Cycle_100, Duty_Cycle_100, Move_Forward);
 
-    } else if (Data == Move_Backward) {
+    } else if (Data == Move_Backward && Platform_Status == Manual_Mode) {
 
         Driver_Control(Duty_Cycle_100, Duty_Cycle_100, Move_Backward);
 
-    } else if (Data == STOP) {
+    } else if (Data == STOP && Platform_Status == Manual_Mode) {
 
         Driver_Control(Duty_Cycle_0, Duty_Cycle_0, STOP);
 
-    } else if (Data == Move_Right) {
+    } else if (Data == Move_Right && Platform_Status == Manual_Mode) {
 
         Driver_Control(Duty_Cycle_75, Duty_Cycle_100, Move_Right);
 
-    } else if (Data == Move_Left) {
+    } else if (Data == Move_Left && Platform_Status == Manual_Mode) {
 
         Driver_Control(Duty_Cycle_100, Duty_Cycle_75, Move_Left);
 

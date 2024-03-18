@@ -64,15 +64,13 @@
 [v _Interrupt Interrupt `IIL(v  1 e 1 0 ]
 "157
 [v _Bluetooth_Receiver Bluetooth_Receiver `(v  1 e 1 0 ]
-"219
-[v _Platform_Mode Platform_Mode `(v  1 e 1 0 ]
-"239
+"222
 [v _Driver_Control Driver_Control `(v  1 e 1 0 ]
-"293
+"276
 [v _Manual Manual `(v  1 e 1 0 ]
-"326
+"309
 [v _Automatic Automatic `(v  1 e 1 0 ]
-"334
+"317
 [v _Semi_Automatic Semi_Automatic `(v  1 e 1 0 ]
 >>>>>>> College_Research/main
 "147 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
@@ -90,9 +88,13 @@
 "2635
 [v _CCPR3L CCPR3L `VEuc  1 e 1 @3934 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 [s S87 . 1 `uc 1 LATC0 1 0 :1:0 
 =======
 [s S83 . 1 `uc 1 LATC0 1 0 :1:0 
+>>>>>>> College_Research/main
+=======
+[s S78 . 1 `uc 1 LATC0 1 0 :1:0 
 >>>>>>> College_Research/main
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
@@ -104,9 +106,13 @@
 ]
 "7811
 <<<<<<< HEAD
+<<<<<<< HEAD
 [s S96 . 1 `uc 1 LC0 1 0 :1:0 
 =======
 [s S92 . 1 `uc 1 LC0 1 0 :1:0 
+>>>>>>> College_Research/main
+=======
+[s S87 . 1 `uc 1 LC0 1 0 :1:0 
 >>>>>>> College_Research/main
 `uc 1 LC1 1 0 :1:1 
 `uc 1 LC2 1 0 :1:2 
@@ -116,6 +122,7 @@
 `uc 1 LC6 1 0 :1:6 
 `uc 1 LC7 1 0 :1:7 
 ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 [u S105 . 1 `S87 1 . 1 0 `S96 1 . 1 0 ]
 [v _LATCbits LATCbits `VES105  1 e 1 @3979 ]
@@ -129,6 +136,13 @@
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
 [s S567 . 1 `uc 1 LATD0 1 0 :1:0 
 >>>>>>> College_Research/main
+=======
+[u S96 . 1 `S78 1 . 1 0 `S87 1 . 1 0 ]
+[v _LATCbits LATCbits `VES96  1 e 1 @3979 ]
+"7896
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+[s S562 . 1 `uc 1 LATD0 1 0 :1:0 
+>>>>>>> College_Research/main
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -139,9 +153,13 @@
 ]
 "7923
 <<<<<<< HEAD
+<<<<<<< HEAD
 [s S563 . 1 `uc 1 LD0 1 0 :1:0 
 =======
 [s S576 . 1 `uc 1 LD0 1 0 :1:0 
+>>>>>>> College_Research/main
+=======
+[s S571 . 1 `uc 1 LD0 1 0 :1:0 
 >>>>>>> College_Research/main
 `uc 1 LD1 1 0 :1:1 
 `uc 1 LD2 1 0 :1:2 
@@ -151,6 +169,7 @@
 `uc 1 LD6 1 0 :1:6 
 `uc 1 LD7 1 0 :1:7 
 ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 [u S572 . 1 `S554 1 . 1 0 `S563 1 . 1 0 ]
 [v _LATDbits LATDbits `VES572  1 e 1 @3980 ]
@@ -164,6 +183,13 @@
 [v _LATE LATE `VEuc  1 e 1 @3981 ]
 [s S41 . 1 `uc 1 TRISC0 1 0 :1:0 
 >>>>>>> College_Research/main
+=======
+[u S580 . 1 `S562 1 . 1 0 `S571 1 . 1 0 ]
+[v _LATDbits LATDbits `VES580  1 e 1 @3980 ]
+"8008
+[v _LATE LATE `VEuc  1 e 1 @3981 ]
+[s S36 . 1 `uc 1 TRISC0 1 0 :1:0 
+>>>>>>> College_Research/main
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -174,9 +200,13 @@
 ]
 "8536
 <<<<<<< HEAD
+<<<<<<< HEAD
 [s S54 . 1 `uc 1 RC0 1 0 :1:0 
 =======
 [s S50 . 1 `uc 1 RC0 1 0 :1:0 
+>>>>>>> College_Research/main
+=======
+[s S45 . 1 `uc 1 RC0 1 0 :1:0 
 >>>>>>> College_Research/main
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
@@ -187,20 +217,29 @@
 `uc 1 RC7 1 0 :1:7 
 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 [u S63 . 1 `S45 1 . 1 0 `S54 1 . 1 0 ]
 [v _TRISCbits TRISCbits `VES63  1 e 1 @3988 ]
 =======
 [u S59 . 1 `S41 1 . 1 0 `S50 1 . 1 0 ]
 [v _TRISCbits TRISCbits `VES59  1 e 1 @3988 ]
 >>>>>>> College_Research/main
+=======
+[u S54 . 1 `S36 1 . 1 0 `S45 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES54  1 e 1 @3988 ]
+>>>>>>> College_Research/main
 "8726
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "8948
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 [s S245 . 1 `uc 1 TMR1IE 1 0 :1:0 
 =======
 [s S241 . 1 `uc 1 TMR1IE 1 0 :1:0 
+>>>>>>> College_Research/main
+=======
+[s S236 . 1 `uc 1 TMR1IE 1 0 :1:0 
 >>>>>>> College_Research/main
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
@@ -211,14 +250,19 @@
 ]
 "9436
 <<<<<<< HEAD
+<<<<<<< HEAD
 [s S253 . 1 `uc 1 . 1 0 :3:0 
 =======
 [s S249 . 1 `uc 1 . 1 0 :3:0 
+>>>>>>> College_Research/main
+=======
+[s S244 . 1 `uc 1 . 1 0 :3:0 
 >>>>>>> College_Research/main
 `uc 1 SSPIE 1 0 :1:3 
 `uc 1 TXIE 1 0 :1:4 
 `uc 1 RCIE 1 0 :1:5 
 ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 [u S258 . 1 `S245 1 . 1 0 `S253 1 . 1 0 ]
 [v _PIE1bits PIE1bits `VES258  1 e 1 @3997 ]
@@ -227,6 +271,11 @@
 [u S254 . 1 `S241 1 . 1 0 `S249 1 . 1 0 ]
 [v _PIE1bits PIE1bits `VES254  1 e 1 @3997 ]
 [s S271 . 1 `uc 1 TMR1IF 1 0 :1:0 
+>>>>>>> College_Research/main
+=======
+[u S249 . 1 `S236 1 . 1 0 `S244 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES249  1 e 1 @3997 ]
+[s S266 . 1 `uc 1 TMR1IF 1 0 :1:0 
 >>>>>>> College_Research/main
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -237,14 +286,19 @@
 ]
 "9513
 <<<<<<< HEAD
+<<<<<<< HEAD
 [s S283 . 1 `uc 1 . 1 0 :3:0 
 =======
 [s S279 . 1 `uc 1 . 1 0 :3:0 
+>>>>>>> College_Research/main
+=======
+[s S274 . 1 `uc 1 . 1 0 :3:0 
 >>>>>>> College_Research/main
 `uc 1 SSPIF 1 0 :1:3 
 `uc 1 TXIF 1 0 :1:4 
 `uc 1 RCIF 1 0 :1:5 
 ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 [u S288 . 1 `S275 1 . 1 0 `S283 1 . 1 0 ]
 [v _PIR1bits PIR1bits `VES288  1 e 1 @3998 ]
@@ -253,6 +307,11 @@
 [u S284 . 1 `S271 1 . 1 0 `S279 1 . 1 0 ]
 [v _PIR1bits PIR1bits `VES284  1 e 1 @3998 ]
 [s S351 . 1 `uc 1 RX9D 1 0 :1:0 
+>>>>>>> College_Research/main
+=======
+[u S279 . 1 `S266 1 . 1 0 `S274 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES279  1 e 1 @3998 ]
+[s S346 . 1 `uc 1 RX9D 1 0 :1:0 
 >>>>>>> College_Research/main
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
@@ -264,6 +323,7 @@
 ]
 "10579
 <<<<<<< HEAD
+<<<<<<< HEAD
 [s S364 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 ADEN 1 0 :1:3 
 ]
@@ -274,6 +334,12 @@
 ]
 [s S363 . 1 `uc 1 RX9D1 1 0 :1:0 
 >>>>>>> College_Research/main
+=======
+[s S355 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ADEN 1 0 :1:3 
+]
+[s S358 . 1 `uc 1 RX9D1 1 0 :1:0 
+>>>>>>> College_Research/main
 `uc 1 OERR1 1 0 :1:1 
 `uc 1 FERR1 1 0 :1:2 
 `uc 1 ADDEN1 1 0 :1:3 
@@ -282,6 +348,7 @@
 `uc 1 RX91 1 0 :1:6 
 `uc 1 SPEN1 1 0 :1:7 
 ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 [s S376 . 1 `uc 1 RCD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
@@ -298,18 +365,27 @@
 [s S306 . 1 `uc 1 TX9D 1 0 :1:0 
 =======
 [s S372 . 1 `uc 1 RCD8 1 0 :1:0 
+=======
+[s S367 . 1 `uc 1 RCD8 1 0 :1:0 
+>>>>>>> College_Research/main
 `uc 1 . 1 0 :5:1 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[s S376 . 1 `uc 1 . 1 0 :6:0 
+[s S371 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S379 . 1 `uc 1 . 1 0 :5:0 
+[s S374 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 SRENA 1 0 :1:5 
 ]
+<<<<<<< HEAD
 [u S382 . 1 `S351 1 . 1 0 `S360 1 . 1 0 `S363 1 . 1 0 `S372 1 . 1 0 `S376 1 . 1 0 `S379 1 . 1 0 ]
 [v _RCSTAbits RCSTAbits `VES382  1 e 1 @4011 ]
 [s S302 . 1 `uc 1 TX9D 1 0 :1:0 
+>>>>>>> College_Research/main
+=======
+[u S377 . 1 `S346 1 . 1 0 `S355 1 . 1 0 `S358 1 . 1 0 `S367 1 . 1 0 `S371 1 . 1 0 `S374 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES377  1 e 1 @4011 ]
+[s S297 . 1 `uc 1 TX9D 1 0 :1:0 
 >>>>>>> College_Research/main
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
@@ -321,9 +397,13 @@
 ]
 "10876
 <<<<<<< HEAD
+<<<<<<< HEAD
 [s S315 . 1 `uc 1 TX9D1 1 0 :1:0 
 =======
 [s S311 . 1 `uc 1 TX9D1 1 0 :1:0 
+>>>>>>> College_Research/main
+=======
+[s S306 . 1 `uc 1 TX9D1 1 0 :1:0 
 >>>>>>> College_Research/main
 `uc 1 TRMT1 1 0 :1:1 
 `uc 1 BRGH1 1 0 :1:2 
@@ -333,6 +413,7 @@
 `uc 1 TX91 1 0 :1:6 
 `uc 1 CSRC1 1 0 :1:7 
 ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 [s S324 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
@@ -348,14 +429,26 @@
 [u S324 . 1 `S302 1 . 1 0 `S311 1 . 1 0 `S320 1 . 1 0 ]
 [v _TXSTA1bits TXSTA1bits `VES324  1 e 1 @4012 ]
 >>>>>>> College_Research/main
+=======
+[s S315 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[u S319 . 1 `S297 1 . 1 0 `S306 1 . 1 0 `S315 1 . 1 0 ]
+[v _TXSTA1bits TXSTA1bits `VES319  1 e 1 @4012 ]
+>>>>>>> College_Research/main
 "11288
 [v _RCREG1 RCREG1 `VEuc  1 e 1 @4014 ]
 "11371
 [v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 [s S425 . 1 `uc 1 ABDEN 1 0 :1:0 
 =======
 [s S421 . 1 `uc 1 ABDEN 1 0 :1:0 
+>>>>>>> College_Research/main
+=======
+[s S416 . 1 `uc 1 ABDEN 1 0 :1:0 
 >>>>>>> College_Research/main
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
@@ -367,6 +460,7 @@
 ]
 "12472
 <<<<<<< HEAD
+<<<<<<< HEAD
 [s S434 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 SCKP 1 0 :1:4 
 ]
@@ -377,6 +471,12 @@
 ]
 [s S433 . 1 `uc 1 ABDEN1 1 0 :1:0 
 >>>>>>> College_Research/main
+=======
+[s S425 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 SCKP 1 0 :1:4 
+]
+[s S428 . 1 `uc 1 ABDEN1 1 0 :1:0 
+>>>>>>> College_Research/main
 `uc 1 WUE1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG161 1 0 :1:3 
@@ -386,23 +486,32 @@
 `uc 1 ABDOVF1 1 0 :1:7 
 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 [s S446 . 1 `uc 1 . 1 0 :4:0 
 =======
 [s S442 . 1 `uc 1 . 1 0 :4:0 
+>>>>>>> College_Research/main
+=======
+[s S437 . 1 `uc 1 . 1 0 :4:0 
 >>>>>>> College_Research/main
 `uc 1 TXCKP 1 0 :1:4 
 `uc 1 RXDTP 1 0 :1:5 
 `uc 1 RCMT 1 0 :1:6 
 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 [s S451 . 1 `uc 1 . 1 0 :4:0 
 =======
 [s S447 . 1 `uc 1 . 1 0 :4:0 
+>>>>>>> College_Research/main
+=======
+[s S442 . 1 `uc 1 . 1 0 :4:0 
 >>>>>>> College_Research/main
 `uc 1 TXCKP1 1 0 :1:4 
 `uc 1 RXDTP1 1 0 :1:5 
 `uc 1 RCMT1 1 0 :1:6 
 ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 [s S456 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 RXCKP 1 0 :1:5 
@@ -417,25 +526,36 @@
 [s S514 . 1 `uc 1 T2CKPS 1 0 :2:0 
 =======
 [s S452 . 1 `uc 1 . 1 0 :5:0 
+=======
+[s S447 . 1 `uc 1 . 1 0 :5:0 
+>>>>>>> College_Research/main
 `uc 1 RXCKP 1 0 :1:5 
 ]
-[s S455 . 1 `uc 1 . 1 0 :1:0 
+[s S450 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 W4E 1 0 :1:1 
 ]
-[u S458 . 1 `S421 1 . 1 0 `S430 1 . 1 0 `S433 1 . 1 0 `S442 1 . 1 0 `S447 1 . 1 0 `S452 1 . 1 0 `S455 1 . 1 0 ]
-[v _BAUDCON1bits BAUDCON1bits `VES458  1 e 1 @4024 ]
+[u S453 . 1 `S416 1 . 1 0 `S425 1 . 1 0 `S428 1 . 1 0 `S437 1 . 1 0 `S442 1 . 1 0 `S447 1 . 1 0 `S450 1 . 1 0 ]
+[v _BAUDCON1bits BAUDCON1bits `VES453  1 e 1 @4024 ]
 "13232
 [v _T2CON T2CON `VEuc  1 e 1 @4026 ]
+<<<<<<< HEAD
 [s S510 . 1 `uc 1 T2CKPS 1 0 :2:0 
+>>>>>>> College_Research/main
+=======
+[s S505 . 1 `uc 1 T2CKPS 1 0 :2:0 
 >>>>>>> College_Research/main
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 T2OUTPS 1 0 :4:3 
 ]
 "13253
 <<<<<<< HEAD
+<<<<<<< HEAD
 [s S518 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 =======
 [s S514 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+>>>>>>> College_Research/main
+=======
+[s S509 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 >>>>>>> College_Research/main
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
@@ -444,6 +564,7 @@
 `uc 1 T2OUTPS2 1 0 :1:5 
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 [u S526 . 1 `S514 1 . 1 0 `S518 1 . 1 0 ]
 [v _T2CONbits T2CONbits `VES526  1 e 1 @4026 ]
@@ -468,24 +589,32 @@
 =======
 [u S522 . 1 `S510 1 . 1 0 `S514 1 . 1 0 ]
 [v _T2CONbits T2CONbits `VES522  1 e 1 @4026 ]
+=======
+[u S517 . 1 `S505 1 . 1 0 `S509 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES517  1 e 1 @4026 ]
+>>>>>>> College_Research/main
 "13303
 [v _PR2 PR2 `VEuc  1 e 1 @4027 ]
-[s S174 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+[s S169 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
 "15871
-[s S176 . 1 `uc 1 . 1 0 :1:0 
+[s S171 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_POR 1 0 :1:1 
 ]
-[s S179 . 1 `uc 1 . 1 0 :2:0 
+[s S174 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_PD 1 0 :1:2 
 ]
-[s S182 . 1 `uc 1 . 1 0 :3:0 
+[s S177 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_TO 1 0 :1:3 
 ]
-[s S185 . 1 `uc 1 . 1 0 :4:0 
+[s S180 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 NOT_RI 1 0 :1:4 
 ]
+<<<<<<< HEAD
 [s S188 . 1 `uc 1 nBOR 1 0 :1:0 
+>>>>>>> College_Research/main
+=======
+[s S183 . 1 `uc 1 nBOR 1 0 :1:0 
 >>>>>>> College_Research/main
 `uc 1 nPOR 1 0 :1:1 
 `uc 1 nPD 1 0 :1:2 
@@ -496,15 +625,20 @@
 `uc 1 IPEN 1 0 :1:7 
 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 [s S201 . 1 `uc 1 BOR 1 0 :1:0 
 =======
 [s S197 . 1 `uc 1 BOR 1 0 :1:0 
+>>>>>>> College_Research/main
+=======
+[s S192 . 1 `uc 1 BOR 1 0 :1:0 
 >>>>>>> College_Research/main
 `uc 1 POR 1 0 :1:1 
 `uc 1 PD 1 0 :1:2 
 `uc 1 TO 1 0 :1:3 
 `uc 1 RI 1 0 :1:4 
 ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 [u S207 . 1 `S178 1 . 1 0 `S180 1 . 1 0 `S183 1 . 1 0 `S186 1 . 1 0 `S189 1 . 1 0 `S192 1 . 1 0 `S201 1 . 1 0 ]
 [v _RCONbits RCONbits `VES207  1 e 1 @4048 ]
@@ -518,6 +652,13 @@
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
 [s S125 . 1 `uc 1 RBIF 1 0 :1:0 
 >>>>>>> College_Research/main
+=======
+[u S198 . 1 `S169 1 . 1 0 `S171 1 . 1 0 `S174 1 . 1 0 `S177 1 . 1 0 `S180 1 . 1 0 `S183 1 . 1 0 `S192 1 . 1 0 ]
+[v _RCONbits RCONbits `VES198  1 e 1 @4048 ]
+"16046
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+[s S120 . 1 `uc 1 RBIF 1 0 :1:0 
+>>>>>>> College_Research/main
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -528,9 +669,13 @@
 ]
 "16958
 <<<<<<< HEAD
+<<<<<<< HEAD
 [s S138 . 1 `uc 1 . 1 0 :1:0 
 =======
 [s S134 . 1 `uc 1 . 1 0 :1:0 
+>>>>>>> College_Research/main
+=======
+[s S129 . 1 `uc 1 . 1 0 :1:0 
 >>>>>>> College_Research/main
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
@@ -540,6 +685,7 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 [s S147 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
@@ -555,6 +701,14 @@
 [u S147 . 1 `S125 1 . 1 0 `S134 1 . 1 0 `S143 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES147  1 e 1 @4082 ]
 >>>>>>> College_Research/main
+=======
+[s S138 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S142 . 1 `S120 1 . 1 0 `S129 1 . 1 0 `S138 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES142  1 e 1 @4082 ]
+>>>>>>> College_Research/main
 "47 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
 [v _Rx_Buffer Rx_Buffer `uc  1 e 1 0 ]
 "48
@@ -569,6 +723,7 @@
 {
 "67
 } 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 "313
 =======
@@ -681,6 +836,8 @@
 "330
 >>>>>>> College_Research/main
 } 0
+=======
+>>>>>>> College_Research/main
 "5 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\LCD_Library.c
 [v _Init_LCD Init_LCD `(v  1 e 1 0 ]
 {
@@ -691,9 +848,9 @@
 {
 [v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 wreg ]
 [v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 wreg ]
-[v Send_Instruction_Data@Data Data `uc  1 p 1 14 ]
+[v Send_Instruction_Data@Data Data `uc  1 p 1 2 ]
 "26
-[v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 15 ]
+[v Send_Instruction_Data@Instruction Instruction `uc  1 a 1 3 ]
 "30
 } 0
 "33
@@ -702,7 +859,7 @@
 [v LCD_Instruction@Instruction Instruction `uc  1 a 1 wreg ]
 [v LCD_Instruction@Instruction Instruction `uc  1 a 1 wreg ]
 "35
-[v LCD_Instruction@Instruction Instruction `uc  1 a 1 13 ]
+[v LCD_Instruction@Instruction Instruction `uc  1 a 1 1 ]
 "42
 } 0
 <<<<<<< HEAD
@@ -744,7 +901,11 @@
 "157
 [v _Bluetooth_Receiver Bluetooth_Receiver `(v  1 e 1 0 ]
 {
+<<<<<<< HEAD
 "215
+>>>>>>> College_Research/main
+=======
+"198
 >>>>>>> College_Research/main
 } 0
 "46 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\LCD_Library.c
@@ -774,4 +935,56 @@
 "35
 [v i2LCD_Instruction@Instruction Instruction `uc  1 a 1 1 ]
 "42
+} 0
+"276 C:\Apps\Git\Repositories\College_Research\Platform_Project.X\main.c
+[v _Manual Manual `(v  1 e 1 0 ]
+{
+[v Manual@Data Data `uc  1 a 1 wreg ]
+[v Manual@Data Data `uc  1 a 1 wreg ]
+"279
+[v Manual@Data Data `uc  1 a 1 34 ]
+"305
+} 0
+"222
+[v _Driver_Control Driver_Control `(v  1 e 1 0 ]
+{
+[v Driver_Control@PWM_RMotor PWM_RMotor `f  1 p 4 25 ]
+[v Driver_Control@PWM_LMotor PWM_LMotor `f  1 p 4 29 ]
+[v Driver_Control@Direction Direction `uc  1 p 1 33 ]
+"272
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 9 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 8 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 0 ]
+"70
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S1076 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S1081 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1084 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1076 1 fAsBytes 4 0 `S1081 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1084  1 a 4 19 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 13 ]
+[s S1152 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S1155 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1152 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1155  1 a 2 23 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 18 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 17 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 12 ]
+"8
+[v ___flmul@b b `d  1 p 4 0 ]
+[v ___flmul@a a `d  1 p 4 4 ]
+"205
 } 0

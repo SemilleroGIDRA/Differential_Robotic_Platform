@@ -5,11 +5,16 @@
       <units>bytes</units>
       <length>65536</length>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <used>3171</used>
       <free>62365</free>
 =======
       <used>3239</used>
       <free>62297</free>
+>>>>>>> College_Research/main
+=======
+      <used>3135</used>
+      <free>62401</free>
 >>>>>>> College_Research/main
     </memory>
     <memory name="data">
